@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Run the Storywizard publishing pipeline on a candidate story."""
 
+import argparse
 import logging
 import sys
 
@@ -17,15 +18,49 @@ logger = logging.getLogger("storywizard")
 
 
 def main() -> None:
-    book_id = int(sys.argv[1]) if len(sys.argv) > 1 else 43  # Default: Jekyll & Hyde
+    parser = argparse.ArgumentParser(description="Storywizard AI Publishing Pipeline")
+    parser.add_argument(
+        "book_id", nargs="?", type=int, default=43,
+        help="Project Gutenberg book ID (default: 43 = Jekyll & Hyde)",
+    )
+    parser.add_argument(
+        "--backend", choices=["mock", "flux"], default="mock",
+        help="Image generation backend (default: mock)",
+    )
+    parser.add_argument(
+        "--max-scenes", type=int, default=15,
+        help="Maximum number of scenes to extract (default: 15)",
+    )
+    parser.add_argument(
+        "--flux-model", default="fal-ai/flux/dev",
+        help="fal.ai model ID for Flux (default: fal-ai/flux/dev)",
+    )
+    parser.add_argument(
+        "--flux-aspect", default="landscape_16_9",
+        help="Aspect ratio for Flux images (default: landscape_16_9)",
+    )
+    args = parser.parse_args()
 
-    config = PipelineConfig()
+    config = PipelineConfig(
+        image_backend=args.backend,
+        max_scenes=args.max_scenes,
+        flux_model=args.flux_model,
+        flux_aspect_ratio=args.flux_aspect,
+    )
+
     if not config.anthropic_api_key:
         logger.error("ANTHROPIC_API_KEY environment variable is required")
         sys.exit(1)
 
-    logger.info("Fetching book %d from Project Gutenberg...", book_id)
-    metadata, text = fetch_book(book_id, config)
+    if args.backend == "flux":
+        import os
+        if not os.environ.get("FAL_KEY"):
+            logger.error("FAL_KEY environment variable is required for flux backend")
+            sys.exit(1)
+        logger.info("Using Flux image generation via fal.ai (%s)", args.flux_model)
+
+    logger.info("Fetching book %d from Project Gutenberg...", args.book_id)
+    metadata, text = fetch_book(args.book_id, config)
     logger.info("Loaded '%s' by %s (%d chars)", metadata.title, metadata.author, len(text))
 
     pipeline = PublishingPipeline(config)

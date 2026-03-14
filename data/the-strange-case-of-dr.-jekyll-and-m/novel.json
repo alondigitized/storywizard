@@ -8,6 +8,14 @@
     "setting": "London",
     "time_period": "Victorian Era"
   },
+  "curator_statement": {
+    "human_truth": "Every person contains multitudes \u2014 impulses we act on and impulses we suppress. Stevenson gave form to the terrifying idea that the darkness inside us isn\u2019t a flaw to be fixed, but a fundamental part of who we are. Jekyll doesn\u2019t become Hyde; he already IS Hyde. The potion just removes the mask.",
+    "historical_moment": "Written in 1886, during the height of Victorian respectability, when gentlemen were expected to be moral pillars in public while London\u2019s underworld thrived in shadow. Stevenson wrote the entire novella in three feverish days, burned the first draft, and rewrote it in three more. It became an instant sensation \u2014 selling 40,000 copies in six months \u2014 because it said out loud what everyone secretly knew: the respectable facade was a lie.",
+    "living_relevance": "In an age of curated social media personas, where everyone projects a polished self while hiding their darker impulses, Jekyll and Hyde is more relevant than ever. We all maintain a public face and a private one. The story asks: what happens when the gap between who we pretend to be and who we actually are becomes unbridgeable?",
+    "invitation": "This isn\u2019t a long read \u2014 it\u2019s a short, sharp shock. In just five scenes, you\u2019ll follow the mystery of a sinister door, a trampled child, and a will that leaves everything to a man no one has ever seen. By the time you reach the final revelation, you\u2019ll understand why this story invented a phrase that\u2019s been part of our language for nearly 140 years. Everyone has a Hyde. Come meet yours.",
+    "one_line": "The story that gave us the language to talk about the darkness hiding inside every respectable person.",
+    "target_audience": "Young adults and adult readers"
+  },
   "style_guide": {
     "art_style": "Dark Victorian noir with ink wash textures \u2014 heavy shadows, gaslit atmosphere, influenced by Mike Mignola and Dave McKean",
     "color_palette": [
@@ -512,13 +520,5 @@
   "cover_bg": "#1a1a2e",
   "reading_time_minutes": 25,
   "target_audience": "Young adults and graphic novel enthusiasts who enjoy dark, atmospheric storytelling",
-  "seo_description": "Read Dr. Jekyll and Mr. Hyde as a stunning AI-generated graphic novel. Dark Victorian noir art brings Stevenson's classic to vivid life.",
-  "curator_statement": {
-    "human_truth": "Every person contains multitudes \u2014 impulses we act on and impulses we suppress. Stevenson gave form to the terrifying idea that the darkness inside us isn\u2019t a flaw to be fixed, but a fundamental part of who we are. Jekyll doesn\u2019t become Hyde; he already IS Hyde. The potion just removes the mask.",
-    "historical_moment": "Written in 1886, during the height of Victorian respectability, when gentlemen were expected to be moral pillars in public while London\u2019s underworld thrived in shadow. Stevenson wrote the entire novella in three feverish days, burned the first draft, and rewrote it in three more. It became an instant sensation \u2014 selling 40,000 copies in six months \u2014 because it said out loud what everyone secretly knew: the respectable facade was a lie.",
-    "living_relevance": "In an age of curated social media personas, where everyone projects a polished self while hiding their darker impulses, Jekyll and Hyde is more relevant than ever. We all maintain a public face and a private one. The story asks: what happens when the gap between who we pretend to be and who we actually are becomes unbridgeable?",
-    "invitation": "This isn\u2019t a long read \u2014 it\u2019s a short, sharp shock. In just five scenes, you\u2019ll follow the mystery of a sinister door, a trampled child, and a will that leaves everything to a man no one has ever seen. By the time you reach the final revelation, you\u2019ll understand why this story invented a phrase that\u2019s been part of our language for nearly 140 years. Everyone has a Hyde. Come meet yours.",
-    "one_line": "The story that gave us the language to talk about the darkness hiding inside every respectable person.",
-    "target_audience": "Young adults and adult readers"
-  }
+  "seo_description": "Read Dr. Jekyll and Mr. Hyde as a stunning AI-generated graphic novel. Dark Victorian noir art brings Stevenson's classic to vivid life."
 }
