@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "source_url": "https://www.gutenberg.org/ebooks/84",
+    "gutenberg_id": 84,
+    "genre": "Gothic Science Fiction",
+    "setting": "Europe",
+    "time_period": "18th Century"
+  },
+  "style_guide": {
+    "art_style": "Romantic-era oil painting aesthetic with dramatic chiaroscuro \u2014 influenced by Caspar David Friedrich's sublime landscapes and Fuseli's nightmarish figures",
+    "color_palette": [
+      "Storm grey (#4A4E5A) \u2014 the bleak northern skies",
+      "Lightning white (#F0F5FF) \u2014 the spark of creation and horror",
+      "Warm amber (#B8860B) \u2014 firelight, humanity, warmth being lost",
+      "Ice blue (#A8C8E0) \u2014 the Arctic, isolation, pursuit",
+      "Decay green (#5A6B3C) \u2014 the unnatural, the Creature's world"
+    ],
+    "mood": "Sublime terror meeting intimate tragedy. Vast landscapes dwarf the characters, emphasizing their insignificance against nature and the horror of playing God.",
+    "character_designs": [
+      {
+        "character_name": "Victor Frankenstein",
+        "appearance": "Young, initially handsome with bright eyes that become increasingly hollow and feverish. Gaunt, obsessed, deteriorating.",
+        "clothing": "Scholar's attire that degrades from crisp university wear to ragged, travel-worn layers.",
+        "distinguishing_features": [
+          "Feverish, sunken eyes",
+          "Hands stained with chemicals",
+          "A posture that curls inward with guilt"
+        ],
+        "color_associations": [
+          "Warm amber fading to storm grey"
+        ]
+      },
+      {
+        "character_name": "The Creature",
+        "appearance": "Eight feet tall, proportioned like a classical sculpture gone wrong. Beautiful component parts assembled into something horrifying. Yellow skin barely covers the muscles beneath. Watery eyes that hold unexpected intelligence and sorrow.",
+        "clothing": "Initially naked, then in scavenged mismatched clothing. Eventually a dark cloak.",
+        "distinguishing_features": [
+          "Enormous stature",
+          "Yellow translucent skin",
+          "Eyes that express more humanity than his creator's"
+        ],
+        "color_associations": [
+          "Decay green",
+          "Lightning white"
+        ]
+      }
+    ],
+    "environment_notes": "Locations range from cramped university labs to sublime Alpine vistas to the frozen Arctic. Each environment reflects the emotional state \u2014 the lab is suffocating, the mountains are liberating but terrifying, the Arctic is the end of all things.",
+    "typography_notes": "Victor's narration in elegant serif. The Creature's speech in a raw, powerful hand that becomes more refined as he learns. Walton's frame narrative in a clean, documentary style.",
+    "consistency_rules": [
+      "The Creature is ALWAYS the tallest figure in any panel",
+      "Lightning imagery recurs throughout \u2014 in skies, in reflections, in Victor's eyes",
+      "Fire and ice as opposing visual motifs",
+      "Hands are emphasized in every scene \u2014 creating, reaching, recoiling"
+    ],
+    "full_style_document": ""
+  },
+  "panel_scripts": [
+    {
+      "scene_number": 1,
+      "scene_title": "It's Alive",
+      "layout_notes": "Build from dark cramped lab to the explosive moment of creation. The final panel should be the largest.",
+      "panels": [
+        {
+          "panel_number": 1,
+          "visual_direction": "Victor hunched over his workbench in the attic laboratory. Candlelight barely reaches the corners. Anatomical sketches cover the walls. His hands, stained and trembling, reach for the final connection.",
+          "dialogue": [],
+          "narration": "It was on a dreary night of November that I beheld the accomplishment of my toils.",
+          "sound_effects": []
+        },
+        {
+          "panel_number": 2,
+          "visual_direction": "The Creature's eye opens \u2014 a single massive panel showing just the eye. Yellow, watery, but undeniably alive. Lightning reflected in the iris.",
+          "dialogue": [],
+          "narration": "I saw the dull yellow eye of the creature open; it breathed hard, and a convulsive motion agitated its limbs.",
+          "sound_effects": []
+        },
+        {
+          "panel_number": 3,
+          "visual_direction": "Victor recoils in horror, knocking over equipment. The Creature sits up on the slab, one enormous hand reaching toward its creator. The scene is half shadow, half lightning flash \u2014 beautiful and terrible.",
+          "dialogue": [],
+          "narration": "How can I describe my emotions at this catastrophe? His limbs were in proportion, and I had selected his features as beautiful. Beautiful! Great God!",
+          "sound_effects": []
+        }
+      ]
+    },
+    {
+      "scene_number": 2,
+      "scene_title": "The Creature's Tale",
+      "layout_notes": "Intimate campfire scene in the mountains. Warm amber lighting against cold blue wilderness.",
+      "panels": [
+        {
+          "panel_number": 1,
+          "visual_direction": "A vast Alpine landscape \u2014 tiny figures of Victor and the Creature sitting by a fire on a glacial moraine. The scale emphasizes their smallness against creation. Mer de Glace stretches behind them.",
+          "dialogue": [
+            "Listen to me, Frankenstein. You accuse me of murder, yet you would destroy your own creature. Hear my tale."
+          ],
+          "narration": "",
+          "sound_effects": []
+        },
+        {
+          "panel_number": 2,
+          "visual_direction": "Close-up of the Creature's face by firelight \u2014 his expression is not monstrous but deeply sad. The amber light softens his features. His enormous eyes glisten with tears.",
+          "dialogue": [
+            "I am malicious because I am miserable. Am I not shunned and hated by all mankind?"
+          ],
+          "narration": "",
+          "sound_effects": []
+        },
+        {
+          "panel_number": 3,
+          "visual_direction": "Victor listens, face torn between revulsion and guilt. The fire between them creates a barrier \u2014 two silhouettes on opposite sides of the flame.",
+          "dialogue": [],
+          "narration": "For the first time, I felt what the duties of a creator towards his creature were.",
+          "sound_effects": []
+        }
+      ]
+    },
+    {
+      "scene_number": 3,
+      "scene_title": "The Arctic Pursuit",
+      "layout_notes": "Stark white and blue palette. Emptiness as a visual force. The two figures \u2014 pursuer and pursued \u2014 are specks in infinite white.",
+      "panels": [
+        {
+          "panel_number": 1,
+          "visual_direction": "An endless Arctic ice field. Victor, emaciated and wild-eyed, drives a dog sled across the frozen waste. In the far distance, barely visible, a massive dark figure moves across the ice.",
+          "dialogue": [],
+          "narration": "I pursued him across the frozen seas, sustained only by vengeance.",
+          "sound_effects": []
+        },
+        {
+          "panel_number": 2,
+          "visual_direction": "Victor collapses on the ice as Walton's ship appears. He is barely human anymore \u2014 a skeleton wrapped in furs, eyes burning with obsession. The ship looms above like salvation or judgment.",
+          "dialogue": [
+            "He is here... you must promise me... you will find him... and destroy him."
+          ],
+          "narration": "",
+          "sound_effects": []
+        },
+        {
+          "panel_number": 3,
+          "visual_direction": "FINAL PANEL: The Creature stands over Victor's deathbed in the ship's cabin. He is weeping \u2014 enormous, terrible, and heartbroken. His hand reaches out but doesn't quite touch his creator's face. The most human moment in the story, belonging to the inhuman.",
+          "dialogue": [
+            "Farewell, Frankenstein! Blasted as thou wert, my agony was still superior to thine."
+          ],
+          "narration": "He sprung from the cabin window upon the ice raft which lay close to the vessel. He was soon borne away by the waves, and lost in darkness and distance.",
+          "sound_effects": []
+        }
+      ]
+    }
+  ],
+  "generated_panels": [
+    {
+      "scene_number": 1,
+      "panel_number": 1,
+      "image_prompt": "Victor hunched over his workbench in the attic laboratory. Candlelight barely reaches the corners. Anatomical sketches cover the walls. His hands, stained and trembling, reach for the final connection.",
+      "image_path": "panels/scene01_panel01.prompt.txt",
+      "alt_text": "Victor hunched over his workbench in the attic laboratory. Candlelight barely reaches the corners. Anatomical sketches c"
+    },
+    {
+      "scene_number": 1,
+      "panel_number": 2,
+      "image_prompt": "The Creature's eye opens \u2014 a single massive panel showing just the eye. Yellow, watery, but undeniably alive. Lightning reflected in the iris.",
+      "image_path": "panels/scene01_panel02.prompt.txt",
+      "alt_text": "The Creature's eye opens \u2014 a single massive panel showing just the eye. Yellow, watery, but undeniably alive. Lightning "
+    },
+    {
+      "scene_number": 1,
+      "panel_number": 3,
+      "image_prompt": "Victor recoils in horror, knocking over equipment. The Creature sits up on the slab, one enormous hand reaching toward its creator. The scene is half shadow, half lightning flash \u2014 beautiful and terrible.",
+      "image_path": "panels/scene01_panel03.prompt.txt",
+      "alt_text": "Victor recoils in horror, knocking over equipment. The Creature sits up on the slab, one enormous hand reaching toward i"
+    },
+    {
+      "scene_number": 2,
+      "panel_number": 1,
+      "image_prompt": "A vast Alpine landscape \u2014 tiny figures of Victor and the Creature sitting by a fire on a glacial moraine. The scale emphasizes their smallness against creation. Mer de Glace stretches behind them.",
+      "image_path": "panels/scene02_panel01.prompt.txt",
+      "alt_text": "A vast Alpine landscape \u2014 tiny figures of Victor and the Creature sitting by a fire on a glacial moraine. The scale emph"
+    },
+    {
+      "scene_number": 2,
+      "panel_number": 2,
+      "image_prompt": "Close-up of the Creature's face by firelight \u2014 his expression is not monstrous but deeply sad. The amber light softens his features. His enormous eyes glisten with tears.",
+      "image_path": "panels/scene02_panel02.prompt.txt",
+      "alt_text": "Close-up of the Creature's face by firelight \u2014 his expression is not monstrous but deeply sad. The amber light softens h"
+    },
+    {
+      "scene_number": 2,
+      "panel_number": 3,
+      "image_prompt": "Victor listens, face torn between revulsion and guilt. The fire between them creates a barrier \u2014 two silhouettes on opposite sides of the flame.",
+      "image_path": "panels/scene02_panel03.prompt.txt",
+      "alt_text": "Victor listens, face torn between revulsion and guilt. The fire between them creates a barrier \u2014 two silhouettes on oppo"
+    },
+    {
+      "scene_number": 3,
+      "panel_number": 1,
+      "image_prompt": "An endless Arctic ice field. Victor, emaciated and wild-eyed, drives a dog sled across the frozen waste. In the far distance, barely visible, a massive dark figure moves across the ice.",
+      "image_path": "panels/scene03_panel01.prompt.txt",
+      "alt_text": "An endless Arctic ice field. Victor, emaciated and wild-eyed, drives a dog sled across the frozen waste. In the far dist"
+    },
+    {
+      "scene_number": 3,
+      "panel_number": 2,
+      "image_prompt": "Victor collapses on the ice as Walton's ship appears. He is barely human anymore \u2014 a skeleton wrapped in furs, eyes burning with obsession. The ship looms above like salvation or judgment.",
+      "image_path": "panels/scene03_panel02.prompt.txt",
+      "alt_text": "Victor collapses on the ice as Walton's ship appears. He is barely human anymore \u2014 a skeleton wrapped in furs, eyes burn"
+    },
+    {
+      "scene_number": 3,
+      "panel_number": 3,
+      "image_prompt": "FINAL PANEL: The Creature stands over Victor's deathbed in the ship's cabin. He is weeping \u2014 enormous, terrible, and heartbroken. His hand reaches out but doesn't quite touch his creator's face. The most human moment in the story, belonging to the inhuman.",
+      "image_path": "panels/scene03_panel03.prompt.txt",
+      "alt_text": "FINAL PANEL: The Creature stands over Victor's deathbed in the ship's cabin. He is weeping \u2014 enormous, terrible, and hea"
+    }
+  ],
+  "editorial_review": {
+    "overall_score": 9,
+    "approved": true,
+    "visual_consistency": "The Romantic painting aesthetic is maintained beautifully. The scale contrasts between figures and landscapes create genuine awe.",
+    "narrative_coherence": "Three scenes capture the essential arc: creation, confrontation, destruction. Efficient and emotionally powerful.",
+    "dialogue_quality": "Faithful to Shelley's prose while adapted for graphic novel pacing. The Creature's dialogue is the emotional core.",
+    "pacing": "Excellent \u2014 builds from claustrophobic creation to sublime landscapes to desolate conclusion.",
+    "issues": [],
+    "suggestions": [
+      "Consider adding the wedding night scene for additional horror"
+    ],
+    "summary": "A visually stunning adaptation that honors Shelley's themes of creation, responsibility, and the nature of humanity. The art direction elevates this beyond mere illustration into genuine visual literature."
+  },
+  "focus_group_feedback": [
+    {
+      "persona_name": "Reluctant Teen Reader",
+      "persona_description": "15-year-old who finds traditional books boring.",
+      "accessibility_score": 8,
+      "engagement_score": 8,
+      "strengths": [
+        "The creation scene is epic",
+        "The Creature is sympathetic, not just scary"
+      ],
+      "concerns": [
+        "Only 3 scenes feels very short"
+      ],
+      "suggestions": [
+        "Add more action scenes"
+      ],
+      "would_read": true,
+      "summary": "Short but powerful. The Creature's sadness hits hard."
+    }
+  ],
+  "description": "Witness the birth of the world's most famous monster in this sublime graphic novel adaptation. Victor Frankenstein's ambition creates life \u2014 and destroys everything he loves.",
+  "tags": [
+    "Gothic Horror",
+    "Science Fiction",
+    "Romantic Era",
+    "Classic Literature",
+    "Tragedy",
+    "Creation"
+  ],
+  "accent_color": "#B8860B",
+  "cover_bg": "#1a2a1a",
+  "reading_time_minutes": 15
+}
