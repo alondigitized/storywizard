@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storywizard — AI Graphic Novel Library</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/bookshelf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bookshelf-page">
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">&#x1F9D9;</span>
+                <h1>Storywizard</h1>
+                <span class="tagline">Classic Stories, Reimagined</span>
+            </div>
+            <nav class="header-nav">
+                <span class="nav-label">AI-Powered Graphic Novels</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h2>Stories Belong to Everyone</h2>
+            <p>We transform the world's greatest public domain novels into stunning graphic novels using AI — making literature accessible, visual, and alive.</p>
+        </div>
+    </section>
+
+    <!-- Bookshelf -->
+    <main class="bookshelf-container">
+        <div class="shelf-header">
+            <h3>Your Library</h3>
+            <span class="book-count">{{ novels|length }} graphic novel{{ 's' if novels|length != 1 else '' }}</span>
+        </div>
+
+        {% if novels %}
+        <div class="bookshelf">
+            {% for novel in novels %}
+            <a href="/read/{{ novel.slug }}" class="book-card">
+                <div class="book-cover" style="--accent: {{ novel.get('accent_color', '#c9a96e') }}">
+                    <div class="cover-spine"></div>
+                    <div class="cover-front">
+                        <div class="cover-art" style="background-color: {{ novel.get('cover_bg', '#1a1a2e') }}">
+                            <div class="cover-pattern"></div>
+                        </div>
+                        <div class="cover-text">
+                            <h4 class="cover-title">{{ novel.metadata.title }}</h4>
+                            <p class="cover-author">{{ novel.metadata.author }}</p>
+                        </div>
+                        <div class="cover-badge">
+                            <span>{{ novel.panel_scripts|length }} Scenes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h4>{{ novel.metadata.title }}</h4>
+                    <p class="book-author">{{ novel.metadata.author }}</p>
+                    <div class="book-meta">
+                        <span class="meta-tag">{{ novel.metadata.genre }}</span>
+                        <span class="meta-tag">{{ novel.generated_panels|length }} Panels</span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+        <!-- Shelf shadow effect -->
+        <div class="shelf-wood">
+            <div class="shelf-shadow"></div>
+        </div>
+        {% else %}
+        <div class="empty-shelf">
+            <div class="empty-icon">&#128218;</div>
+            <h3>Your bookshelf is empty</h3>
+            <p>Run the Storywizard pipeline to generate your first graphic novel:</p>
+            <code>ANTHROPIC_API_KEY=sk-... python run.py</code>
+        </div>
+        {% endif %}
+    </main>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-inner">
+            <div class="about-card">
+                <div class="about-icon">&#128214;</div>
+                <h4>Story Analyst</h4>
+                <p>Reads the novel and identifies the most powerful scenes for visual storytelling</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">&#127912;</div>
+                <h4>Production Designer</h4>
+                <p>Creates a cohesive visual style guide — art direction, color palette, character designs</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">&#9997;&#65039;</div>
+                <h4>Script Writer</h4>
+                <p>Transforms scenes into panel scripts with dialogue, narration, and visual direction</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">&#128396;&#65039;</div>
+                <h4>Artist</h4>
+                <p>Generates stunning artwork for every panel using AI image generation</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">&#128269;</div>
+                <h4>Critical Editor</h4>
+                <p>Quality gate ensuring consistency, coherence, and faithfulness to the source</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">&#128101;</div>
+                <h4>Focus Group</h4>
+                <p>Tests with diverse reader personas to maximize accessibility and engagement</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>Storywizard — Preserving stories for all readers</p>
+    </footer>
+</body>
+</html>

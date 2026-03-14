@@ -6,6 +6,7 @@ from storywizard.agents.production_designer import ProductionDesigner
 from storywizard.agents.artist import Artist
 from storywizard.agents.critical_editor import CriticalEditor
 from storywizard.agents.focus_group import FocusGroup
+from storywizard.agents.web_publisher import AccessibilityReviewer, WebPublisher
 
 __all__ = [
     "StoryAnalyst",
@@ -14,4 +15,6 @@ __all__ = [
     "Artist",
     "CriticalEditor",
     "FocusGroup",
+    "WebPublisher",
+    "AccessibilityReviewer",
 ]

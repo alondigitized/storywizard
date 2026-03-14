@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ novel.metadata.title }} — Storywizard Reader</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/reader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Literata:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="reader-page">
+    <!-- Top bar -->
+    <header class="reader-header" id="readerHeader">
+        <a href="/" class="back-btn" title="Back to library">&#8592; Library</a>
+        <div class="book-title-bar">
+            <h1>{{ novel.metadata.title }}</h1>
+            <span class="author-bar">{{ novel.metadata.author }}</span>
+        </div>
+        <div class="reader-controls">
+            <button id="btnToc" class="ctrl-btn" title="Table of contents">&#9776;</button>
+            <button id="btnStyle" class="ctrl-btn" title="Reading settings">Aa</button>
+            <button id="btnFullscreen" class="ctrl-btn" title="Fullscreen">&#x26F6;</button>
+        </div>
+    </header>
+
+    <!-- Table of Contents sidebar -->
+    <aside class="toc-sidebar" id="tocSidebar">
+        <div class="toc-header">
+            <h3>Scenes</h3>
+            <button class="toc-close" id="tocClose">&times;</button>
+        </div>
+        <nav class="toc-list" id="tocList">
+            <!-- Populated by JS -->
+        </nav>
+    </aside>
+
+    <!-- Style settings panel -->
+    <div class="style-panel" id="stylePanel">
+        <div class="style-row">
+            <label>Font Size</label>
+            <div class="style-btns">
+                <button onclick="adjustFontSize(-1)">A-</button>
+                <button onclick="adjustFontSize(1)">A+</button>
+            </div>
+        </div>
+        <div class="style-row">
+            <label>Theme</label>
+            <div class="style-btns">
+                <button onclick="setTheme('light')" class="theme-btn light-btn">Light</button>
+                <button onclick="setTheme('sepia')" class="theme-btn sepia-btn">Sepia</button>
+                <button onclick="setTheme('dark')" class="theme-btn dark-btn">Dark</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main reader area -->
+    <main class="reader-viewport" id="readerViewport">
+        <div class="page-container" id="pageContainer">
+            <!-- Title page -->
+            <div class="page title-page" data-page="0">
+                <div class="title-content">
+                    <h1 class="novel-title">{{ novel.metadata.title }}</h1>
+                    <p class="novel-subtitle">A Graphic Novel Adaptation</p>
+                    <div class="title-divider"></div>
+                    <p class="novel-author">{{ novel.metadata.author }}</p>
+                    <div class="title-meta">
+                        <span>{{ novel.metadata.genre }}</span>
+                        <span>&middot;</span>
+                        <span>{{ novel.metadata.setting }}, {{ novel.metadata.time_period }}</span>
+                    </div>
+                    <p class="novel-style">Art Style: {{ novel.style_guide.art_style }}</p>
+                </div>
+            </div>
+
+            <!-- Style guide page -->
+            <div class="page style-page" data-page="1">
+                <div class="page-content">
+                    <h2>Visual Style Guide</h2>
+                    <div class="style-guide-content">
+                        <div class="sg-section">
+                            <h3>Art Direction</h3>
+                            <p>{{ novel.style_guide.art_style }}</p>
+                        </div>
+                        <div class="sg-section">
+                            <h3>Mood</h3>
+                            <p>{{ novel.style_guide.mood }}</p>
+                        </div>
+                        <div class="sg-section">
+                            <h3>Color Palette</h3>
+                            <div class="color-swatches">
+                                {% for color in novel.style_guide.color_palette %}
+                                <div class="swatch">{{ color }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% if novel.style_guide.character_designs %}
+                        <div class="sg-section">
+                            <h3>Character Designs</h3>
+                            {% for cd in novel.style_guide.character_designs %}
+                            <div class="char-design">
+                                <strong>{{ cd.character_name }}</strong>
+                                <p>{{ cd.appearance }}</p>
+                                {% if cd.clothing %}<p class="cd-detail">Clothing: {{ cd.clothing }}</p>{% endif %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        {% if novel.style_guide.environment_notes %}
+                        <div class="sg-section">
+                            <h3>Environment</h3>
+                            <p>{{ novel.style_guide.environment_notes }}</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene pages -->
+            {% for script in novel.panel_scripts %}
+            <div class="page scene-page" data-page="{{ loop.index + 1 }}" data-scene="{{ script.scene_number }}">
+                <div class="page-content">
+                    <div class="scene-header">
+                        <span class="scene-number">Scene {{ script.scene_number }}</span>
+                        <h2 class="scene-title">{{ script.scene_title }}</h2>
+                        {% if script.layout_notes %}
+                        <p class="layout-notes">{{ script.layout_notes }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="panels-grid">
+                        {% for panel in script.panels %}
+                        <div class="panel" data-panel="{{ panel.panel_number }}">
+                            <!-- Panel image -->
+                            {% set panel_key = (script.scene_number, panel.panel_number) %}
+                            {% for gp in novel.generated_panels %}
+                            {% if gp.scene_number == script.scene_number and gp.panel_number == panel.panel_number %}
+                            <div class="panel-image">
+                                <img src="/panels/{{ slug }}/scene{{ '%02d' % gp.scene_number }}_panel{{ '%02d' % gp.panel_number }}.prompt.txt"
+                                     alt="{{ gp.alt_text or panel.visual_direction }}"
+                                     onerror="this.parentElement.classList.add('placeholder')"
+                                     loading="lazy">
+                                <div class="panel-placeholder">
+                                    <div class="placeholder-icon">&#127912;</div>
+                                    <p class="placeholder-text">{{ panel.visual_direction[:120] }}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+
+                            <!-- Panel text content -->
+                            <div class="panel-content">
+                                {% if panel.narration %}
+                                <div class="narration-box">
+                                    <p>{{ panel.narration }}</p>
+                                </div>
+                                {% endif %}
+
+                                {% for line in panel.dialogue %}
+                                <div class="speech-bubble">
+                                    <p>{{ line }}</p>
+                                </div>
+                                {% endfor %}
+
+                                {% if panel.sound_effects %}
+                                <div class="sfx">
+                                    {% for sfx in panel.sound_effects %}
+                                    <span class="sfx-text">{{ sfx }}</span>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- End page -->
+            <div class="page end-page" data-page="{{ novel.panel_scripts|length + 2 }}">
+                <div class="title-content">
+                    <h2>The End</h2>
+                    <div class="title-divider"></div>
+                    <p class="novel-subtitle">{{ novel.metadata.title }}</p>
+                    <p class="novel-author">by {{ novel.metadata.author }}</p>
+                    {% if novel.editorial_review %}
+                    <div class="end-review">
+                        <p>Editorial Score: {{ novel.editorial_review.overall_score }}/10</p>
+                        <p>{{ novel.editorial_review.summary }}</p>
+                    </div>
+                    {% endif %}
+                    <div class="end-credits">
+                        <p>Produced by Storywizard AI Publishing Pipeline</p>
+                        <p class="mission">Preserving stories for all readers</p>
+                    </div>
+                    <a href="/" class="back-to-library">&#8592; Back to Library</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Page navigation -->
+    <div class="page-nav">
+        <button class="nav-arrow nav-prev" id="prevPage" title="Previous page">&#8249;</button>
+        <div class="page-indicator">
+            <span id="currentPage">1</span> / <span id="totalPages">1</span>
+        </div>
+        <button class="nav-arrow nav-next" id="nextPage" title="Next page">&#8250;</button>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="reading-progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <script src="/static/js/reader.js"></script>
+    <script>
+        initReader({{ novel | tojson }}, "{{ slug }}");
+    </script>
+</body>
+</html>

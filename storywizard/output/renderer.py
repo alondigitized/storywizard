@@ -1,4 +1,4 @@
-"""Output renderer — assembles the final graphic novel as markdown."""
+"""Output renderer — assembles the final graphic novel as markdown and JSON."""
 
 from __future__ import annotations
 
@@ -8,15 +8,20 @@ from storywizard.models import GraphicNovel
 
 
 def render_graphic_novel(novel: GraphicNovel, output_dir: Path) -> Path:
-    """Render the graphic novel as a markdown document with image references.
+    """Render the graphic novel as markdown documents and JSON for the web app.
 
     Creates:
+    - novel.json — full structured data for the web reader
     - graphic_novel.md — the main reading document
     - style_guide.md — the production design style guide
     - editorial_review.md — the editor's review
     - focus_group.md — focus group feedback
     """
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    # JSON for web app
+    json_path = output_dir / "novel.json"
+    json_path.write_text(novel.model_dump_json(indent=2), encoding="utf-8")
 
     # Main graphic novel
     main_path = output_dir / "graphic_novel.md"

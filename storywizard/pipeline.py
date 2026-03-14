@@ -11,6 +11,7 @@ from storywizard.agents.script_writer import ScriptWriter
 from storywizard.agents.artist import Artist
 from storywizard.agents.critical_editor import CriticalEditor
 from storywizard.agents.focus_group import FocusGroup
+from storywizard.agents.web_publisher import AccessibilityReviewer, WebPublisher
 from storywizard.config import PipelineConfig
 from storywizard.models import GraphicNovel, StoryMetadata
 from storywizard.output.renderer import render_graphic_novel
@@ -33,6 +34,8 @@ class PublishingPipeline:
         self.artist = Artist(self.config)
         self.critical_editor = CriticalEditor(self.config)
         self.focus_group = FocusGroup(self.config)
+        self.web_publisher = WebPublisher(self.config)
+        self.accessibility_reviewer = AccessibilityReviewer(self.config)
 
     def run(self, source_text: str, metadata: StoryMetadata) -> GraphicNovel:
         """Execute the full publishing pipeline."""
@@ -122,11 +125,32 @@ class PublishingPipeline:
             focus_group_feedback=focus_feedback,
         )
 
-        # Render output
+        # Render markdown output
         logger.info("=" * 60)
         logger.info("RENDERING: Assembling final graphic novel")
         logger.info("=" * 60)
         render_graphic_novel(graphic_novel, output_dir)
-        logger.info("Graphic novel saved to %s", output_dir)
 
+        # Stage 7: Web Publishing
+        logger.info("=" * 60)
+        logger.info("STAGE 7: Web Publisher preparing for web delivery")
+        logger.info("=" * 60)
+        self.web_publisher.prepare_for_web(graphic_novel, output_dir)
+        logger.info("Web-optimized data saved")
+
+        # Stage 8: Accessibility Review
+        logger.info("=" * 60)
+        logger.info("STAGE 8: Accessibility Reviewer checking web version")
+        logger.info("=" * 60)
+        a11y_review = self.accessibility_reviewer.review_accessibility(graphic_novel)
+        logger.info(
+            "Accessibility score: %s/10", a11y_review.get("overall_score", "N/A")
+        )
+
+        # Save accessibility review
+        import json
+        a11y_path = output_dir / "accessibility_review.json"
+        a11y_path.write_text(json.dumps(a11y_review, indent=2), encoding="utf-8")
+
+        logger.info("Graphic novel published to %s", output_dir)
         return graphic_novel
