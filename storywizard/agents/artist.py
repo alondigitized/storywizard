@@ -20,7 +20,7 @@ class Artist(BaseAgent):
     The Artist takes panel scripts and the visual style guide, then crafts
     detailed image generation prompts. Supports multiple backends:
     - "mock": saves prompts as text files (free, for testing)
-    - "flux": uses Flux via Replicate API (high quality, ~$0.015/image)
+    - "flux": uses Flux via fal.ai API (high quality, fast inference)
     """
 
     name = "Artist"
@@ -123,33 +123,28 @@ class Artist(BaseAgent):
         return path
 
     def _flux_generate(self, prompt: str, filename: str, output_dir: Path) -> Path:
-        """Generate an image using Flux via Replicate API."""
-        import replicate
+        """Generate an image using Flux via fal.ai API."""
+        import fal_client
 
         model = self.config.flux_model
-        logger.info("Calling Flux model: %s", model)
+        logger.info("Calling Flux model via fal.ai: %s", model)
 
-        output = replicate.run(
+        result = fal_client.subscribe(
             model,
-            input={
+            arguments={
                 "prompt": prompt,
-                "aspect_ratio": self.config.flux_aspect_ratio,
+                "image_size": self.config.flux_aspect_ratio,
+                "num_images": 1,
                 "output_format": "png",
-                "output_quality": 90,
-                "num_outputs": 1,
             },
         )
 
-        # Replicate returns a FileOutput or list of FileOutput objects
-        # that can be read directly
-        if isinstance(output, list):
-            image_url = output[0]
-        else:
-            image_url = output
+        # fal.ai returns {"images": [{"url": "...", "width": ..., "height": ...}]}
+        image_url = result["images"][0]["url"]
 
         # Download the image
         path = output_dir / f"{filename}.png"
-        response = httpx.get(str(image_url), timeout=60.0)
+        response = httpx.get(image_url, timeout=60.0)
         response.raise_for_status()
         path.write_bytes(response.content)
 

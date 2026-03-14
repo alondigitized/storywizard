@@ -22,9 +22,9 @@ class PipelineConfig:
         default_factory=lambda: os.environ.get("IMAGE_API_KEY", "")
     )
 
-    # Flux (via Replicate) settings
-    flux_model: str = "black-forest-labs/flux-2-pro"
-    flux_aspect_ratio: str = "16:9"
+    # Flux (via fal.ai) settings
+    flux_model: str = "fal-ai/flux/dev"
+    flux_aspect_ratio: str = "landscape_16_9"
 
     # Pipeline tuning
     max_scenes: int = 15
