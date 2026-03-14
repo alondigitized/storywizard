@@ -129,6 +129,8 @@ async def api_novel(slug: str):
 @app.get("/panels/{slug}/{filename}")
 async def serve_panel(slug: str, filename: str):
     path = DATA_DIR / slug / "panels" / filename
-    if path.exists():
-        return PlainTextResponse(path.read_text())
-    return HTMLResponse("Not found", status_code=404)
+    if not path.exists() or not path.is_file():
+        return HTMLResponse("Not found", status_code=404)
+    suffix = path.suffix.lower()
+    content_type = MIME_TYPES.get(suffix, "application/octet-stream")
+    return Response(content=path.read_bytes(), media_type=content_type)

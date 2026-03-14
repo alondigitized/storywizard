@@ -168,11 +168,15 @@
                             {% set panel_key = (script.scene_number, panel.panel_number) %}
                             {% for gp in novel.generated_panels %}
                             {% if gp.scene_number == script.scene_number and gp.panel_number == panel.panel_number %}
-                            <div class="panel-image">
-                                <img src="/panels/{{ slug }}/scene{{ '%02d' % gp.scene_number }}_panel{{ '%02d' % gp.panel_number }}.prompt.txt"
+                            {% set base = 'scene%02d_panel%02d' % (gp.scene_number, gp.panel_number) %}
+                            {% set has_image = gp.image_path and gp.image_path.endswith('.png') %}
+                            <div class="panel-image{% if not has_image %} placeholder{% endif %}">
+                                {% if has_image %}
+                                <img src="/panels/{{ slug }}/{{ base }}.png"
                                      alt="{{ gp.alt_text or panel.visual_direction }}"
                                      onerror="this.parentElement.classList.add('placeholder')"
                                      loading="lazy">
+                                {% endif %}
                                 <div class="panel-placeholder">
                                     <div class="placeholder-icon">&#127912;</div>
                                     <p class="placeholder-text">{{ panel.visual_direction[:120] }}</p>

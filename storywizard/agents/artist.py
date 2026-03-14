@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import logging
+import time
 from pathlib import Path
+
+import httpx
 
 from storywizard.agents.base import BaseAgent
 from storywizard.models import GeneratedPanel, Panel, PanelScript, VisualStyleGuide
@@ -15,8 +18,9 @@ class Artist(BaseAgent):
     """Creates image generation prompts and produces panel artwork.
 
     The Artist takes panel scripts and the visual style guide, then crafts
-    detailed image generation prompts. In mock mode, it saves the prompts
-    as text files. With a real backend, it calls the image generation API.
+    detailed image generation prompts. Supports multiple backends:
+    - "mock": saves prompts as text files (free, for testing)
+    - "flux": uses Flux via Replicate API (high quality, ~$0.015/image)
     """
 
     name = "Artist"
@@ -31,7 +35,8 @@ class Artist(BaseAgent):
         "5. Captures the EMOTION — the feeling the image should evoke\n\n"
         "Your prompts should be detailed enough for an AI image generator to "
         "produce a high-quality, consistent result. Always reference the style "
-        "guide to maintain visual coherence across all panels."
+        "guide to maintain visual coherence across all panels.\n\n"
+        "Keep prompts under 500 words. Be specific and visual, not abstract."
     )
 
     def generate_panels(
@@ -44,8 +49,16 @@ class Artist(BaseAgent):
         output_dir.mkdir(parents=True, exist_ok=True)
         generated = []
 
+        total = sum(len(s.panels) for s in scripts)
+        count = 0
+
         for script in scripts:
             for panel in script.panels:
+                count += 1
+                logger.info(
+                    "Generating panel %d/%d (scene %d, panel %d)",
+                    count, total, script.scene_number, panel.panel_number,
+                )
                 prompt = self._craft_image_prompt(panel, script, style_guide)
                 image_path = self._generate_image(
                     prompt, script.scene_number, panel.panel_number, output_dir
@@ -77,7 +90,8 @@ class Artist(BaseAgent):
             f"- Mood: {style_guide.mood}\n"
             f"- Environment: {style_guide.environment_notes}\n"
             f"- Consistency rules: {'; '.join(style_guide.consistency_rules)}\n\n"
-            f"Return ONLY the image generation prompt text, nothing else."
+            f"Return ONLY the image generation prompt text, nothing else. "
+            f"Keep it under 500 words."
         )
         return self.invoke(prompt)
 
@@ -89,10 +103,12 @@ class Artist(BaseAgent):
 
         if self.config.image_backend == "mock":
             return self._mock_generate(prompt, filename, output_dir)
+        elif self.config.image_backend == "flux":
+            return self._flux_generate(prompt, filename, output_dir)
         else:
             raise NotImplementedError(
                 f"Image backend '{self.config.image_backend}' not yet implemented. "
-                f"Use 'mock' for testing."
+                f"Use 'mock' or 'flux'."
             )
 
     def _mock_generate(self, prompt: str, filename: str, output_dir: Path) -> Path:
@@ -104,4 +120,42 @@ class Artist(BaseAgent):
             encoding="utf-8",
         )
         logger.info("Mock image saved: %s", path)
+        return path
+
+    def _flux_generate(self, prompt: str, filename: str, output_dir: Path) -> Path:
+        """Generate an image using Flux via Replicate API."""
+        import replicate
+
+        model = self.config.flux_model
+        logger.info("Calling Flux model: %s", model)
+
+        output = replicate.run(
+            model,
+            input={
+                "prompt": prompt,
+                "aspect_ratio": self.config.flux_aspect_ratio,
+                "output_format": "png",
+                "output_quality": 90,
+                "num_outputs": 1,
+            },
+        )
+
+        # Replicate returns a FileOutput or list of FileOutput objects
+        # that can be read directly
+        if isinstance(output, list):
+            image_url = output[0]
+        else:
+            image_url = output
+
+        # Download the image
+        path = output_dir / f"{filename}.png"
+        response = httpx.get(str(image_url), timeout=60.0)
+        response.raise_for_status()
+        path.write_bytes(response.content)
+
+        # Also save the prompt alongside for reference
+        prompt_path = output_dir / f"{filename}.prompt.txt"
+        prompt_path.write_text(f"IMAGE PROMPT:\n{prompt}\n", encoding="utf-8")
+
+        logger.info("Flux image saved: %s (%d bytes)", path, len(response.content))
         return path

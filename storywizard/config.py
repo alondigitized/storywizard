@@ -17,10 +17,14 @@ class PipelineConfig:
     model_name: str = "claude-sonnet-4-6"
 
     # Image generation
-    image_backend: str = "mock"  # "mock" | "dalle"
+    image_backend: str = "mock"  # "mock" | "flux"
     image_api_key: str = field(
         default_factory=lambda: os.environ.get("IMAGE_API_KEY", "")
     )
+
+    # Flux (via Replicate) settings
+    flux_model: str = "black-forest-labs/flux-2-pro"
+    flux_aspect_ratio: str = "16:9"
 
     # Pipeline tuning
     max_scenes: int = 15
