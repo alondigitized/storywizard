@@ -1,25 +1,45 @@
-"""Vercel serverless entry point for the Storywizard web app."""
+"""Vercel serverless entry point for the Storywizard web app.
+
+Vercel's @vercel/python runtime expects either:
+- A WSGI app named `app`, or
+- A handler function
+
+We use the FastAPI ASGI app directly — Vercel handles the ASGI adapter.
+"""
 
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse, PlainTextResponse
-from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse, PlainTextResponse, Response
 from fastapi.templating import Jinja2Templates
-from mangum import Mangum
 
-# Paths — works both locally and on Vercel
-ROOT_DIR = Path(__file__).parent.parent
+# On Vercel, the function runs from /var/task/api/
+# The repo root is one level up from this file's directory
+ROOT_DIR = Path(__file__).resolve().parent.parent
 WEB_DIR = ROOT_DIR / "web"
-STATIC_DIR = WEB_DIR / "static"
 TEMPLATES_DIR = WEB_DIR / "templates"
+STATIC_DIR = WEB_DIR / "static"
 DATA_DIR = ROOT_DIR / "data"
 
 app = FastAPI(title="Storywizard", description="AI Graphic Novel Library")
 templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
+
+# Mime types for static files
+MIME_TYPES = {
+    ".css": "text/css",
+    ".js": "application/javascript",
+    ".html": "text/html",
+    ".json": "application/json",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".svg": "image/svg+xml",
+    ".ico": "image/x-icon",
+    ".txt": "text/plain",
+}
 
 
 def _discover_novels() -> list[dict]:
@@ -56,6 +76,20 @@ async def bookshelf(request: Request):
     )
 
 
+@app.get("/static/{file_path:path}")
+async def serve_static(file_path: str):
+    """Serve static files (CSS, JS, images)."""
+    full_path = STATIC_DIR / file_path
+    if not full_path.exists() or not full_path.is_file():
+        return HTMLResponse("Not found", status_code=404)
+    suffix = full_path.suffix.lower()
+    content_type = MIME_TYPES.get(suffix, "application/octet-stream")
+    return Response(
+        content=full_path.read_bytes(),
+        media_type=content_type,
+    )
+
+
 @app.get("/read/{slug}", response_class=HTMLResponse)
 async def reader(request: Request, slug: str):
     novel = _load_novel(slug)
@@ -87,5 +121,17 @@ async def serve_panel(slug: str, filename: str):
     return HTMLResponse("Not found", status_code=404)
 
 
-# Mangum handler for Vercel serverless
-handler = Mangum(app, lifespan="off")
+@app.get("/debug")
+async def debug():
+    """Debug endpoint to diagnose path issues on Vercel."""
+    return {
+        "root_dir": str(ROOT_DIR),
+        "web_dir_exists": WEB_DIR.exists(),
+        "templates_dir_exists": TEMPLATES_DIR.exists(),
+        "static_dir_exists": STATIC_DIR.exists(),
+        "data_dir_exists": DATA_DIR.exists(),
+        "data_contents": [str(p.name) for p in DATA_DIR.iterdir()] if DATA_DIR.exists() else [],
+        "templates_contents": [str(p.name) for p in TEMPLATES_DIR.iterdir()] if TEMPLATES_DIR.exists() else [],
+        "cwd": os.getcwd(),
+        "file_location": str(Path(__file__).resolve()),
+    }
