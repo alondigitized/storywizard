@@ -354,6 +354,71 @@
     font-style: italic;
 }
 
+/* ---- Curator Page (Why Read This) ---- */
+.curator-page .page-content {
+    padding: 1rem 0;
+}
+
+.curator-page h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--reader-accent);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.curator-oneline {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 2rem;
+    background: rgba(201, 169, 110, 0.06);
+    border-radius: 8px;
+    border: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.curator-oneline p {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--reader-accent);
+    line-height: 1.6;
+}
+
+.curator-section {
+    margin-bottom: 2rem;
+}
+
+.curator-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--reader-accent);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--reader-border);
+}
+
+.curator-section p {
+    font-family: var(--font-reading);
+    line-height: 1.8;
+    color: var(--reader-text);
+}
+
+.curator-invitation {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(201, 169, 110, 0.04);
+    border-left: 3px solid var(--reader-accent);
+    border-radius: 0 8px 8px 0;
+}
+
+.curator-invitation p {
+    font-family: var(--font-reading);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--reader-text);
+    font-style: italic;
+}
+
 /* ---- Style Guide Page ---- */
 .style-page .page-content {
     padding: 1rem 0;

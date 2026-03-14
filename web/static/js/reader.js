@@ -66,32 +66,46 @@ function buildTOC(novel) {
     titleItem.onclick = () => { goToPage(0); toggleTOC(); };
     list.appendChild(titleItem);
 
+    // Curator page (Why Read This)
+    let pageOffset = 1;
+    if (novel.curator_statement) {
+        const curatorItem = document.createElement('a');
+        curatorItem.className = 'toc-item';
+        curatorItem.dataset.page = String(pageOffset);
+        curatorItem.innerHTML = '<span class="toc-scene-num">Foreword</span>Why Read This Book?';
+        curatorItem.onclick = () => { goToPage(pageOffset); toggleTOC(); };
+        list.appendChild(curatorItem);
+        pageOffset++;
+    }
+
     // Style guide
     const styleItem = document.createElement('a');
     styleItem.className = 'toc-item';
-    styleItem.dataset.page = '1';
+    styleItem.dataset.page = String(pageOffset);
     styleItem.innerHTML = '<span class="toc-scene-num">Reference</span>Visual Style Guide';
-    styleItem.onclick = () => { goToPage(1); toggleTOC(); };
+    styleItem.onclick = () => { goToPage(pageOffset); toggleTOC(); };
     list.appendChild(styleItem);
+    pageOffset++;
 
     // Scenes
     novel.panel_scripts.forEach((script, i) => {
         const item = document.createElement('a');
         item.className = 'toc-item';
-        item.dataset.page = String(i + 2);
+        item.dataset.page = String(i + pageOffset);
         item.innerHTML =
             `<span class="toc-scene-num">Scene ${script.scene_number}</span>` +
             script.scene_title;
-        item.onclick = () => { goToPage(i + 2); toggleTOC(); };
+        item.onclick = () => { goToPage(i + pageOffset); toggleTOC(); };
         list.appendChild(item);
     });
 
     // End page
+    const endPageIndex = novel.panel_scripts.length + pageOffset;
     const endItem = document.createElement('a');
     endItem.className = 'toc-item';
-    endItem.dataset.page = String(novel.panel_scripts.length + 2);
+    endItem.dataset.page = String(endPageIndex);
     endItem.innerHTML = '<span class="toc-scene-num">Epilogue</span>The End';
-    endItem.onclick = () => { goToPage(novel.panel_scripts.length + 2); toggleTOC(); };
+    endItem.onclick = () => { goToPage(endPageIndex); toggleTOC(); };
     list.appendChild(endItem);
 }
 

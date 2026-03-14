@@ -6,6 +6,7 @@ import logging
 from pathlib import Path
 
 from storywizard.agents.story_analyst import StoryAnalyst
+from storywizard.agents.curator import Curator
 from storywizard.agents.production_designer import ProductionDesigner
 from storywizard.agents.script_writer import ScriptWriter
 from storywizard.agents.artist import Artist
@@ -29,6 +30,7 @@ class PublishingPipeline:
     def __init__(self, config: PipelineConfig | None = None) -> None:
         self.config = config or PipelineConfig()
         self.story_analyst = StoryAnalyst(self.config)
+        self.curator = Curator(self.config)
         self.production_designer = ProductionDesigner(self.config)
         self.script_writer = ScriptWriter(self.config)
         self.artist = Artist(self.config)
@@ -54,16 +56,23 @@ class PublishingPipeline:
             len(analysis.themes),
         )
 
-        # Stage 2: Production Design
+        # Stage 2: The Curator — why this book matters
         logger.info("=" * 60)
-        logger.info("STAGE 2: Production Designer creating style guide")
+        logger.info("STAGE 2: The Curator articulating why this book matters")
+        logger.info("=" * 60)
+        curator_statement = self.curator.curate(analysis)
+        logger.info("Curator: \"%s\"", curator_statement.one_line)
+
+        # Stage 3: Production Design
+        logger.info("=" * 60)
+        logger.info("STAGE 3: Production Designer creating style guide")
         logger.info("=" * 60)
         style_guide = self.production_designer.design(analysis)
         logger.info("Style guide created: %s", style_guide.art_style)
 
-        # Stage 3: Script Writing
+        # Stage 4: Script Writing
         logger.info("=" * 60)
-        logger.info("STAGE 3: Script Writer creating panel scripts")
+        logger.info("STAGE 4: Script Writer creating panel scripts")
         logger.info("=" * 60)
         scripts = self.script_writer.write_all_scripts(
             analysis.scenes, analysis.characters, style_guide
@@ -71,16 +80,16 @@ class PublishingPipeline:
         total_panels = sum(len(s.panels) for s in scripts)
         logger.info("Created %d scripts with %d total panels", len(scripts), total_panels)
 
-        # Stage 4: Art Generation
+        # Stage 5: Art Generation
         logger.info("=" * 60)
-        logger.info("STAGE 4: Artist generating panels (%s backend)", self.config.image_backend)
+        logger.info("STAGE 5: Artist generating panels (%s backend)", self.config.image_backend)
         logger.info("=" * 60)
         panels = self.artist.generate_panels(scripts, style_guide, output_dir / "panels")
         logger.info("Generated %d panel images", len(panels))
 
-        # Stage 5: Editorial Review (with revision loop)
+        # Stage 6: Editorial Review (with revision loop)
         logger.info("=" * 60)
-        logger.info("STAGE 5: Critical Editor reviewing draft")
+        logger.info("STAGE 6: Critical Editor reviewing draft")
         logger.info("=" * 60)
         editorial_review = None
         for attempt in range(1, self.config.max_revision_rounds + 1):
@@ -106,9 +115,9 @@ class PublishingPipeline:
                 self.config.max_revision_rounds,
             )
 
-        # Stage 6: Focus Group
+        # Stage 7: Focus Group
         logger.info("=" * 60)
-        logger.info("STAGE 6: Focus Group evaluating from persona perspectives")
+        logger.info("STAGE 7: Focus Group evaluating from persona perspectives")
         logger.info("=" * 60)
         focus_feedback = self.focus_group.evaluate(
             metadata, style_guide, scripts, editorial_review
@@ -118,6 +127,7 @@ class PublishingPipeline:
         # Assemble final graphic novel
         graphic_novel = GraphicNovel(
             metadata=metadata,
+            curator_statement=curator_statement,
             style_guide=style_guide,
             panel_scripts=scripts,
             generated_panels=panels,
@@ -131,16 +141,16 @@ class PublishingPipeline:
         logger.info("=" * 60)
         render_graphic_novel(graphic_novel, output_dir)
 
-        # Stage 7: Web Publishing
+        # Stage 8: Web Publishing
         logger.info("=" * 60)
-        logger.info("STAGE 7: Web Publisher preparing for web delivery")
+        logger.info("STAGE 8: Web Publisher preparing for web delivery")
         logger.info("=" * 60)
         self.web_publisher.prepare_for_web(graphic_novel, output_dir)
         logger.info("Web-optimized data saved")
 
-        # Stage 8: Accessibility Review
+        # Stage 9: Accessibility Review
         logger.info("=" * 60)
-        logger.info("STAGE 8: Accessibility Reviewer checking web version")
+        logger.info("STAGE 9: Accessibility Reviewer checking web version")
         logger.info("=" * 60)
         a11y_review = self.accessibility_reviewer.review_accessibility(graphic_novel)
         logger.info(

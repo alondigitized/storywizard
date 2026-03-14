@@ -24,6 +24,14 @@ def create_jekyll_hyde_demo():
             "setting": "London",
             "time_period": "Victorian Era",
         },
+        "curator_statement": {
+            "human_truth": "Every person contains multitudes \u2014 impulses we act on and impulses we suppress. Stevenson gave form to the terrifying idea that the darkness inside us isn\u2019t a flaw to be fixed, but a fundamental part of who we are. Jekyll doesn\u2019t become Hyde; he already IS Hyde. The potion just removes the mask.",
+            "historical_moment": "Written in 1886, during the height of Victorian respectability, when gentlemen were expected to be moral pillars in public while London\u2019s underworld thrived in shadow. Stevenson wrote the entire novella in three feverish days, burned the first draft, and rewrote it in three more. It became an instant sensation \u2014 selling 40,000 copies in six months \u2014 because it said out loud what everyone secretly knew: the respectable facade was a lie.",
+            "living_relevance": "In an age of curated social media personas, where everyone projects a polished self while hiding their darker impulses, Jekyll and Hyde is more relevant than ever. We all maintain a public face and a private one. The story asks: what happens when the gap between who we pretend to be and who we actually are becomes unbridgeable?",
+            "invitation": "This isn\u2019t a long read \u2014 it\u2019s a short, sharp shock. In just five scenes, you\u2019ll follow the mystery of a sinister door, a trampled child, and a will that leaves everything to a man no one has ever seen. By the time you reach the final revelation, you\u2019ll understand why this story invented a phrase that\u2019s been part of our language for nearly 140 years. Everyone has a Hyde. Come meet yours.",
+            "one_line": "The story that gave us the language to talk about the darkness hiding inside every respectable person.",
+            "target_audience": "Young adults and adult readers",
+        },
         "style_guide": {
             "art_style": "Dark Victorian noir with ink wash textures — heavy shadows, gaslit atmosphere, influenced by Mike Mignola and Dave McKean",
             "color_palette": [
@@ -385,6 +393,14 @@ def create_frankenstein_demo():
             "genre": "Gothic Science Fiction",
             "setting": "Europe",
             "time_period": "18th Century",
+        },
+        "curator_statement": {
+            "human_truth": "What do you owe the life you create? Frankenstein is about the most primal form of abandonment \u2014 a parent who rejects their child because it didn\u2019t turn out as expected. The Creature isn\u2019t born evil; he\u2019s made evil by a world that refuses to see past his appearance. His rage is the rage of anyone who has ever been judged before they could speak.",
+            "historical_moment": "Mary Shelley was just eighteen years old when she began writing Frankenstein in 1816, during a stormy summer in Switzerland with Percy Shelley and Lord Byron. They challenged each other to write ghost stories. The two famous poets produced nothing memorable. The teenager produced the first science fiction novel ever written \u2014 a book that invented an entire genre and has never gone out of print in over two hundred years.",
+            "living_relevance": "As we build artificial intelligence, gene-edit embryos, and push the boundaries of what we can create, Frankenstein\u2019s central question has never been more urgent: just because we CAN create something, should we? And if we do, what responsibility do we bear for what we\u2019ve made? Victor Frankenstein is the patron saint of every technologist who ships first and asks questions later.",
+            "invitation": "Forget the bolts-in-the-neck movie monster \u2014 Shelley\u2019s Creature is eloquent, lonely, and heartbreaking. He teaches himself to read with Paradise Lost. He weeps when a family he secretly loves rejects him. And when he finally confronts his creator on an Alpine glacier, their conversation is one of the most powerful scenes in all of literature. This is the book that started science fiction, written by a teenage girl. Come find out why it still matters.",
+            "one_line": "Written by an eighteen-year-old woman in 1818, this is the book that invented science fiction \u2014 and the question it asks about creating life has never been more urgent.",
+            "target_audience": "Young adults and adult readers",
         },
         "style_guide": {
             "art_style": "Romantic-era oil painting aesthetic with dramatic chiaroscuro — influenced by Caspar David Friedrich's sublime landscapes and Fuseli's nightmarish figures",

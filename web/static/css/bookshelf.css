@@ -194,7 +194,16 @@
 .book-author {
     font-size: 0.8rem;
     color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.book-oneline {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--accent);
+    line-height: 1.4;
     margin-bottom: 0.5rem;
+    opacity: 0.9;
 }
 
 .book-meta {

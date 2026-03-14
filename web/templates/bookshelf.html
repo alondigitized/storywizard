@@ -61,6 +61,9 @@
                 <div class="book-info">
                     <h4>{{ novel.metadata.title }}</h4>
                     <p class="book-author">{{ novel.metadata.author }}</p>
+                    {% if novel.curator_statement %}
+                    <p class="book-oneline">{{ novel.curator_statement.one_line }}</p>
+                    {% endif %}
                     <div class="book-meta">
                         <span class="meta-tag">{{ novel.metadata.genre }}</span>
                         <span class="meta-tag">{{ novel.generated_panels|length }} Panels</span>

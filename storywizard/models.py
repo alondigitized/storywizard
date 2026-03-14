@@ -118,6 +118,29 @@ class VisualStyleGuide(BaseModel):
     )
 
 
+class CuratorStatement(BaseModel):
+    """The Curator's statement on why this book matters."""
+
+    human_truth: str = Field(
+        description="The universal human experience this book captures"
+    )
+    historical_moment: str = Field(
+        description="When/why it was written and what made it revolutionary"
+    )
+    living_relevance: str = Field(
+        description="Why it matters right now, today"
+    )
+    invitation: str = Field(
+        description="A warm, compelling reason to read this book"
+    )
+    one_line: str = Field(
+        description="A single powerful sentence capturing why this book endures"
+    )
+    target_audience: str = Field(
+        default="", description="Who this statement is written for"
+    )
+
+
 class GeneratedPanel(BaseModel):
     """An artist-produced panel with image prompt and result."""
 
@@ -160,6 +183,7 @@ class GraphicNovel(BaseModel):
     """The complete graphic novel output."""
 
     metadata: StoryMetadata
+    curator_statement: CuratorStatement | None = None
     style_guide: VisualStyleGuide
     panel_scripts: list[PanelScript]
     generated_panels: list[GeneratedPanel]

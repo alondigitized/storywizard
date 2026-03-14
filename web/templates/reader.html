@@ -73,8 +73,41 @@
                 </div>
             </div>
 
+            <!-- Why Read This page (Curator's statement) -->
+            {% if novel.curator_statement %}
+            <div class="page curator-page" data-page="1">
+                <div class="page-content">
+                    <h2>Why Read This Book?</h2>
+                    <div class="curator-statement">
+                        <div class="curator-oneline">
+                            <p>{{ novel.curator_statement.one_line }}</p>
+                        </div>
+
+                        <div class="curator-section">
+                            <h3>The Human Truth</h3>
+                            <p>{{ novel.curator_statement.human_truth }}</p>
+                        </div>
+
+                        <div class="curator-section">
+                            <h3>The Historical Moment</h3>
+                            <p>{{ novel.curator_statement.historical_moment }}</p>
+                        </div>
+
+                        <div class="curator-section">
+                            <h3>Why It Matters Now</h3>
+                            <p>{{ novel.curator_statement.living_relevance }}</p>
+                        </div>
+
+                        <div class="curator-invitation">
+                            <p>{{ novel.curator_statement.invitation }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
             <!-- Style guide page -->
-            <div class="page style-page" data-page="1">
+            <div class="page style-page" data-page="{{ 2 if novel.curator_statement else 1 }}">
                 <div class="page-content">
                     <h2>Visual Style Guide</h2>
                     <div class="style-guide-content">
@@ -118,7 +151,7 @@
 
             <!-- Scene pages -->
             {% for script in novel.panel_scripts %}
-            <div class="page scene-page" data-page="{{ loop.index + 1 }}" data-scene="{{ script.scene_number }}">
+            <div class="page scene-page" data-scene="{{ script.scene_number }}">
                 <div class="page-content">
                     <div class="scene-header">
                         <span class="scene-number">Scene {{ script.scene_number }}</span>
@@ -178,7 +211,7 @@
             {% endfor %}
 
             <!-- End page -->
-            <div class="page end-page" data-page="{{ novel.panel_scripts|length + 2 }}">
+            <div class="page end-page">
                 <div class="title-content">
                     <h2>The End</h2>
                     <div class="title-divider"></div>
