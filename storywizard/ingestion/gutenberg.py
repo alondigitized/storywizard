@@ -55,6 +55,14 @@ CANDIDATES = {
         setting="Europe",
         time_period="18th century",
     ),
+    77416: StoryMetadata(
+        title="Romance of the Three Kingdoms",
+        author="Luo Guanzhong (trans. C.H. Brewitt-Taylor)",
+        gutenberg_id=77416,
+        genre="Mythic martial arts adventure",
+        setting="Ancient China — Han Dynasty collapse",
+        time_period="Late 2nd century CE",
+    ),
 }
 
 

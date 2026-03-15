@@ -91,6 +91,20 @@ class TestPipelineConfigValidation:
         errors = config.validate()
         assert not any("flux_num_inference_steps" in e for e in errors)
 
+    def test_kontext_guidance_scale_bounds(self):
+        config = PipelineConfig(kontext_guidance_scale=0.5)
+        errors = config.validate()
+        assert any("kontext_guidance_scale" in e for e in errors)
+
+        config2 = PipelineConfig(kontext_guidance_scale=25.0)
+        errors2 = config2.validate()
+        assert any("kontext_guidance_scale" in e for e in errors2)
+
+    def test_kontext_guidance_scale_valid(self):
+        config = PipelineConfig(kontext_guidance_scale=4.0)
+        errors = config.validate()
+        assert not any("kontext_guidance_scale" in e for e in errors)
+
     def test_default_values(self):
         config = PipelineConfig()
         assert config.model_name == "claude-sonnet-4-6"
@@ -105,3 +119,11 @@ class TestPipelineConfigValidation:
         assert config.flux_num_inference_steps == 28
         assert config.flux_negative_prompt != ""
         assert config.flux_reference_strength == 0.50
+        assert config.character_ref_enabled is True
+        assert config.character_ref_model == "fal-ai/recraft/v4/pro/text-to-image"
+        assert config.character_ref_aspect_ratio == "portrait_4_3"
+        assert config.character_ref_roles == ["protagonist", "antagonist"]
+        assert config.kontext_model == "fal-ai/flux-pro/kontext"
+        assert config.kontext_guidance_scale == 4.0
+        assert config.group_ref_enabled is True
+        assert config.group_ref_min_appearances == 3

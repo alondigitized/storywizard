@@ -86,3 +86,4 @@ class TestCandidates:
         assert 11 in CANDIDATES  # Alice in Wonderland
         assert 46 in CANDIDATES  # A Christmas Carol
         assert 174 in CANDIDATES  # Dorian Gray
+        assert 77416 in CANDIDATES  # Three Kingdoms

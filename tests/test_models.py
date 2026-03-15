@@ -5,6 +5,8 @@ from pydantic import ValidationError
 
 from storywizard.models import (
     Character,
+    CharacterDesign,
+    CharacterGroupReference,
     CuratorStatement,
     EditorialReview,
     FocusGroupFeedback,
@@ -162,6 +164,15 @@ class TestPanel:
         assert p.dialogue == []
         assert p.narration == ""
         assert p.sound_effects == []
+        assert p.characters == []
+
+    def test_with_characters(self):
+        p = Panel(
+            panel_number=1,
+            visual_direction="Wide shot",
+            characters=["Liu Bei", "Guan Yu"],
+        )
+        assert p.characters == ["Liu Bei", "Guan Yu"]
 
 
 class TestPanelScript:
@@ -176,6 +187,63 @@ class TestPanelScript:
             ],
         )
         assert len(script.panels) == 2
+
+
+# --- CharacterDesign reference fields ---
+
+class TestCharacterDesignRefs:
+    def test_defaults(self):
+        cd = CharacterDesign(character_name="Alice", appearance="Blonde girl")
+        assert cd.reference_image_url == ""
+        assert cd.reference_image_path == ""
+
+    def test_with_references(self):
+        cd = CharacterDesign(
+            character_name="Alice",
+            appearance="Blonde girl",
+            reference_image_url="https://cdn.example.com/alice.png",
+            reference_image_path="/output/refs/alice.png",
+        )
+        assert cd.reference_image_url == "https://cdn.example.com/alice.png"
+
+
+# --- CharacterGroupReference ---
+
+class TestCharacterGroupReference:
+    def test_basic_creation(self):
+        gr = CharacterGroupReference(
+            character_names=["Liu Bei", "Guan Yu", "Zhang Fei"],
+            reference_image_url="https://cdn.example.com/group.png",
+        )
+        assert len(gr.character_names) == 3
+        assert gr.reference_image_url != ""
+
+    def test_defaults(self):
+        gr = CharacterGroupReference(character_names=["A", "B"])
+        assert gr.reference_image_url == ""
+        assert gr.reference_image_path == ""
+
+
+# --- VisualStyleGuide group_references ---
+
+class TestVisualStyleGuideGroups:
+    def test_group_references_default(self):
+        sg = make_style_guide()
+        assert sg.group_references == []
+
+    def test_with_group_references(self):
+        sg = VisualStyleGuide(
+            art_style="Ink wash",
+            color_palette=["#000 - ink"],
+            group_references=[
+                CharacterGroupReference(
+                    character_names=["Liu Bei", "Guan Yu"],
+                    reference_image_url="https://example.com/group.png",
+                )
+            ],
+        )
+        assert len(sg.group_references) == 1
+        assert sg.group_references[0].character_names == ["Liu Bei", "Guan Yu"]
 
 
 # --- GeneratedPanel ---
@@ -199,6 +267,19 @@ class TestGeneratedPanel:
             seed=4201,
         )
         assert gp.seed == 4201
+
+    def test_reference_source_default(self):
+        gp = GeneratedPanel(
+            scene_number=1, panel_number=1, image_prompt="prompt",
+        )
+        assert gp.reference_source == ""
+
+    def test_reference_source_character(self):
+        gp = GeneratedPanel(
+            scene_number=1, panel_number=1, image_prompt="prompt",
+            reference_source="character:Guan Yu",
+        )
+        assert gp.reference_source == "character:Guan Yu"
 
     def test_json_round_trip_with_seed(self):
         gp = GeneratedPanel(

@@ -26,11 +26,29 @@ class PipelineConfig:
     flux_guidance_scale: float = 7.0  # 1.0-20.0; higher = more prompt-adherent
     flux_num_inference_steps: int = 28  # 1-100; higher = better quality
     flux_negative_prompt: str = (
+        "text, words, lettering, typography, title, caption, speech bubble, subtitle, "
+        "watermark, signature, "
         "photograph, photo, photorealistic, 3D render, CGI, anime, manga, "
         "cartoon, cel-shaded, flat color, vector art, stock photo, film still, "
         "movie screenshot"
     )
     flux_reference_strength: float = 0.50  # 0.0-1.0; style anchor strength
+
+    # Character reference generation
+    character_ref_enabled: bool = True
+    character_ref_model: str = "fal-ai/recraft/v4/pro/text-to-image"
+    character_ref_aspect_ratio: str = "portrait_4_3"
+    character_ref_roles: list[str] = field(
+        default_factory=lambda: ["protagonist", "antagonist"]
+    )
+
+    # Kontext (character-consistent panel generation)
+    kontext_model: str = "fal-ai/flux-pro/kontext"
+    kontext_guidance_scale: float = 4.0
+
+    # Group references
+    group_ref_enabled: bool = True
+    group_ref_min_appearances: int = 3
 
     # Pipeline tuning
     max_scenes: int = 15
@@ -83,6 +101,11 @@ class PipelineConfig:
         if not (0.0 <= self.flux_reference_strength <= 1.0):
             errors.append(
                 f"flux_reference_strength must be between 0.0 and 1.0, got {self.flux_reference_strength}."
+            )
+
+        if not (1.0 <= self.kontext_guidance_scale <= 20.0):
+            errors.append(
+                f"kontext_guidance_scale must be between 1.0 and 20.0, got {self.kontext_guidance_scale}."
             )
 
         return errors

@@ -32,7 +32,8 @@ class ScriptWriter(BaseAgent):
         "- Show, don't tell — convert prose descriptions into visual action\n"
         "- Dialogue should be adapted from the source, not copied verbatim — "
         "keep it natural for speech bubbles\n"
-        "- Use narration sparingly — only when visual storytelling needs support"
+        "- Use narration sparingly — only when visual storytelling needs support\n"
+        "- For each panel, list the CHARACTER NAMES present (from the character list provided)"
     )
 
     def write_script(

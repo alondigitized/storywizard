@@ -70,6 +70,26 @@ class PublishingPipeline:
         style_guide = self.production_designer.design(analysis)
         logger.info("Style guide created: %s", style_guide.art_style)
 
+        # Stage 3.5: Character Reference Generation
+        if self.config.character_ref_enabled and self.config.image_backend == "flux":
+            logger.info("=" * 60)
+            logger.info("STAGE 3.5: Generating character reference portraits")
+            logger.info("=" * 60)
+            from storywizard.agents.character_ref_generator import (
+                CharacterReferenceGenerator,
+            )
+            char_ref_gen = CharacterReferenceGenerator(self.config)
+            style_guide = char_ref_gen.generate_references(
+                style_guide, analysis.scenes, output_dir / "character_refs"
+            )
+            ref_count = sum(
+                1 for cd in style_guide.character_designs if cd.reference_image_url
+            )
+            group_count = len(style_guide.group_references)
+            logger.info(
+                "Generated %d character refs, %d group refs", ref_count, group_count
+            )
+
         # Stage 4: Script Writing
         logger.info("=" * 60)
         logger.info("STAGE 4: Script Writer creating panel scripts")

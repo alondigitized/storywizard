@@ -68,6 +68,10 @@ class Panel(BaseModel):
     )
     narration: str = Field(default="", description="Caption/narration box text")
     sound_effects: list[str] = Field(default_factory=list)
+    characters: list[str] = Field(
+        default_factory=list,
+        description="Character names present in this panel",
+    )
 
 
 class PanelScript(BaseModel):
@@ -89,6 +93,16 @@ class CharacterDesign(BaseModel):
     clothing: str = ""
     distinguishing_features: list[str] = Field(default_factory=list)
     color_associations: list[str] = Field(default_factory=list)
+    reference_image_url: str = ""
+    reference_image_path: str = ""
+
+
+class CharacterGroupReference(BaseModel):
+    """Reference image for a group of characters that frequently appear together."""
+
+    character_names: list[str]
+    reference_image_url: str = ""
+    reference_image_path: str = ""
 
 
 class VisualStyleGuide(BaseModel):
@@ -116,6 +130,7 @@ class VisualStyleGuide(BaseModel):
         default="",
         description="Complete style guide as markdown for reference",
     )
+    group_references: list[CharacterGroupReference] = Field(default_factory=list)
 
 
 class CuratorStatement(BaseModel):
@@ -150,6 +165,10 @@ class GeneratedPanel(BaseModel):
     image_path: str = Field(default="", description="Path to the generated image")
     alt_text: str = Field(default="", description="Accessibility description")
     seed: int | None = Field(default=None, description="Seed used for image generation")
+    reference_source: str = Field(
+        default="",
+        description="Reference image source, e.g. 'character:Guan Yu', 'group:Liu Bei+Guan Yu', 'style_anchor'",
+    )
 
 
 class EditorialReview(BaseModel):

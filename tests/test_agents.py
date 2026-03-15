@@ -292,3 +292,124 @@ class TestArtistFluxArguments:
             )
             content = path.read_text()
             assert "SEED:" not in content
+
+    def test_mock_generate_includes_reference_source(self):
+        """Mock backend should write reference source to prompt file."""
+        config = PipelineConfig()
+        artist = Artist(config)
+
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = artist._mock_generate(
+                "test prompt", "test_file", Path(tmpdir),
+                reference_source="character:Guan Yu",
+            )
+            content = path.read_text()
+            assert "REFERENCE: character:Guan Yu" in content
+
+    def test_mock_generate_no_reference_source(self):
+        """Mock backend should omit REFERENCE line when source is empty."""
+        config = PipelineConfig()
+        artist = Artist(config)
+
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = artist._mock_generate(
+                "test prompt", "test_file", Path(tmpdir),
+            )
+            content = path.read_text()
+            assert "REFERENCE:" not in content
+
+
+class TestArtistReferenceSelection:
+    """Tests for _select_reference_image and _detect_panel_characters."""
+
+    def test_detect_panel_characters_explicit(self):
+        """Explicit panel.characters list should be used when present."""
+        config = PipelineConfig()
+        artist = Artist(config)
+        style_guide = _make_style_guide_with_characters()
+        panel = Panel(
+            panel_number=1,
+            visual_direction="Wide shot",
+            characters=["Dr. Jekyll"],
+        )
+        result = artist._detect_panel_characters(panel, style_guide)
+        assert result == ["Dr. Jekyll"]
+
+    def test_detect_panel_characters_fallback(self):
+        """Falls back to substring matching when panel.characters is empty."""
+        config = PipelineConfig()
+        artist = Artist(config)
+        style_guide = _make_style_guide_with_characters()
+        panel = Panel(
+            panel_number=1,
+            visual_direction="Dr. Jekyll walks through fog",
+        )
+        result = artist._detect_panel_characters(panel, style_guide)
+        assert "Dr. Jekyll" in result
+
+    def test_select_character_reference(self):
+        """Should select character reference when available."""
+        config = PipelineConfig()
+        artist = Artist(config)
+        style_guide = _make_style_guide_with_characters()
+        style_guide.character_designs[0].reference_image_url = "https://cdn.example.com/jekyll.png"
+
+        panel = Panel(
+            panel_number=1,
+            visual_direction="Dr. Jekyll enters",
+            characters=["Dr. Jekyll"],
+        )
+        script = _make_panel_script()
+        url, source, is_char = artist._select_reference_image(
+            panel, script, style_guide, "https://style-anchor.png",
+        )
+        assert url == "https://cdn.example.com/jekyll.png"
+        assert source == "character:Dr. Jekyll"
+        assert is_char is True
+
+    def test_select_style_anchor_fallback(self):
+        """Should fall back to style anchor when no character refs exist."""
+        config = PipelineConfig()
+        artist = Artist(config)
+        style_guide = _make_style_guide_with_characters()
+
+        panel = Panel(
+            panel_number=1,
+            visual_direction="Dr. Jekyll enters",
+            characters=["Dr. Jekyll"],
+        )
+        script = _make_panel_script()
+        url, source, is_char = artist._select_reference_image(
+            panel, script, style_guide, "https://style-anchor.png",
+        )
+        assert url == "https://style-anchor.png"
+        assert source == "style_anchor"
+        assert is_char is False
+
+    def test_select_group_reference(self):
+        """Should prefer group reference when 2+ group members present."""
+        config = PipelineConfig()
+        artist = Artist(config)
+        style_guide = _make_style_guide_with_characters()
+        from storywizard.models import CharacterGroupReference
+        style_guide.group_references.append(
+            CharacterGroupReference(
+                character_names=["Dr. Jekyll", "Mr. Hyde"],
+                reference_image_url="https://cdn.example.com/group.png",
+            )
+        )
+
+        panel = Panel(
+            panel_number=1,
+            visual_direction="The transformation",
+            characters=["Dr. Jekyll", "Mr. Hyde"],
+        )
+        script = _make_panel_script()
+        url, source, is_char = artist._select_reference_image(
+            panel, script, style_guide, "https://style-anchor.png",
+        )
+        assert url == "https://cdn.example.com/group.png"
+        assert "group:" in source
+        assert is_char is True

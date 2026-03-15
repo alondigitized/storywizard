@@ -32,8 +32,8 @@ def main() -> None:
         help="Maximum number of scenes to extract (default: 15)",
     )
     parser.add_argument(
-        "--flux-model", default="fal-ai/flux/dev",
-        help="fal.ai model ID for Flux (default: fal-ai/flux/dev)",
+        "--flux-model", default="fal-ai/flux-general",
+        help="fal.ai model ID for Flux (default: fal-ai/flux-general)",
     )
     parser.add_argument(
         "--flux-aspect", default="landscape_16_9",
@@ -44,8 +44,8 @@ def main() -> None:
         help="Base seed for deterministic image generation (default: random)",
     )
     parser.add_argument(
-        "--flux-guidance", type=float, default=3.5,
-        help="Guidance scale for prompt adherence, 1.0-20.0 (default: 3.5)",
+        "--flux-guidance", type=float, default=7.0,
+        help="Guidance scale for prompt adherence, 1.0-20.0 (default: 7.0)",
     )
     parser.add_argument(
         "--flux-steps", type=int, default=28,
@@ -54,6 +54,10 @@ def main() -> None:
     parser.add_argument(
         "--flux-negative", default="",
         help="Negative prompt — concepts to exclude from generation",
+    )
+    parser.add_argument(
+        "--no-character-refs", action="store_true",
+        help="Disable character reference portrait generation",
     )
     args = parser.parse_args()
 
@@ -66,6 +70,7 @@ def main() -> None:
         flux_guidance_scale=args.flux_guidance,
         flux_num_inference_steps=args.flux_steps,
         flux_negative_prompt=args.flux_negative,
+        character_ref_enabled=not args.no_character_refs,
     )
 
     errors = config.validate()

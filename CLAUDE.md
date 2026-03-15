@@ -80,6 +80,7 @@ python run.py [BOOK_ID] [OPTIONS]
 | 11 | Alice's Adventures in Wonderland |
 | 46 | A Christmas Carol |
 | 174 | The Picture of Dorian Gray |
+| 77416 | Romance of the Three Kingdoms (Vol. 1) |
 
 ## Key Conventions
 

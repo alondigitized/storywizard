@@ -69,6 +69,8 @@ def generate_recraft(prompt: str) -> tuple[bytes, str]:
     """Generate with Recraft V4 Pro. Returns (PNG bytes, CDN URL)."""
     import fal_client
 
+    prompt += " No text, words, lettering, or typography in the image."
+
     arguments = {
         "prompt": prompt,
         "image_size": "landscape_16_9",
@@ -110,6 +112,8 @@ def generate_kontext(
     """Generate with FLUX Pro Kontext. Returns (PNG bytes, CDN URL)."""
     import fal_client
 
+    prompt += " No text, words, lettering, or typography in the image."
+
     arguments = {
         "prompt": prompt,
         "image_url": image_url,
@@ -149,10 +153,87 @@ def generate_kontext(
     ) from last_error
 
 
+def load_character_refs(novel_json: Path) -> dict[str, str]:
+    """Load character reference URLs from novel.json character_designs.
+
+    Returns a mapping of character_name -> reference_image_url.
+    """
+    if not novel_json.exists():
+        return {}
+    novel = json.loads(novel_json.read_text(encoding="utf-8"))
+    style_guide = novel.get("style_guide", {})
+    refs = {}
+    for cd in style_guide.get("character_designs", []):
+        url = cd.get("reference_image_url", "")
+        if url:
+            refs[cd["character_name"]] = url
+    # Also load group references
+    for gr in style_guide.get("group_references", []):
+        url = gr.get("reference_image_url", "")
+        if url:
+            key = "+".join(sorted(gr["character_names"]))
+            refs[f"group:{key}"] = url
+    return refs
+
+
+def select_reference_for_panel(
+    prompt_text: str,
+    character_refs: dict[str, str],
+    style_anchor_url: str | None,
+) -> tuple[str | None, str]:
+    """Select best reference image for a panel.
+
+    Returns (url, source_description).
+    Priority: group ref > individual character ref > style anchor.
+    """
+    if not character_refs:
+        return style_anchor_url, "style_anchor" if style_anchor_url else ""
+
+    prompt_lower = prompt_text.lower()
+
+    # Check group references first
+    for key, url in character_refs.items():
+        if key.startswith("group:"):
+            names = key[6:].split("+")
+            matches = sum(1 for n in names if n.lower() in prompt_lower)
+            if matches >= 2:
+                return url, key
+
+    # Check individual character references
+    for name, url in character_refs.items():
+        if not name.startswith("group:") and name.lower() in prompt_lower:
+            return url, f"character:{name}"
+
+    # Fall back to style anchor
+    if style_anchor_url:
+        return style_anchor_url, "style_anchor"
+
+    return None, ""
+
+
 def main() -> None:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Generate panels for Frankenstein")
+    parser.add_argument(
+        "--character-refs", action="store_true",
+        help="Use character reference portraits from novel.json for consistency",
+    )
+    script_args = parser.parse_args()
+
     if not os.environ.get("FAL_KEY"):
         print("ERROR: FAL_KEY environment variable is required.", file=sys.stderr)
         sys.exit(1)
+
+    # Load character references if requested
+    character_refs: dict[str, str] = {}
+    if script_args.character_refs:
+        character_refs = load_character_refs(NOVEL_JSON)
+        if character_refs:
+            print(f"Loaded {len(character_refs)} character/group references from novel.json")
+        else:
+            print("WARNING: --character-refs specified but no references found in novel.json",
+                  file=sys.stderr)
 
     # Discover panels for target scenes
     panels_to_generate = []
@@ -173,6 +254,8 @@ def main() -> None:
     print(f"Generating {len(panels_to_generate)} panels for scenes {SCENES}")
     print(f"  Panel 1: Recraft V4 Pro (style anchor with color palette)")
     print(f"  Panels 2-{len(panels_to_generate)}: FLUX Pro Kontext (style-anchored)")
+    if character_refs:
+        print(f"  Character references: enabled ({len(character_refs)} refs)")
     print()
 
     generated_files = []
@@ -199,11 +282,15 @@ def main() -> None:
             style_anchor_url = cdn_url
             print(f"  Style anchor URL: {cdn_url}")
         else:
-            # Subsequent panels: FLUX Pro Kontext
+            # Select reference: character ref > style anchor
+            ref_url, ref_source = select_reference_for_panel(
+                prompt, character_refs, style_anchor_url,
+            )
+            ref_label = f" [{ref_source}]" if ref_source != "style_anchor" else ""
             print(f"[{len(generated_files)+1}/{len(panels_to_generate)}] "
-                  f"scene {scene_num}, panel {panel_num} (seed={seed}) — Kontext")
+                  f"scene {scene_num}, panel {panel_num} (seed={seed}) — Kontext{ref_label}")
             png_bytes, cdn_url = generate_kontext(
-                prompt, seed, image_url=style_anchor_url,
+                prompt, seed, image_url=ref_url or style_anchor_url,
             )
 
         png_path.write_bytes(png_bytes)

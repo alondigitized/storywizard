@@ -9,7 +9,13 @@ from pathlib import Path
 import httpx
 
 from storywizard.agents.base import BaseAgent
-from storywizard.models import GeneratedPanel, Panel, PanelScript, VisualStyleGuide
+from storywizard.models import (
+    CharacterDesign,
+    GeneratedPanel,
+    Panel,
+    PanelScript,
+    VisualStyleGuide,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -34,7 +40,10 @@ class Artist(BaseAgent):
         "and visual rules from the style guide\n"
         "5. Captures the EMOTION — the feeling the image should evoke\n"
         "6. Maintains CHARACTER IDENTITY — always include exact appearance, clothing, "
-        "and distinguishing features as specified in the character designs\n\n"
+        "and distinguishing features as specified in the character designs\n"
+        "7. NEVER include text, words, lettering, titles, captions, speech bubbles, "
+        "or typography in the image — AI generators render text as illegible "
+        "garbled shapes. All dialogue and narration will be overlaid separately.\n\n"
         "Your prompts should be detailed enough for an AI image generator to "
         "produce a high-quality, consistent result. Always reference the style "
         "guide to maintain visual coherence across all panels.\n\n"
@@ -79,9 +88,15 @@ class Artist(BaseAgent):
                         + panel.panel_number
                     )
 
+                # Select best reference image (character > group > style anchor)
+                ref_url, ref_source, is_char_ref = self._select_reference_image(
+                    panel, script, style_guide, style_anchor_url,
+                )
+
                 image_path, cdn_url = self._generate_image(
                     prompt, script.scene_number, panel.panel_number, output_dir,
-                    seed=seed, reference_image_url=style_anchor_url,
+                    seed=seed, reference_image_url=ref_url,
+                    is_character_ref=is_char_ref, reference_source=ref_source,
                 )
 
                 # First panel becomes the style anchor for all subsequent panels
@@ -97,21 +112,73 @@ class Artist(BaseAgent):
                         image_path=str(image_path),
                         alt_text=panel.visual_direction,
                         seed=seed,
+                        reference_source=ref_source,
                     )
                 )
 
                 # Register first appearances of characters in this panel
-                panel_text = f"{panel.visual_direction} {panel.narration}"
-                for cd in style_guide.character_designs:
-                    if (
-                        cd.character_name not in character_prompt_registry
-                        and cd.character_name.lower() in panel_text.lower()
-                    ):
-                        character_prompt_registry[cd.character_name] = (
+                panel_chars = self._detect_panel_characters(panel, style_guide)
+                for char_name in panel_chars:
+                    if char_name not in character_prompt_registry:
+                        character_prompt_registry[char_name] = (
                             f"scene {script.scene_number}, panel {panel.panel_number}"
                         )
 
         return generated
+
+    def _detect_panel_characters(
+        self, panel: Panel, style_guide: VisualStyleGuide,
+    ) -> list[str]:
+        """Detect which characters are in a panel.
+
+        Uses explicit panel.characters list if available, falls back to
+        substring matching on visual_direction + narration.
+        """
+        if panel.characters:
+            return panel.characters
+        panel_text = f"{panel.visual_direction} {panel.narration}".lower()
+        return [
+            cd.character_name
+            for cd in style_guide.character_designs
+            if cd.character_name.lower() in panel_text
+        ]
+
+    def _select_reference_image(
+        self,
+        panel: Panel,
+        script: PanelScript,
+        style_guide: VisualStyleGuide,
+        style_anchor_url: str | None,
+    ) -> tuple[str | None, str, bool]:
+        """Select the best reference image for this panel.
+
+        Priority: group reference > individual character reference > style anchor.
+        Returns (url, source_description, is_character_ref).
+        """
+        panel_chars = self._detect_panel_characters(panel, style_guide)
+        panel_chars_set = set(panel_chars)
+
+        # 1. Check group references — match if 2+ group members are present
+        for group_ref in style_guide.group_references:
+            overlap = panel_chars_set & set(group_ref.character_names)
+            if len(overlap) >= 2 and group_ref.reference_image_url:
+                source = f"group:{'+'.join(sorted(group_ref.character_names))}"
+                logger.debug("Using group reference for panel %d: %s", panel.panel_number, source)
+                return group_ref.reference_image_url, source, True
+
+        # 2. Check individual character references — use primary character
+        for char_name in panel_chars:
+            for cd in style_guide.character_designs:
+                if cd.character_name == char_name and cd.reference_image_url:
+                    source = f"character:{cd.character_name}"
+                    logger.debug("Using character reference for panel %d: %s", panel.panel_number, source)
+                    return cd.reference_image_url, source, True
+
+        # 3. Fall back to style anchor
+        if style_anchor_url:
+            return style_anchor_url, "style_anchor", False
+
+        return None, "", False
 
     def _craft_image_prompt(
         self,
@@ -170,23 +237,36 @@ class Artist(BaseAgent):
             f"{char_designs_block}"
             f"{prev_chars_block}"
             f"Return ONLY the image generation prompt text, nothing else. "
-            f"Keep it under 500 words."
+            f"Keep it under 500 words.\n\n"
+            f"IMPORTANT: Do NOT include any text, words, lettering, or speech bubbles "
+            f"in the prompt — text will be added separately in post-production."
         )
         return self.invoke(prompt)
 
     def _generate_image(
         self, prompt: str, scene_num: int, panel_num: int, output_dir: Path,
         *, seed: int | None = None, reference_image_url: str | None = None,
+        is_character_ref: bool = False, reference_source: str = "",
     ) -> tuple[Path, str | None]:
         """Generate an image using the configured backend.
 
         Returns (local_path, cdn_url). cdn_url is None for mock backend.
+        When is_character_ref is True and backend is "flux", routes to Kontext
+        instead of flux-general for character-consistent generation.
         """
         filename = f"scene{scene_num:02d}_panel{panel_num:02d}"
 
         if self.config.image_backend == "mock":
-            return self._mock_generate(prompt, filename, output_dir, seed=seed), None
+            return self._mock_generate(
+                prompt, filename, output_dir,
+                seed=seed, reference_source=reference_source,
+            ), None
         elif self.config.image_backend == "flux":
+            if is_character_ref and reference_image_url:
+                return self._kontext_generate(
+                    prompt, filename, output_dir,
+                    seed=seed, image_url=reference_image_url,
+                )
             return self._flux_generate(
                 prompt, filename, output_dir,
                 seed=seed, reference_image_url=reference_image_url,
@@ -199,14 +279,16 @@ class Artist(BaseAgent):
 
     def _mock_generate(
         self, prompt: str, filename: str, output_dir: Path,
-        *, seed: int | None = None,
+        *, seed: int | None = None, reference_source: str = "",
     ) -> Path:
         """Mock image generation — saves the prompt as a text file."""
         path = output_dir / f"{filename}.prompt.txt"
         seed_line = f"SEED: {seed}\n" if seed is not None else ""
+        ref_line = f"REFERENCE: {reference_source}\n" if reference_source else ""
         path.write_text(
             f"[MOCK IMAGE — would be generated by AI image API]\n\n"
             f"{seed_line}"
+            f"{ref_line}"
             f"IMAGE PROMPT:\n{prompt}\n",
             encoding="utf-8",
         )
@@ -295,5 +377,80 @@ class Artist(BaseAgent):
 
         raise RuntimeError(
             f"Flux image generation failed after {self._FLUX_MAX_RETRIES} attempts: "
+            f"{last_error}"
+        ) from last_error
+
+    def _kontext_generate(
+        self, prompt: str, filename: str, output_dir: Path,
+        *, seed: int | None = None, image_url: str,
+    ) -> tuple[Path, str]:
+        """Generate an image using FLUX Pro Kontext for character consistency.
+
+        Uses a character/group reference image via image_url to maintain
+        character identity across panels.
+
+        Returns (local_path, cdn_url).
+        """
+        import fal_client
+
+        model = self.config.kontext_model
+        logger.info("Calling Kontext model via fal.ai: %s", model)
+
+        prompt_with_suffix = prompt + " No text, words, lettering, or typography in the image."
+
+        arguments: dict = {
+            "prompt": prompt_with_suffix,
+            "image_url": image_url,
+            "guidance_scale": self.config.kontext_guidance_scale,
+            "num_images": 1,
+            "output_format": "png",
+            "aspect_ratio": "16:9",
+            "safety_tolerance": "6",
+        }
+        if seed is not None:
+            arguments["seed"] = seed
+
+        last_error = None
+        for attempt in range(1, self._FLUX_MAX_RETRIES + 1):
+            try:
+                result = fal_client.subscribe(model, arguments=arguments)
+                result_url = result["images"][0]["url"]
+
+                path = output_dir / f"{filename}.png"
+                response = httpx.get(result_url, timeout=60.0)
+                response.raise_for_status()
+
+                if len(response.content) < self._MIN_IMAGE_BYTES:
+                    raise ValueError(
+                        f"Image too small ({len(response.content)} bytes), "
+                        f"likely corrupted"
+                    )
+
+                path.write_bytes(response.content)
+
+                # Save prompt alongside for reference
+                prompt_path = output_dir / f"{filename}.prompt.txt"
+                seed_line = f"SEED: {seed}\n" if seed is not None else ""
+                prompt_path.write_text(
+                    f"{seed_line}IMAGE PROMPT:\n{prompt}\n", encoding="utf-8"
+                )
+
+                logger.info(
+                    "Kontext image saved: %s (%d bytes)", path, len(response.content)
+                )
+                return path, result_url
+
+            except Exception as e:
+                last_error = e
+                if attempt < self._FLUX_MAX_RETRIES:
+                    wait = self._FLUX_RETRY_BACKOFF ** attempt
+                    logger.warning(
+                        "Kontext generation failed (attempt %d/%d): %s — retrying in %.1fs",
+                        attempt, self._FLUX_MAX_RETRIES, e, wait,
+                    )
+                    time.sleep(wait)
+
+        raise RuntimeError(
+            f"Kontext image generation failed after {self._FLUX_MAX_RETRIES} attempts: "
             f"{last_error}"
         ) from last_error
