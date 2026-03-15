@@ -1849,5 +1849,6 @@
   "cover_bg": "#1a1a2e",
   "reading_time_minutes": 178,
   "target_audience": "All readers",
-  "seo_description": "Read Frankenstein as a stunning AI-generated graphic novel."
+  "seo_description": "Read Frankenstein as a stunning AI-generated graphic novel.",
+  "cover_image": "cover.png"
 }

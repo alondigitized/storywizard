@@ -126,6 +126,14 @@ async def api_novel(slug: str):
     return novel
 
 
+@app.get("/covers/{slug}")
+async def serve_cover(slug: str):
+    path = DATA_DIR / slug / "cover.png"
+    if not path.exists() or not path.is_file():
+        return HTMLResponse("Not found", status_code=404)
+    return Response(content=path.read_bytes(), media_type="image/png")
+
+
 @app.get("/panels/{slug}/{filename}")
 async def serve_panel(slug: str, filename: str):
     path = DATA_DIR / slug / "panels" / filename

@@ -84,6 +84,15 @@ async def api_novel(slug: str):
     return novel
 
 
+@app.get("/covers/{slug}")
+async def serve_cover(slug: str):
+    """Serve book cover image."""
+    path = OUTPUT_DIR / slug / "cover.png"
+    if path.exists() and path.is_file():
+        return FileResponse(path)
+    return HTMLResponse("Not found", status_code=404)
+
+
 @app.get("/panels/{slug}/{filename}")
 async def serve_panel(slug: str, filename: str):
     """Serve panel images and prompts from the output directory."""
