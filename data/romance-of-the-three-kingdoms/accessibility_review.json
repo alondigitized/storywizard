@@ -1,0 +1,272 @@
+{
+  "overall_score": 3,
+  "issues": [
+    {
+      "id": "ALT-001",
+      "category": "ALT_TEXT",
+      "severity": "critical",
+      "location": "All 31 panels",
+      "description": "Panel 'direction' fields are production/cinematography staging notes \u2014 terms like 'WIDE ESTABLISHING SHOT', 'TIGHT TWO-SHOT', 'FULL-BLEED HORIZONTAL PANORAMA' \u2014 written for artists, not for users. Repurposing these as alt attributes exposes technical jargon that communicates nothing of narrative, character, or emotional content to a screen reader user.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "ALT-002",
+      "category": "ALT_TEXT",
+      "severity": "critical",
+      "location": "All 31 panels",
+      "description": "Every direction field is truncated mid-sentence, ending abruptly (e.g., '...looking down from above the peach', '...from just before the alt', '...tethered side by side to the same peach tree,'). The data pipeline is cutting descriptions at a character limit before their descriptive content is complete. Even if repurposed, these are factually incomplete.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "ALT-003",
+      "category": "ALT_TEXT",
+      "severity": "critical",
+      "location": "Scene 4 Panel 3; Scene 5 Panel 2",
+      "description": "These two panels contain zero dialogue, zero narration, and truncated direction fields \u2014 they are fully opaque to assistive technology. Yet they carry essential narrative information: S4P3 depicts Chang Fei's fatal spear strike (the first kill of the campaign), and S5P2 shows Chang Pao in the physical ecstasy of summoning the phantom army. Both are narrative turning points invisible to any user who cannot perceive the image.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "ALT-004",
+      "category": "ALT_TEXT",
+      "severity": "serious",
+      "location": "Scene 4 Panel 6",
+      "description": "This panel is described as a calligraphic poem rendered in seal-script brushwork \u2014 almost certainly presented as an image. Its full verse text ('Two heroes new to war's alarms / rode boldly forth to try their arms / Their doughty deeds three kingdoms tell / and poets sing how these befell') must be provided as image alt text or as a visually-hidden text node synchronized via aria-describedby. Currently the narration field contains the text, but it must be explicitly associated with the image element.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "CC-001",
+      "category": "COLOR_CONTRAST",
+      "severity": "critical",
+      "location": "Imperial Gold (#C9963D) on Parchment Ivory (#F2EBD9) \u2014 narration boxes, court scene headings, Han regalia captions",
+      "description": "Calculated contrast ratio: approximately 2.13:1. Fails WCAG AA for both normal text (requires 4.5:1) and large text (requires 3:1). The palette description specifies Parchment Ivory as 'the background of narration boxes' and Imperial Gold as the color of dynastic legitimacy. If gold text appears on ivory backgrounds in narration, it is effectively unreadable for low-vision users and in any bright ambient lighting.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)"
+    },
+    {
+      "id": "CC-002",
+      "category": "COLOR_CONTRAST",
+      "severity": "critical",
+      "location": "Bone White (#E8DFD0) against Parchment Ivory (#F2EBD9) \u2014 highlights, moonlight labels, death iconography captions",
+      "description": "Calculated contrast ratio: approximately 1.12:1 \u2014 a near-total contrast failure. These two warm neutrals are visually indistinguishable in most rendering conditions. Any UI text, tooltip, caption, or label that uses this pairing is invisible. The palette assigns Bone White to 'the gleam on Kuan Yu's blade,' 'snow,' and 'death' \u2014 if any of these appear as text over an ivory background, they fail completely.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)"
+    },
+    {
+      "id": "CC-003",
+      "category": "COLOR_CONTRAST",
+      "severity": "serious",
+      "location": "Smoke Ash (#7A7A8A) on Parchment Ivory (#F2EBD9) \u2014 political compromise scenes, Ho Chin court dialogue",
+      "description": "Calculated contrast ratio: approximately 3.31:1. Fails WCAG AA for normal-weight body text (requires 4.5:1) and only marginally passes for large text (requires 3:1). Smoke Ash is designated for 'moral ambiguity and political compromise' scenes including dialogue boxes for court characters. At normal text sizes, this pairing will be difficult to read for users with even mild contrast sensitivity issues.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)"
+    },
+    {
+      "id": "CC-004",
+      "category": "COLOR_CONTRAST",
+      "severity": "serious",
+      "location": "Cinnabar Red (#C1392B) on Midnight Ink (#1A1A2E) \u2014 battle scene dialogue, oath ceremony captions",
+      "description": "Calculated contrast ratio: approximately 3.12:1. Fails WCAG AA for normal text. Cinnabar Red is specifically designated for 'sworn blood, martial valor, oath-taking, and battle wounds' \u2014 its most dramatic narrative moments. If red dialogue text or captions appear on the deep Midnight Ink backgrounds common to palace and battle panels, they will fail readability requirements.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)"
+    },
+    {
+      "id": "CC-005",
+      "category": "COLOR_CONTRAST",
+      "severity": "serious",
+      "location": "Jade Green (#3A7D44) on Parchment Ivory (#F2EBD9) \u2014 Liu Pei's dialogue, Peach Garden narration",
+      "description": "Calculated contrast ratio: approximately 3.93:1. Fails WCAG AA for normal-size body text (requires 4.5:1) but passes for large text (requires 3:1). Since Jade Green is Liu Pei's thematic color and will likely appear in chapter headings and character name labels as well as dialogue text, any normal-weight dialogue text using Jade Green on ivory backgrounds will fail.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)"
+    },
+    {
+      "id": "CC-006",
+      "category": "COLOR_CONTRAST",
+      "severity": "moderate",
+      "location": "Yellow Ochre (#D4943A) on Parchment Ivory (#F2EBD9) \u2014 Yellow Turban rebellion captions, Chang Chio scenes",
+      "description": "Calculated contrast ratio: approximately 2.21:1. Fails WCAG AA for all text sizes. Yellow Ochre is the designated color of the Yellow Turban rebellion \u2014 if Yellow Turban-associated captions or faction labels use this color on ivory backgrounds, they will fail.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)"
+    },
+    {
+      "id": "CC-007",
+      "category": "COLOR_CONTRAST",
+      "severity": "moderate",
+      "location": "Color-only symbolism throughout all 31 panels",
+      "description": "The palette's narrative symbolism is conveyed exclusively through color: Jade Green = Liu Pei's virtue, Cinnabar Red = blood oath, Yellow Ochre = peasant rebellion, Storm Teal = supernatural. Users with deuteranopia, protanopia, or achromatopsia, and users on monochrome displays, will miss this entire symbolic layer. No textual annotations, patterns, or icons supplement the color coding.",
+      "wcag_criterion": "1.4.1 Use of Color (Level A)"
+    },
+    {
+      "id": "RO-001",
+      "category": "READING_ORDER",
+      "severity": "critical",
+      "location": "Scene 3 Panel 5 \u2014 FULL DOUBLE-PAGE BLEED SPREAD",
+      "description": "A full double-page spread with 'no borders, no gutters, image bleeds to all four edges' has no inherent DOM reading order. If implemented with CSS absolute positioning or grid placement, screen readers will encounter this panel at whatever point it appears in source order, which may be before or after surrounding panels depending on implementation. aria-flowto or strict source-order management is required to preserve narrative sequence.",
+      "wcag_criterion": "1.3.2 Meaningful Sequence (Level A)"
+    },
+    {
+      "id": "RO-002",
+      "category": "READING_ORDER",
+      "severity": "serious",
+      "location": "Scene 1 Panel 4 ('spine of the spread'); Scene 4 Panel 6 ('narrow vertical gutter panel')",
+      "description": "A 'spine of the spread' panel sits between two flanking halves of a two-page layout; a 'gutter panel' sits in the physical gutter between pages. Both require CSS positioning that may place them arbitrarily in the DOM relative to adjacent panels. Without explicit logical source ordering, a screen reader user will encounter these panels in the wrong narrative sequence \u2014 potentially reading the oath's conclusion before its buildup, or the battle's poetic coda before its climax.",
+      "wcag_criterion": "1.3.2 Meaningful Sequence (Level A)"
+    },
+    {
+      "id": "RO-003",
+      "category": "READING_ORDER",
+      "severity": "moderate",
+      "location": "All scene boundaries (Scenes 1\u20136)",
+      "description": "There is no heading structure or ARIA landmark markup wrapping scenes. Keyboard and screen reader users navigating by headings (a primary navigation strategy) cannot jump between scenes. Each scene should be wrapped in a <section> with an <h2> or equivalent heading so users can skip between 'The Peach Garden Oath,' 'Liu Pei Reads the Notice,' etc., without tabbing through every individual panel.",
+      "wcag_criterion": "2.4.1 Bypass Blocks (Level A); 2.4.6 Headings and Labels (Level AA)"
+    },
+    {
+      "id": "KN-001",
+      "category": "KEYBOARD_NAVIGATION",
+      "severity": "critical",
+      "location": "Entire panel reader",
+      "description": "No keyboard navigation scheme is described for advancing between panels or scenes. If panel progression relies on click/swipe events without keyboard equivalents (arrow keys, Enter, Space), keyboard-only users \u2014 including most switch-access and screen reader users \u2014 are entirely excluded from reading the novel.",
+      "wcag_criterion": "2.1.1 Keyboard (Level A)"
+    },
+    {
+      "id": "KN-002",
+      "category": "KEYBOARD_NAVIGATION",
+      "severity": "serious",
+      "location": "Top of reader, each scene",
+      "description": "No skip navigation link is described. On each page load or scene transition, keyboard users must Tab through all header, navigation, and chrome elements before reaching panel content. A visible 'Skip to panels' link at the top of the reader is required. If the bookshelf has per-novel navigation elements, a 'Skip to chapter content' mechanism is equally required there.",
+      "wcag_criterion": "2.4.1 Bypass Blocks (Level A)"
+    },
+    {
+      "id": "KN-003",
+      "category": "KEYBOARD_NAVIGATION",
+      "severity": "moderate",
+      "location": "Any panel with zoom, expand, or lightbox interaction",
+      "description": "If any panel supports zoom, detail view, or lightbox expansion (common in web graphic novel readers), these interactions must be fully keyboard operable with Enter/Space to activate and Escape to dismiss. Focus must be managed programmatically \u2014 moved into the expanded view on open, returned to the triggering panel on close. No focus management strategy is described.",
+      "wcag_criterion": "2.1.1 Keyboard (Level A); 2.4.7 Focus Visible (Level AA)"
+    },
+    {
+      "id": "SR-001",
+      "category": "SCREEN_READER",
+      "severity": "critical",
+      "location": "All dialogue panels \u2014 S1P4, S1P5, S2P3, S2P4, S2P5, S3P2, S3P3, S3P4, S3P5, S4P5, S5P4, S5P6",
+      "description": "Dialogue is stored as undifferentiated strings ('Liu Pei: We three \u2014 though born of different blood...'). Without semantic markup \u2014 <dl>/<dt>/<dd>, role='list', or at minimum <span class='speaker'> with CSS pairing \u2014 screen readers read the speaker name and speech as one continuous string with no structural pause or distinction. In Scene 1 Panel 4, four speakers deliver overlapping parts of a single oath; without structure, this is unintelligible.",
+      "wcag_criterion": "1.3.1 Info and Relationships (Level A)"
+    },
+    {
+      "id": "SR-002",
+      "category": "SCREEN_READER",
+      "severity": "serious",
+      "location": "All scenes \u2014 Chinese proper nouns and terms throughout",
+      "description": "Chinese proper nouns (Liu Pei, Kuan Yu, Chang Fei, Tsao Tsao, Chang Chio, Chang Pao, Chu Chien, Huangfu Sung, Chang Pao) and terms (shu\u01d0m\u00f2, wuxia, Zhongping era) lack lang='zh' or lang='zh-Hant' markup. English-language screen readers will mispronounce these names using English phoneme rules, making character names unrecognizable and breaking story comprehension for screen reader users familiar with these historical figures.",
+      "wcag_criterion": "3.1.2 Language of Parts (Level AA)"
+    },
+    {
+      "id": "SR-003",
+      "category": "SCREEN_READER",
+      "severity": "serious",
+      "location": "Scenes 4, 5, and 6 \u2014 battle sequences",
+      "description": "Battle panels rely on visual kinetics \u2014 diagonal compositions, motion-blur ink streaks, the geometry of impact \u2014 to convey who attacks whom, what the outcome is, and what the cost is. The existing direction fields describe camera angle and composition only, not narrative action. Without alt text that narrates 'Chang Fei drives his spear through the rebel commander' or 'Kuan Yu's single stroke ends the duel,' a screen reader user cannot follow the battle narrative.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "SR-004",
+      "category": "SCREEN_READER",
+      "severity": "moderate",
+      "location": "Scene 5 Panels 1\u20135 \u2014 phantom army sequence",
+      "description": "The supernatural phantom army sequence is the most visually complex in the novel: supernatural summoning, dissolution into torn paper fragments, blood magic counter-attack. The narration text partially describes outcomes but does not describe what the user would see. A screen reader user completing this scene will understand that sorcery happened and that it was defeated, but will have no sense of the visual spectacle, the scale of the threat, or the specific mechanism of its defeat.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    }
+  ],
+  "enhanced_alt_texts": {
+    "1_1": "Aerial view looking down into a peach orchard at night, the trees in full spring bloom. Three small figures \u2014 Liu Pei, Kuan Yu, and Chang Fei \u2014 stand at the center of the garden around a stone altar. Lantern light turns the blossoms Imperial Gold and Parchment Ivory; darkness crowds the edges of the garden from all sides. The composition conveys the smallness of three men against the vast disorder of the age, and the fragile, consecrated beauty of the one place that is, for now, theirs. Tone: solemn, portentous, sacred.",
+    "1_2": "Waist-up view looking up at the three sworn brothers from slightly below eye level, lit from below and in front by firelight. Liu Pei stands at center \u2014 long-faced, composed, carrying the gravity of his Imperial lineage. Kuan Yu is to his right \u2014 tall, long-bearded, magnificently still. Chang Fei to his left \u2014 broad, fierce, barely containing his energy. All three faces are turned slightly upward, as if addressing Heaven directly. They have not yet spoken the oath; it already lives in their eyes. Tone: resolve, brotherhood, the weight of what is about to be made permanent.",
+    "1_3": "Tight two-shot of a black ox and white horse tethered side by side to the same blossoming peach tree. The animals stand quietly, unaware of their ritual significance. Peach blossoms fall around them. Their pairing \u2014 the black and white sacrificial animals of the oldest Chinese vow-taking tradition \u2014 signals to the reader that this oath will not be a casual promise. Tone: ancient, grave, the oldest vow a person can make.",
+    "1_4": "Full-figure vertical panel \u2014 the three brothers stand upright at ground level, facing the viewer directly, framed against a sky of deep Midnight Ink pierced by the first stars. Liu Pei stands center and slightly forward in jade-green robes; Kuan Yu to his right holds his Green Dragon Blade upright like a standard; Chang Fei to the left grips his serpent spear. All three have raised their right hands. Their faces are illuminated from below by the altar flame \u2014 serious, consecrated, transformed by the act of oath-taking into something more than men. Tone: monumental, mythic, the birth of brotherhood as a living force.",
+    "1_5": "Extreme close-up from above: three right hands, each belonging to one of the brothers, stacked one atop the next over a flat altar stone where a flame burns. The hands are different \u2014 Liu Pei's slender and scholar-pale, Kuan Yu's enormous and bronze, Chang Fei's blunt and scarred \u2014 yet in this moment they are one thing. Cinnabar Red firelight illuminates the stack from below. The composition is almost abstract: three textures, one gesture, one unbreakable promise. Tone: intimate, absolute, blood-sacred.",
+    "1_6": "Wide shot pulling back from the altar to the full scale of the garden. Three hundred men feast and talk beneath the peach trees \u2014 small figures in the golden lamplight, the sound of voices and celebration implied by their posture and clustering. The three brothers stand at the near edge of the scene, their backs to the viewer, watching over the feast. Beyond the garden's edge, darkness; the world still burns. But tonight, it cannot reach here. Tone: brief joy, fellowship under threat, the beauty of a single protected night.",
+    "2_1": "Full-width establishing shot: a dusty village street in amber late-afternoon light. Worn buildings line both sides; villagers in earth-toned clothing go about exhausted business. On the far wall, a single white conscription notice has been affixed \u2014 small, official, life-changing. Yellow Ochre dust hangs in the air. The street feels simultaneously ordinary and pivotal, as though history is using it without its knowledge. Tone: urgency, the mundane and the momentous colliding, a world on the verge.",
+    "2_2": "Close-up of Liu Pei in three-quarter profile \u2014 a man who appears in his mid-thirties, dressed plainly despite his Imperial blood, eyes fixed on the recruitment notice just outside the frame. His expression holds grief, longing, and barely-suppressed resolve in uncomfortable balance. He is a thread of the old dynasty in commoner's clothes, looking at the one door that might open. Jade Green and Storm Teal tones in his eyes catch the late light. Tone: longing, suppressed duty, a man reading his own fate.",
+    "2_3": "A sudden vertical panel \u2014 Chang Fei erupts into the composition from below the frame, his massive, broad-shouldered figure looming over Liu Pei in a confrontational but not hostile posture. He is dark-bearded, vital, impatient with inaction; his challenge is offered as an act of generosity. Earth Umber tones. His entrance is the disruption of stasis \u2014 the world will not wait for a man still sighing. Tone: explosive energy, the challenge of action, the offer of a different kind of courage.",
+    "2_4": "Interior of a low inn: rough timber beams, clay wine jars, a scarred table between two men leaning close. Liu Pei and Chang Fei sit in conspiratorial alliance, the late afternoon light cutting through smoke above them. Their body language has shifted from confrontation to alliance \u2014 two men agreeing to act, to try what can be done. Smoke Ash and Earth Umber throughout. Tone: practical courage, the quiet forging of plans, two men deciding the world is their responsibility.",
+    "2_5": "The inn doorway fills the left edge of the frame, and through it steps Kuan Yu \u2014 enormous, self-possessed, one hand resting on the hilt of a sheathed blade as long as a man is tall. The afternoon light behind him creates a near-silhouette, giving his entrance a quality that is less human arrival and more force of nature. Jade Green undertones. Liu Pei and Chang Fei are visible at the right edge of the frame, already arrested mid-conversation. Tone: destiny made flesh, the completion of a pattern, the arrival of the third element.",
+    "2_6": "The tightest panel on the page: all three faces in a rough triangle, close together in the smoky inn light. Liu Pei looks at Kuan Yu. Kuan Yu looks at Chang Fei. Chang Fei looks at Liu Pei. Each man recognizes in the others what he has been searching for. No words; the recognition is complete before words. Tone: recognition, fate, history choosing its instruments.",
+    "3_1": "Wide establishing shot of a smithy at deep night \u2014 the interior glows with the intense orange-gold light of a furnace, a river of molten metal pouring in a bright arc, armourers' silhouettes moving in the forge-smoke. Imperial Gold and Earth Umber. Two merchant strangers stand to one side, their generosity already transformed into steel in the crucible. Heaven, the narration implies, does not announce itself. Tone: creation, providential provision, purpose being given material form.",
+    "3_2": "Medium shot of Liu Pei from chest to hands. He stands before a low table draped in dark cloth, holding twin double-edged swords \u2014 matched, slightly different in length, perfectly balanced between his extended hands. He is testing their weight against each other with a jeweler's precision. His expression is one of quiet, private satisfaction: these are the right tools for the right man. Jade Green highlights on the blades. Tone: symmetry, quiet satisfaction, the peace of fitness.",
+    "3_3": "Medium-wide shot inside the forge. Two armourers strain with visibly trembling arms to present Kuan Yu with the Green Dragon Crescent Blade \u2014 an enormous crescent-bladed halberd, its weight requiring two men to lift. Kuan Yu reaches out and takes it one-handed, arm barely flexing under a weight that staggers professional smiths. The armourers step back in instinctive deference. His expression is appraising, not boastful. Jade Green and Midnight Ink. Tone: overwhelming physical presence, the weapon recognizing its master, awe without performance.",
+    "3_4": "Low-angle medium shot in the yard outside the smithy, the sky behind Chang Fei transitioning from black to deep Storm Teal at the horizon \u2014 dawn is coming. Chang Fei holds a serpent-headed spear eighteen feet long by its butt end, extended one-handed at arm's length parallel to the ground, and he is laughing \u2014 a full, whole-body laugh of a man who has never doubted his own capability for a single day of his life. Earth Umber and Storm Teal. Tone: joyful ferocity, absurd confidence, the laugh before the war.",
+    "3_5": "Full double-page bleed spread with no panel borders: dawn over a wide open plain, the sky in gradients from deep indigo to rose to Imperial Gold at the horizon. Five hundred mounted soldiers spread in formation across the full width of the image, small against the scale of the landscape. The three brothers ride at the fore \u2014 Liu Pei center on a grey horse, Kuan Yu to his right with his halberd upright, Chang Fei to his left with his spear at rest. Jade Green, Cinnabar Red, and Imperial Gold banners catch the dawn wind. The army is impossibly small against what is coming; they ride anyway. Tone: epic, defiant, the courage of beginning against impossible odds.",
+    "4_1": "Full-bleed horizontal panorama of a dust-choked plain at first light. Two vast armies face each other across open ground \u2014 the imperial force in the foreground, the Yellow Turbans holding the distant hills. The Yellow Ochre dust hangs between them like a curtain. The composition emphasizes scale: individual soldiers are specks; the weight of the opposing masses fills the frame edge to edge. Tone: the scale of war, the silence before violence, the weight of what is about to happen.",
+    "4_2": "Tight vertical panel from nearly ground level, looking up and slightly behind Chang Fei at full gallop. His warhorse's hooves throw up chunks of yellow earth; his serpent spear is leveled to its full eighteen-foot reach; his dark hair and armor stream behind him in motion blur rendered in Earth Umber ink streaks. He has not shouted a war cry \u2014 he has simply come. There is something more terrible about his silence. Tone: unstoppable force, the terrifying simplicity of a man built for exactly this, motion as inevitability.",
+    "4_3": "Near-abstract impact panel: extreme close-up of a spear tip that has erupted through the breastplate of a rebel commander, the force of impact rendered in explosive diagonal ink strokes radiating from the point of contact. Cinnabar Red. The commander's hands are open and useless at the frame's edges. The geometry of violence reduced to its essential physics: a point, a force, an ending. Tone: sudden, brutal, the reality of killing stripped of glory.",
+    "4_4": "Half-page vertical panel \u2014 Kuan Yu and the Yellow Turban rebel leader face each other in single combat at the painting's center of gravity. Kuan Yu's Green Dragon Blade is drawn back at the apex of its arc, the moment of maximum potential before the single stroke. The rebel leader's posture registers the hopelessness of his position. Jade Green and Cinnabar Red. The composition has the stillness of a suspended breath: everyone in the scene, and the reader, knows what comes next. Tone: inevitable, heroic, the compression of a duel into its decisive instant.",
+    "4_5": "Wide horizontal aftermath panel: the Yellow Turban soldiers are in full flight across the dust-choked field, weapons discarded, yellow headbands catching the wind as they run. The imperial forces stand at rest in the center distance. At the right edge of the frame, Liu Pei sits on horseback watching the rout, his expression not triumph but a complicated wonder \u2014 his brothers have made him redundant before he raised his own sword. Yellow Ochre and Smoke Ash. Tone: the strange anti-climax of easy victory, the gentle comedy of Liu Pei's irrelevance, the gap between ambition and execution.",
+    "4_6": "A narrow vertical panel occupying the full height of the page at barely two inches wide \u2014 a single seal-script calligraphic poem brushed in Midnight Ink on Parchment Ivory. The poem reads: 'Two heroes new to war's alarms / rode boldly forth to try their arms / Their doughty deeds three kingdoms tell / and poets sing how these befell.' The brushwork itself is expressive \u2014 firm, swift, final \u2014 a visual closing bracket on the battle sequence. Tone: elegiac, historical distance, the compression of heroic deeds into verse and verse into ink.",
+    "5_1": "Full-width establishing shot from a wide low angle looking up at the rebel sorcerer Chang Pao on horseback against a sky that is filling, panel by panel, with black and Storm Teal storm-clouds. His hair is loose, his sword raised, his mouth open in a supernatural incantation directed at the sky above him. The clouds have begun to respond. His horse is motionless beneath the unnatural wind. Tone: dread, the enemy at his most dangerous, the sky itself being enlisted against the living.",
+    "5_2": "Tight vertical close-up of Chang Pao from chest to scalp: his face is contorted by the effort of the summoning, his long hair streaming in every direction at once in a wind that obeys no natural law, his eyes rolled back to show their whites. This is not performance \u2014 this is the physical cost of calling down the dead. Storm Teal against Midnight Ink. The image is disturbing, ecstatic, and wrong in the way that only genuine supernatural contact can be. Tone: horror, the ecstasy of power, the uncanny made visceral and personal.",
+    "5_3": "Wide horizontal shot: the black cloud mass fills the upper two-thirds of the frame, and from it descends a phantom cavalry \u2014 thousands of ghostly riders and horses sweeping down like ink dissolving through water, their forms half-solid, their weapons real enough. At the bottom edge of the frame, Liu Pei's living soldiers are already turning to run. Storm Teal and Midnight Ink dominate; the living soldiers appear in Earth Umber, small and fleeing. Tone: overwhelming supernatural dread, the smallness of mortal soldiers before the uncanny, the psychological terror of the unknowable.",
+    "5_4": "Full-width horizontal shot from a clifftop looking down: the military strategist Chu Chien stands at the cliff's edge directing soldiers who pour large clay vessels of dark liquid \u2014 the blood of slaughtered animals \u2014 from the heights above the oncoming phantom army below. Cinnabar Red streams fall in arcs through the frame. Chu Chien's posture is decisive and controlled: this is ancient knowledge meeting supernatural threat, and the scholar is unafraid. Tone: desperate ingenuity, the turning of the tide, knowledge as its own form of courage.",
+    "5_5": "Large vertical panel \u2014 the dissolution of the phantom army. The mass of ghost cavalry and phantom horses is fragmenting in the air, each figure fluttering apart into what is unmistakably torn paper \u2014 scattering in the wind like debris, not blood. Storm Teal dissolving into Parchment Ivory from bottom to top, the supernatural retreating upward as the natural world reasserts itself. The thunder has stopped; the wind has changed. Tone: the uncanny retreating, relief, ancient knowledge triumphing over ancient fear.",
+    "5_6": "Smaller square panel: a moment of absolute stillness and clarity after the storm. Wide shot of the battlefield from middle distance \u2014 the sky is clearing, the first Imperial Gold of sunlight breaking through dissipating Storm Teal clouds. Chu Chien stands at the front of his cavalry, one arm extended forward in the gesture of command: forward, charge. His soldiers lean into motion around him. The world is natural again. Tone: clarity after chaos, the return of natural order, command reasserted.",
+    "6_1": "Full-width establishing shot of a smoke-choked dawn battlefield from low angle, looking across a field of defeat. Yellow Turban soldiers lie scattered and motionless, yellow headbands discarded in the dust. Several fires still smolder. The imperial commander Huangfu Sung is visible at the far right on horseback, surveying the rout his strategy has achieved. Yellow Ochre and Smoke Ash, with Cinnabar Red in the embers. The dawn is ugly with what it illuminates. Tone: exhausted victory, the morning-after of battle, the cost of rebellion and its brutal suppression."
+  },
+  "recommendations": [
+    {
+      "priority": "critical",
+      "category": "ALT_TEXT",
+      "recommendation": "Decouple the artist direction field from the accessibility description field in the data model. Add a dedicated 'alt_text' field to each panel object in novel.json that is authored separately from production notes. The artist direction field should never be exposed to end users. The alt_text field should answer: who is in the panel, what are they doing, what is the setting, and what emotional tone does the image convey. For purely visual panels (S4P3, S5P2), this field is not optional \u2014 it is the only accessibility mechanism available."
+    },
+    {
+      "priority": "critical",
+      "category": "ALT_TEXT",
+      "recommendation": "For complex graphic novel panels that require longer descriptions than a single alt attribute can comfortably carry, implement a two-tier description system: a concise alt attribute (under 150 characters) summarizing action and subject, paired with an aria-describedby attribute pointing to a longer, visually-hidden <p> element containing full scene description, emotional context, and color symbolism. Example HTML: <figure><img src='panel.png' alt='Chang Fei charges the rebel commander' aria-describedby='s4p3-desc'><p id='s4p3-desc' class='visually-hidden'>Near-abstract impact panel: extreme close-up of Chang Fei's spear tip erupting through a rebel commander's breastplate in an explosive diagonal composition...</p></figure>"
+    },
+    {
+      "priority": "critical",
+      "category": "COLOR_CONTRAST",
+      "recommendation": "Audit every text-on-background color combination using the exact hex values in the palette. The minimum changes required for WCAG AA compliance: (1) Replace Imperial Gold (#C9963D) text on Parchment Ivory (#F2EBD9) with a darkened gold of approximately #8B6914 (\u22484.8:1 on ivory); (2) Never use Bone White (#E8DFD0) as text color against Parchment Ivory; (3) Darken Smoke Ash (#7A7A8A) text to at least #5A5A68 for use on ivory backgrounds; (4) For Jade Green dialogue text on ivory, darken to #2A5C32 to achieve 4.5:1. Crucially, the visual palette colors can remain unchanged as painterly tones \u2014 only their use as CSS text colors on UI backgrounds must be adjusted."
+    },
+    {
+      "priority": "critical",
+      "category": "KEYBOARD_NAVIGATION",
+      "recommendation": "Implement a complete keyboard navigation model for the reader: (1) Left/Right arrow keys advance between panels within a scene; (2) Up/Down arrows or bracket keys advance between scenes; (3) Home/End jump to first/last panel; (4) Tab focuses interactive controls only, not panels themselves; (5) If panels are focusable for reading, they receive a visible focus ring meeting 3:1 contrast against surrounding background. Document the keyboard shortcuts in an accessible help panel reachable from a keyboard-visible 'Help' button in the navigation chrome."
+    },
+    {
+      "priority": "critical",
+      "category": "READING_ORDER",
+      "recommendation": "Enforce logical reading order in the DOM for every complex layout. The rule is: DOM source order must match intended reading order, regardless of CSS visual positioning. For the double-page spread (S3P5), the spread image should appear as a single <figure> element in the flow, not positioned with CSS. For 'spine' and 'gutter' panels, place them in the HTML at the exact narrative position they occupy in the reading sequence, then use CSS to achieve the desired visual layout. Test reading order by disabling all CSS and reading the page linearly."
+    },
+    {
+      "priority": "serious",
+      "category": "SCREEN_READER",
+      "recommendation": "Mark up multi-speaker dialogue using a definition list pattern or a labeled list pattern. Recommended HTML for dialogue: <dl class='dialogue'><dt lang='zh'>Liu Pei</dt><dd>We three \u2014 though born of different blood \u2014 swear brotherhood before Heaven and Earth.</dd><dt lang='zh'>Kuan Yu</dt><dd>We vow to aid each other in danger. To rescue each other in darkness.</dd></dl>. This gives screen reader users the ability to navigate speaker-by-speaker and clearly disambiguates who is speaking. For the merged choral speech ('All three: \u2014but we seek to die together'), use a dedicated 'All' speaker attribution."
+    },
+    {
+      "priority": "serious",
+      "category": "SCREEN_READER",
+      "recommendation": "Add lang='zh-Hant' (Traditional Chinese) to every element containing Chinese proper nouns and terms. This is especially important for character names (Liu Pei, Kuan Yu, Chang Fei, Tsao Tsao) that appear repeatedly in dialogue speaker labels. Implement a data attribute or wrapper span: <span lang='zh-Hant'>Liu Pei</span>. For terms that appear in English narrative context (e.g., 'shu\u01d0m\u00f2 painting'), mark only the Chinese term itself, not the surrounding English sentence."
+    },
+    {
+      "priority": "serious",
+      "category": "SCREEN_READER",
+      "recommendation": "Add semantic scene structure using HTML5 landmarks. Each scene should be: <section aria-labelledby='scene-N-title'><h2 id='scene-N-title'>Scene N: [Scene Title]</h2>. Scene titles do not exist in the current data model \u2014 add a 'scene_title' field to the novel.json schema. For this novel: Scene 1: 'The Peach Garden Oath,' Scene 2: 'Liu Pei Reads the Notice,' Scene 3: 'The Arming,' Scene 4: 'First Battle,' Scene 5: 'The Phantom Army,' Scene 6: 'Huangfu Sung's Victory.' This enables heading-level navigation for screen reader users and provides chapter structure for all users."
+    },
+    {
+      "priority": "serious",
+      "category": "COLOR_CONTRAST",
+      "recommendation": "Supplement color-only symbolism with textual or structural annotations accessible to all users. Options: (1) Add a 'Color Lexicon' page accessible from the reader's navigation, describing the symbolic meaning of each palette color in text; (2) For key symbolic moments (Jade Green desaturation as Liu Pei's hopes fail, Cinnabar Red appearing at oath scenes), include a visually-hidden <span class='color-note'> within the panel's description text that names the symbolic color event; (3) Consider using CSS custom properties for palette colors so a high-contrast or colorblind mode can remap the palette without losing symbolic structure."
+    },
+    {
+      "priority": "moderate",
+      "category": "KEYBOARD_NAVIGATION",
+      "recommendation": "Add a visible 'Skip to panels' link as the first focusable element on each reader page. Implement it as: <a href='#panel-1-1' class='skip-link'>Skip to chapter content</a> with CSS that positions it off-screen until focused. The link must be the very first Tab stop on the page, visible on focus, and meet 4.5:1 contrast when visible. Similarly, add a 'Skip to navigation' reverse-skip for users who have navigated deep into the panel sequence and need to return to the bookshelf."
+    },
+    {
+      "priority": "moderate",
+      "category": "ALT_TEXT",
+      "recommendation": "For the calligraphic poem panel (Scene 4 Panel 6), render the verse text as both an image (for the visual brushwork) and as a visually-hidden accessible text block: <figure><img src='poem-panel.png' alt='Seal-script calligraphic poem in Midnight Ink on Parchment Ivory'><figcaption class='visually-hidden'>Two heroes new to war's alarms / rode boldly forth to try their arms / Their doughty deeds three kingdoms tell / and poets sing how these befell.</figcaption></figure>. The <figcaption> approach makes the poem text available to all AT without duplicating it for sighted users."
+    },
+    {
+      "priority": "moderate",
+      "category": "SCREEN_READER",
+      "recommendation": "Add an ARIA live region to announce panel navigation to screen reader users: <div aria-live='polite' aria-atomic='true' class='visually-hidden' id='nav-announcement'></div>. When a user advances to a new panel via keyboard, update this element's text content with 'Scene 2, Panel 3 of 6.' This gives screen reader users orientation information that sighted users receive visually from panel borders and page position. Update the announcement text via JavaScript on each panel navigation event."
+    },
+    {
+      "priority": "moderate",
+      "category": "SCREEN_READER",
+      "recommendation": "Add a plain-text 'Read as Story' mode accessible from the reader navigation. This mode renders all narration boxes and dialogue in their correct reading order as a linear prose document, with scene headings and speaker attributions, but without the panel image structure. This serves: (1) users who prefer text-only reading, (2) users on low-bandwidth connections, (3) users whose AT struggles with complex image-and-text layouts. The mode requires no additional content authoring \u2014 it is a view transformation of existing novel.json data."
+    }
+  ]
+}
