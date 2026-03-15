@@ -1,0 +1,167 @@
+#!/usr/bin/env python3
+"""Generate real Flux images for scenes 1-2 of Frankenstein.
+
+Reads existing .prompt.txt files, extracts the image prompt, calls fal.ai Flux
+to generate PNGs, and updates novel.json to point to the new images.
+
+Usage:
+    FAL_KEY=your-key python scripts/generate_test_panels.py
+"""
+
+from __future__ import annotations
+
+import json
+import os
+import re
+import sys
+import time
+from pathlib import Path
+
+import httpx
+
+DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "frankenstein"
+PANELS_DIR = DATA_DIR / "panels"
+NOVEL_JSON = DATA_DIR / "novel.json"
+
+# Scenes to generate (1 and 2)
+SCENES = [1, 2]
+
+# Flux settings (match pipeline defaults from config.py)
+FLUX_MODEL = "fal-ai/flux/dev"
+FLUX_ASPECT = "landscape_16_9"
+FLUX_GUIDANCE_SCALE = 3.5
+FLUX_INFERENCE_STEPS = 28
+BASE_SEED = 42  # seed = 42 + scene*100 + panel
+
+MAX_RETRIES = 3
+RETRY_BACKOFF = 2.0
+MIN_IMAGE_BYTES = 1024
+
+
+def extract_prompt(text: str) -> str:
+    """Extract the raw image prompt from a .prompt.txt file.
+
+    Strips the [MOCK IMAGE...] header and IMAGE PROMPT: prefix.
+    Also strips any SEED: line.
+    """
+    # Remove [MOCK IMAGE ...] header line
+    text = re.sub(r"^\[MOCK IMAGE[^\]]*\]\s*\n*", "", text)
+    # Remove SEED: line
+    text = re.sub(r"^SEED:\s*\d+\s*\n*", "", text, flags=re.MULTILINE)
+    # Remove IMAGE PROMPT: prefix
+    text = re.sub(r"^IMAGE PROMPT:\s*\n?", "", text)
+    return text.strip()
+
+
+def generate_image(prompt: str, seed: int) -> bytes:
+    """Call fal.ai Flux and return the PNG bytes."""
+    import fal_client
+
+    arguments = {
+        "prompt": prompt,
+        "image_size": FLUX_ASPECT,
+        "num_images": 1,
+        "output_format": "png",
+        "guidance_scale": FLUX_GUIDANCE_SCALE,
+        "num_inference_steps": FLUX_INFERENCE_STEPS,
+        "seed": seed,
+    }
+
+    last_error = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            result = fal_client.subscribe(FLUX_MODEL, arguments=arguments)
+            image_url = result["images"][0]["url"]
+
+            response = httpx.get(image_url, timeout=60.0)
+            response.raise_for_status()
+
+            if len(response.content) < MIN_IMAGE_BYTES:
+                raise ValueError(
+                    f"Image too small ({len(response.content)} bytes), likely corrupted"
+                )
+
+            return response.content
+
+        except Exception as e:
+            last_error = e
+            if attempt < MAX_RETRIES:
+                wait = RETRY_BACKOFF**attempt
+                print(f"  Attempt {attempt}/{MAX_RETRIES} failed: {e} — retrying in {wait:.1f}s")
+                time.sleep(wait)
+
+    raise RuntimeError(
+        f"Flux generation failed after {MAX_RETRIES} attempts: {last_error}"
+    ) from last_error
+
+
+def main() -> None:
+    if not os.environ.get("FAL_KEY"):
+        print("ERROR: FAL_KEY environment variable is required.", file=sys.stderr)
+        sys.exit(1)
+
+    # Discover panels for target scenes
+    panels_to_generate = []
+    for scene in SCENES:
+        scene_files = sorted(PANELS_DIR.glob(f"scene{scene:02d}_panel*.prompt.txt"))
+        if not scene_files:
+            print(f"WARNING: No prompt files found for scene {scene}", file=sys.stderr)
+            continue
+        for f in scene_files:
+            match = re.match(r"scene(\d+)_panel(\d+)\.prompt\.txt", f.name)
+            if match:
+                panels_to_generate.append((int(match.group(1)), int(match.group(2)), f))
+
+    if not panels_to_generate:
+        print("ERROR: No panels found to generate.", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"Generating {len(panels_to_generate)} panels for scenes {SCENES}")
+    print()
+
+    generated_files = []
+    for scene_num, panel_num, prompt_file in panels_to_generate:
+        seed = BASE_SEED + scene_num * 100 + panel_num
+        png_path = prompt_file.parent / f"scene{scene_num:02d}_panel{panel_num:02d}.png"
+
+        print(f"[{len(generated_files)+1}/{len(panels_to_generate)}] "
+              f"scene {scene_num}, panel {panel_num} (seed={seed})")
+
+        # Extract prompt
+        raw_text = prompt_file.read_text(encoding="utf-8")
+        prompt = extract_prompt(raw_text)
+
+        # Generate image
+        png_bytes = generate_image(prompt, seed)
+        png_path.write_bytes(png_bytes)
+        print(f"  Saved: {png_path.name} ({len(png_bytes):,} bytes)")
+
+        generated_files.append((scene_num, panel_num, png_path))
+
+    # Update novel.json — change image_path for generated panels
+    print()
+    print("Updating novel.json...")
+    novel = json.loads(NOVEL_JSON.read_text(encoding="utf-8"))
+
+    updated_count = 0
+    generated_set = {(s, p) for s, p, _ in generated_files}
+    for gp in novel["generated_panels"]:
+        key = (gp["scene_number"], gp["panel_number"])
+        if key in generated_set:
+            scene_num, panel_num = key
+            new_path = f"panels/scene{scene_num:02d}_panel{panel_num:02d}.png"
+            old_path = gp["image_path"]
+            gp["image_path"] = new_path
+            print(f"  {old_path} -> {new_path}")
+            updated_count += 1
+
+    NOVEL_JSON.write_text(
+        json.dumps(novel, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(f"\nDone! Updated {updated_count} panel paths in novel.json.")
+    print(f"Generated {len(generated_files)} PNGs in {PANELS_DIR}")
+
+
+if __name__ == "__main__":
+    main()
