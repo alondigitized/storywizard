@@ -16,7 +16,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 WEB_DIR = ROOT_DIR / "web"
 TEMPLATES_DIR = WEB_DIR / "templates"
 STATIC_DIR = WEB_DIR / "static"
-DATA_DIR = ROOT_DIR / "data"
+DATA_DIR = ROOT_DIR / "output"
 
 app = FastAPI(title="Storywizard", description="AI Graphic Novel Library")
 templates = Jinja2Templates(directory=str(TEMPLATES_DIR))

@@ -23,7 +23,7 @@ from pathlib import Path
 
 import httpx
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "frankenstein"
+DATA_DIR = Path(__file__).resolve().parent.parent / "output" / "frankenstein"
 PANELS_DIR = DATA_DIR / "panels"
 NOVEL_JSON = DATA_DIR / "novel.json"
 

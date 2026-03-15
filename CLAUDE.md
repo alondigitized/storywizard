@@ -34,7 +34,7 @@ web/
 ├── templates/       # Jinja2 (bookshelf.html, reader.html)
 ├── static/          # CSS, JS (Kindle-like reader)
 ├── create_demo.py   # Generate demo data without API keys
-data/                # Vercel-deployed novel data
+output/              # Pipeline output + Vercel-deployed novel data
 run.py               # CLI entry point with argparse
 ```
 
