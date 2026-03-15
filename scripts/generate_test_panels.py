@@ -27,10 +27,16 @@ NOVEL_JSON = DATA_DIR / "novel.json"
 SCENES = [1, 2]
 
 # Flux settings (match pipeline defaults from config.py)
-FLUX_MODEL = "fal-ai/flux/dev"
+FLUX_MODEL = "fal-ai/flux-general"
 FLUX_ASPECT = "landscape_16_9"
-FLUX_GUIDANCE_SCALE = 3.5
+FLUX_GUIDANCE_SCALE = 7.0
 FLUX_INFERENCE_STEPS = 28
+FLUX_REFERENCE_STRENGTH = 0.50
+FLUX_NEGATIVE_PROMPT = (
+    "photograph, photo, photorealistic, 3D render, CGI, anime, manga, "
+    "cartoon, cel-shaded, flat color, vector art, stock photo, film still, "
+    "movie screenshot"
+)
 BASE_SEED = 42  # seed = 42 + scene*100 + panel
 
 MAX_RETRIES = 3
@@ -53,8 +59,10 @@ def extract_prompt(text: str) -> str:
     return text.strip()
 
 
-def generate_image(prompt: str, seed: int) -> bytes:
-    """Call fal.ai Flux and return the PNG bytes."""
+def generate_image(
+    prompt: str, seed: int, *, reference_image_url: str | None = None,
+) -> tuple[bytes, str]:
+    """Call fal.ai Flux and return (PNG bytes, CDN URL)."""
     import fal_client
 
     arguments = {
@@ -66,6 +74,12 @@ def generate_image(prompt: str, seed: int) -> bytes:
         "num_inference_steps": FLUX_INFERENCE_STEPS,
         "seed": seed,
     }
+    if reference_image_url:
+        # negative_prompt (NAG) is incompatible with reference_image on flux-general
+        arguments["reference_image_url"] = reference_image_url
+        arguments["reference_strength"] = FLUX_REFERENCE_STRENGTH
+    else:
+        arguments["negative_prompt"] = FLUX_NEGATIVE_PROMPT
 
     last_error = None
     for attempt in range(1, MAX_RETRIES + 1):
@@ -81,7 +95,7 @@ def generate_image(prompt: str, seed: int) -> bytes:
                     f"Image too small ({len(response.content)} bytes), likely corrupted"
                 )
 
-            return response.content
+            return response.content, image_url
 
         except Exception as e:
             last_error = e
@@ -120,21 +134,30 @@ def main() -> None:
     print()
 
     generated_files = []
+    style_anchor_url: str | None = None
+
     for scene_num, panel_num, prompt_file in panels_to_generate:
         seed = BASE_SEED + scene_num * 100 + panel_num
         png_path = prompt_file.parent / f"scene{scene_num:02d}_panel{panel_num:02d}.png"
 
+        ref_label = " (style anchor)" if style_anchor_url is None else ""
         print(f"[{len(generated_files)+1}/{len(panels_to_generate)}] "
-              f"scene {scene_num}, panel {panel_num} (seed={seed})")
+              f"scene {scene_num}, panel {panel_num} (seed={seed}){ref_label}")
 
         # Extract prompt
         raw_text = prompt_file.read_text(encoding="utf-8")
         prompt = extract_prompt(raw_text)
 
-        # Generate image
-        png_bytes = generate_image(prompt, seed)
+        # Generate image — first panel becomes the style anchor
+        png_bytes, cdn_url = generate_image(
+            prompt, seed, reference_image_url=style_anchor_url,
+        )
         png_path.write_bytes(png_bytes)
         print(f"  Saved: {png_path.name} ({len(png_bytes):,} bytes)")
+
+        if style_anchor_url is None:
+            style_anchor_url = cdn_url
+            print(f"  Style anchor URL: {cdn_url}")
 
         generated_files.append((scene_num, panel_num, png_path))
 

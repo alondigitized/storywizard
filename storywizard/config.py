@@ -20,12 +20,17 @@ class PipelineConfig:
     )
 
     # Flux (via fal.ai) settings
-    flux_model: str = "fal-ai/flux/dev"
+    flux_model: str = "fal-ai/flux-general"
     flux_aspect_ratio: str = "landscape_16_9"
     flux_seed: int | None = None  # None = random; set for reproducibility
-    flux_guidance_scale: float = 3.5  # 1.0-20.0; higher = more prompt-adherent
+    flux_guidance_scale: float = 7.0  # 1.0-20.0; higher = more prompt-adherent
     flux_num_inference_steps: int = 28  # 1-100; higher = better quality
-    flux_negative_prompt: str = ""  # Excluded concepts
+    flux_negative_prompt: str = (
+        "photograph, photo, photorealistic, 3D render, CGI, anime, manga, "
+        "cartoon, cel-shaded, flat color, vector art, stock photo, film still, "
+        "movie screenshot"
+    )
+    flux_reference_strength: float = 0.50  # 0.0-1.0; style anchor strength
 
     # Pipeline tuning
     max_scenes: int = 15
@@ -73,6 +78,11 @@ class PipelineConfig:
         if not (1 <= self.flux_num_inference_steps <= 100):
             errors.append(
                 f"flux_num_inference_steps must be between 1 and 100, got {self.flux_num_inference_steps}."
+            )
+
+        if not (0.0 <= self.flux_reference_strength <= 1.0):
+            errors.append(
+                f"flux_reference_strength must be between 0.0 and 1.0, got {self.flux_reference_strength}."
             )
 
         return errors

@@ -101,6 +101,7 @@ class TestPipelineConfigValidation:
         assert config.output_dir == "output"
         assert config.stories_dir == "stories"
         assert config.flux_seed is None
-        assert config.flux_guidance_scale == 3.5
+        assert config.flux_guidance_scale == 7.0
         assert config.flux_num_inference_steps == 28
-        assert config.flux_negative_prompt == ""
+        assert config.flux_negative_prompt != ""
+        assert config.flux_reference_strength == 0.50

@@ -52,6 +52,8 @@ class Artist(BaseAgent):
         generated = []
         # Track first appearance of each character for cross-panel consistency
         character_prompt_registry: dict[str, str] = {}
+        # Style anchor: CDN URL of the first generated panel (Flux only)
+        style_anchor_url: str | None = None
 
         total = sum(len(s.panels) for s in scripts)
         count = 0
@@ -60,8 +62,9 @@ class Artist(BaseAgent):
             for panel in script.panels:
                 count += 1
                 logger.info(
-                    "Generating panel %d/%d (scene %d, panel %d)",
+                    "Generating panel %d/%d (scene %d, panel %d)%s",
                     count, total, script.scene_number, panel.panel_number,
+                    " (style anchor)" if style_anchor_url is None else "",
                 )
                 prompt = self._craft_image_prompt(
                     panel, script, style_guide, character_prompt_registry
@@ -76,10 +79,16 @@ class Artist(BaseAgent):
                         + panel.panel_number
                     )
 
-                image_path = self._generate_image(
+                image_path, cdn_url = self._generate_image(
                     prompt, script.scene_number, panel.panel_number, output_dir,
-                    seed=seed,
+                    seed=seed, reference_image_url=style_anchor_url,
                 )
+
+                # First panel becomes the style anchor for all subsequent panels
+                if style_anchor_url is None and cdn_url is not None:
+                    style_anchor_url = cdn_url
+                    logger.info("Style anchor set: %s", cdn_url)
+
                 generated.append(
                     GeneratedPanel(
                         scene_number=script.scene_number,
@@ -167,15 +176,21 @@ class Artist(BaseAgent):
 
     def _generate_image(
         self, prompt: str, scene_num: int, panel_num: int, output_dir: Path,
-        *, seed: int | None = None,
-    ) -> Path:
-        """Generate an image using the configured backend."""
+        *, seed: int | None = None, reference_image_url: str | None = None,
+    ) -> tuple[Path, str | None]:
+        """Generate an image using the configured backend.
+
+        Returns (local_path, cdn_url). cdn_url is None for mock backend.
+        """
         filename = f"scene{scene_num:02d}_panel{panel_num:02d}"
 
         if self.config.image_backend == "mock":
-            return self._mock_generate(prompt, filename, output_dir, seed=seed)
+            return self._mock_generate(prompt, filename, output_dir, seed=seed), None
         elif self.config.image_backend == "flux":
-            return self._flux_generate(prompt, filename, output_dir, seed=seed)
+            return self._flux_generate(
+                prompt, filename, output_dir,
+                seed=seed, reference_image_url=reference_image_url,
+            )
         else:
             raise NotImplementedError(
                 f"Image backend '{self.config.image_backend}' not yet implemented. "
@@ -204,12 +219,15 @@ class Artist(BaseAgent):
 
     def _flux_generate(
         self, prompt: str, filename: str, output_dir: Path,
-        *, seed: int | None = None,
-    ) -> Path:
+        *, seed: int | None = None, reference_image_url: str | None = None,
+    ) -> tuple[Path, str]:
         """Generate an image using Flux via fal.ai API.
 
         Retries on transient failures with exponential backoff and validates
         that the downloaded image meets a minimum size threshold.
+
+        Returns (local_path, cdn_url) so the CDN URL can be used as a style
+        anchor for subsequent panels.
         """
         import fal_client
 
@@ -226,7 +244,11 @@ class Artist(BaseAgent):
         }
         if seed is not None:
             arguments["seed"] = seed
-        if self.config.flux_negative_prompt:
+        if reference_image_url:
+            # negative_prompt (NAG) is incompatible with reference_image on flux-general
+            arguments["reference_image_url"] = reference_image_url
+            arguments["reference_strength"] = self.config.flux_reference_strength
+        elif self.config.flux_negative_prompt:
             arguments["negative_prompt"] = self.config.flux_negative_prompt
 
         last_error = None
@@ -259,7 +281,7 @@ class Artist(BaseAgent):
                 logger.info(
                     "Flux image saved: %s (%d bytes)", path, len(response.content)
                 )
-                return path
+                return path, image_url
 
             except Exception as e:
                 last_error = e
