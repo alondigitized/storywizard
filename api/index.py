@@ -67,6 +67,16 @@ async def vercel_root(request: Request):
 
 @app.get("/debug")
 async def debug(request: Request):
+    # List panel files for each novel
+    novel_panels = {}
+    if DATA_DIR.exists():
+        for novel_dir in sorted(DATA_DIR.iterdir()):
+            if novel_dir.is_dir():
+                panels_dir = novel_dir / "panels"
+                if panels_dir.exists():
+                    pngs = sorted(p.name for p in panels_dir.iterdir() if p.suffix == ".png")
+                    novel_panels[novel_dir.name] = {"png_count": len(pngs), "pngs": pngs[:5]}
+
     return {
         "path": request.scope.get("path"),
         "raw_path": request.scope.get("raw_path", b"").decode(),
@@ -77,7 +87,9 @@ async def debug(request: Request):
         "templates_dir_exists": TEMPLATES_DIR.exists(),
         "static_dir_exists": STATIC_DIR.exists(),
         "data_dir_exists": DATA_DIR.exists(),
+        "data_dir_path": str(DATA_DIR),
         "data_contents": [p.name for p in DATA_DIR.iterdir()] if DATA_DIR.exists() else [],
+        "novel_panels": novel_panels,
         "cwd": os.getcwd(),
         "file_location": str(Path(__file__).resolve()),
     }
