@@ -48,7 +48,7 @@
                     <div class="cover-front">
                         <div class="cover-art" style="background-color: {{ novel.get('cover_bg', '#1a1a2e') }}">
                             {% if novel.get('cover_image') %}
-                            <img class="cover-img" src="/covers/{{ novel.slug }}" alt="{{ novel.metadata.title }} cover">
+                            <img class="cover-img" src="/covers/{{ novel.slug }}.png" alt="{{ novel.metadata.title }} cover">
                             {% else %}
                             <div class="cover-pattern"></div>
                             {% endif %}
