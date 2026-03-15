@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-"""Generate real Flux images for scenes 1-2 of Frankenstein.
+"""Generate high-quality panels for scenes 1-2 of Frankenstein.
 
-Reads existing .prompt.txt files, extracts the image prompt, calls fal.ai Flux
+Uses a hybrid approach for visual consistency:
+  - Panel 1: Recraft V4 Pro (highest quality, color palette from style guide)
+  - Panels 2+: FLUX Pro Kontext (style-anchored to panel 1 via image_url)
+
+Reads existing .prompt.txt files, extracts the image prompt, calls fal.ai
 to generate PNGs, and updates novel.json to point to the new images.
 
 Usage:
@@ -26,18 +30,20 @@ NOVEL_JSON = DATA_DIR / "novel.json"
 # Scenes to generate (1 and 2)
 SCENES = [1, 2]
 
-# Flux settings (match pipeline defaults from config.py)
-FLUX_MODEL = "fal-ai/flux-general"
-FLUX_ASPECT = "landscape_16_9"
-FLUX_GUIDANCE_SCALE = 7.0
-FLUX_INFERENCE_STEPS = 28
-FLUX_REFERENCE_STRENGTH = 0.50
-FLUX_NEGATIVE_PROMPT = (
-    "photograph, photo, photorealistic, 3D render, CGI, anime, manga, "
-    "cartoon, cel-shaded, flat color, vector art, stock photo, film still, "
-    "movie screenshot"
-)
+# Model settings
+RECRAFT_MODEL = "fal-ai/recraft/v4/pro/text-to-image"
+KONTEXT_MODEL = "fal-ai/flux-pro/kontext"
+KONTEXT_GUIDANCE_SCALE = 4.0
 BASE_SEED = 42  # seed = 42 + scene*100 + panel
+
+# Frankenstein style guide color palette (RGB tuples from hex)
+STYLE_COLORS = [
+    {"r": 27, "g": 42, "b": 74},     # Midnight Prussian Blue #1B2A4A
+    {"r": 197, "g": 196, "b": 106},   # Corpse Yellow-Green #C5C46A
+    {"r": 110, "g": 110, "b": 110},   # Charnel Ash Grey #6E6E6E
+    {"r": 139, "g": 26, "b": 26},     # Blood Crimson #8B1A1A
+    {"r": 212, "g": 136, "b": 42},    # Amber Candlelight #D4882A
+]
 
 MAX_RETRIES = 3
 RETRY_BACKOFF = 2.0
@@ -59,32 +65,21 @@ def extract_prompt(text: str) -> str:
     return text.strip()
 
 
-def generate_image(
-    prompt: str, seed: int, *, reference_image_url: str | None = None,
-) -> tuple[bytes, str]:
-    """Call fal.ai Flux and return (PNG bytes, CDN URL)."""
+def generate_recraft(prompt: str) -> tuple[bytes, str]:
+    """Generate with Recraft V4 Pro. Returns (PNG bytes, CDN URL)."""
     import fal_client
 
     arguments = {
         "prompt": prompt,
-        "image_size": FLUX_ASPECT,
-        "num_images": 1,
+        "image_size": "landscape_16_9",
         "output_format": "png",
-        "guidance_scale": FLUX_GUIDANCE_SCALE,
-        "num_inference_steps": FLUX_INFERENCE_STEPS,
-        "seed": seed,
+        "colors": STYLE_COLORS,
     }
-    if reference_image_url:
-        # negative_prompt (NAG) is incompatible with reference_image on flux-general
-        arguments["reference_image_url"] = reference_image_url
-        arguments["reference_strength"] = FLUX_REFERENCE_STRENGTH
-    else:
-        arguments["negative_prompt"] = FLUX_NEGATIVE_PROMPT
 
     last_error = None
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            result = fal_client.subscribe(FLUX_MODEL, arguments=arguments)
+            result = fal_client.subscribe(RECRAFT_MODEL, arguments=arguments)
             image_url = result["images"][0]["url"]
 
             response = httpx.get(image_url, timeout=60.0)
@@ -105,7 +100,52 @@ def generate_image(
                 time.sleep(wait)
 
     raise RuntimeError(
-        f"Flux generation failed after {MAX_RETRIES} attempts: {last_error}"
+        f"Recraft generation failed after {MAX_RETRIES} attempts: {last_error}"
+    ) from last_error
+
+
+def generate_kontext(
+    prompt: str, seed: int, *, image_url: str,
+) -> tuple[bytes, str]:
+    """Generate with FLUX Pro Kontext. Returns (PNG bytes, CDN URL)."""
+    import fal_client
+
+    arguments = {
+        "prompt": prompt,
+        "image_url": image_url,
+        "guidance_scale": KONTEXT_GUIDANCE_SCALE,
+        "seed": seed,
+        "num_images": 1,
+        "output_format": "png",
+        "aspect_ratio": "16:9",
+        "safety_tolerance": "6",
+    }
+
+    last_error = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            result = fal_client.subscribe(KONTEXT_MODEL, arguments=arguments)
+            result_url = result["images"][0]["url"]
+
+            response = httpx.get(result_url, timeout=60.0)
+            response.raise_for_status()
+
+            if len(response.content) < MIN_IMAGE_BYTES:
+                raise ValueError(
+                    f"Image too small ({len(response.content)} bytes), likely corrupted"
+                )
+
+            return response.content, result_url
+
+        except Exception as e:
+            last_error = e
+            if attempt < MAX_RETRIES:
+                wait = RETRY_BACKOFF**attempt
+                print(f"  Attempt {attempt}/{MAX_RETRIES} failed: {e} — retrying in {wait:.1f}s")
+                time.sleep(wait)
+
+    raise RuntimeError(
+        f"Kontext generation failed after {MAX_RETRIES} attempts: {last_error}"
     ) from last_error
 
 
@@ -131,6 +171,8 @@ def main() -> None:
         sys.exit(1)
 
     print(f"Generating {len(panels_to_generate)} panels for scenes {SCENES}")
+    print(f"  Panel 1: Recraft V4 Pro (style anchor with color palette)")
+    print(f"  Panels 2-{len(panels_to_generate)}: FLUX Pro Kontext (style-anchored)")
     print()
 
     generated_files = []
@@ -140,24 +182,27 @@ def main() -> None:
         seed = BASE_SEED + scene_num * 100 + panel_num
         png_path = prompt_file.parent / f"scene{scene_num:02d}_panel{panel_num:02d}.png"
 
-        ref_label = " (style anchor)" if style_anchor_url is None else ""
-        print(f"[{len(generated_files)+1}/{len(panels_to_generate)}] "
-              f"scene {scene_num}, panel {panel_num} (seed={seed}){ref_label}")
-
         # Extract prompt
         raw_text = prompt_file.read_text(encoding="utf-8")
         prompt = extract_prompt(raw_text)
 
-        # Generate image — first panel becomes the style anchor
-        png_bytes, cdn_url = generate_image(
-            prompt, seed, reference_image_url=style_anchor_url,
-        )
-        png_path.write_bytes(png_bytes)
-        print(f"  Saved: {png_path.name} ({len(png_bytes):,} bytes)")
-
         if style_anchor_url is None:
+            # First panel: Recraft V4 Pro
+            print(f"[{len(generated_files)+1}/{len(panels_to_generate)}] "
+                  f"scene {scene_num}, panel {panel_num} — Recraft V4 Pro (style anchor)")
+            png_bytes, cdn_url = generate_recraft(prompt)
             style_anchor_url = cdn_url
             print(f"  Style anchor URL: {cdn_url}")
+        else:
+            # Subsequent panels: FLUX Pro Kontext
+            print(f"[{len(generated_files)+1}/{len(panels_to_generate)}] "
+                  f"scene {scene_num}, panel {panel_num} (seed={seed}) — Kontext")
+            png_bytes, cdn_url = generate_kontext(
+                prompt, seed, image_url=style_anchor_url,
+            )
+
+        png_path.write_bytes(png_bytes)
+        print(f"  Saved: {png_path.name} ({len(png_bytes):,} bytes)")
 
         generated_files.append((scene_num, panel_num, png_path))
 
