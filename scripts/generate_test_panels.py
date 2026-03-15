@@ -27,8 +27,8 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "frankenstein"
 PANELS_DIR = DATA_DIR / "panels"
 NOVEL_JSON = DATA_DIR / "novel.json"
 
-# Scenes to generate (1 and 2)
-SCENES = [1, 2]
+# Scenes to generate
+SCENES = list(range(3, 16))  # 3-15 (1-2 already done)
 
 # Model settings
 RECRAFT_MODEL = "fal-ai/recraft/v4/pro/text-to-image"
@@ -176,7 +176,12 @@ def main() -> None:
     print()
 
     generated_files = []
-    style_anchor_url: str | None = None
+
+    # Use existing style anchor if available, otherwise generate with Recraft
+    style_anchor_url: str | None = os.environ.get("STYLE_ANCHOR_URL")
+    if style_anchor_url:
+        print(f"Using existing style anchor: {style_anchor_url}")
+        print()
 
     for scene_num, panel_num, prompt_file in panels_to_generate:
         seed = BASE_SEED + scene_num * 100 + panel_num
