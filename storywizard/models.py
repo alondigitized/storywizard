@@ -149,6 +149,7 @@ class GeneratedPanel(BaseModel):
     image_prompt: str = Field(description="The prompt sent to the image generator")
     image_path: str = Field(default="", description="Path to the generated image")
     alt_text: str = Field(default="", description="Accessibility description")
+    seed: int | None = Field(default=None, description="Seed used for image generation")
 
 
 class EditorialReview(BaseModel):

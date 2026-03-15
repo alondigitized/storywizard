@@ -31,8 +31,20 @@ class StoryAnalyst(BaseAgent):
         "carry the story's essence."
     )
 
+    MAX_TEXT_CHARS = 80_000
+
     def analyze(self, text: str, metadata: StoryMetadata) -> StoryAnalysis:
         """Analyze the novel and return structured story analysis."""
+        import logging
+
+        if len(text) > self.MAX_TEXT_CHARS:
+            logging.getLogger(__name__).warning(
+                "Novel text is %d chars, truncating to %d chars. "
+                "Later plot points may be missed.",
+                len(text), self.MAX_TEXT_CHARS,
+            )
+            text = text[: self.MAX_TEXT_CHARS]
+
         prompt = (
             f"Analyze this novel for graphic novel adaptation.\n\n"
             f"Title: {metadata.title}\n"
@@ -41,6 +53,6 @@ class StoryAnalyst(BaseAgent):
             f"Setting: {metadata.setting}, {metadata.time_period}\n\n"
             f"Identify up to {self.config.max_scenes} crucial scenes, "
             f"all major characters, themes, and the narrative arc.\n\n"
-            f"NOVEL TEXT:\n{text[:80000]}"  # Truncate if extremely long
+            f"NOVEL TEXT:\n{text}"
         )
         return self.invoke_structured(prompt, StoryAnalysis)

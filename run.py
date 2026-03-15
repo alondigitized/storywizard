@@ -39,6 +39,22 @@ def main() -> None:
         "--flux-aspect", default="landscape_16_9",
         help="Aspect ratio for Flux images (default: landscape_16_9)",
     )
+    parser.add_argument(
+        "--flux-seed", type=int, default=None,
+        help="Base seed for deterministic image generation (default: random)",
+    )
+    parser.add_argument(
+        "--flux-guidance", type=float, default=3.5,
+        help="Guidance scale for prompt adherence, 1.0-20.0 (default: 3.5)",
+    )
+    parser.add_argument(
+        "--flux-steps", type=int, default=28,
+        help="Number of inference steps, 1-100 (default: 28)",
+    )
+    parser.add_argument(
+        "--flux-negative", default="",
+        help="Negative prompt — concepts to exclude from generation",
+    )
     args = parser.parse_args()
 
     config = PipelineConfig(
@@ -46,17 +62,19 @@ def main() -> None:
         max_scenes=args.max_scenes,
         flux_model=args.flux_model,
         flux_aspect_ratio=args.flux_aspect,
+        flux_seed=args.flux_seed,
+        flux_guidance_scale=args.flux_guidance,
+        flux_num_inference_steps=args.flux_steps,
+        flux_negative_prompt=args.flux_negative,
     )
 
-    if not config.anthropic_api_key:
-        logger.error("ANTHROPIC_API_KEY environment variable is required")
+    errors = config.validate()
+    if errors:
+        for error in errors:
+            logger.error(error)
         sys.exit(1)
 
     if args.backend == "flux":
-        import os
-        if not os.environ.get("FAL_KEY"):
-            logger.error("FAL_KEY environment variable is required for flux backend")
-            sys.exit(1)
         logger.info("Using Flux image generation via fal.ai (%s)", args.flux_model)
 
     logger.info("Fetching book %d from Project Gutenberg...", args.book_id)

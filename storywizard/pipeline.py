@@ -105,10 +105,33 @@ class PublishingPipeline:
             if editorial_review.approved:
                 break
             if attempt < self.config.max_revision_rounds:
-                logger.info("Draft rejected — revision feedback provided")
-                # In a full implementation, we'd feed the review back to
-                # the relevant agents for revision. For now, we log and retry.
+                logger.info("Draft rejected — revising scripts based on feedback")
                 logger.info("Issues: %s", editorial_review.issues)
+
+                # Feed editor feedback to Script Writer for revision
+                feedback_context = (
+                    f"EDITOR FEEDBACK (score {editorial_review.overall_score}/10):\n"
+                    f"Issues: {'; '.join(editorial_review.issues)}\n"
+                    f"Suggestions: {'; '.join(editorial_review.suggestions)}\n"
+                    f"Visual consistency: {editorial_review.visual_consistency}\n"
+                    f"Narrative coherence: {editorial_review.narrative_coherence}\n"
+                    f"Dialogue quality: {editorial_review.dialogue_quality}\n"
+                    f"Pacing: {editorial_review.pacing}"
+                )
+                scripts = self.script_writer.revise_scripts(
+                    scripts, analysis.characters, style_guide, feedback_context
+                )
+                total_panels = sum(len(s.panels) for s in scripts)
+                logger.info(
+                    "Revised %d scripts with %d total panels",
+                    len(scripts), total_panels,
+                )
+
+                # Re-generate panels from revised scripts
+                panels = self.artist.generate_panels(
+                    scripts, style_guide, output_dir / "panels"
+                )
+                logger.info("Re-generated %d panel images", len(panels))
         else:
             logger.warning(
                 "Draft not approved after %d rounds — proceeding with final version",

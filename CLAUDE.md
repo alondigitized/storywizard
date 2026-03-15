@@ -7,9 +7,7 @@ AI publishing pipeline that transforms public domain novels into illustrated gra
 ```bash
 pip install -e .
 
-# Required
-export ANTHROPIC_API_KEY="your-key"
-
+# Requires Claude CLI (claude) installed and authenticated
 # For real image generation (optional)
 export FAL_KEY="your-fal-key"
 
@@ -56,9 +54,10 @@ run.py               # CLI entry point with argparse
 
 | Variable | Required | Purpose |
 |----------|----------|---------|
-| `ANTHROPIC_API_KEY` | Yes | Claude API for all agents |
 | `FAL_KEY` | For `--backend flux` | fal.ai Flux image generation |
 | `IMAGE_API_KEY` | No | Legacy alias for image API key |
+
+**Note:** Agents invoke Claude via the local `claude` CLI (no API key needed). Ensure `claude` is installed and authenticated.
 
 ## CLI Options
 

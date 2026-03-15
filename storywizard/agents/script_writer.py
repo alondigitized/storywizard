@@ -76,3 +76,32 @@ class ScriptWriter(BaseAgent):
             script = self.write_script(scene, characters, style_guide)
             scripts.append(script)
         return scripts
+
+    def revise_scripts(
+        self,
+        scripts: list[PanelScript],
+        characters: list[Character],
+        style_guide: VisualStyleGuide,
+        feedback: str,
+    ) -> list[PanelScript]:
+        """Revise panel scripts based on editorial feedback."""
+        revised = []
+        for script in scripts:
+            panels_summary = "\n".join(
+                f"  Panel {p.panel_number}: {p.visual_direction[:100]}"
+                for p in script.panels
+            )
+            prompt = (
+                f"Revise this graphic novel panel script based on editor feedback.\n\n"
+                f"SCENE {script.scene_number}: {script.scene_title}\n"
+                f"Current layout: {script.layout_notes}\n"
+                f"Current panels:\n{panels_summary}\n\n"
+                f"{feedback}\n\n"
+                f"Art style: {style_guide.art_style}\n"
+                f"Mood: {style_guide.mood}\n\n"
+                f"Address the editor's concerns while keeping what works well. "
+                f"Create 3-6 revised panels for this scene."
+            )
+            revised_script = self.invoke_structured(prompt, PanelScript)
+            revised.append(revised_script)
+        return revised
