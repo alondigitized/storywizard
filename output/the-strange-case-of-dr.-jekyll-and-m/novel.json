@@ -9,23 +9,23 @@
     "time_period": "Victorian Era"
   },
   "curator_statement": {
-    "human_truth": "Every person contains multitudes \u2014 impulses we act on and impulses we suppress. Stevenson gave form to the terrifying idea that the darkness inside us isn\u2019t a flaw to be fixed, but a fundamental part of who we are. Jekyll doesn\u2019t become Hyde; he already IS Hyde. The potion just removes the mask.",
-    "historical_moment": "Written in 1886, during the height of Victorian respectability, when gentlemen were expected to be moral pillars in public while London\u2019s underworld thrived in shadow. Stevenson wrote the entire novella in three feverish days, burned the first draft, and rewrote it in three more. It became an instant sensation \u2014 selling 40,000 copies in six months \u2014 because it said out loud what everyone secretly knew: the respectable facade was a lie.",
+    "human_truth": "Every person contains multitudes — impulses we act on and impulses we suppress. Stevenson gave form to the terrifying idea that the darkness inside us isn’t a flaw to be fixed, but a fundamental part of who we are. Jekyll doesn’t become Hyde; he already IS Hyde. The potion just removes the mask.",
+    "historical_moment": "Written in 1886, during the height of Victorian respectability, when gentlemen were expected to be moral pillars in public while London’s underworld thrived in shadow. Stevenson wrote the entire novella in three feverish days, burned the first draft, and rewrote it in three more. It became an instant sensation — selling 40,000 copies in six months — because it said out loud what everyone secretly knew: the respectable facade was a lie.",
     "living_relevance": "In an age of curated social media personas, where everyone projects a polished self while hiding their darker impulses, Jekyll and Hyde is more relevant than ever. We all maintain a public face and a private one. The story asks: what happens when the gap between who we pretend to be and who we actually are becomes unbridgeable?",
-    "invitation": "This isn\u2019t a long read \u2014 it\u2019s a short, sharp shock. In just five scenes, you\u2019ll follow the mystery of a sinister door, a trampled child, and a will that leaves everything to a man no one has ever seen. By the time you reach the final revelation, you\u2019ll understand why this story invented a phrase that\u2019s been part of our language for nearly 140 years. Everyone has a Hyde. Come meet yours.",
+    "invitation": "This isn’t a long read — it’s a short, sharp shock. In just five scenes, you’ll follow the mystery of a sinister door, a trampled child, and a will that leaves everything to a man no one has ever seen. By the time you reach the final revelation, you’ll understand why this story invented a phrase that’s been part of our language for nearly 140 years. Everyone has a Hyde. Come meet yours.",
     "one_line": "The story that gave us the language to talk about the darkness hiding inside every respectable person.",
     "target_audience": "Young adults and adult readers"
   },
   "style_guide": {
-    "art_style": "Dark Victorian noir with ink wash textures \u2014 heavy shadows, gaslit atmosphere, influenced by Mike Mignola and Dave McKean",
+    "art_style": "Dark Victorian noir with ink wash textures — heavy shadows, gaslit atmosphere, influenced by Mike Mignola and Dave McKean",
     "color_palette": [
-      "Deep charcoal (#2C2C2C) \u2014 the fog-shrouded streets",
-      "Sickly amber (#D4A847) \u2014 gaslight and moral corruption",
-      "Blood crimson (#8B0000) \u2014 violence and Hyde's presence",
-      "Cold blue-grey (#6B7B8D) \u2014 Jekyll's repression and clinical detachment",
-      "Ivory white (#F5F0E1) \u2014 innocence and the facade of respectability"
+      "Deep charcoal (#2C2C2C) — the fog-shrouded streets",
+      "Sickly amber (#D4A847) — gaslight and moral corruption",
+      "Blood crimson (#8B0000) — violence and Hyde's presence",
+      "Cold blue-grey (#6B7B8D) — Jekyll's repression and clinical detachment",
+      "Ivory white (#F5F0E1) — innocence and the facade of respectability"
     ],
-    "mood": "Oppressive, claustrophobic Victorian dread \u2014 the constant sense that something monstrous lurks beneath the veneer of respectability. Shadows are alive, fog obscures truth, and every gentleman's face hides a beast.",
+    "mood": "Oppressive, claustrophobic Victorian dread — the constant sense that something monstrous lurks beneath the veneer of respectability. Shadows are alive, fog obscures truth, and every gentleman's face hides a beast.",
     "character_designs": [
       {
         "character_name": "Dr. Henry Jekyll",
@@ -51,7 +51,7 @@
       },
       {
         "character_name": "Mr. Edward Hyde",
-        "appearance": "Small, pale, dwarfish figure that radiates wrongness. Features are not deformed but give an impression of deformity \u2014 something fundamentally off about his proportions.",
+        "appearance": "Small, pale, dwarfish figure that radiates wrongness. Features are not deformed but give an impression of deformity — something fundamentally off about his proportions.",
         "clothing": "Jekyll's clothes hanging loose on his smaller frame. Rumpled, stained. Wears a heavy cape to hide in shadows.",
         "distinguishing_features": [
           "Unsettling smile",
@@ -93,15 +93,15 @@
         ]
       }
     ],
-    "environment_notes": "Victorian London rendered in heavy shadow and fog. Streets are narrow, gaslit corridors. Jekyll's house is grand but with one wing perpetually dark. Hyde's Soho apartment is cramped, stained. The laboratory door is always in shadow \u2014 a threshold between worlds.",
+    "environment_notes": "Victorian London rendered in heavy shadow and fog. Streets are narrow, gaslit corridors. Jekyll's house is grand but with one wing perpetually dark. Hyde's Soho apartment is cramped, stained. The laboratory door is always in shadow — a threshold between worlds.",
     "typography_notes": "Dialogue in clean serif (Caslon-style). Narration in slightly weathered italic. Hyde's speech in a more jagged, unsettling variant. Sound effects hand-lettered with ink splatter.",
     "consistency_rules": [
       "Hyde is ALWAYS drawn smaller than everyone around him",
       "Gaslight casts amber; moonlight casts blue-grey",
-      "Jekyll's hands are prominent in every scene \u2014 trembling, clenching, transforming",
+      "Jekyll's hands are prominent in every scene — trembling, clenching, transforming",
       "Shadows grow longer and more distorted as the story progresses",
       "The laboratory door appears in the background of at least one panel per scene",
-      "Weather worsens with narrative tension \u2014 mist to fog to storm"
+      "Weather worsens with narrative tension — mist to fog to storm"
     ],
     "full_style_document": ""
   },
@@ -120,7 +120,7 @@
         },
         {
           "panel_number": 2,
-          "visual_direction": "Medium shot of Enfield gesturing toward a sinister door set into a windowless wall. The door is blistered, stained \u2014 utterly out of place on the respectable street. Deep shadows pool around its threshold.",
+          "visual_direction": "Medium shot of Enfield gesturing toward a sinister door set into a windowless wall. The door is blistered, stained — utterly out of place on the respectable street. Deep shadows pool around its threshold.",
           "dialogue": [
             "Did you ever remark that door?",
             "It is connected in my mind with a very odd story."
@@ -130,9 +130,9 @@
         },
         {
           "panel_number": 3,
-          "visual_direction": "Flashback panel \u2014 tilted angle, more expressionistic. A small, pale figure (Hyde) tramples over a screaming child at a street corner. The scene is rendered in harsh crimson and black. Hyde's face is obscured by shadow but his posture radiates malice.",
+          "visual_direction": "Flashback panel — tilted angle, more expressionistic. A small, pale figure (Hyde) tramples over a screaming child at a street corner. The scene is rendered in harsh crimson and black. Hyde's face is obscured by shadow but his posture radiates malice.",
           "dialogue": [],
-          "narration": "It was some damned Juggernaut \u2014 the man trampled calmly over the child's body and left her screaming on the ground.",
+          "narration": "It was some damned Juggernaut — the man trampled calmly over the child's body and left her screaming on the ground.",
           "sound_effects": [
             "CRACK"
           ]
@@ -141,7 +141,7 @@
           "panel_number": 4,
           "visual_direction": "Close-up of the sinister door, now filling the entire panel. The wood grain seems to form a face. A keyhole glints like an eye. Utterson's reflection is barely visible in the dark wood.",
           "dialogue": [
-            "And the man who did this \u2014 he had a key to that door."
+            "And the man who did this — he had a key to that door."
           ],
           "narration": "",
           "sound_effects": []
@@ -162,14 +162,14 @@
         },
         {
           "panel_number": 2,
-          "visual_direction": "Montage panel: Three small frames showing Utterson haunting the street near the door at different times \u2014 dawn, noon, night. Each time the street is emptier, the shadows deeper. He is a dark sentinel, watching.",
+          "visual_direction": "Montage panel: Three small frames showing Utterson haunting the street near the door at different times — dawn, noon, night. Each time the street is emptier, the shadows deeper. He is a dark sentinel, watching.",
           "dialogue": [],
           "narration": "If he be Mr. Hyde, I shall be Mr. Seek.",
           "sound_effects": []
         },
         {
           "panel_number": 3,
-          "visual_direction": "The confrontation: Hyde emerges from the door, face half-lit by a distant gaslight. He is small but radiates menace. Utterson blocks his path. The size difference is stark \u2014 Hyde looks up at the tall lawyer, but somehow Utterson seems the more vulnerable.",
+          "visual_direction": "The confrontation: Hyde emerges from the door, face half-lit by a distant gaslight. He is small but radiates menace. Utterson blocks his path. The size difference is stark — Hyde looks up at the tall lawyer, but somehow Utterson seems the more vulnerable.",
           "dialogue": [
             "Mr. Hyde, I think?",
             "That is my name. What do you want?"
@@ -179,7 +179,7 @@
         },
         {
           "panel_number": 4,
-          "visual_direction": "Extreme close-up of Hyde's face \u2014 the only time we see it clearly. Not deformed, but deeply wrong. His smile is too wide, his eyes too bright, something reptilian in his gaze. The amber gaslight makes his skin look sickly.",
+          "visual_direction": "Extreme close-up of Hyde's face — the only time we see it clearly. Not deformed, but deeply wrong. His smile is too wide, his eyes too bright, something reptilian in his gaze. The amber gaslight makes his skin look sickly.",
           "dialogue": [
             "Will you let me see your face?"
           ],
@@ -197,19 +197,19 @@
           "panel_number": 1,
           "visual_direction": "A peaceful moonlit scene: Sir Danvers Carew, a beautiful old gentleman with white hair, walks along the Thames embankment. The moon is full, London is serene. This peace is about to be destroyed.",
           "dialogue": [],
-          "narration": "It was a fine night \u2014 the moon lay on her back, and the lanes were brilliantly lit.",
+          "narration": "It was a fine night — the moon lay on her back, and the lanes were brilliantly lit.",
           "sound_effects": []
         },
         {
           "panel_number": 2,
-          "visual_direction": "Hyde appears from shadow, cane in hand. His shadow falls over Carew. The panel is split diagonally \u2014 the peaceful moonlit half versus the encroaching crimson darkness of Hyde's arrival.",
+          "visual_direction": "Hyde appears from shadow, cane in hand. His shadow falls over Carew. The panel is split diagonally — the peaceful moonlit half versus the encroaching crimson darkness of Hyde's arrival.",
           "dialogue": [],
           "narration": "",
           "sound_effects": []
         },
         {
           "panel_number": 3,
-          "visual_direction": "VIOLENCE \u2014 rendered almost abstractly. The cane rises and falls. Splashes of crimson against the blue moonlight. Panel borders crack and splinter. Hyde's face is pure savage joy. This should be horrifying but artfully composed \u2014 the violence of a Caravaggio painting.",
+          "visual_direction": "VIOLENCE — rendered almost abstractly. The cane rises and falls. Splashes of crimson against the blue moonlight. Panel borders crack and splinter. Hyde's face is pure savage joy. This should be horrifying but artfully composed — the violence of a Caravaggio painting.",
           "dialogue": [],
           "narration": "With ape-like fury, he was trampling his victim under foot and hailing down a storm of blows.",
           "sound_effects": [
@@ -220,9 +220,9 @@
         },
         {
           "panel_number": 4,
-          "visual_direction": "Aftermath: The broken cane lies in two pieces. A pool of moonlight \u2014 or is it something else? \u2014 spreads across the cobblestones. Hyde is gone. Only the fog remains.",
+          "visual_direction": "Aftermath: The broken cane lies in two pieces. A pool of moonlight — or is it something else? — spreads across the cobblestones. Hyde is gone. Only the fog remains.",
           "dialogue": [],
-          "narration": "The stick with which the deed had been done was of some rare and very tough wood \u2014 it had broken in the middle under the stress of this insensate cruelty.",
+          "narration": "The stick with which the deed had been done was of some rare and very tough wood — it had broken in the middle under the stress of this insensate cruelty.",
           "sound_effects": []
         }
       ]
@@ -236,7 +236,7 @@
           "panel_number": 1,
           "visual_direction": "Jekyll's butler Poole stands at Utterson's door, terror in his eyes. Behind him, the street is a wall of fog. His hands twist his hat. The warm light from Utterson's hallway contrasts with the cold night.",
           "dialogue": [
-            "Mr. Utterson, sir \u2014 something is wrong.",
+            "Mr. Utterson, sir — something is wrong.",
             "There has been foul play."
           ],
           "narration": "",
@@ -244,7 +244,7 @@
         },
         {
           "panel_number": 2,
-          "visual_direction": "Utterson and Poole approach Jekyll's laboratory door. Servants huddle in the hallway behind them, holding candles that create a procession of wavering light. The door at the end of the corridor is the darkest point in the image \u2014 a void.",
+          "visual_direction": "Utterson and Poole approach Jekyll's laboratory door. Servants huddle in the hallway behind them, holding candles that create a procession of wavering light. The door at the end of the corridor is the darkest point in the image — a void.",
           "dialogue": [
             "Jekyll! I demand to see you!"
           ],
@@ -253,16 +253,16 @@
         },
         {
           "panel_number": 3,
-          "visual_direction": "A voice from behind the door \u2014 rendered as a jagged speech bubble, the lettering unstable, wavering between Jekyll's refined hand and something more primal.",
+          "visual_direction": "A voice from behind the door — rendered as a jagged speech bubble, the lettering unstable, wavering between Jekyll's refined hand and something more primal.",
           "dialogue": [
             "For God's sake, have mercy!"
           ],
-          "narration": "Utterson heard a voice from within: a voice that was not Jekyll's \u2014 and yet somehow was.",
+          "narration": "Utterson heard a voice from within: a voice that was not Jekyll's — and yet somehow was.",
           "sound_effects": []
         },
         {
           "panel_number": 4,
-          "visual_direction": "FULL PAGE: The door crashes open. Inside, Hyde's body lies crumpled on the floor, still twitching. A vial rolls from his hand. But the horror is in the details \u2014 Jekyll's clothes on Hyde's small frame. The chemicals still smoking. The full-length mirror reflecting something we cannot see. Utterson and Poole stand frozen in the doorway, backlit.",
+          "visual_direction": "FULL PAGE: The door crashes open. Inside, Hyde's body lies crumpled on the floor, still twitching. A vial rolls from his hand. But the horror is in the details — Jekyll's clothes on Hyde's small frame. The chemicals still smoking. The full-length mirror reflecting something we cannot see. Utterson and Poole stand frozen in the doorway, backlit.",
           "dialogue": [],
           "narration": "Right in the midst there lay the body of a man sorely contorted and still twitching. They drew near on tiptoe, turned it on its back, and beheld the face of Edward Hyde.",
           "sound_effects": []
@@ -272,7 +272,7 @@
     {
       "scene_number": 5,
       "scene_title": "Henry Jekyll's Full Statement",
-      "layout_notes": "The transformation sequence. Panels dissolve and morph. Jekyll's handwriting narrates. This is the emotional climax \u2014 horror and tragedy intertwined.",
+      "layout_notes": "The transformation sequence. Panels dissolve and morph. Jekyll's handwriting narrates. This is the emotional climax — horror and tragedy intertwined.",
       "panels": [
         {
           "panel_number": 1,
@@ -283,21 +283,21 @@
         },
         {
           "panel_number": 2,
-          "visual_direction": "THE TRANSFORMATION \u2014 a four-part sequence within one panel. Jekyll drinks. His body convulses. His features shift and compress. Hyde emerges. Each stage overlaps the last like a multiple exposure photograph. Pain and ecstasy are indistinguishable on his changing face.",
+          "visual_direction": "THE TRANSFORMATION — a four-part sequence within one panel. Jekyll drinks. His body convulses. His features shift and compress. Hyde emerges. Each stage overlaps the last like a multiple exposure photograph. Pain and ecstasy are indistinguishable on his changing face.",
           "dialogue": [],
           "narration": "The most racking pangs succeeded: a grinding in the bones, deadly nausea, and a horror of the spirit that cannot be exceeded at the hour of birth or death.",
           "sound_effects": []
         },
         {
           "panel_number": 3,
-          "visual_direction": "Hyde stands before a full-length mirror, seeing himself for the first time. His reflection fills the panel \u2014 small, young, wicked, grinning. Behind the mirror, the ghostly outline of Jekyll watches, trapped.",
+          "visual_direction": "Hyde stands before a full-length mirror, seeing himself for the first time. His reflection fills the panel — small, young, wicked, grinning. Behind the mirror, the ghostly outline of Jekyll watches, trapped.",
           "dialogue": [],
-          "narration": "I felt younger, lighter, happier in body. I knew myself, at the first breath of this new life, to be more wicked, tenfold more wicked \u2014 and the thought delighted me like wine.",
+          "narration": "I felt younger, lighter, happier in body. I knew myself, at the first breath of this new life, to be more wicked, tenfold more wicked — and the thought delighted me like wine.",
           "sound_effects": []
         },
         {
           "panel_number": 4,
-          "visual_direction": "Final panel \u2014 split vertically. Left half: Jekyll writing his confession by candlelight, tears on his cheeks, hand trembling. Right half: Hyde's shadow looming behind him, growing, consuming. The two halves are separated by a crack that runs through the middle \u2014 the self, divided and irreparable.",
+          "visual_direction": "Final panel — split vertically. Left half: Jekyll writing his confession by candlelight, tears on his cheeks, hand trembling. Right half: Hyde's shadow looming behind him, growing, consuming. The two halves are separated by a crack that runs through the middle — the self, divided and irreparable.",
           "dialogue": [],
           "narration": "I bring the life of that unhappy Henry Jekyll to an end.",
           "sound_effects": []
@@ -309,142 +309,182 @@
     {
       "scene_number": 1,
       "panel_number": 1,
-      "image_prompt": "Wide shot: A foggy London street at dusk. Mr. Utterson and Mr. Enfield walk side by side, silhouettes against amber gaslight. Victorian buildings loom on either side, their upper floors lost in mist.",
-      "image_path": "panels/scene01_panel01.prompt.txt",
-      "alt_text": "Wide shot: A foggy London street at dusk. Mr. Utterson and Mr. Enfield walk side by side, silhouettes against amber gasl"
+      "image_prompt": "Wide-angle establishing shot, low camera angle looking slightly upward along a narrow Victorian London street at dusk. The perspective recedes into deep fog, creating a claustrophobic corridor of looming architecture.\n\nTwo male silhouettes dominate the lower-center foreground, walking side by side away from the viewer at a measured, contemplative pace. The taller figure — Mr. Utterson — is lean and angular in a conservative dark suit, his rugged weathered profile barely visible as a three-quarter turn. Beside him walks Mr. Enfield, similarly dressed in Victorian gentleman's attire. Both men are rendered primarily as dark shapes, their forms solid and grounded against the dissolving world around them. Utterson's posture is upright but carries the quiet weight of a man who guards too many secrets.\n\nFlanking them on both sides, Victorian terraced buildings rise in asymmetric masses, upper stories dissolving completely into amber-tinged fog. Heavy ink-wash texture defines the stone facades — deeply shadowed recesses, ornate cornices swallowed by mist, dark windows that suggest watching rather than light. Wrought iron railings and stone steps jut from the buildings like skeletal fingers.\n\nThree gas lamps are visible along the street — the nearest lamp casts a concentrated amber halo (#D4A847) that bleeds into the fog, creating layered rings of sickly warm light. The lamplight catches the cobblestones below in slick amber reflections, suggesting recent rain. The deeper street beyond dissolves into cool blue-grey (#6B7B8D) mist, the fog thickening with distance.\n\nThe sky above is a turbulent wash of deep charcoal (#2C2C2C) pressing down, barely distinguishable from the building tops. The overall palette is dominated by charcoal blacks and deep shadow, punctuated only by the amber gaslight and a faint ghostly ivory fog.\n\nShadows are exaggerated and directional in the Mignola tradition — hard-edged black pools beneath the architecture, elongated silhouettes of the two men stretching along wet cobblestones. The ink-wash texture is heavy throughout: rough, organic strokes suggesting grime and age. Cross-hatching defines architectural depth.\n\nThe composition uses the street as a vanishing-point tunnel, pulling the eye toward an obscured vanishing point swallowed in fog. The two figures are small relative to the architecture, emphasizing human insignificance against the oppressive Victorian cityscape. Atmosphere is thick with dread despite the mundane act of an evening walk — the fog itself feels animate, concealing rather than merely obscuring.\n\nArt style: Dark Victorian noir graphic novel, heavy ink-wash textures, deep shadow masses, influenced by Mike Mignola and Dave McKean. High contrast. Painterly but graphic. No text, no lettering, no captions, no speech bubbles, no words of any kind anywhere in the image.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene01_panel01.png",
+      "alt_text": "Wide shot: A foggy London street at dusk. Mr. Utterson and Mr. Enfield walk side by side, silhouettes against amber gaslight. Victorian buildings loom on either side, their upper floors lost in mist.",
+      "seed": 143,
+      "reference_source": ""
     },
     {
       "scene_number": 1,
       "panel_number": 2,
-      "image_prompt": "Medium shot of Enfield gesturing toward a sinister door set into a windowless wall. The door is blistered, stained \u2014 utterly out of place on the respectable street. Deep shadows pool around its threshold.",
-      "image_path": "panels/scene01_panel02.prompt.txt",
-      "alt_text": "Medium shot of Enfield gesturing toward a sinister door set into a windowless wall. The door is blistered, stained \u2014 utt"
+      "image_prompt": "Medium shot, slightly low angle, two-thirds frame composition. A well-dressed Victorian gentleman — Mr. Enfield, a trim man in his thirties wearing a dark overcoat and top hat, ruddy-cheeked from a late-night walk — stands on a fog-wrapped London street, his right arm extended, one gloved finger pointing toward a door set flush into a long, bare, windowless wall to his left. His posture holds a tension between casual storytelling and involuntary unease, his body angled slightly away from the door even as he gestures at it, as though reluctant to fully face it.\n\nThe door dominates the left side of the frame. It is a battered, low, two-panelled door of no architectural distinction — its paint blistered and peeling in leprous patches, its wood grain stained dark with age and damp, its brass knocker tarnished to near-black. It sits recessed slightly into the wall, and the shadows at its threshold are unnaturally deep, pooling like ink that refuses to drain, as though the darkness behind it presses outward. The wall itself is plain, the surrounding buildings respectable and well-maintained Victorian terraces — which makes the door's presence feel deeply, inexplicably wrong. A single gaslight on a wrought-iron post further down the street bleeds sickly amber (#D4A847) across the cobblestones, casting long distorted shadows that stretch toward the door like fingers.\n\nThe fog is thick but low — a Victorian pea-souper clinging to the wet cobblestones, swallowing the bases of the buildings. Wisps of mist curl around Enfield's boots and drift toward the door's threshold, as if drawn inward. The overall palette is deep charcoal (#2C2C2C) with amber gaslight picking out Enfield's coat and the wet stones, cold blue-grey (#6B7B8D) bleeding into the mid-distance fog. The door itself sits in its own shadow, neither amber nor blue — an absence of both.\n\nArt style: Dark Victorian noir with heavy ink wash textures in the manner of Mike Mignola and Dave McKean. Deep, confident blacks with crosshatched shadow work. Linework that is deliberate and bold, with watercolor-wash tones bleeding at the edges. The shadows around the door's threshold are rendered as solid black shapes with no interior detail — pure absence. Gaslight halos are soft, amber, impressionistic. The overall mood is oppressive Victorian dread: the feeling that the door is not merely old and ugly, but wrong in some way that bypasses rational thought and registers only as instinctive revulsion. No text, no lettering, no signage, no captions, no speech bubbles of any kind.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene01_panel02.png",
+      "alt_text": "Medium shot of Enfield gesturing toward a sinister door set into a windowless wall. The door is blistered, stained — utterly out of place on the respectable street. Deep shadows pool around its threshold.",
+      "seed": 144,
+      "reference_source": ""
     },
     {
       "scene_number": 1,
       "panel_number": 3,
-      "image_prompt": "Flashback panel \u2014 tilted angle, more expressionistic. A small, pale figure (Hyde) tramples over a screaming child at a street corner. The scene is rendered in harsh crimson and black. Hyde's face is obscured by shadow but his posture radiates malice.",
-      "image_path": "panels/scene01_panel03.prompt.txt",
-      "alt_text": "Flashback panel \u2014 tilted angle, more expressionistic. A small, pale figure (Hyde) tramples over a screaming child at a s"
+      "image_prompt": "Graphic novel panel, dark Victorian noir ink wash illustration, Mike Mignola and Dave McKean style. Tilted Dutch angle composition, approximately 15 degrees clockwise, creating disorientation and dread. The frame is tight and claustrophobic.\n\nCOMPOSITION: Low-angle shot from ground level, looking up from the cobblestones. The focal point is Hyde's boot mid-stride, planted callously against the cobblestones beside a small child's splayed hand. The scene is framed by the sharp corner of two narrow Victorian street walls converging in the background, forcing the eye toward the act of violence at center.\n\nCHARACTERS: Hyde — a small, pale, dwarfish male figure in the middle distance, rendered almost entirely in silhouette and deep shadow. His face is completely obscured beneath the brim of a heavy cape collar and hat, swallowed by darkness. Despite his diminutive stature, his silhouette dominates the panel — his shadow cast by a distant gaslight stretches grotesquely long and wide across the wet cobblestones, three times larger than his body, distorted into something monstrous. His posture is chillingly upright, unhurried — one foot mid-step, spine straight, radiating cold indifference rather than rage. Jekyll's oversized clothes hang loose from his smaller frame, cape billowing. A fallen child in white dress is crumpled at the street corner, small pale limbs against dark wet stone, mouth open in a silent cry. The child rendered in ivory white (#F5F0E1), a stark contrast to the surrounding darkness.\n\nENVIRONMENT: A narrow Victorian London street corner at night. Wet cobblestones slick with rain, reflecting distorted amber and crimson light. A single gaslight at the far end of the lane casts a sickly amber (#D4A847) cone of light that barely reaches the scene, leaving most of the panel in deep charcoal shadow (#2C2C2C). The surrounding architecture — brick walls, iron railings, a dark doorway — presses inward. Wisps of fog curl low along the ground. The laboratory door is faintly visible in deep shadow in the far background, barely discernible.\n\nCOLOR TREATMENT: Near-monochromatic, dominated by blood crimson (#8B0000) bleeding across the cobblestones and saturating Hyde's shadow like a stain. Deep charcoal blacks form the majority of the frame. Sparse amber touches on the distant gaslight only. The child's dress is the sole ivory white element, fragile and isolated. This is a flashback panel — the entire image has a slight vignette burn at the edges, as if viewed through corrupted memory.\n\nSTYLE: Heavy ink wash, cross-hatched shadows, expressionist distortion on architecture. Brushwork is rough and violent at the edges, precise only on Hyde's silhouette. No halftones — pure shadow and light. Oppressive, nightmarish quality. No text, letters, captions, symbols, or speech bubbles anywhere in the image.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene01_panel03.png",
+      "alt_text": "Flashback panel — tilted angle, more expressionistic. A small, pale figure (Hyde) tramples over a screaming child at a street corner. The scene is rendered in harsh crimson and black. Hyde's face is obscured by shadow but his posture radiates malice.",
+      "seed": 145,
+      "reference_source": ""
     },
     {
       "scene_number": 1,
       "panel_number": 4,
-      "image_prompt": "Close-up of the sinister door, now filling the entire panel. The wood grain seems to form a face. A keyhole glints like an eye. Utterson's reflection is barely visible in the dark wood.",
-      "image_path": "panels/scene01_panel04.prompt.txt",
-      "alt_text": "Close-up of the sinister door, now filling the entire panel. The wood grain seems to form a face. A keyhole glints like "
+      "image_prompt": "Extreme close-up shot, the entire panel consumed by a single massive Victorian door, filling the frame edge to edge with oppressive, looming presence. The door is ancient, thick-planked wood of deep charcoal black, the grain running vertically like claw marks etched into the surface over decades. Within the wood grain itself, the natural patterns subtly suggest a contorted face — hollow eye sockets formed by dark knots, a gaping mouth implied by a long split in the timber, not overtly literal but deeply unsettling, the kind of shape the brain recognizes before the eye does.\n\nAt the center of the frame, slightly below the midpoint, a brass keyhole plate catches a sliver of amber gaslight from somewhere off-panel to the lower left. The keyhole itself glints with a cold, singular yellow-gold gleam — shaped like an eye, vertical and watchful, the only source of warm light in an otherwise dead-black composition. The surrounding metal is tarnished and pitted, ringed with age and grime.\n\nIn the polished upper wood, barely perceptible — a ghost of a reflection: the elongated, distorted silhouette of Mr. Gabriel Utterson. His lean, dark-suited form is rendered in cold blue-grey tones within the reflection, fragmented across the uneven grain, his deep-set watchful eyes just barely resolving out of the distortion. He appears small, swallowed by the door's mass, a man confronting something far larger than himself. His reflected face carries no expression — only stillness.\n\nThe door's iron hinges are massive, rusted to near-black, barely clinging to a crumbling brick surround at the panel edges. No door handle is visible — this is a door that does not invite entry. A thin hairline crack of absolute darkness runs along the bottom edge — nothing beyond it, only void.\n\nLighting is almost entirely absent except for the keyhole's amber glint and a faint blue-grey ambient glow catching the edge of Utterson's reflection. Shadows are Mignola-heavy — inky, flat, with crisp geometric edges that feel more drawn than rendered. Texture is McKean ink-wash, the wood built from layered charcoal strokes and bleed marks, tactile and gritty.\n\nColor palette: dominant deep charcoal (#2C2C2C), with the single sickly amber (#D4A847) keyhole gleam, cold blue-grey (#6B7B8D) in the reflection, and traces of ivory white only in the faint highlight catching the door's upper edge. The grain suggests blood crimson in the deepest shadow pockets — subliminal, not literal.\n\nMood: pure Victorian dread. A threshold between worlds. The door is not haunted — the door IS the haunting.\n\nArt style: dark graphic novel illustration, Mike Mignola ink-block shadows, Dave McKean mixed-media texture, high contrast, no text, no lettering, no speech bubbles, no captions.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene01_panel04.png",
+      "alt_text": "Close-up of the sinister door, now filling the entire panel. The wood grain seems to form a face. A keyhole glints like an eye. Utterson's reflection is barely visible in the dark wood.",
+      "seed": 146,
+      "reference_source": ""
     },
     {
       "scene_number": 2,
       "panel_number": 1,
-      "image_prompt": "Utterson alone in his study at night, holding Jekyll's will by candlelight. The document glows amber. His face is deeply troubled, carved by shadows. Behind him, bookshelves recede into darkness.",
-      "image_path": "panels/scene02_panel01.prompt.txt",
-      "alt_text": "Utterson alone in his study at night, holding Jekyll's will by candlelight. The document glows amber. His face is deeply"
+      "image_prompt": "Close-up medium shot, slightly low angle, centered on a lean weathered man seated at a heavy Victorian writing desk. The frame is intimate and oppressive — walls feel close, ceiling lost to darkness above.\n\nSUBJECT: Gabriel Utterson, a lean, long-faced lawyer with a rugged, deeply lined face carved by decades of keeping secrets. Deep-set watchful eyes cast downward, brow furrowed with quiet dread. Firm jaw tightened. He wears a conservative dark charcoal suit, perfectly proper but swallowed by shadow. Both hands hold a single document at chest level — a legal parchment that catches all available light, glowing a warm amber-gold from the single candle flame burning low on the desk beside him. His fingers grip the edges of the document with restrained urgency. His expression is troubled, still, like a man who has read something he cannot unread.\n\nLIGHTING: Singular candlelight source from the desk, casting amber (#D4A847) warmth across the document and the lower half of Utterson's face. His forehead and the tops of his cheekbones fall into deep charcoal shadow (#2C2C2C). The flame is small, barely holding against the weight of the darkness surrounding it. No secondary light sources — the room is sealed in night.\n\nENVIRONMENT: A Victorian bachelor's study, dense with brooding atmosphere. Behind Utterson, floor-to-ceiling bookshelves recede steeply into absolute darkness — spines of leather-bound volumes visible only closest to the candle, fading to silhouette, then to nothing. The desk is heavy dark wood, cluttered edges vanishing into shadow. No windows visible — the night is implied rather than shown. The room feels airtight, suffocating, the darkness pressing inward like a living thing.\n\nATMOSPHERE: Still, oppressive Victorian dread. The shadows are not passive — they lean. Ink wash textures layer across every surface: hatching on the suit, pooled black in the corners of the room, textured grain on the bookshelves. The amber glow of the document feels sickly, a warmth that unsettles rather than comforts — light the color of moral corruption.\n\nSTYLE: Dark Victorian noir rendered in heavy ink wash, deep shadow masses with minimal linework visible. Influences of Mike Mignola's blocked shadow work and Dave McKean's textural atmospheric depth. Color palette strictly limited: deep charcoal dominates, sickly amber illuminates only the document and Utterson's central face, cold blue-grey (#6B7B8D) bleeds faintly into the shadow edges of the bookshelves. No crimson present — Hyde is absent from this moment. High contrast. Painterly. Heavy. No text, no lettering, no words, no captions, no speech bubbles anywhere in the image.\n\nMOOD: Isolation and foreboding. A man confronting a truth in silence. The document is the only light in the world.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene02_panel01.png",
+      "alt_text": "Utterson alone in his study at night, holding Jekyll's will by candlelight. The document glows amber. His face is deeply troubled, carved by shadows. Behind him, bookshelves recede into darkness.",
+      "seed": 243,
+      "reference_source": ""
     },
     {
       "scene_number": 2,
       "panel_number": 2,
-      "image_prompt": "Montage panel: Three small frames showing Utterson haunting the street near the door at different times \u2014 dawn, noon, night. Each time the street is emptier, the shadows deeper. He is a dark sentinel, watching.",
-      "image_path": "panels/scene02_panel02.prompt.txt",
-      "alt_text": "Montage panel: Three small frames showing Utterson haunting the street near the door at different times \u2014 dawn, noon, ni"
+      "image_prompt": "Triptych composition, three vertical frames side by side within a single panel, each depicting the same narrow Victorian cobblestone alley at different times of day. The frames share a continuous background — the same recessed doorway, the same gas lamp post, the same damp stone walls — but the light and shadow shift dramatically across each frame.\n\n**Left frame — Dawn:** Cold blue-grey light bleeds over fog-drenched cobblestones. Utterson stands motionless to the left of the doorway, a lean, long figure in a conservative dark suit and weathered overcoat, collar turned up against the chill. His deep-set eyes are fixed on the door. A single gas lamp still burns amber, fighting the pale morning. Fog pools at his feet. The street is deserted. His shadow stretches thin and long behind him.\n\n**Center frame — Noon:** Flat, joyless grey light — no warmth, no color — washes the alley. Utterson occupies the same position, same posture, slightly more rigid. His face is turned three-quarters toward the door, jaw firm, watchful eyes patient and unblinking. A few distant pedestrian silhouettes blur in the background fog, but none approach the door. The gaslight is extinguished. Shadows retreat but never fully vanish — they pool in doorframes and under eaves.\n\n**Right frame — Night:** Gaslight returns, casting a sickly amber corona on wet cobblestones. The door is swallowed in deep charcoal shadow. Utterson now stands closer, half-consumed by darkness himself, only the amber highlight of his rugged jaw and the gleam of his watchful eyes catching the light. Fog thickens into near-opacity. His shadow on the wall behind him is massive, distorted, doubling his silhouette like a second figure. The street is utterly empty. The recessed laboratory door looms at the edge of frame, a threshold into absolute blackness.\n\nAcross all three frames, the doorway anchors the right edge — identical, unchanging, perpetually in shadow. The repetition of Utterson's silhouette creates a sentinel rhythm. Heavy ink wash textures roughen the stone walls. Cross-hatched shadows deepen with each frame. Color palette: deep charcoal dominates, sickly amber gaslight punctuates the dawn and night frames, cold blue-grey drains the noon frame of life.\n\nArt style: Dark Victorian noir, Mike Mignola-influenced heavy shadow blocking with Dave McKean ink wash texture. Thick expressive linework. Fog rendered as translucent layered washes. Atmosphere oppressive and claustrophobic — the street a cage Utterson willingly inhabits. Mood: obsessive vigilance, creeping dread, the weight of a secret not yet known but already felt. No figures other than Utterson. No text, no lettering, no speech bubbles, no captions.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene02_panel02.png",
+      "alt_text": "Montage panel: Three small frames showing Utterson haunting the street near the door at different times — dawn, noon, night. Each time the street is emptier, the shadows deeper. He is a dark sentinel, watching.",
+      "seed": 244,
+      "reference_source": ""
     },
     {
       "scene_number": 2,
       "panel_number": 3,
-      "image_prompt": "The confrontation: Hyde emerges from the door, face half-lit by a distant gaslight. He is small but radiates menace. Utterson blocks his path. The size difference is stark \u2014 Hyde looks up at the tall lawyer, but somehow Utterson seems the more vulnerable.",
-      "image_path": "panels/scene02_panel03.prompt.txt",
-      "alt_text": "The confrontation: Hyde emerges from the door, face half-lit by a distant gaslight. He is small but radiates menace. Utt"
+      "image_prompt": "Low-angle wide shot framed in a narrow cobblestone alleyway at night. A weathered wooden door fills the left third of the composition, thrown open mid-frame. Hyde stands in the doorway threshold, body half-swallowed by the deep charcoal interior darkness behind him — only the right side of his face illuminated by a distant amber gaslight at the end of the alley. His face is pale, almost cadaverous, features unsettlingly proportioned — not deformed, but fundamentally wrong. Jekyll's oversized frock coat hangs loose on his dwarfish frame, sleeves too long, shoulders slumped with excess fabric. A heavy dark cape drapes around him. His unsettling smile catches the gaslight like a blade. His shadow stretches tall and distorted behind him on the door, grotesquely larger than his small body — a silhouette that does not match the man.\n\nUtterson stands in the foreground, center-right, a full head taller than Hyde. His back is three-quarters to the viewer, lean frame in a conservative dark suit and greatcoat, the muted browns and reliable grey of his clothing absorbing the fog. His posture is rigid, blocking Hyde's exit — but something in the set of his shoulders, the almost imperceptible lean backward, suggests instinctive recoil. Despite his height advantage, Utterson is clearly the one made vulnerable by this encounter. His deep-set eyes are fixed on Hyde's face with grim watchful intensity. His firm jaw is set.\n\nThe environment is a cramped Soho side-street — narrow, wet cobblestones reflecting the amber gaslight as sickly pools. Thick Victorian fog rolls in from the background, obscuring the gas lamp into a diffused amber halo. Brick walls press in on both sides, slick with damp. The door Hyde occupies is scarred and discolored, the threshold itself shadowed as a threshold between worlds.\n\nLighting is dramatic chiaroscuro: warm amber gaslight from behind Utterson illuminates his back and casts his shadow forward across Hyde, while the interior darkness behind Hyde provides total black negative space. Hyde's half-lit face sits precisely on the light-shadow boundary. Blood crimson bleeds into the scene as subtle color grading around Hyde's silhouette and in the shadows at his feet.\n\nArt style references Mike Mignola's heavy ink blacks and Dave McKean's textured, painterly atmosphere — bold shadow shapes, minimal mid-tones, ink wash grain throughout. The composition creates claustrophobic dread: two figures, tight alley, fog closing in. Hyde looks up at Utterson with that wrong smile. The size difference is undeniable. The power dynamic is reversed. Mood: predatory stillness beneath a veneer of civility, the monstrous hidden in plain sight.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene02_panel03.png",
+      "alt_text": "The confrontation: Hyde emerges from the door, face half-lit by a distant gaslight. He is small but radiates menace. Utterson blocks his path. The size difference is stark — Hyde looks up at the tall lawyer, but somehow Utterson seems the more vulnerable.",
+      "seed": 245,
+      "reference_source": ""
     },
     {
       "scene_number": 2,
       "panel_number": 4,
-      "image_prompt": "Extreme close-up of Hyde's face \u2014 the only time we see it clearly. Not deformed, but deeply wrong. His smile is too wide, his eyes too bright, something reptilian in his gaze. The amber gaslight makes his skin look sickly.",
-      "image_path": "panels/scene02_panel04.prompt.txt",
-      "alt_text": "Extreme close-up of Hyde's face \u2014 the only time we see it clearly. Not deformed, but deeply wrong. His smile is too wide"
+      "image_prompt": "Extreme close-up portrait of Mr. Hyde's face filling the entire frame, cropped just below the chin and cutting off the top of his skull at the hairline. The focal point is his eyes — sharp, glittering, too alert, pupils unnervingly dilated, catching the amber gaslight like a cat's in the dark. His smile is the second focal point: stretched fractionally too wide across pale, bloodless skin, revealing teeth that are slightly too even, the expression containing no warmth whatsoever — the mechanical mimicry of joy.\n\nHyde is a small, pale man with a face that is not malformed but deeply, inexplicably wrong. His proportions are subtly off — the jaw slightly too narrow, the brow slightly too low, the eyes set at an angle that reads as predatory. The wrongness is felt before it is understood. His skin is waxy, sallow, rendered sickly under the amber gaslight that rakes across his face from below-left, carving deep shadows beneath his cheekbones and brow ridge. His hair is dark, lank, slightly disheveled. The heavy collar of Jekyll's oversized frock coat rises around his neck, swallowing his small frame.\n\nLighting is a single amber gaslight source from below, casting the sickly golden-amber glow of moral corruption across his face. The light intensifies the pallor of his skin, turning it a jaundiced ivory-yellow. Deep charcoal shadows pool in his eye sockets, beneath his nose, and in the corners of that too-wide smile. The background is pure darkness — impenetrable deep charcoal black, with the faintest suggestion of a Victorian fog-diffused gaslight halo behind him, dissolving into nothing.\n\nArt style: Dark Victorian noir executed in heavy ink wash textures with aggressive crosshatching in the shadow regions. Influenced by Mike Mignola's brutal use of black mass and Dave McKean's unsettling portraiture — the face rendered with visceral detail at the eyes and mouth, dissolving into gestural ink wash at the edges. The line work is dense and scratchy, suggesting something organic and alive in the shadows. No clean outlines — edges bleed into darkness.\n\nColor palette is almost monochromatic: deep charcoal blacks dominate the frame, the sickly amber gaslight is the only color, concentrated on his skin and eyes. A faint, barely perceptible blush of blood crimson haunts the inner corners of his eyes and the wet line of his lips — Hyde's color bleeding through. No blues, no whites. The ivory of his skin is jaundiced toward amber, corrupted.\n\nEmotion: pure reptilian wrongness. The image should evoke the visceral, instinctive revulsion of encountering something that wears a human face but is not quite human — the uncanny valley rendered in gaslight and shadow. Dread that bypasses rational thought. The feeling of being watched by something that does not blink often enough.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene02_panel04.png",
+      "alt_text": "Extreme close-up of Hyde's face — the only time we see it clearly. Not deformed, but deeply wrong. His smile is too wide, his eyes too bright, something reptilian in his gaze. The amber gaslight makes his skin look sickly.",
+      "seed": 246,
+      "reference_source": ""
     },
     {
       "scene_number": 3,
       "panel_number": 1,
-      "image_prompt": "A peaceful moonlit scene: Sir Danvers Carew, a beautiful old gentleman with white hair, walks along the Thames embankment. The moon is full, London is serene. This peace is about to be destroyed.",
-      "image_path": "panels/scene03_panel01.prompt.txt",
-      "alt_text": "A peaceful moonlit scene: Sir Danvers Carew, a beautiful old gentleman with white hair, walks along the Thames embankmen"
+      "image_prompt": "Wide establishing shot, low angle looking up along the Thames embankment, moonlight flooding the composition from above-left. Sir Danvers Carew occupies the left-center foreground — a beautiful elderly gentleman, white-haired and impeccably dressed in a dark Victorian overcoat with silver buttons, his posture upright and graceful, the dignity of a man entirely at peace with the world. His face, turned slightly upward toward the moon, carries an expression of quiet contentment — soft eyes, a gentle half-smile. His white hair catches the cold blue-grey moonlight like a halo, rendered in ivory white (#F5F0E1), making him glow against the deep charcoal surroundings.\n\nThe Thames runs silver-black behind him, moonlight shattered across the water in fragmented blue-grey shards. The embankment stretches into the middle distance — wet cobblestones reflecting cold lunar light, framed by iron lampposts casting pools of sickly amber (#D4A847) that punctuate the blue-grey moonlit quiet. The gaslit halos and moonlit stretches create alternating rhythms of warm and cold light along the receding path.\n\nThe background reveals Victorian London at its most deceptively serene — silhouetted rooftops, chimney stacks, the distant dark suggestion of bridge arches. A low river mist clings to the water's surface and curls faintly around Carew's feet, rendered in deep charcoal tones, beginning to creep. The sky is heavy ink-wash black with the full moon dominant — enormous, luminous, cold blue-white — but faint ink-wash clouds at the frame's edge suggest what approaches.\n\nEverything in the panel breathes false peace. The composition is open, the horizon low, the moon high — space and serenity — but the ink-wash textures in the shadows along the embankment walls contain subtle distortions, shadow-shapes that don't quite belong to any visible object. The lamppost to the right casts a shadow that stretches unnaturally long across the cobblestones toward Carew.\n\nArt style: Mike Mignola and Dave McKean-influenced Victorian noir — heavy ink outlines, dramatic chiaroscuro, crosshatched shadows with ink wash texture fills. Color palette restricted to cold blue-grey moonlight (#6B7B8D), deep charcoal darkness (#2C2C2C), sickly amber gaslight (#D4A847), and ivory white (#F5F0E1) for Carew's hair and the moon's face. No blood crimson yet — its absence makes its eventual arrival more devastating. The mood is elegiac, still, and quietly wrong. No text, lettering, captions, speech bubbles, or typography anywhere in the image.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene03_panel01.png",
+      "alt_text": "A peaceful moonlit scene: Sir Danvers Carew, a beautiful old gentleman with white hair, walks along the Thames embankment. The moon is full, London is serene. This peace is about to be destroyed.",
+      "seed": 343,
+      "reference_source": ""
     },
     {
       "scene_number": 3,
       "panel_number": 2,
-      "image_prompt": "Hyde appears from shadow, cane in hand. His shadow falls over Carew. The panel is split diagonally \u2014 the peaceful moonlit half versus the encroaching crimson darkness of Hyde's arrival.",
-      "image_path": "panels/scene03_panel02.prompt.txt",
-      "alt_text": "Hyde appears from shadow, cane in hand. His shadow falls over Carew. The panel is split diagonally \u2014 the peaceful moonli"
+      "image_prompt": "Diagonal split-panel composition: a single cobblestone street bisected by a hard diagonal line from upper-left to lower-right. The left half bathes in cold blue-grey moonlight (#6B7B8D) — peaceful, still, a lone elderly gentleman (Sir Danvers Carew) caught mid-step on a fog-laced Victorian street, silver-haired, dignified, unaware, illuminated from above by a full moon filtered through thin mist.\n\nThe right half is consumed by encroaching blood crimson shadow (#8B0000), deep charcoal darkness bleeding across the diagonal like a wound spreading through fabric. Edward Hyde emerges from this darkness — small, dwarfish, unnervingly slight, wearing Jekyll's oversized clothes hanging loose on his narrow frame, a heavy cape swallowing his shoulders. He grips a thick walking cane in one pale hand, arm slightly raised, posture coiled with barely restrained violence. His face is angled downward toward Carew, wearing that unsettling smile — features not deformed, but fundamentally wrong in proportion, something insectile in the alertness of his stillness.\n\nHyde's shadow stretches far across the cobblestones, disproportionately massive — twice his body's height, reaching toward Carew like a predator's claw. The shadow bleeds crimson at its edges, darkening to charcoal at its core. Despite Hyde's small stature, everyone he stands near appears dwarfed in spirit even as they tower in height — Carew's silhouette taller by a full head, yet somehow already diminished by proximity.\n\nBackground: narrow Victorian London street, cramped Georgian facades pressing inward from both sides, gaslit amber (#D4A847) lamp visible on the far right casting a sickly halo that the crimson darkness actively consumes. A laboratory door — heavy, dark oak, iron-hinged — visible in the distant background shadow, deliberately ambiguous, always watching. Thick ground-level fog rolls across cobblestones, parting around Hyde's feet as if repelled.\n\nArt style: Mike Mignola-influenced ink wash with Dave McKean collage energy — heavy black ink lines, dramatic negative space, texture in shadows achieved through layered cross-hatching and ink bleed. Moonlit half rendered in thin, delicate linework; Hyde's half in thick, aggressive brushstrokes. No smooth gradients — all tonal transitions are graphic and harsh. Ivory white (#F5F0E1) used sparingly for the moonlit cobblestones and Carew's coat, amplifying his vulnerability. The diagonal split itself rendered as a visible, almost physical boundary — a crack in reality.\n\nMood: predatory stillness one breath before catastrophe. The peaceful half already feels like memory. A sense of wrongness radiates from Hyde's half of the frame — not chaos yet, but inevitability. Oppressive Victorian dread, claustrophobic shadows alive with malice.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene03_panel02.png",
+      "alt_text": "Hyde appears from shadow, cane in hand. His shadow falls over Carew. The panel is split diagonally — the peaceful moonlit half versus the encroaching crimson darkness of Hyde's arrival.",
+      "seed": 344,
+      "reference_source": ""
     },
     {
       "scene_number": 3,
       "panel_number": 3,
-      "image_prompt": "VIOLENCE \u2014 rendered almost abstractly. The cane rises and falls. Splashes of crimson against the blue moonlight. Panel borders crack and splinter. Hyde's face is pure savage joy. This should be horrifying but artfully composed \u2014 the violence of a Caravaggio painting.",
-      "image_path": "panels/scene03_panel03.prompt.txt",
-      "alt_text": "VIOLENCE \u2014 rendered almost abstractly. The cane rises and falls. Splashes of crimson against the blue moonlight. Panel b"
+      "image_prompt": "Extreme low-angle shot, Dutch tilt, looking up from ground level as Edward Hyde looms over his fallen victim. The composition fragments at the edges — panel borders crack and splinter like broken glass, bleeding into black negative space. The focal point splits between Hyde's ecstatic, upturned face and the arc of a heavy silver-tipped cane mid-descent.\n\nHyde occupies the center-right of the frame: small, dwarfish, dressed in an oversized dark frock coat and heavy cape that pool around him like spilled ink. His proportions are subtly wrong — limbs too quick, posture coiled with insectile energy. His face is the horror: a savage, rapturous grin, eyes wide and reflecting cold blue moonlight, every muscle slack with pure animal joy. His shadow stretches enormous behind him, misshapen and monstrous, dwarfing his actual body against the cobblestones.\n\nThe violence is rendered semi-abstractly in the style of Caravaggio filtered through Mike Mignola's ink work. The cane is a streak of grey motion blur cutting diagonally across the frame. Beneath Hyde, the victim — Sir Danvers Carew — is reduced to impressionistic fragments: a white-gloved hand, silver hair against wet stone, the ghostly pale suggestion of an elderly gentleman's form dissolving into shadow. His body is not detailed — it is an absence, a negative space the violence is directed into.\n\nBlood crimson (#8B0000) erupts in abstract splashes — not realistic gore but painterly explosions of dark red ink, like brushstrokes flung across the panel. They arc upward into the blue-grey (#6B7B8D) moonlight, catching the cold silver glow before falling back into deep charcoal shadow. The moonlight is the scene's only light source: hard, theatrical, bleaching the tops of Hyde's knuckles and cheekbones bone-white while drowning everything below in suffocating darkness.\n\nThe environment is a fog-choked London alley, barely visible — narrow cobblestone corridor dissolving into deep charcoal fog. A distant gaslight provides a single sickly amber (#D4A847) smear far behind Hyde, impossibly far away, uselessly small. No warmth reaches this corner of the city. The laboratory door — heavy, shadowed — is barely perceptible as a dark rectangle in the distant background, swallowed by fog and shadow.\n\nHeavy ink wash textures dominate every surface: crosshatching builds the darkness, splattered India ink suggests chaos, wet-on-wet bleeds create the atmospheric fog. The color palette is almost entirely cold — blue-grey moonlight, deep charcoal shadow, blood crimson violence — with the amber gaslight reduced to a cold, ironic pinprick in the distance.\n\nThe emotional register is operatic horror: the composition of Judith Slaying Holofernes translated into Victorian noir. Artful, formally composed, devastating. The violence is a performance of pure id — and Hyde is loving every second.\n\nNo text, no lettering, no captions, no speech bubbles, no words anywhere in the image.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene03_panel03.png",
+      "alt_text": "VIOLENCE — rendered almost abstractly. The cane rises and falls. Splashes of crimson against the blue moonlight. Panel borders crack and splinter. Hyde's face is pure savage joy. This should be horrifying but artfully composed — the violence of a Caravaggio painting.",
+      "seed": 345,
+      "reference_source": ""
     },
     {
       "scene_number": 3,
       "panel_number": 4,
-      "image_prompt": "Aftermath: The broken cane lies in two pieces. A pool of moonlight \u2014 or is it something else? \u2014 spreads across the cobblestones. Hyde is gone. Only the fog remains.",
-      "image_path": "panels/scene03_panel04.prompt.txt",
-      "alt_text": "Aftermath: The broken cane lies in two pieces. A pool of moonlight \u2014 or is it something else? \u2014 spreads across the cobbl"
+      "image_prompt": "Extreme low-angle close-up shot, camera nearly flush with the wet cobblestones of a fog-drenched Victorian London street at night. The focal point is a shattered walking cane broken cleanly in two, the splintered halves splayed apart on the uneven stone pavement — the wood is dark, rare, dense, visibly stressed at the break point with white-fibered splinters exploding outward. The fracture radiates immense, insensate force.\n\nSpreading from beneath the broken cane across the cobblestones is a wide, irregular pool that catches the cold blue-grey cast of moonlight — its surface ambiguous, viscous, neither fully silver nor fully crimson, bleeding into the gaps between stones with the slow certainty of something that cannot be undone. The liquid edges catch both moonlight (#6B7B8D blue-grey) and a distant gaslight's sickly amber (#D4A847), creating a sickening iridescence. Deep blood crimson (#8B0000) pulses in the shadows at the pool's heart.\n\nHyde is absent. His absence is the subject. The heavy fog fills the space where he stood — thick, roiling, almost physical, swallowing the mid-ground completely. Wisps curl around a distant iron lamppost, its gaslight a weak amber smear barely visible through the murk, casting almost no illumination. Narrow Victorian cobblestone alley walls rise on either side, streaked with damp, shrinking the frame into a claustrophobic corridor. In the far background, barely discernible through fog, the dark outline of a doorway — shadowed, looming, threshold between worlds.\n\nThe composition emphasizes emptiness and aftermath. No figures. No movement. Only the evidence of catastrophic violence rendered in stillness. The broken cane dominates the foreground, massive in frame against the tiny, retreating street. The fog acts as an erasure — Hyde dissolved into it, but his crimson presence bleeds through the stones.\n\nArt style: Dark Victorian noir ink wash. Heavy Mignola-esque black masses dominate the frame — the cobblestones are suggested with angular ink lines, not rendered in detail. McKean-influenced texture overlays give the fog a collage-like, almost photographic grain. Deep charcoal (#2C2C2C) crushes the shadows to near-black. Ink wash bleeds at the edges of the pool, suggesting violence that cannot be contained. Cross-hatching on the cane's broken wood emphasizes texture and violence. The overall palette is nearly monochrome — charcoal, blue-grey, and amber — punctured by the blood crimson pooling beneath the broken cane. Shadows stretch long and distorted across the cobblestones, reaching toward the viewer. Mood: cold, irreversible, haunted. The fog does not comfort — it conceals.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene03_panel04.png",
+      "alt_text": "Aftermath: The broken cane lies in two pieces. A pool of moonlight — or is it something else? — spreads across the cobblestones. Hyde is gone. Only the fog remains.",
+      "seed": 346,
+      "reference_source": ""
     },
     {
       "scene_number": 4,
       "panel_number": 1,
-      "image_prompt": "Jekyll's butler Poole stands at Utterson's door, terror in his eyes. Behind him, the street is a wall of fog. His hands twist his hat. The warm light from Utterson's hallway contrasts with the cold night.",
-      "image_path": "panels/scene04_panel01.prompt.txt",
-      "alt_text": "Jekyll's butler Poole stands at Utterson's door, terror in his eyes. Behind him, the street is a wall of fog. His hands "
+      "image_prompt": "Wide establishing shot from inside Utterson's hallway, looking outward through the open front door. The camera sits at mid-height, framing Poole in the doorway as a silhouette caught between two worlds — the warm amber glow of the interior pushing forward, and the impenetrable blue-grey fog swallowing everything behind him.\n\nPoole is a heavyset man in his late 50s, dressed in a formal butler's dark livery — black coat, white shirt, black waistcoat — professional clothing now made pathetic by raw terror. His face is pale as ivory, eyes wide and glassy with a fear that strips away all dignity. Deep lines around his mouth are pulled downward. He clutches a black top hat in both hands, knuckles bone-white, fingers twisting and wrenching the brim in an unconscious, desperate gesture. He stands with his shoulders slightly hunched, as if bracing against something invisible. His whole posture radiates collapse — a man of rigid composure finally broken.\n\nBehind Poole, the London street has ceased to exist. A solid wall of cold blue-grey fog obliterates all detail — no buildings, no gaslamps, only the faintest ghost of amber smearing somewhere deep in the murk, a gaslight drowning in the mist. The fog presses against the doorframe like a living thing, tendrils curling inward.\n\nThe hallway behind the viewer pours warm sickly amber light — the glow of a coal fire and indoor gaslamps — washing across Poole's face and chest in a harsh raking light from below. This warm light picks out every line of terror on his face, every knot of his twisted hands. His shadow stretches enormously up the doorframe behind him, distorted and monstrous, far larger than the man himself.\n\nThe door frame itself is heavy dark oak, Victorian and grand. The threshold is sharp and charged — a hard geometric line between amber warmth and cold void.\n\nArt style: Dark Victorian noir rendered in heavy ink wash with cross-hatching shadows. Influenced by Mike Mignola's stark contrast and Dave McKean's textural expressionism. Shadows are thick and architectural, not gradual. Fog has physical weight and texture — layered washes of cold blue-grey. The amber light is sickly and irregular, flickering quality implied through uneven warm tones pooling on skin and fabric.\n\nEmotional register: Pure dread transmitted through a human face. The horror of something unspeakable witnessed and now carried to another's door. The fog is not atmospheric — it is suffocation. The warm hallway light is fragile and shrinking. The image should feel like a door opening onto an abyss.\n\nNo text, no lettering, no captions, no speech bubbles, no symbols.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene04_panel01.png",
+      "alt_text": "Jekyll's butler Poole stands at Utterson's door, terror in his eyes. Behind him, the street is a wall of fog. His hands twist his hat. The warm light from Utterson's hallway contrasts with the cold night.",
+      "seed": 443,
+      "reference_source": ""
     },
     {
       "scene_number": 4,
       "panel_number": 2,
-      "image_prompt": "Utterson and Poole approach Jekyll's laboratory door. Servants huddle in the hallway behind them, holding candles that create a procession of wavering light. The door at the end of the corridor is the darkest point in the image \u2014 a void.",
-      "image_path": "panels/scene04_panel02.prompt.txt",
-      "alt_text": "Utterson and Poole approach Jekyll's laboratory door. Servants huddle in the hallway behind them, holding candles that c"
+      "image_prompt": "Wide-angle low shot looking down a narrow Victorian corridor toward a heavy oak laboratory door at the far end, framed as a receding tunnel of shadow. The door is the absolute focal point — a featureless black rectangle consuming the vanishing point, no handle visible, no light beneath it, a void swallowing all depth.\n\nIn the foreground, two figures advance from the right-center: UTTERSON, a lean weathered lawyer in a conservative dark suit, muted brown-grey tones, deep-set eyes fixed on the door with grim determination, jaw set, posture stiff with dread. Beside him, Poole the butler — older, stout, uniformed, face pale and sheened with cold sweat, gripping a brass candlestick with white-knuckled hands. Both men lean slightly forward as if pressing against invisible resistance.\n\nBehind them, five or six servants cluster in a loose procession filling the hallway — their faces half-visible, eyes wide, bodies pressed close together for comfort. Each holds a candle. The candles cast pools of sickly amber (#D4A847) that flicker and waver, throwing the servants' shadows dramatically up the walls as enormous, distorted shapes that stretch and merge across the ceiling. The amber light dies completely before it reaches the laboratory door — the corridor eats light as it approaches the threshold.\n\nThe hallway is Victorian-era grand but decrepit in this wing: dark wainscoting, framed portraits on the walls rendered as ghostly smears in shadow, a patterned carpet runner worn thin down the center. Wallpaper peeling slightly at the corners. The architecture compresses — ceiling lower, walls closer — as the eye travels toward the door, creating a physical sense of claustrophobia.\n\nThe laboratory door is rendered in deep charcoal (#2C2C2C), almost entirely flat, with no detail — a negative space that functions as a hole in reality. The gap beneath the door shows nothing. No light. No sound implied.\n\nArt style: Dark Victorian noir, heavy ink wash textures, bold black shadows with soft amber pooling. Influenced by Mike Mignola's stark geometry and Dave McKean's painterly texture. Ink bleeds at shadow edges. Crosshatching visible in mid-tone areas. No clean lines — everything slightly rough, organic, oppressive.\n\nEmotional register: creeping existential dread, the held breath before catastrophe, collective human warmth swallowed by encroaching darkness. The candle procession evokes a funeral march. The door is not a door — it is an ending.\n\nNo text, no lettering, no captions, no speech bubbles anywhere in the image.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene04_panel02.png",
+      "alt_text": "Utterson and Poole approach Jekyll's laboratory door. Servants huddle in the hallway behind them, holding candles that create a procession of wavering light. The door at the end of the corridor is the darkest point in the image — a void.",
+      "seed": 444,
+      "reference_source": ""
     },
     {
       "scene_number": 4,
       "panel_number": 3,
-      "image_prompt": "A voice from behind the door \u2014 rendered as a jagged speech bubble, the lettering unstable, wavering between Jekyll's refined hand and something more primal.",
-      "image_path": "panels/scene04_panel03.prompt.txt",
-      "alt_text": "A voice from behind the door \u2014 rendered as a jagged speech bubble, the lettering unstable, wavering between Jekyll's ref"
+      "image_prompt": "Close-up medium shot framed on a heavy Victorian door — dark mahogany, iron hardware, the threshold between Utterson and something unknowable. The door fills two-thirds of the frame, dominating the composition with its mass and silence. Camera is positioned slightly low, making the door loom.\n\nUtterson stands to the left foreground, lean silhouette in conservative dark suit and muted grey-brown overcoat, profile turned toward the door. His deep-set eyes are wide, jaw locked. One gloved hand is raised mid-knock or frozen against the wood — suspended, uncertain. He is lit from the right by a single gaslight sconce just behind him, casting his long shadow diagonally across the floorboards toward the door. His color associations: weathered grey-brown, reliable and muted against the dark corridor.\n\nThe door itself is the visual fulcrum. Light bleeds beneath it from within — but the light is wrong, divided: one half amber-gold (warm gaslight, Jekyll's warmth, civilized and rational) and one half a deep sickly crimson that bleeds at the edge (Hyde's presence, violence, the primal). The two colors meet and bleed into each other in the gap under the door, creating an unsettling gradient that pulses visually between warmth and threat. The keyhole breathes a sliver of crimson light.\n\nThe door's shadow on the wall beside it stretches long and distorted — subtly not quite the shape of a door. It twists at the top, organic, like something behind the wood is pressing outward against the grain.\n\nBackground: a narrow Victorian corridor, high wainscoting, faded wallpaper with a repeating fleur-de-lis pattern dissolving into charcoal shadow at the edges. The laboratory door in the far background (barely visible through the murk) lurks in total darkness. Gaslight sconces line the hall but the nearest ones are dim, their glass clouded. Fog curls in from an unseen source — low to the floor, creeping.\n\nArt style: Mignola-influenced heavy black ink blocks with McKean textural wash layering — ink wash grain over the shadows, cross-hatching on the wood grain of the door, rough impasto texture on the wallpaper. No clean lines; everything bleeds slightly at the edges.\n\nColor palette strictly: deep charcoal (#2C2C2C) for the corridor void, sickly amber (#D4A847) for Utterson's gaslit side, blood crimson (#8B0000) bleeding under the door, cold blue-grey (#6B7B8D) in the far shadows of the hall, ivory (#F5F0E1) in the crack of keyhole light at its most neutral point.\n\nMood: oppressive stillness before rupture. The silence rendered visible. The feeling that the door is listening back.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene04_panel03.png",
+      "alt_text": "A voice from behind the door — rendered as a jagged speech bubble, the lettering unstable, wavering between Jekyll's refined hand and something more primal.",
+      "seed": 445,
+      "reference_source": ""
     },
     {
       "scene_number": 4,
       "panel_number": 4,
-      "image_prompt": "FULL PAGE: The door crashes open. Inside, Hyde's body lies crumpled on the floor, still twitching. A vial rolls from his hand. But the horror is in the details \u2014 Jekyll's clothes on Hyde's small frame. The chemicals still smoking. The full-length mirror reflecting something we cannot see. Utterson and Poole stand frozen in the doorway, backlit.",
-      "image_path": "panels/scene04_panel04.prompt.txt",
-      "alt_text": "FULL PAGE: The door crashes open. Inside, Hyde's body lies crumpled on the floor, still twitching. A vial rolls from his"
+      "image_prompt": "Full-page vertical composition, low dramatic angle looking across the laboratory floor. The perspective originates near ground level, emphasizing the sprawling horror of the scene and making the doorway figures appear towering and monumental above.\n\n**FOREGROUND — Hyde's body dominates the lower two-thirds of the frame.** A small, dwarfish figure lies crumpled and contorted on cold stone floor, face upturned toward the viewer, features radiating that uncanny wrongness — not deformed but fundamentally off, pale as candle wax, lips twisted in a final grimace. He is visibly smaller than any normal man. Jekyll's oversized dark frock coat bunches around his shrunken frame, sleeves swallowing his hands, trouser hems pooled beneath him. One pale hand is outstretched, fingers still loosely curled. A glass vial rolls away from his palm, a thin rivulet of dark liquid tracing the grout between flagstones. Blood crimson (#8B0000) bleeds into the shadows beneath him. His shadow stretches larger and more distorted than his body warrants.\n\n**MIDGROUND — The laboratory chaos.** A workbench just behind Hyde is scattered with chemical apparatus — beakers, retorts, burners — wisps of acrid amber-tinged smoke still curling upward, catching the gaslight. The smoke drifts in slow, spectral tendrils. Sickly amber (#D4A847) light glows from a low gas bracket on the wall, casting everything in moral corruption's hue. Chemicals have stained the floor in dark, spreading blooms.\n\n**FULL-LENGTH MIRROR — stage right, angled.** An ornate Victorian mirror in a dark mahogany frame stands against the wall. Its reflection is wrong — it faces slightly away from Hyde, showing a fragment of the room that doesn't quite match what we see, a sliver of something the viewer cannot identify. Cold blue-grey (#6B7B8D) emanates from within the glass. No clear figure is visible; only an unsettling negative space.\n\n**BACKGROUND — The shattered doorway.** The heavy laboratory door hangs open, splintered at the lock. Two silhouettes are frozen in the threshold — Utterson, lean and long, wearing his conservative dark suit, one hand still raised mid-motion from having forced the door; beside him, Poole, the manservant, broader, rigid with horror. Both are backlit by the dim corridor behind them, rendered almost entirely in deep charcoal silhouette with only their faces catching faint amber edge-light — Utterson's deep-set watchful eyes wide, jaw firm, caught in the split second before grief replaces shock.\n\n**ATMOSPHERE AND STYLE.** Heavy ink wash shadows consume the corners and ceiling entirely. Lines are thick, brutal, Mignola-influenced — architectural detail etched in stark black and ivory white (#F5F0E1), with pools of gaslit amber and crimson doing all the emotional work. The room feels airless, sealed. Fog cannot enter here — this is the suffocating, clinical chamber where all pretense has collapsed. Mood: irreversible. Victorian dread made absolute.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene04_panel04.png",
+      "alt_text": "FULL PAGE: The door crashes open. Inside, Hyde's body lies crumpled on the floor, still twitching. A vial rolls from his hand. But the horror is in the details — Jekyll's clothes on Hyde's small frame. The chemicals still smoking. The full-length mirror reflecting something we cannot see. Utterson and Poole stand frozen in the doorway, backlit.",
+      "seed": 446,
+      "reference_source": ""
     },
     {
       "scene_number": 5,
       "panel_number": 1,
-      "image_prompt": "Jekyll alone in his laboratory, hand reaching for a bubbling green potion. The room is cluttered with scientific apparatus. His face shows equal parts terror and fascination. The potion glows, casting his face in an eerie green light.",
-      "image_path": "panels/scene05_panel01.prompt.txt",
-      "alt_text": "Jekyll alone in his laboratory, hand reaching for a bubbling green potion. The room is cluttered with scientific apparat"
+      "image_prompt": "Dark Victorian noir illustration, ink wash textures with heavy crosshatching, Mike Mignola and Dave McKean influenced graphic novel panel. No text, no words, no lettering, no speech bubbles, no captions.\n\n**COMPOSITION:** Low-angle close shot, slightly below eye level, Jekyll centered in frame. The camera tilts subtly to emphasize psychological imbalance. His outstretched right hand dominates the foreground, fingers reaching toward a glass beaker in the extreme lower-right of the frame. The laboratory door looms in the deep background, lost in shadow — a dark threshold barely visible through the clutter.\n\n**CHARACTER:** Dr. Henry Jekyll, tall man of 50, greying temples, refined features. His dark frock coat is immaculate but the high collar strains as his neck cranes forward, drawn toward the potion against his will. His posture — normally impeccable — breaks slightly at the shoulders, the first hairline crack in a proud man's composure. His face is bisected by the potion's glow: one half bathed in sickly green luminescence, the other swallowed by deep charcoal shadow. His expression is a war — wide haunted eyes with pronounced dark circles reflecting pure terror, yet his lips part with unmistakable hunger. His prominent hand trembles visibly, fingers spread and reaching, tendons taut beneath pale skin.\n\n**ENVIRONMENT:** A Victorian laboratory in deep shadow and controlled chaos. Shelves sag under the weight of glass apparatus — retorts, condensers, specimen jars filled with murky fluid. Stacked leather journals and scattered papers cascade across a heavy oak workbench. The room breathes with amber gaslight from a single wall sconce at the far left, casting long distorted shadows that claw up the shelves like fingers. The dominant light source is the potion itself — a bubbling beaker of visceral green that pulses with an inner luminescence, throwing ghastly uplight across Jekyll's face and hands. Steam curls from the liquid in thin tendrils. The laboratory door in the background is a rectangle of absolute darkness, slightly ajar, as though something has just passed through — or waits.\n\n**COLOR AND ATMOSPHERE:** Primary palette: deep charcoal (#2C2C2C) consuming 70% of the frame in suffocating shadow. The potion radiates a sickly, unnatural green that has no place in the warm Victorian palette. Amber gaslight (#D4A847) bleeds in from the periphery, fighting and losing to the green. Jekyll's face occupies the contested border where green light corrupts the amber warmth. Cold blue-grey (#6B7B8D) touches the glass apparatus, the clinical steel of scientific ambition turned cold.\n\n**MOOD AND STYLE:** Oppressive and claustrophobic. Ink wash textures with deep blacks and minimal hatched midtones — the world simplified to shadow and the terrible light of a single glowing vessel. The shadows are not passive; they lean in. This is the moment before a man destroys himself with both eyes open.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene05_panel01.png",
+      "alt_text": "Jekyll alone in his laboratory, hand reaching for a bubbling green potion. The room is cluttered with scientific apparatus. His face shows equal parts terror and fascination. The potion glows, casting his face in an eerie green light.",
+      "seed": 543,
+      "reference_source": ""
     },
     {
       "scene_number": 5,
       "panel_number": 2,
-      "image_prompt": "THE TRANSFORMATION \u2014 a four-part sequence within one panel. Jekyll drinks. His body convulses. His features shift and compress. Hyde emerges. Each stage overlaps the last like a multiple exposure photograph. Pain and ecstasy are indistinguishable on his changing face.",
-      "image_path": "panels/scene05_panel02.prompt.txt",
-      "alt_text": "THE TRANSFORMATION \u2014 a four-part sequence within one panel. Jekyll drinks. His body convulses. His features shift and co"
+      "image_prompt": "Multiple-exposure transformation sequence, four overlapping stages composited within a single vertical panel, dark Victorian noir ink wash illustration in the style of Mike Mignola and Dave McKean. Heavy cross-hatching, aggressive black shadows, expressionist distortion.\n\n**COMPOSITION:** Centered tall-format panel. Four translucent ghost-images of the same figure overlap like a long-exposure photograph — each stage slightly offset and fading into the next, creating a smeared temporal blur. The figure fills the frame from mid-thigh to crown. Background is deep charcoal void with the faint silhouette of a laboratory door in shadow at the lower-right edge.\n\n**STAGE 1 — LEFT GHOST (Jekyll drinking):** Tall man of 50, handsome with greying temples, in an immaculate dark frock coat with high collar and silk cravat. He tips a small glass vial to his lips, head thrown back slightly. His posture is still upright, refined. Expression: anticipatory dread, a warmth in the eyes already curdling. Rendered in cool blue-grey tones, ivory highlights on collar and cuffs.\n\n**STAGE 2 — CENTER-LEFT GHOST (convulsion onset):** Same figure, frock coat beginning to wrinkle and twist. Both hands — large, prominent, trembling violently — clutch the lapels. Spine arching backward. Face caught mid-grimace, eyes squeezed shut, mouth open in silent agony. Jaw elongating slightly. Veins visible on the backs of the hands. Blue-grey bleeds into sickly amber, bones visible as thin white lines beneath the skin.\n\n**STAGE 3 — CENTER-RIGHT GHOST (features shifting):** The figure is visibly compressing, shrinking. The frock coat now hangs loose, collar swallowing the neck. Facial features in violent flux — nose flattening, brow thickening, proportions subtly wrong in a way that can't be named. The expression is simultaneously anguished and ecstatic, indistinguishable. Hands claw at the chest. Blood crimson seeps into the palette as dark veins of red spiderweb through the amber shadows.\n\n**STAGE 4 — RIGHT GHOST (Hyde emerges):** Small, dwarfish figure swamped in Jekyll's oversized clothing, heavy cape half-fallen from the shoulders. The transformation complete. Features not deformed but fundamentally wrong — an uncanny wrongness of proportion that radiates from every line. Unsettling smile beginning to form, head tilted at an insectile angle. Eyes catching a single point of amber gaslight. Rendered almost entirely in blood crimson and deep charcoal. His shadow on the wall behind him is enormous — far larger than his body, suggesting a massive dark presence.\n\n**LIGHTING & ATMOSPHERE:** A single amber gaslight source from below-left rakes harsh shadows upward across all four stages, elongating them grotesquely. The background is choked with ink-wash fog. The laboratory door in shadow at frame edge glows faintly with blue-grey cold light — a threshold already crossed.\n\n**MOOD:** Claustrophobic, nauseating, ecstatic horror. The sensation of watching a man unmade and something worse assembled in his place. Shadows alive. The panel breathes wrongness.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene05_panel02.png",
+      "alt_text": "THE TRANSFORMATION — a four-part sequence within one panel. Jekyll drinks. His body convulses. His features shift and compress. Hyde emerges. Each stage overlaps the last like a multiple exposure photograph. Pain and ecstasy are indistinguishable on his changing face.",
+      "seed": 544,
+      "reference_source": ""
     },
     {
       "scene_number": 5,
       "panel_number": 3,
-      "image_prompt": "Hyde stands before a full-length mirror, seeing himself for the first time. His reflection fills the panel \u2014 small, young, wicked, grinning. Behind the mirror, the ghostly outline of Jekyll watches, trapped.",
-      "image_path": "panels/scene05_panel03.prompt.txt",
-      "alt_text": "Hyde stands before a full-length mirror, seeing himself for the first time. His reflection fills the panel \u2014 small, youn"
+      "image_prompt": "Wide shot, low camera angle looking slightly upward, centered on a grand full-length Victorian mirror in an ornate gilded frame, dominating the composition. The mirror fills nearly the entire panel, its surface dark and slightly warped, reflecting a cramped laboratory interior.\n\nIn the foreground, Edward Hyde stands with his back to the viewer, small and dwarfish, his silhouette radiating wrongness — shoulders slightly uneven, proportions subtly off, head tilted at an angle too eager, too hungry. Jekyll's oversized frock coat drapes loose off his narrow frame, pooling at the shoulders, sleeves swallowing his hands. A heavy dark cape bunches around him. His shadow stretches behind him — impossibly large, distorted, sprawling across the floorboards far beyond what his small body should cast, bleeding into deep charcoal (#2C2C2C) darkness.\n\nIn the mirror's reflection, Hyde's face is fully visible — pale as old bone, features not deformed but deeply, subtly wrong in proportion. His expression is an unsettling grin of pure, unguarded delight, eyes wide and bright with wicked recognition. Blood crimson (#8B0000) tinges the shadows beneath his cheekbones and the hollow of his throat. He looks young. Too young. Delighted.\n\nBehind Hyde's reflection in the mirror's depths — not a separate figure but a presence layered within the glass itself — the ghostly outline of Dr. Henry Jekyll looms tall. His form is translucent, rendered in cold blue-grey (#6B7B8D) ink wash, barely distinguishable from the mirror's foggy surface. His face is anguished, mouth slightly open, one hand raised as if pressing from the other side of the glass, long fingers splayed against an invisible barrier. His haunted eyes with dark circles stare outward, trapped, watching. His immaculate frock coat and high collar are visible as phantom impressions.\n\nLighting: a single gas lamp off to the left casts sickly amber (#D4A847) light across Hyde's back and the left edge of the mirror frame, throwing the right side into deep shadow. The amber catches the gilded mirror frame in flickering streaks. Jekyll's ghost-image within the glass is illuminated by cold blue-grey moonlight from an unseen window, keeping the two figures in visual opposition — warmth for corruption, cold for repression.\n\nThe laboratory environment bleeds into the background — heavy ink wash textures, rough stone walls, the silhouette of the laboratory door partially visible in deep shadow at the far edge of the frame. Glass bottles on a bench catch amber glints. Floor planks recede in perspective, warped by shadow.\n\nArt style: Mike Mignola-influenced heavy black ink with Dave McKean painterly texture overlay. Thick shadow masses, minimal linework in darkness, ink wash gradients throughout. Ivory white (#F5F0E1) used sparingly for Hyde's face in the reflection and Jekyll's ghostly hands. No text, no lettering, no speech bubbles, no captions anywhere in the image.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene05_panel03.png",
+      "alt_text": "Hyde stands before a full-length mirror, seeing himself for the first time. His reflection fills the panel — small, young, wicked, grinning. Behind the mirror, the ghostly outline of Jekyll watches, trapped.",
+      "seed": 545,
+      "reference_source": ""
     },
     {
       "scene_number": 5,
       "panel_number": 4,
-      "image_prompt": "Final panel \u2014 split vertically. Left half: Jekyll writing his confession by candlelight, tears on his cheeks, hand trembling. Right half: Hyde's shadow looming behind him, growing, consuming. The two halves are separated by a crack that runs through the middle \u2014 the self, divided and irreparable.",
-      "image_path": "panels/scene05_panel04.prompt.txt",
-      "alt_text": "Final panel \u2014 split vertically. Left half: Jekyll writing his confession by candlelight, tears on his cheeks, hand tremb"
+      "image_prompt": "Vertical split-panel composition, divided by a jagged crack running floor to ceiling through the exact center of the frame — the fracture is physical, irreparable, as though the image itself has been torn apart. The crack glows faintly with sickly amber light bleeding through from the left side.\n\nLEFT HALF — JEKYLL: Close three-quarter view of Dr. Henry Jekyll, tall, 50 years old, greying temples, seated hunched over a writing desk cluttered with scattered papers and a guttering candle. His once-immaculate dark frock coat is disheveled, collar loose, silk cravat undone. His haunted eyes — deep-set, rimmed with dark circles — are wet, twin tracks of tears catching the candlelight on his cheeks. His prominent right hand grips a quill with white-knuckled trembling, pressing too hard against the page. The candle flame — sickly amber (#D4A847) — is the sole light source, casting his face in warm gold on one side and deep charcoal shadow (#2C2C2C) on the other. The background behind him is cool blue-grey (#6B7B8D) — shelves of leather-bound volumes, a fogged window, the faint silhouette of a laboratory door receding into shadow in the far corner. The atmosphere is cold and claustrophobic. Ink wash textures dominate — hatched shadows, soft bleed at the edges. Influenced by Mike Mignola and Dave McKean.\n\nRIGHT HALF — HYDE'S SHADOW: The right half is almost entirely consumed by darkness. Edward Hyde stands at the far edge — small, dwarfish, his loose-fitting clothes hanging off his wrong-proportioned frame — but his SHADOW stretches enormous, distorted, towering upward and outward across the entire right half, devouring the ceiling and walls. The shadow is rendered in deep blood crimson (#8B0000) bleeding into absolute charcoal black, pulsing and organic, like smoke or ink spreading through water. Hyde's physical form is almost incidental — a small pale flicker at the base of a monstrous darkness — his unsettling smile barely visible, too wide, too still. The shadow reaches toward the crack at the center as though consuming it. No separate light source illuminates this half — only the crimson-black void.\n\nTHE CRACK: The central divide is jagged and organic, running vertically with splinters branching outward — amber light from the left bleeds into crimson shadow from the right along the fracture line. The crack is both architectural and metaphysical — wallpaper peeling, plaster split, reality fractured.\n\nOVERALL MOOD: Oppressive, final, devastating. The visual weight of the right half threatens to consume the left. Heavy ink wash textures throughout. Shadows are alive and breathing. No text, no lettering, no speech bubbles, no captions anywhere in the image.",
+      "image_path": "output/the-strange-case-of-dr.-jekyll-and-m/panels/scene05_panel04.png",
+      "alt_text": "Final panel — split vertically. Left half: Jekyll writing his confession by candlelight, tears on his cheeks, hand trembling. Right half: Hyde's shadow looming behind him, growing, consuming. The two halves are separated by a crack that runs through the middle — the self, divided and irreparable.",
+      "seed": 546,
+      "reference_source": ""
     }
   ],
   "editorial_review": {
@@ -452,15 +492,15 @@
     "approved": true,
     "visual_consistency": "Strong noir aesthetic maintained throughout. The gaslight-to-moonlight color shifting is effective. Hyde's consistent small stature creates excellent visual dissonance.",
     "narrative_coherence": "The five selected scenes create a compelling arc from mystery to revelation. The Carew murder scene effectively marks the turn from suspense to horror.",
-    "dialogue_quality": "Dialogue is well-adapted from the source \u2014 concise and powerful. The mix of original Stevenson prose in narration with adapted dialogue works well.",
+    "dialogue_quality": "Dialogue is well-adapted from the source — concise and powerful. The mix of original Stevenson prose in narration with adapted dialogue works well.",
     "pacing": "Excellent build from slow-burn suspense to explosive revelation. The transformation sequence is the emotional peak, properly positioned.",
     "issues": [
       "Scene 3 panel 3 could be more specific about composition to ensure the violence reads as artistic rather than gratuitous",
-      "Consider adding a quiet epilogue panel after the full statement \u2014 Utterson alone with the letter"
+      "Consider adding a quiet epilogue panel after the full statement — Utterson alone with the letter"
     ],
     "suggestions": [
       "The color palette could incorporate more green for the transformation scenes to contrast with the amber/crimson palette",
-      "Consider a recurring visual motif of hands \u2014 Jekyll's refined hands becoming Hyde's brutal ones"
+      "Consider a recurring visual motif of hands — Jekyll's refined hands becoming Hyde's brutal ones"
     ],
     "summary": "A strong, atmospheric adaptation that captures the psychological horror of Stevenson's novella. The visual style guide creates a cohesive world, and the scene selection balances suspense, violence, and tragedy effectively. Approved with minor suggestions for enhancement."
   },
@@ -471,7 +511,7 @@
       "accessibility_score": 8,
       "engagement_score": 9,
       "strengths": [
-        "The murder scene is intense and visually dynamic \u2014 very manga-influenced with the breaking panel borders",
+        "The murder scene is intense and visually dynamic — very manga-influenced with the breaking panel borders",
         "Hyde is genuinely creepy without being over-the-top",
         "The transformation sequence is the kind of thing I'd screenshot and share"
       ],
@@ -481,7 +521,7 @@
       ],
       "suggestions": [
         "Modernize some narration phrasing while keeping dialogue period-accurate",
-        "Add more visual action \u2014 Hyde in motion, not just described"
+        "Add more visual action — Hyde in motion, not just described"
       ],
       "would_read": true,
       "summary": "This is way better than I expected from a 'classic.' The dark art style sells it. I'd actually read this."
@@ -492,17 +532,17 @@
       "accessibility_score": 9,
       "engagement_score": 8,
       "strengths": [
-        "The Mike Mignola / Dave McKean influence is inspired \u2014 perfect for this material",
+        "The Mike Mignola / Dave McKean influence is inspired — perfect for this material",
         "Color palette is sophisticated and narratively meaningful",
         "Panel compositions show real cinematic thinking"
       ],
       "concerns": [
         "Only 5 scenes might feel too compressed for someone who knows the source material",
-        "The editorial voice in the narration boxes needs to be carefully balanced \u2014 too much tells, too little loses the literary quality"
+        "The editorial voice in the narration boxes needs to be carefully balanced — too much tells, too little loses the literary quality"
       ],
       "suggestions": [
         "Consider a brief text prologue giving context for readers unfamiliar with Victorian London",
-        "The style guide's consistency rules are excellent \u2014 ensure they're followed rigorously in final art"
+        "The style guide's consistency rules are excellent — ensure they're followed rigorously in final art"
       ],
       "would_read": true,
       "summary": "A respectful, artistically ambitious adaptation. The visual design elevates the source material rather than simplifying it."
@@ -515,7 +555,7 @@
       "strengths": [
         "The visual storytelling is strong enough to follow even without reading every word",
         "Character expressions and body language convey emotion clearly",
-        "The transformation sequence is universally understandable \u2014 no language needed"
+        "The transformation sequence is universally understandable — no language needed"
       ],
       "concerns": [
         "Some Victorian vocabulary will be challenging (Juggernaut, frock coat, cravat)",

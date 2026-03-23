@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+"""Generate panel images from existing novel.json using mflux.
+
+This script loads the panel scripts and style guide from an existing
+novel.json and runs just the Artist stage to generate actual PNG images
+via the mflux backend. Avoids re-running the full 9-stage pipeline.
+
+Usage:
+    python3 generate_panels.py [--model klein|turbo] [--seed N] [--size WxH]
+"""
+
+import argparse
+import json
+import logging
+import shutil
+from pathlib import Path
+
+from storywizard.agents.artist import Artist
+from storywizard.config import PipelineConfig
+from storywizard.models import PanelScript, VisualStyleGuide
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(name)s] %(message)s",
+    datefmt="%H:%M:%S",
+)
+logger = logging.getLogger("generate_panels")
+
+SLUG = "the-strange-case-of-dr.-jekyll-and-m"
+OUTPUT_DIR = Path("output") / SLUG
+PANELS_DIR = OUTPUT_DIR / "panels"
+PUBLIC_PANELS_DIR = Path("public/panels") / SLUG
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Generate panels from existing novel.json")
+    parser.add_argument("--model", choices=["klein", "turbo"], default="turbo")
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--size", default="1024x768")
+    args = parser.parse_args()
+
+    w, h = [int(x) for x in args.size.split("x")]
+
+    # Load novel.json
+    novel_path = OUTPUT_DIR / "novel.json"
+    logger.info("Loading %s", novel_path)
+    data = json.loads(novel_path.read_text())
+
+    # Reconstruct models from JSON
+    style_guide = VisualStyleGuide(**data["style_guide"])
+    scripts = [PanelScript(**s) for s in data["panel_scripts"]]
+
+    total_panels = sum(len(s.panels) for s in scripts)
+    logger.info(
+        "Loaded %d scenes, %d panels. Backend: mflux-%s, size: %dx%d, seed: %d",
+        len(scripts), total_panels, args.model, w, h, args.seed,
+    )
+
+    # Configure for mflux
+    config = PipelineConfig(
+        image_backend="mflux",
+        mflux_model=args.model,
+        mflux_width=w,
+        mflux_height=h,
+        mflux_seed=args.seed,
+    )
+
+    # Generate panels
+    artist = Artist(config)
+    generated = artist.generate_panels(scripts, style_guide, PANELS_DIR)
+
+    logger.info("Generated %d panels", len(generated))
+
+    # Update novel.json with real image paths
+    data["generated_panels"] = [gp.model_dump() for gp in generated]
+    novel_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    logger.info("Updated %s with generated panel data", novel_path)
+
+    # Copy PNGs to public/ for Vercel static serving
+    PUBLIC_PANELS_DIR.mkdir(parents=True, exist_ok=True)
+    png_count = 0
+    for f in PANELS_DIR.glob("*.png"):
+        shutil.copy2(f, PUBLIC_PANELS_DIR / f.name)
+        png_count += 1
+    logger.info("Copied %d PNGs to %s", png_count, PUBLIC_PANELS_DIR)
+
+    logger.info("Done! %d panels generated.", len(generated))
+
+
+if __name__ == "__main__":
+    main()

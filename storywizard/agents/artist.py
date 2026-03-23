@@ -410,7 +410,7 @@ class Artist(BaseAgent):
                 args,
                 capture_output=True,
                 text=True,
-                timeout=300,  # 5 minute timeout
+                timeout=1200,  # 20 minute timeout (turbo at 1024x768 takes ~13 min)
             )
             if result.returncode != 0:
                 raise RuntimeError(
