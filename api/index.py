@@ -99,10 +99,16 @@ async def debug(request: Request):
 
 @app.get("/", response_class=HTMLResponse)
 async def bookshelf(request: Request):
-    novels = _discover_novels()
-    return templates.TemplateResponse(
-        "bookshelf.html", {"request": request, "novels": novels}
-    )
+    try:
+        novels = _discover_novels()
+        return templates.TemplateResponse(
+            "bookshelf.html", {"request": request, "novels": novels}
+        )
+    except Exception as e:
+        import traceback
+        return PlainTextResponse(
+            f"Error: {e}\n\n{traceback.format_exc()}", status_code=500
+        )
 
 
 @app.get("/static/{file_path:path}")
