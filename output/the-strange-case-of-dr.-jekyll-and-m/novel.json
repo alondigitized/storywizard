@@ -39,6 +39,14 @@
         "color_associations": [
           "Cool blue-grey",
           "White that yellows"
+        ],
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/jekyll_front.png",
+        "reference_images": [
+          "character_refs/jekyll_front.png",
+          "character_refs/jekyll_three_quarter.png",
+          "character_refs/jekyll_full_body.png",
+          "character_refs/jekyll_dramatic.png"
         ]
       },
       {
@@ -53,6 +61,14 @@
         "color_associations": [
           "Blood crimson",
           "Deep charcoal"
+        ],
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/hyde_front.png",
+        "reference_images": [
+          "character_refs/hyde_front.png",
+          "character_refs/hyde_three_quarter.png",
+          "character_refs/hyde_full_body.png",
+          "character_refs/hyde_dramatic.png"
         ]
       },
       {
@@ -66,6 +82,14 @@
         "color_associations": [
           "Muted browns",
           "Reliable grey"
+        ],
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/utterson_front.png",
+        "reference_images": [
+          "character_refs/utterson_front.png",
+          "character_refs/utterson_three_quarter.png",
+          "character_refs/utterson_full_body.png",
+          "character_refs/utterson_dramatic.png"
         ]
       }
     ],

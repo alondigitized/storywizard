@@ -70,7 +70,7 @@ class PublishingPipeline:
         style_guide = self.production_designer.design(analysis)
         logger.info("Style guide created: %s", style_guide.art_style)
 
-        # Stage 3.5: Character Reference Generation
+        # Stage 3.5: Character Reference Generation (Flux API only)
         if self.config.character_ref_enabled and self.config.image_backend == "flux":
             logger.info("=" * 60)
             logger.info("STAGE 3.5: Generating character reference portraits")

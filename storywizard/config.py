@@ -14,10 +14,16 @@ class PipelineConfig:
     model_name: str = "claude-sonnet-4-6"
 
     # Image generation
-    image_backend: str = "mock"  # "mock" | "flux"
+    image_backend: str = "mock"  # "mock" | "flux" | "mflux"
     image_api_key: str = field(
         default_factory=lambda: os.environ.get("IMAGE_API_KEY", "")
     )
+
+    # mflux (local Apple Silicon) settings
+    mflux_model: str = "klein"  # "klein" (fast, 4 steps) | "turbo" (quality, 9 steps)
+    mflux_width: int = 1024
+    mflux_height: int = 768
+    mflux_seed: int | None = None  # None = random; set for reproducibility
 
     # Flux (via fal.ai) settings
     flux_model: str = "fal-ai/flux-general"
@@ -63,15 +69,25 @@ class PipelineConfig:
         """Validate configuration and return list of errors (empty = valid)."""
         errors = []
 
-        if self.image_backend not in ("mock", "flux"):
+        if self.image_backend not in ("mock", "flux", "mflux"):
             errors.append(
-                f"Invalid image_backend '{self.image_backend}'. Must be 'mock' or 'flux'."
+                f"Invalid image_backend '{self.image_backend}'. Must be 'mock', 'flux', or 'mflux'."
             )
 
         if self.image_backend == "flux" and not os.environ.get("FAL_KEY"):
             errors.append(
                 "FAL_KEY environment variable is required when using the 'flux' backend."
             )
+
+        if self.image_backend == "mflux":
+            if self.mflux_model not in ("klein", "turbo"):
+                errors.append(
+                    f"Invalid mflux_model '{self.mflux_model}'. Must be 'klein' or 'turbo'."
+                )
+            if self.mflux_width < 256 or self.mflux_height < 256:
+                errors.append(
+                    f"mflux dimensions must be >= 256, got {self.mflux_width}x{self.mflux_height}."
+                )
 
         if self.max_scenes < 1 or self.max_scenes > 50:
             errors.append(

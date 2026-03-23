@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import logging
+import random
+import subprocess
 import time
 from pathlib import Path
 
@@ -81,9 +83,14 @@ class Artist(BaseAgent):
 
                 # Compute deterministic seed if base seed is set
                 seed = None
-                if self.config.flux_seed is not None:
+                base_seed = (
+                    self.config.mflux_seed
+                    if self.config.image_backend == "mflux"
+                    else self.config.flux_seed
+                )
+                if base_seed is not None:
                     seed = (
-                        self.config.flux_seed
+                        base_seed
                         + script.scene_number * 100
                         + panel.panel_number
                     )
@@ -180,6 +187,42 @@ class Artist(BaseAgent):
 
         return None, "", False
 
+    def _build_character_identity_block(
+        self,
+        panel: Panel,
+        style_guide: VisualStyleGuide,
+    ) -> str:
+        """Build a frozen, verbatim character identity block for prompt injection.
+
+        Unlike the Claude-rephrased approach, this produces a deterministic text
+        block that is inserted into every prompt unchanged. This ensures mflux
+        (which has no reference image input) sees identical character descriptions
+        across all panels, maximizing visual consistency.
+        """
+        panel_chars = self._detect_panel_characters(panel, style_guide)
+        if not panel_chars:
+            return ""
+
+        lines = []
+        for char_name in panel_chars:
+            for cd in style_guide.character_designs:
+                if cd.character_name == char_name:
+                    parts = [cd.appearance]
+                    if cd.clothing:
+                        parts.append(cd.clothing)
+                    if cd.distinguishing_features:
+                        parts.append(", ".join(cd.distinguishing_features))
+                    if cd.color_associations:
+                        parts.append(
+                            "color palette: " + ", ".join(cd.color_associations)
+                        )
+                    lines.append(f"{cd.character_name}: {'; '.join(parts)}")
+                    break
+
+        if not lines:
+            return ""
+        return "CHARACTERS IN SCENE — " + " | ".join(lines)
+
     def _craft_image_prompt(
         self,
         panel: Panel,
@@ -187,7 +230,15 @@ class Artist(BaseAgent):
         style_guide: VisualStyleGuide,
         character_prompt_registry: dict[str, str] | None = None,
     ) -> str:
-        """Use Claude to craft a detailed image generation prompt."""
+        """Use Claude to craft a detailed image generation prompt.
+
+        For the mflux backend, the prompt is structured to maximize character
+        consistency without reference images: a frozen character identity block
+        is injected verbatim, and Claude is instructed to incorporate it exactly
+        rather than paraphrasing.
+        """
+        is_mflux = self.config.image_backend == "mflux"
+
         # Build character designs block
         char_designs_block = ""
         if style_guide.character_designs:
@@ -223,6 +274,23 @@ class Artist(BaseAgent):
                     + "\n\n"
                 )
 
+        # For mflux: build the frozen identity block that will be injected verbatim
+        identity_anchor = ""
+        consistency_instruction = ""
+        if is_mflux:
+            identity_anchor = self._build_character_identity_block(panel, style_guide)
+            if identity_anchor:
+                consistency_instruction = (
+                    "\n\nCRITICAL CONSISTENCY RULE: Your prompt MUST begin with the "
+                    "art style declaration and then include this EXACT character "
+                    "identity block verbatim (do not rephrase, reorder, or omit "
+                    "any detail):\n"
+                    f"Style: {style_guide.art_style}\n"
+                    f"{identity_anchor}\n"
+                    "After this identity block, describe the scene composition, "
+                    "action, environment, and lighting."
+                )
+
         prompt = (
             f"Craft a detailed image generation prompt for this graphic novel panel.\n\n"
             f"SCENE: {script.scene_title}\n"
@@ -236,6 +304,7 @@ class Artist(BaseAgent):
             f"- Consistency rules: {'; '.join(style_guide.consistency_rules)}\n\n"
             f"{char_designs_block}"
             f"{prev_chars_block}"
+            f"{consistency_instruction}\n\n"
             f"Return ONLY the image generation prompt text, nothing else. "
             f"Keep it under 500 words.\n\n"
             f"IMPORTANT: Do NOT include any text, words, lettering, or speech bubbles "
@@ -271,10 +340,14 @@ class Artist(BaseAgent):
                 prompt, filename, output_dir,
                 seed=seed, reference_image_url=reference_image_url,
             )
+        elif self.config.image_backend == "mflux":
+            return self._mflux_generate(
+                prompt, filename, output_dir, seed=seed,
+            ), None
         else:
             raise NotImplementedError(
                 f"Image backend '{self.config.image_backend}' not yet implemented. "
-                f"Use 'mock' or 'flux'."
+                f"Use 'mock', 'flux', or 'mflux'."
             )
 
     def _mock_generate(
@@ -293,6 +366,79 @@ class Artist(BaseAgent):
             encoding="utf-8",
         )
         logger.info("Mock image saved: %s", path)
+        return path
+
+    def _mflux_generate(
+        self, prompt: str, filename: str, output_dir: Path,
+        *, seed: int | None = None,
+    ) -> Path:
+        """Generate an image locally using mflux on Apple Silicon.
+
+        Routes to mflux-generate-flux2 (Klein 4B, 4 steps) or
+        mflux-generate-z-image-turbo (9 steps) based on config.
+        """
+        path = output_dir / f"{filename}.png"
+
+        if seed is None:
+            seed = random.randint(0, 2**31 - 1)
+
+        model = self.config.mflux_model
+        if model == "turbo":
+            cmd = "mflux-generate-z-image-turbo"
+            steps = 9
+        else:
+            cmd = "mflux-generate-flux2"
+            steps = 4
+
+        args = [
+            cmd,
+            "--prompt", prompt,
+            "--width", str(self.config.mflux_width),
+            "--height", str(self.config.mflux_height),
+            "--steps", str(steps),
+            "--seed", str(seed),
+            "--output", str(path),
+        ]
+
+        logger.info(
+            "Calling mflux (%s, %dx%d, seed=%d): %s",
+            model, self.config.mflux_width, self.config.mflux_height, seed, filename,
+        )
+
+        try:
+            result = subprocess.run(
+                args,
+                capture_output=True,
+                text=True,
+                timeout=300,  # 5 minute timeout
+            )
+            if result.returncode != 0:
+                raise RuntimeError(
+                    f"mflux exited with code {result.returncode}: {result.stderr}"
+                )
+        except FileNotFoundError:
+            raise RuntimeError(
+                f"mflux command '{cmd}' not found. Install with: pip install mflux"
+            )
+
+        if not path.exists() or path.stat().st_size < 1024:
+            raise RuntimeError(
+                f"mflux produced no valid image at {path}. "
+                f"stderr: {result.stderr[:500] if result.stderr else '(empty)'}"
+            )
+
+        # Save prompt alongside for reference
+        prompt_path = output_dir / f"{filename}.prompt.txt"
+        prompt_path.write_text(
+            f"SEED: {seed}\nMODEL: mflux-{model}\n"
+            f"SIZE: {self.config.mflux_width}x{self.config.mflux_height}\n"
+            f"IMAGE PROMPT:\n{prompt}\n",
+            encoding="utf-8",
+        )
+
+        logger.info(
+            "mflux image saved: %s (%d bytes)", path, path.stat().st_size,
+        )
         return path
 
     _FLUX_MAX_RETRIES = 3

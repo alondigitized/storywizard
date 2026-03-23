@@ -1,6 +1,6 @@
 # Storywizard
 
-AI publishing pipeline that transforms public domain novels into illustrated graphic novels using Claude AI agents and Flux image generation.
+AI publishing pipeline that transforms public domain novels into illustrated graphic novels using Claude AI agents and local mflux or cloud Flux image generation.
 
 ## Quick Start
 
@@ -8,12 +8,14 @@ AI publishing pipeline that transforms public domain novels into illustrated gra
 pip install -e .
 
 # Requires Claude CLI (claude) installed and authenticated
-# For real image generation (optional)
-export FAL_KEY="your-fal-key"
+# For local image generation (Apple Silicon)
+pip install mflux
 
 # Run pipeline (mock images by default)
 python run.py 43                        # Jekyll & Hyde
-python run.py 84 --backend flux         # Frankenstein with real images
+python run.py 43 --backend mflux        # Jekyll & Hyde with local mflux
+python run.py 43 --backend mflux --mflux-model turbo --mflux-seed 42  # Quality + reproducible
+python run.py 84 --backend flux         # Frankenstein with cloud Flux (needs FAL_KEY)
 
 # Web reader
 python -m web.serve                     # http://localhost:8000
@@ -44,7 +46,7 @@ run.py               # CLI entry point with argparse
 2. **Curator** — writes compelling "why this book matters" statement
 3. **Production Designer** — creates visual style guide (art style, colors, character designs)
 4. **Script Writer** — converts scenes to 3-6 panel scripts with dialogue/narration
-5. **Artist** — generates image prompts and renders via mock or Flux backend
+5. **Artist** — generates image prompts and renders via mock, mflux (local), or Flux (cloud) backend
 6. **Critical Editor** — quality gate (score ≥7 to approve, else revision loop)
 7. **Focus Group** — evaluates from 3 reader personas (teen, adult, ESL)
 8. **Web Publisher** — prepares novel.json with web metadata
@@ -64,11 +66,18 @@ run.py               # CLI entry point with argparse
 ```
 python run.py [BOOK_ID] [OPTIONS]
 
-  BOOK_ID              Gutenberg ID (default: 43 = Jekyll & Hyde)
-  --backend mock|flux  Image backend (default: mock)
-  --max-scenes N       Max scenes to extract (default: 15)
-  --flux-model ID      fal.ai model (default: fal-ai/flux/dev)
-  --flux-aspect RATIO  Aspect ratio (default: landscape_16_9)
+  BOOK_ID                  Gutenberg ID (default: 43 = Jekyll & Hyde)
+  --backend mock|flux|mflux  Image backend (default: mock)
+  --max-scenes N           Max scenes to extract (default: 15)
+
+  # mflux (local Apple Silicon) options:
+  --mflux-model klein|turbo  Model choice (default: klein)
+  --mflux-size WxH           Image dimensions (default: 1024x768)
+  --mflux-seed N             Base seed for reproducibility (default: random)
+
+  # Flux (cloud fal.ai) options:
+  --flux-model ID          fal.ai model (default: fal-ai/flux-general)
+  --flux-aspect RATIO      Aspect ratio (default: landscape_16_9)
 ```
 
 ## Candidate Books
@@ -86,7 +95,8 @@ python run.py [BOOK_ID] [OPTIONS]
 
 - All agent outputs use Pydantic models (see `models.py`)
 - Pipeline config is a dataclass in `config.py` — reads from env vars
-- Image backend is pluggable: `mock` saves `.prompt.txt`, `flux` generates PNGs
+- Image backend is pluggable: `mock` saves `.prompt.txt`, `mflux` generates PNGs locally, `flux` generates PNGs via fal.ai
+- mflux backend uses frozen character identity blocks in prompts for cross-panel consistency (no reference images needed)
 - Web reader loads from `novel.json` in each output subdirectory
 - Demo data can be regenerated with `python web/create_demo.py`
 - Tests: `pytest tests/`

@@ -24,7 +24,7 @@ def main() -> None:
         help="Project Gutenberg book ID (default: 43 = Jekyll & Hyde)",
     )
     parser.add_argument(
-        "--backend", choices=["mock", "flux"], default="mock",
+        "--backend", choices=["mock", "flux", "mflux"], default="mock",
         help="Image generation backend (default: mock)",
     )
     parser.add_argument(
@@ -59,7 +59,26 @@ def main() -> None:
         "--no-character-refs", action="store_true",
         help="Disable character reference portrait generation",
     )
+    # mflux (local Apple Silicon) options
+    parser.add_argument(
+        "--mflux-model", choices=["klein", "turbo"], default="klein",
+        help="mflux model: klein (fast, 4 steps) or turbo (quality, 9 steps)",
+    )
+    parser.add_argument(
+        "--mflux-size", default="1024x768",
+        help="mflux image size WxH (default: 1024x768)",
+    )
+    parser.add_argument(
+        "--mflux-seed", type=int, default=None,
+        help="Base seed for deterministic mflux generation (default: random)",
+    )
     args = parser.parse_args()
+
+    # Parse mflux size
+    mflux_w, mflux_h = 1024, 768
+    if "x" in args.mflux_size:
+        parts = args.mflux_size.split("x")
+        mflux_w, mflux_h = int(parts[0]), int(parts[1])
 
     config = PipelineConfig(
         image_backend=args.backend,
@@ -71,6 +90,10 @@ def main() -> None:
         flux_num_inference_steps=args.flux_steps,
         flux_negative_prompt=args.flux_negative,
         character_ref_enabled=not args.no_character_refs,
+        mflux_model=args.mflux_model,
+        mflux_width=mflux_w,
+        mflux_height=mflux_h,
+        mflux_seed=args.mflux_seed,
     )
 
     errors = config.validate()
@@ -81,6 +104,12 @@ def main() -> None:
 
     if args.backend == "flux":
         logger.info("Using Flux image generation via fal.ai (%s)", args.flux_model)
+    elif args.backend == "mflux":
+        logger.info(
+            "Using local mflux image generation (%s, %s, seed=%s)",
+            args.mflux_model, args.mflux_size,
+            args.mflux_seed if args.mflux_seed is not None else "random",
+        )
 
     logger.info("Fetching book %d from Project Gutenberg...", args.book_id)
     metadata, text = fetch_book(args.book_id, config)
