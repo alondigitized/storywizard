@@ -93,6 +93,15 @@ async def serve_cover(slug: str):
     return HTMLResponse("Not found", status_code=404)
 
 
+@app.get("/character_refs/{slug}/{filename}")
+async def serve_character_ref(slug: str, filename: str):
+    """Serve character reference images from the output directory."""
+    path = OUTPUT_DIR / slug / "character_refs" / filename
+    if path.exists() and path.is_file():
+        return FileResponse(path)
+    return HTMLResponse("Not found", status_code=404)
+
+
 @app.get("/panels/{slug}/{filename}")
 async def serve_panel(slug: str, filename: str):
     """Serve panel images and prompts from the output directory."""

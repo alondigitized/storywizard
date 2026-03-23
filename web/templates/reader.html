@@ -135,6 +135,16 @@
                                 <strong>{{ cd.character_name }}</strong>
                                 <p>{{ cd.appearance }}</p>
                                 {% if cd.clothing %}<p class="cd-detail">Clothing: {{ cd.clothing }}</p>{% endif %}
+                                {% if cd.distinguishing_features %}
+                                <p class="cd-detail">Features: {{ cd.distinguishing_features | join(', ') }}</p>
+                                {% endif %}
+                                {% if cd.reference_images %}
+                                <div class="char-ref-gallery">
+                                    {% for img in cd.reference_images %}
+                                    <img class="char-ref-img" src="/character_refs/{{ slug }}/{{ img.split('/')[-1] }}" alt="{{ cd.character_name }} reference" loading="lazy">
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
                             </div>
                             {% endfor %}
                         </div>

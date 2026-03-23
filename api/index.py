@@ -146,6 +146,16 @@ async def serve_cover(slug: str):
     return Response(content=path.read_bytes(), media_type="image/png")
 
 
+@app.get("/character_refs/{slug}/{filename}")
+async def serve_character_ref(slug: str, filename: str):
+    path = DATA_DIR / slug / "character_refs" / filename
+    if not path.exists() or not path.is_file():
+        return HTMLResponse("Not found", status_code=404)
+    suffix = path.suffix.lower()
+    content_type = MIME_TYPES.get(suffix, "application/octet-stream")
+    return Response(content=path.read_bytes(), media_type=content_type)
+
+
 @app.get("/panels/{slug}/{filename}")
 async def serve_panel(slug: str, filename: str):
     path = DATA_DIR / slug / "panels" / filename

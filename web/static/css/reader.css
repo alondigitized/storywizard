@@ -481,6 +481,31 @@
     color: var(--text-secondary);
 }
 
+.char-ref-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.char-ref-img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.char-ref-img:hover {
+    transform: scale(1.05);
+    border-color: var(--reader-accent);
+}
+
+@media (max-width: 600px) {
+    .char-ref-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* ---- Scene Pages ---- */
 .scene-header {
     text-align: center;
