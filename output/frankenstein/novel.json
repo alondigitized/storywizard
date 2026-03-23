@@ -46,6 +46,14 @@
           "Amber Candlelight — present only in early domestic scenes with family and Clerval, progressively fading from his palette as the novel advances",
           "Corpse Yellow-Green — bleeds into his skin tone during laboratory sequences and fever episodes, marking the Creature's contamination of his flesh",
           "Ice White — in the Arctic scenes, as he becomes a figure whose distinction from death grows increasingly ambiguous"
+        ],
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/victor_front.png",
+        "reference_images": [
+          "character_refs/victor_front.png",
+          "character_refs/victor_three_quarter.png",
+          "character_refs/victor_full_body.png",
+          "character_refs/victor_dramatic.png"
         ]
       },
       {
@@ -65,6 +73,14 @@
           "Storm Violet-Black — the color of his rage and the darkness he is forced to inhabit",
           "Forest Shadow Green — exclusively in the De Lacey scenes, a borrowed warmth suggesting his proximity to the only innocence he will ever know",
           "Ice White — in the final Arctic scenes, as he too moves toward the self-chosen annihilation that mirrors his creator's death"
+        ],
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/creature_front.png",
+        "reference_images": [
+          "character_refs/creature_front.png",
+          "character_refs/creature_three_quarter.png",
+          "character_refs/creature_full_body.png",
+          "character_refs/creature_dramatic.png"
         ]
       },
       {
@@ -81,6 +97,14 @@
           "Deep Navy Blue — his coat, his ship's timbers, the Arctic sea that is his element",
           "Amber Candlelight — the warm light of his cabin, the connection to his sister Margaret and to civilized human warmth",
           "Ice White — the Arctic environment that both defines his ambition and threatens to consume him as it consumed Victor"
+        ],
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/walton_front.png",
+        "reference_images": [
+          "character_refs/walton_front.png",
+          "character_refs/walton_three_quarter.png",
+          "character_refs/walton_full_body.png",
+          "character_refs/walton_dramatic.png"
         ]
       },
       {
@@ -97,6 +121,14 @@
           "Amber Candlelight — her primary warmth, the color she radiates in domestic scenes",
           "Soft Blue-Grey — her eyes, her ribbons, her association with the clear Alpine sky before the storms arrive",
           "Ice White — her dresses throughout the novel, and finally the color of her death"
+        ],
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/elizabeth_front.png",
+        "reference_images": [
+          "character_refs/elizabeth_front.png",
+          "character_refs/elizabeth_three_quarter.png",
+          "character_refs/elizabeth_full_body.png",
+          "character_refs/elizabeth_dramatic.png"
         ]
       },
       {
@@ -112,6 +144,14 @@
           "Amber Candlelight — his governing warm tones, always present when he appears",
           "Russet Brown and Forest Green — his clothing and his connection to the living, growing world",
           "Blood Crimson — appears in his palette only at his death, the violent violation of all he represents"
+        ],
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/clerval_front.png",
+        "reference_images": [
+          "character_refs/clerval_front.png",
+          "character_refs/clerval_three_quarter.png",
+          "character_refs/clerval_full_body.png",
+          "character_refs/clerval_dramatic.png"
         ]
       },
       {
