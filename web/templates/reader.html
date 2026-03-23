@@ -109,35 +109,54 @@
             <!-- Style guide page -->
             <div class="page style-page" data-page="{{ 2 if novel.curator_statement else 1 }}">
                 <div class="page-content">
-                    <h2>Visual Style Guide</h2>
+                    <div class="sg-page-header">
+                        <span class="sg-label">Reference</span>
+                        <h2>Visual Style Guide</h2>
+                        <div class="sg-header-rule"></div>
+                    </div>
+
                     <div class="style-guide-content">
-                        <div class="sg-section">
-                            <h3>Art Direction</h3>
-                            <p>{{ novel.style_guide.art_style }}</p>
+                        <div class="sg-top-row">
+                            <div class="sg-section sg-art-direction">
+                                <h3>Art Direction</h3>
+                                <p>{{ novel.style_guide.art_style }}</p>
+                            </div>
+                            <div class="sg-section sg-mood">
+                                <h3>Mood</h3>
+                                <p>{{ novel.style_guide.mood }}</p>
+                            </div>
                         </div>
-                        <div class="sg-section">
-                            <h3>Mood</h3>
-                            <p>{{ novel.style_guide.mood }}</p>
-                        </div>
-                        <div class="sg-section">
+
+                        <div class="sg-section sg-palette-section">
                             <h3>Color Palette</h3>
                             <div class="color-swatches">
                                 {% for color in novel.style_guide.color_palette %}
-                                <div class="swatch">{{ color }}</div>
+                                <div class="swatch">
+                                    <div class="swatch-color"></div>
+                                    <div class="swatch-info">
+                                        <span class="swatch-hex"></span>
+                                        <span class="swatch-desc">{{ color }}</span>
+                                    </div>
+                                </div>
                                 {% endfor %}
                             </div>
                         </div>
+
                         {% if novel.style_guide.character_designs %}
-                        <div class="sg-section">
+                        <div class="sg-section sg-characters-section">
                             <h3>Character Designs</h3>
                             {% for cd in novel.style_guide.character_designs %}
-                            <div class="char-design">
-                                <strong>{{ cd.character_name }}</strong>
-                                <p>{{ cd.appearance }}</p>
-                                {% if cd.clothing %}<p class="cd-detail">Clothing: {{ cd.clothing }}</p>{% endif %}
-                                {% if cd.distinguishing_features %}
-                                <p class="cd-detail">Features: {{ cd.distinguishing_features | join(', ') }}</p>
-                                {% endif %}
+                            <div class="char-card">
+                                <div class="char-card-header">
+                                    <h4 class="char-card-name">{{ cd.character_name }}</h4>
+                                    {% if cd.color_associations %}
+                                    <div class="char-color-badges">
+                                        {% for ca in cd.color_associations %}
+                                        <span class="color-badge">{{ ca }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
                                 {% if cd.reference_images %}
                                 <div class="char-ref-gallery">
                                     {% for img in cd.reference_images %}
@@ -145,14 +164,55 @@
                                     {% endfor %}
                                 </div>
                                 {% endif %}
+                                <div class="char-card-details">
+                                    <div class="char-detail-row">
+                                        <span class="char-detail-label">Appearance</span>
+                                        <p>{{ cd.appearance }}</p>
+                                    </div>
+                                    {% if cd.clothing %}
+                                    <div class="char-detail-row">
+                                        <span class="char-detail-label">Clothing</span>
+                                        <p>{{ cd.clothing }}</p>
+                                    </div>
+                                    {% endif %}
+                                    {% if cd.distinguishing_features %}
+                                    <div class="char-detail-row">
+                                        <span class="char-detail-label">Distinguishing Features</span>
+                                        <ul class="char-features-list">
+                                            {% for feat in cd.distinguishing_features %}
+                                            <li>{{ feat }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    {% endif %}
+                                </div>
                             </div>
                             {% endfor %}
                         </div>
                         {% endif %}
+
                         {% if novel.style_guide.environment_notes %}
-                        <div class="sg-section">
+                        <div class="sg-section sg-environment">
                             <h3>Environment</h3>
                             <p>{{ novel.style_guide.environment_notes }}</p>
+                        </div>
+                        {% endif %}
+
+                        {% if novel.style_guide.typography_notes %}
+                        <div class="sg-section sg-typography">
+                            <h3>Typography</h3>
+                            <p>{{ novel.style_guide.typography_notes }}</p>
+                        </div>
+                        {% endif %}
+
+                        {% if novel.style_guide.consistency_rules %}
+                        <div class="sg-section sg-consistency">
+                            <h3>Visual Consistency Rules</h3>
+                            <ol class="consistency-rules-list">
+                                {% for rule in novel.style_guide.consistency_rules %}
+                                <li>{{ rule }}</li>
+                                {% endfor %}
+                            </ol>
                         </div>
                         {% endif %}
                     </div>
@@ -264,6 +324,22 @@
     <script src="/static/js/reader.js"></script>
     <script>
         initReader({{ novel | tojson }}, "{{ slug }}");
+
+        // Extract hex colors from palette swatches and render them
+        document.querySelectorAll('.swatch').forEach(el => {
+            const desc = el.querySelector('.swatch-desc');
+            if (!desc) return;
+            const text = desc.textContent;
+            const hexMatch = text.match(/#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})\b/);
+            const colorEl = el.querySelector('.swatch-color');
+            const hexEl = el.querySelector('.swatch-hex');
+            if (hexMatch && colorEl) {
+                colorEl.style.backgroundColor = hexMatch[0];
+                if (hexEl) hexEl.textContent = hexMatch[0].toUpperCase();
+                // Simplify description: "Name (#HEX) — desc" → "Name: desc"
+                desc.textContent = text.replace(/\s*\(#[0-9A-Fa-f]{3,6}\)\s*/, ' ').replace(/\s*\u2014\s*/, ': ').trim();
+            }
+        });
     </script>
 </body>
 </html>
