@@ -6,7 +6,7 @@ novel.json and runs just the Artist stage to generate actual PNG images
 via the mflux backend. Avoids re-running the full 9-stage pipeline.
 
 Usage:
-    python3 generate_panels.py [--model klein|turbo] [--seed N] [--size WxH]
+    python3 generate_panels.py [--slug SLUG] [--model klein|turbo] [--seed N] [--size WxH]
 """
 
 import argparse
@@ -26,14 +26,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger("generate_panels")
 
-SLUG = "the-strange-case-of-dr.-jekyll-and-m"
-OUTPUT_DIR = Path("output") / SLUG
-PANELS_DIR = OUTPUT_DIR / "panels"
-PUBLIC_PANELS_DIR = Path("public/panels") / SLUG
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate panels from existing novel.json")
+    parser.add_argument("--slug", default="the-strange-case-of-dr.-jekyll-and-m",
+                        help="Novel directory slug under output/")
     parser.add_argument("--model", choices=["klein", "turbo"], default="turbo")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--size", default="1024x768")
@@ -41,8 +37,12 @@ def main() -> None:
 
     w, h = [int(x) for x in args.size.split("x")]
 
+    output_dir = Path("output") / args.slug
+    panels_dir = output_dir / "panels"
+    public_panels_dir = Path("public/panels") / args.slug
+
     # Load novel.json
-    novel_path = OUTPUT_DIR / "novel.json"
+    novel_path = output_dir / "novel.json"
     logger.info("Loading %s", novel_path)
     data = json.loads(novel_path.read_text())
 
@@ -67,7 +67,7 @@ def main() -> None:
 
     # Generate panels
     artist = Artist(config)
-    generated = artist.generate_panels(scripts, style_guide, PANELS_DIR)
+    generated = artist.generate_panels(scripts, style_guide, panels_dir)
 
     logger.info("Generated %d panels", len(generated))
 
@@ -77,12 +77,12 @@ def main() -> None:
     logger.info("Updated %s with generated panel data", novel_path)
 
     # Copy PNGs to public/ for Vercel static serving
-    PUBLIC_PANELS_DIR.mkdir(parents=True, exist_ok=True)
+    public_panels_dir.mkdir(parents=True, exist_ok=True)
     png_count = 0
-    for f in PANELS_DIR.glob("*.png"):
-        shutil.copy2(f, PUBLIC_PANELS_DIR / f.name)
+    for f in panels_dir.glob("*.png"):
+        shutil.copy2(f, public_panels_dir / f.name)
         png_count += 1
-    logger.info("Copied %d PNGs to %s", png_count, PUBLIC_PANELS_DIR)
+    logger.info("Copied %d PNGs to %s", png_count, public_panels_dir)
 
     logger.info("Done! %d panels generated.", len(generated))
 

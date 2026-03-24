@@ -276,6 +276,12 @@
                                     {% endfor %}
                                 </div>
                                 {% endif %}
+
+                                {% if panel.visual_direction %}
+                                <div class="scene-description">
+                                    <p>{{ panel.visual_direction }}</p>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                         {% endfor %}
