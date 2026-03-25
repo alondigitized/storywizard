@@ -274,7 +274,7 @@
           "panel_number": 1,
           "visual_direction": "WIDE ESTABLISHING SHOT — full-bleed horizontal banner, high angle looking down from above the peach canopy. A sea of white-pink blossoms fills the upper half of the frame, rendered in loose shuǐmò brushwork, petals dissolving at the edges. Below, three tiny figures kneel at a stone altar in the garden's heart, their silhouettes sharp against the altar fire's warm glow. Surrounding them in a vast semicircle, 300 villagers hold torches that stud the deepening dusk like earthbound stars. The black ox and white horse are visible to the altar's left, tethered to a peach tree. The sky behind is ink-washed indigo, the last light of day bleeding copper along the horizon. The composition should feel as though Heaven itself is looking down as a witness. Incense smoke rises in slow white columns into the blossom canopy.",
           "dialogue": [],
-          "narration": "In the third year of Zhongping, when the land bled and the Han sky darkened — three men walked into a garden in flower.",
+          "narration": "In the third year of Zhongping, the Yellow Turban rebels swept across the Han lands like brushfire, and the Son of Heaven's call for soldiers went out to every village and crossroads. Liu Yüan-tê had stood before that notice and sighed — not from despair, but from the ache of a man who knows his own purpose and has not yet found the means to answer it. He had found his brothers since then: one met at a posting board with a rasping voice and a leopard's brow, one met at a roadside inn pushing a cart, with eyes like a phoenix and the bearing of a man the world had not yet fully measured. Together they had come to this orchard in full blossom, with three hundred willing men, a black ox, a white horse, and an altar built beneath the open and watching sky.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -285,8 +285,12 @@
         {
           "panel_number": 2,
           "visual_direction": "MEDIUM SHOT — waist-up, slightly low angle looking up at the three brothers from just before the altar. They are caught mid-kneel, arms raised in formal salute toward the sky, their faces turned upward. Liu Pei is at center: lean, serene, with a scholar's composed gravity, robes plain but dignified. Kuan Yu looms to his right: enormous, bearded, his face a carved mask of solemn gravitas, eyes half-lidded in reverence. Chang Fei crouches to Liu Pei's left: stocky and fierce, but his expression — usually combative — is stripped raw with rare, almost frightened emotion, as if this moment costs him something. The altar fire between them and the viewer throws orange light upward across their faces, carving them in chiaroscuro. Peach blossoms drift downward through the smoke.",
-          "dialogue": [],
-          "narration": "They were not kin. They shared no blood, no clan name, no dynasty. They had only this: one garden, one fire, one word.",
+          "dialogue": [
+            "Chang Fei: The peach trees in the orchard behind the house are just in full flower. To-morrow we will institute a sacrifice there and solemnly swear our oath before Heaven and Earth.",
+            "Liu Pei: And we three shall declare brotherhood — unity of aims and sentiments. Thus will we enter upon our great task.",
+            "Kuan Yu: All three being of one mind — then let us prepare the sacrifices."
+          ],
+          "narration": "They were not kin — not by blood, by clan, nor by the dynasty that was crumbling above them all. Liu Pei was of the Imperial Family by name but had woven sandals and sold them to survive; Kuan Yü had been five years a fugitive on the rivers, a wanted man who had slain a powerful bully because it was the right thing to do; Chang Fei was a wine-seller and a butcher who had seen a stranger sigh at a notice board and recognized, in that sigh, a worthy man. It had been Chang Fei who proposed the garden, the sacrifice, the oath — and both had agreed without hesitation, as though the words had been waiting inside them since birth.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -298,7 +302,7 @@
           "panel_number": 3,
           "visual_direction": "TIGHT TWO-SHOT — close on the black ox and white horse tethered side by side to the same peach tree, their heads turned toward the altar fire as if drawn by it. The ox is massive, ink-black, absolutely still. The horse is white as paper, a single pink blossom caught in its mane. The animals' eyes reflect the firelight — liquid, amber, ancient. Behind them, the blurred forms of watching villagers holding torches create a bokeh of warm light. This panel is deliberately quiet and oblique — a symbolic breath before the oath, letting the ritual objects carry the weight of sacrifice and covenant. Rendered in fine, precise linework for the animals against a loose, atmospheric background.",
           "dialogue": [],
-          "narration": "Heaven and Earth were called as witnesses. The black ox and white horse — the oldest vow a man could make.",
+          "narration": "Beneath the rising columns of incense smoke, the offerings had been laid out with ritual precision: a black ox as heavy as sorrow, a white horse still as unwritten paper, and wine for libation poured until the altar stone ran dark. These were not gifts exchanged between men — they were a claim addressed upward, to the all-ruling Heaven and the all-producing Earth, asking the powers that move dynasties and end them to stand as witnesses to what three ordinary men were about to promise. The altar fire burned without flickering, though the night air moved the blossoms all around it.",
           "sound_effects": [],
           "characters": []
         },
@@ -306,12 +310,14 @@
           "panel_number": 4,
           "visual_direction": "TALL VERTICAL PANEL — the spine of the spread. Full-figure shot from a straight-on, ground-level angle: all three men kneel in a tight row before the altar, heads bowed forward at the apex of the oath, foreheads nearly touching the earth. Their backs form a single strong horizontal line. Above them, incense smoke billows up and spreads across the panel like ink dropped in water, filling the entire upper half — and within the smoke, rendered in ghostly lighter ink-wash, the suggestion of vast presences: a dragon coiling, a phoenix wing, the outline of a Han dynasty court that no longer exists. The altar dominates the foreground: candles, incense burners, offerings arranged with ritual precision. The three men are small against all of this, and that smallness is the point — they are mortals making a claim on eternity. The art style here should feel the most 'scroll-painting': spare, vertical, heavy with negative space.",
           "dialogue": [
-            "Liu Pei: We three — though born of different blood — swear brotherhood before Heaven and Earth.",
-            "Kuan Yu: We vow to aid each other in danger. To rescue each other in darkness.",
-            "Chang Fei: We do not ask to share the same day of birth—",
-            "All three: —but we seek to die together."
+            "Liu Pei: We three — Liu Pei, Kuan Yü, and Chang Fei — though born of different families, swear brotherhood and promise mutual help to one end.",
+            "Kuan Yu: We will rescue each other in difficulty. We will aid each other in danger.",
+            "Chang Fei: We swear to serve the state and save the people.",
+            "All three: We ask not the same day of birth —",
+            "All three: — but we seek to die together.",
+            "Liu Pei: May Heaven, the all-ruling, and Earth, the all-producing, read our hearts."
           ],
-          "narration": "",
+          "narration": "Their foreheads touched the earth and the words rose with the incense smoke — spoken slowly, as though each syllable were being cut into something that could not be taken back. The peach blossoms drifted down around them without sound. Three hundred men held their torches and watched, and did not speak, because some silences are not emptiness but weight.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -327,7 +333,7 @@
             "Kuan Yu: —or forget kindliness—",
             "Chang Fei: —may Heaven and man strike us down."
           ],
-          "narration": "",
+          "narration": "The oath did not ask for the same birth — only for the same end. It was not a promise of victory, or glory, or long life; it was a promise of direction, a needle set to a single point from which no wind could move it. Every man who heard it understood that these three had just closed a door behind them on everything they had been before — the vagrant, the fugitive, the farmer — and opened another onto something that had no name yet. The fire did not burn their hands. It had no reason to.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -339,7 +345,7 @@
           "panel_number": 6,
           "visual_direction": "WIDE SHOT — pulling back to the human scale. The three brothers rise to their feet and turn to face the assembled villagers. The crowd erupts — not in chaos but in a great collective exhale, torches raised, faces illuminated and shining. The peach garden blazes with light now, every tree lit from below, blossoms falling everywhere like soft snow. Liu Pei, Kuan Yu, and Chang Fei stand shoulder to shoulder, their backs to us, facing the tide of firelight and faces. They are not yet lords. They are not yet legends. They are three men who have just made themselves responsible for the world. The composition is deliberately warm and expansive after the solemn compression of Panel 4 — this is the exhale, the feast beginning, the brief golden moment before everything becomes war. Ink-wash sky above: the first stars appearing.",
           "dialogue": [],
-          "narration": "That night, three hundred men feasted beneath the blossoms. The world outside still burned. But for one night — brotherhood held the darkness back.",
+          "narration": "They rose. Kuan Yü and Chang Fei bowed before Yüan-tê as their elder brother, and so the order of the world between them was settled without argument, as though it had always been written that way. Then they slew other oxen and made a great feast, and three hundred men feasted and drank deep in the Peach Garden until the blossoms came down like soft snow and the first stars blazed through the ink-washed sky above. The land outside still burned — the yellow turbans still rode, the Han dynasty continued its long unraveling — but for one night, beneath the flowering trees, three men had made themselves answerable to Heaven, and the darkness held its distance.",
           "sound_effects": [
             "CHEER — a low, rolling thunder of voices"
           ],
@@ -360,7 +366,7 @@
           "panel_number": 1,
           "visual_direction": "Full-width establishing banner panel. A dusty village street bathed in the amber slant of late afternoon — the light rendered in warm ochre ink washes that bleed into cool shadow along the mud-brick walls. Dead center of the composition, a paper notice is pinned to a crumbling wall, its edges fluttering in a dry wind. Liu Pei stands before it, seen from the mid-back, tall and solitary. His long earlobes are just visible in three-quarter profile. His shoulders carry a quiet, inward weight. The street around him is sparse — a few figures in the distance, a cart wheel leaning against a doorway. The sky above is a vast, loosely-brushed expanse, ink bleeding into paper, enormous and indifferent. The notice itself is crisp, authoritative — a single white rectangle in a faded world.",
           "dialogue": [],
-          "narration": "In the second year of the Zhongping era, the Yellow Turbans rose like a plague across the land. The Emperor called for soldiers. On a village wall, a single notice answered back.",
+          "narration": "In the second year of the Zhongping era, the Yellow Turbans rose like a plague across the land — tens of thousands bound in yellow cloth, shaking the very foundations of the Han. The Prefect, knowing his forces were too few, put out notices calling for volunteers to serve against the rebels; one of these was posted in the Cho district, where lived one of whom much would be heard later. His name was Liu Pei, and he was twenty-eight years old when the rebellion first called for soldiers. He stood before the notice as a man stands before a mirror — and saw in it everything he was, and everything he had not yet become.",
           "sound_effects": [
             "FWWP — the notice flutters in the wind"
           ],
@@ -372,7 +378,7 @@
           "panel_number": 2,
           "visual_direction": "Tight close-up on Liu Pei's face in three-quarter profile, eyes fixed on the notice just out of frame. His jade-pale complexion is carved by deep chiaroscuro — warm light from the right, cool shadow pooling on the left. His expression is not weak but haunted: the grief of a man who knows exactly who he is and exactly how little power he holds. His long earlobes catch the light. A single visible tear-line — not shed, merely present — traces the edge of his eye. The notice is blurred in the foreground, its characters ghostly. The background dissolves into ink-wash nothing.",
           "dialogue": [],
-          "narration": "He was of the Imperial blood — a thread hanging from a fraying tapestry.",
+          "narration": "He was a descendant of the Han princes, yet the family had sunk deep in poverty across the generations — his father dead young, his mother a widow, the boy grown to manhood weaving grass mats and selling straw sandals by the road. He was liberal and amiable, a man of few words who hid all feeling beneath a calm exterior; yet always he had cherished a yearning for high emprise, and the sight of the notice saddened him so that he sighed as he read it. The sigh carried the full weight of a man who knew the blood that ran in his veins and felt, in every quiet year of poverty, the distance between what he was and what he had been born to be.",
           "sound_effects": [],
           "characters": [
             "Liu Pei"
@@ -382,9 +388,12 @@
           "panel_number": 3,
           "visual_direction": "A sudden vertical panel — energy erupting from below the frame. Chang Fei looms into the composition from the lower right, a bull of a man with a thick neck, bristling jowls, and eyes like two black coals burning with impatient life. He leans forward aggressively, his posture a physical challenge, his finger extended toward Liu Pei — and by extension, toward the notice. His clothing is a butcher's rough cloth, forearms like carved oak. The ink linework on his figure is thick, urgent, slashing — contrasted against the delicate brushwork on Liu Pei beside him. The two men are framed together for the first time: one still as a scroll painting, one crackling like a brushfire.",
           "dialogue": [
-            "Noble sir — why only sighs? If you will not act, what use is your grief to anyone?"
+            "Noble sir — why sigh if you will not act? What use is your grief to the country?",
+            "Chang Fei is my name — I-tê, they call me. I live near here, where I have a farm; I sell wine and butcher meat besides. I like to become acquainted with worthy men. Your sighs as you read the notice drew me toward you.",
+            "I am of the Imperial Family — Liu by name, Yüan-tê by style. An I could, I would destroy these rebels and restore peace to the land. But alas — I am helpless.",
+            "Helpless? I am not without means. Suppose you and I raised some men and tried what we could do."
           ],
-          "narration": "",
+          "narration": "Suddenly a rasping voice at his back cried out, and turning quickly, Yüan-tê saw a man with a bullet head like a leopard's, large eyes, a pointed chin, and a bristling moustache — speaking in a loud bass voice, looking as irresistible as a runaway horse. At once he saw this was no ordinary man, and asked who he was. The stranger answered without modesty or hesitation, planting himself before the notice as though he had been waiting there all his life for exactly this conversation.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -395,10 +404,11 @@
           "panel_number": 4,
           "visual_direction": "Interior of a low inn — rough-hewn beams, a clay wine jar on a scarred table, afternoon light cutting through a single high window in a dusty diagonal shaft. Liu Pei and Chang Fei sit across from each other, leaning in over the table. Liu Pei's bearing is dignified even in this rough space; his hands are folded, his voice measured. Chang Fei plants both fists on the table, radiating barely-contained momentum. The scene is composed like a classical Chinese court painting compressed into an intimate space — two figures in dialogue, the world outside reduced to a strip of glowing window. A wine cup sits between them, untouched.",
           "dialogue": [
-            "I am of the Imperial Family — Liu is my name. I would give everything to crush these rebels and return peace to the land.",
-            "Then give it. I have means enough to raise men. You and I — let us try what we can do."
+            "I am Liu Pei — of the Imperial blood, though you would not know it by my hands. I would give everything to crush these rebels and return peace to the land. But I lack the means, and I lack the men.",
+            "Then I will provide them. I have coin enough, and fire enough. Suppose you and I raised some men and tried what we could do together — what then?",
+            "Then, Chang Fei, I would count myself the most fortunate man in Cho."
           ],
-          "narration": "",
+          "narration": "This was happy news for Yüan-tê, and the two betook themselves to the village inn to talk over the project — heads bent low over rough-cut wood, voices measured against the quiet of the afternoon. Chang Fei had means enough: a farm, good coin, and a restlessness in his blood that could not be stilled by butchering or wine-selling. Liu Pei had something rarer and more fragile — a name that traced its roots to the Emperor himself, and a patience built from years of poverty that had burned everything away except certainty of purpose. Between them on the table sat a wine cup, and neither man touched it. There was too much to say first.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -409,9 +419,10 @@
           "panel_number": 5,
           "visual_direction": "A dramatic half-page vertical panel. The inn doorway fills the left edge of the frame — and through it, blocking the light, stands the silhouette of Kuan Yu. He is enormous: broad-shouldered, unhurried, pushing a heavy hand-cart piled with goods. His magnificent beard — long, layered, almost architectural — catches the slant of the setting sun behind him, turning it to flame-edged copper. His face is in near-shadow, but the eyes are calm, ancient, luminous. Dust motes swirl in the light around him like a halo of smoke. He does not look at the two men yet — he is speaking to the innkeeper — but the composition makes clear: this is an entrance the universe has been rehearsing. The cart's wheel echoes the circle of the recruitment notice from Panel 1.",
           "dialogue": [
-            "Wine — quickly. I am in haste. There is an army to join before the day dies."
+            "Wine — and be quick about it. I am in haste to get into the town and offer myself for the army.",
+            "I am Kuan Yü — Yün-chʻang, Long as a Cloud. I am a native of the east side of the river, but I have wandered these waters five years now, for I slew a ruffian who used his power to bully the weak. Now I have come here to join the fight."
           ],
-          "narration": "And then the doorway filled.",
+          "narration": "And then the doorway filled. He was a huge, tall fellow who halted at the threshold as though the inn had been built around the fact of his arrival — a long beard, a dark brown face, lips as red as ripe dates, eyes like a phoenix, eyebrows like sleeping silkworms, his whole bearing dignified and awe-inspiring. He entered to rest awhile and called for wine, adding that he was in haste to offer himself to the army. Presently Yüan-tê crossed over, sat down beside him, and asked his name; and what came back was not merely a name but a story — told plainly, without shame, by a man who had learned that the truth is the only armor worth wearing.",
           "sound_effects": [
             "CREAK — the heavy cart wheel on the threshold"
           ],
@@ -422,8 +433,12 @@
         {
           "panel_number": 6,
           "visual_direction": "A close, intimate three-shot — the tightest panel on the page. All three faces in a rough triangle: Liu Pei center-frame and slightly elevated, Chang Fei lower-left with his jaw set and eyes alight, Kuan Yu lower-right, his gaze now fully on Liu Pei with an expression of slow, certain recognition. The ink work is spare and deliberate — faces rendered with the weight of classical portraiture, backgrounds dissolved to near-white negative space. A single wine cup sits in the extreme foreground, blurred. Between the three men there is no dialogue — only the silence before an oath. The light falls equally on all three, as though the afternoon sun has decided to witness.",
-          "dialogue": [],
-          "narration": "Three men. One notice. The hinge on which an age turned.",
+          "dialogue": [
+            "Then come with us, Yün-chʻang. We go to Chang Fei's farm — there is a great project to speak of, and I would have you hear it.",
+            "I have walked far and asked little of fate. But I will hear what you have to say, Liu Yüan-tê.",
+            "Tomorrow the peach trees behind my house are in full flower. We will make sacrifice there — we three will swear brotherhood before Heaven and Earth, and declare our purpose. Thus we enter upon our great task."
+          ],
+          "narration": "Then Yüan-tê told him his own intentions, and all three went away to Chang Fei's farm where they could talk over the grand project in full. Three men of different births and different roads, each carrying a private hunger the other two recognized without a word — drawn together by a scrap of paper nailed to a crumbling wall in a dying afternoon in Cho. The age that turned on this quiet moment would not know for years, and then for centuries, how much had been set in motion here: in the dust, between three cups of wine, beneath a sky too vast to care and yet somehow, it seemed, attending.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -442,7 +457,7 @@
           "panel_number": 1,
           "visual_direction": "Wide, full-bleed horizontal establishing shot of the smithy at deep night. A river of molten metal pours from a crucible at center-frame, erupting in a cascade of orange sparks that scatter through the upper half of the panel like thrown stars. Three bare-chested armourers work in dramatic silhouette against the blaze — hammers mid-swing, bodies bent in labor, faces hidden by the glare. The background dissolves into pure ink-wash darkness; the forge is the only light source, carving figures from shadow in extreme chiaroscuro. Composition echoes a classical Chinese horizontal landscape scroll — human forms small but purposeful against elemental fire. Ink-wash smoke curls into the upper corners. Two fine horses are just visible tethered at the smithy entrance, their flanks gleaming — the providential gift made flesh.",
           "dialogue": [],
-          "narration": "Two merchants rode in from Changshan — fifty horses, gold, silver, and a thousand catties of steel. Heaven does not announce itself. It simply provides.",
+          "narration": "The two dealers from Changshan had ridden south against the current of war, their drove of horses laden with gold, silver, and a thousand catties of steel fit for the forging of weapons. When Yüan-tê told them of the plan to strive for tranquility, they gave freely and at once — fifty good steeds besides — as though the gift had been waiting only to be asked for. Through that long night the armourers worked without pause, hammer against anvil, fire against iron, the dark shapes of the horses watching from the entrance as though they too understood what was being made. Heaven does not announce itself. It simply provides.",
           "sound_effects": [
             "CLANG",
             "CLANG",
@@ -454,9 +469,10 @@
           "panel_number": 2,
           "visual_direction": "Tight medium shot framing Liu Pei from chest to hands. He stands before a low table draped in dark cloth; on it, two slender jian swords lie in perfect parallel, their blades catching forge-light in cold silver gleams — elegant, ceremonial, matched like a reflection. A smith's weathered hands enter from the panel's lower edge, presenting them humbly on upturned palms. Liu Pei looks down at the blades with still, grave eyes — not triumph, but quiet recognition, as though meeting someone long expected. His own hands have not yet moved to take them. Ink-wash style: precise muscular linework on his face; the background is pure negative space, letting the twin blades carry all the weight.",
           "dialogue": [
+            "Two blades, forged as one. As we three vowed to be.",
             "Balanced... as brothers should be."
           ],
-          "narration": "For the eldest: twin blades, forged as one.",
+          "narration": "For the eldest the armourers made a double sword — two blades matched in length and temper, mirror images, inseparable as the twin obligations of a man who leads: to protect and to endure. Yüan-tê looked upon them with still, grave eyes, as a man looks at something long expected finally arriving. He had declared his ancestry, sworn the oath beneath the peach blossoms, bound himself to his brothers and to the people of the state; the blades on the dark cloth before him were merely the outward and visible shape of a promise already fixed in bone.",
           "sound_effects": [],
           "characters": [
             "Liu Pei"
@@ -466,9 +482,10 @@
           "panel_number": 3,
           "visual_direction": "Medium-wide shot inside the forge. Two armourers strain with visibly trembling arms to present Kuan Yu's weapon — a massive long-handled glaive with a vast, curving dao blade etched with a coiling dragon along its flat. The weapon's scale dwarfs them; their knees are slightly bent under its weight. Kuan Yu stands before them, his legendary long beard stirred by the heat-shimmer, and reaches out with a single hand to grip the hilt. One hand — where two men buckle. His face is utterly serene, a barely perceptible downward tilt of the chin the only acknowledgment of the blade's hundredweight. Low upward camera angle makes Kuan Yu monumental, almost architectural. The dragon etching on the blade catches the fire-light and seems to writhe.",
           "dialogue": [
-            "Cold Beauty... Black Dragon... I shall let it choose its own name in battle."
+            "Cold Beauty. Black Dragon. A blade that carries two names has not yet decided what it is.",
+            "I shall let it choose its own name in battle."
           ],
-          "narration": "A full hundredweight of iron and intent. Yun-chang took it one-handed, and the smiths stepped back in silence.",
+          "narration": "Yün-chʻang had fashioned for himself a long-handled, curved blade the armourers called Cold Beauty — or Black Dragon — which weighed a full hundredweight, the weight of a grown man, the weight of a solemn oath. Two armourers strained with trembling arms to present it; he received it with one hand, as a man might accept a cup of wine. His legendary beard, as long as his patience and as dark as the midnight river from which he had once fled as a fugitive, stirred in the heat-shimmer rising from the forge. The dragon etched along the flat of the blade caught the firelight and seemed, for a moment, to breathe.",
           "sound_effects": [
             "KRRRNNG"
           ],
@@ -480,9 +497,10 @@
           "panel_number": 4,
           "visual_direction": "Low-angle medium shot in the yard outside the smithy; the sky behind Chang Fei is transitioning from black to the first deep blue of pre-dawn. He holds the eighteen-foot serpent-spear fully extended overhead with one hand, the shaft perfectly horizontal — the weapon balanced on a single point of his palm as though it were weightless. His grin is enormous and uncontained, a boy's pure delight housed in a warrior's body. A ring of armourers and new recruits stare in open-mouthed awe. The spear's length demands a wide horizontal composition; the iron tip nearly exits the panel on the right, implying a force too large to be contained. Ink-wash motion-blur halos the spear-head.",
           "dialogue": [
-            "Ha! Light as a willow switch!"
+            "Ha! Light as a willow switch!",
+            "Well? Who steps forward to test it? No one? Then we are already winning!"
           ],
-          "narration": "Eighteen feet of ash and iron. Chang Fei lifted it one-handed and laughed as if the war were already finished.",
+          "narration": "Chang Fei had made his own spear, insisted upon it, as though the making were itself part of the oath — eighteen feet of ash and iron, longer than three men laid end to end, a weapon that required as much space as its maker's ambitions. He lifted it overhead on one open palm and balanced it there as if it were a straw, his great laughter rolling out across the yard and swallowing even the sound of the forge. The new recruits who stood watching could not decide whether they were more afraid of the war ahead or more glad that this man would be riding beside them. They chose glad.",
           "sound_effects": [
             "WHOOOM"
           ],
@@ -494,9 +512,11 @@
           "panel_number": 5,
           "visual_direction": "FULL DOUBLE-PAGE BLEED SPREAD — no borders, no gutters, image bleeds to all four edges. Dawn on an open plain. In the foreground left, the three brothers sit mounted and fully armored: Liu Pei at center on a pale horse, Kuan Yu to his right on a red roan, Chang Fei to his left on a dark stallion. Each bears his weapon: the twin swords sheathed at Liu Pei's hip, the Black Dragon glaive held upright in Kuan Yu's fist like a war-standard, Chang Fei's spear angled skyward at a defiant diagonal. Behind them, filling the right two-thirds and the middle distance, five hundred men stand in loose ranks — infantry, a scattering of horsemen — rendered in progressively sparser ink-wash brushwork as they recede toward the horizon until the rearmost are barely suggestions of figures, a tide of human will dissolving into morning mist. A pale gold band of first light breaks along the entire horizon; above it, the sky is still the deep blue-black of departing night. The brothers are lit from below by this horizon glow, faces resolute and upward. Liu Pei's mouth is open — the only figure speaking into the silence. Composition is asymmetric: brothers anchored lower-left, army sweeping right and back, creating a visual tension between the intimate and the vast. Every brushstroke should carry the weight of a scroll painting and the forward momentum of a sword-stroke.",
           "dialogue": [
-            "Thus does Heaven help us."
+            "We swore to serve the state and save the people. We ask not the same day of birth — only to die together if Heaven wills it.",
+            "Thus does Heaven help us.",
+            "Then let us not keep Heaven waiting."
           ],
-          "narration": "Five hundred men. Small — impossibly small against what was coming. But they rode out anyway. And that, the historians would say, was everything.",
+          "narration": "When the weapons were ready the troop, now five hundred strong, mustered on the plain in the grey before dawn — impossibly few against what was coming, and every one of them knew it. The three brothers rode to the fore, each bearing the steel that had been sworn by: the twin swords at Yüan-tê's hip, the Black Dragon upright in Yün-chʻang's fist like a crimson war-standard, Chang Fei's great spear angled at the sky in frank defiance of arithmetic. Behind them the five hundred stretched back into the morning mist, their forms growing sparser with distance until the rearmost were barely suggestions of men, a tide of human will dissolving into the uncertain light. They had sworn to serve the state and save the people, to rescue each other in difficulty and aid each other in danger, asking not the same day of birth but seeking to die together. Small — impossibly small against what was coming. But they rode out anyway. And that, the historians would say, was everything.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -509,13 +529,16 @@
     {
       "scene_number": 4,
       "scene_title": "First Blood at Tahsing Hills",
-      "layout_notes": "PAGE 1: Panel 1 is a full-bleed horizontal splash across the top two-thirds of the page — a sweeping cinematic panorama. Below it, Panels 2 and 3 stack in equal halves, tight and vertical, like the beat of a war drum. PAGE 2: Panel 4 is a half-page center-spread — a single massive diagonal stroke of violence. Panel 5 occupies the lower third as a wide horizontal, quieter, monumental. Panel 6 is a single narrow vertical gutter-panel on the far right, almost a bookmark — a poet's afterthought rendered in ink. The page rhythm should mirror the battle itself: slow breath, then explosion, then silence.",
+      "layout_notes": "PAGE 1: Panel 1 is a full-bleed horizontal splash across the top two-thirds of the page — a sweeping cinematic panorama. Below it, Panels 2 and 3 stack in equal halves, tight and vertical, like the beat of a war drum. PAGE 2: Panel 4 is a half-page center-spread — a single massive diagonal stroke of violence. Panel 5 occupies the lower third as a wide horizontal, quieter, monumental. Panel 6 is a single narrow vertical gutter-panel on the far right, almost a bookmark — a poet’s afterthought rendered in ink. The page rhythm should mirror the battle itself: slow breath, then explosion, then silence.",
       "panels": [
         {
           "panel_number": 1,
           "visual_direction": "FULL-BLEED HORIZONTAL PANORAMA. Two armies face each other across a wide, dust-choked plain at the foot of the Tahsing Hills. The Yellow Turban forces mass on the left: a ragged sea of yellow banners, roughly-armored peasant soldiers, and rebel cavalry. On the right: a smaller, grimly ordered imperial column, their banners crisp against the haze. Center foreground: three riders advance slightly ahead of the imperial line — Liu Pei, composed and still, both swords sheathed at his hip; Chang Fei to his left, eighteen-foot serpent-spear already leveled, his war-horse straining forward like a loosed arrow; Kuan Yu to his right, the Black Dragon blade resting across his saddle, his long beard lifting in the wind. The hills loom in Song Dynasty ink-wash style behind both armies — vast, indifferent, ancient. The sky is a flat white-gold haze. Dust catches the light in sweeping diagonal arcs. The scale is mythic: tiny human figures against geological eternity. The emotional register is the held breath before a thunderclap.",
-          "dialogue": [],
-          "narration": "The Yellow Turbans held the hills. The empire sent three sworn brothers and a handful of soldiers to take them back.",
+          "dialogue": [
+            "Liu Pei: Sons of Han — your quarrel is with those who have failed you, not with the people who bore you! Lay down your yellow banners. Yield now, and Heaven will forgive what men cannot!",
+            "Chêng Yüan-chih: Silence that man. Têng Mou — ride out and answer him in blood!"
+          ],
+          "narration": "The rebel host of the Yellow Turbans massed at the foot of the Tahsing Hills like a tide that had forgotten how to recede — their hair flying loose about their shoulders, their foreheads bound with yellow cloth, their banners a ragged sea against the white-gold haze of the sky. Against them rode Liu Yüan-tê with his two sworn brothers, one on each side, as they had solemnly promised before Heaven and Earth beneath the flowering peach trees: united in aim, united in heart, united unto death, or not at all. Yüan-tê raised his whip and his voice carried across the dusty plain with the authority of the Han blood in his veins, calling upon the rebels to throw down their weapons and surrender. Their leader, full of rage, did not answer with words.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -525,9 +548,9 @@
         },
         {
           "panel_number": 2,
-          "visual_direction": "TIGHT VERTICAL PANEL, LOW ANGLE — almost ground-level. Chang Fei at full gallop, seen from below and ahead. His war-horse is a blur of motion, hooves barely grazing the earth, ink-streak speed lines radiating from every edge of the panel. Chang Fei's face is a mask of absolute ferocious focus — not rage, but the cold certainty of a man who has already seen the end of this moment. The eighteen-foot spear extends before him like a strike of lightning, the iron tip catching the pale sky. Rebel officer Teng Mou, visible in the upper right corner, is turning his horse in panic — too late. His expression: the moment a man understands he has already lost. The spear tip is aimed dead center at his chest. Diagonal composition — everything angles toward the point of impact. Heavy ink-wash shadows on Chang Fei's armor; Teng Mou half-dissolved in the harsh backlighting.",
+          "visual_direction": "TIGHT VERTICAL PANEL, LOW ANGLE — almost ground-level. Chang Fei at full gallop, seen from below and ahead. His war-horse is a blur of motion, hooves barely grazing the earth, ink-streak speed lines radiating from every edge of the panel. Chang Fei’s face is a mask of absolute ferocious focus — not rage, but the cold certainty of a man who has already seen the end of this moment. The eighteen-foot spear extends before him like a strike of lightning, the iron tip catching the pale sky. Rebel officer Teng Mou, visible in the upper right corner, is turning his horse in panic — too late. His expression: the moment a man understands he has already lost. The spear tip is aimed dead center at his chest. Diagonal composition — everything angles toward the point of impact. Heavy ink-wash shadows on Chang Fei’s armor; Teng Mou half-dissolved in the harsh backlighting.",
           "dialogue": [],
-          "narration": "Chang Fei did not shout. He simply came.",
+          "narration": "At once rode forward Chang Fei, his long spear poised to strike — eighteen feet of iron-tipped certainty, forged from a thousand catties of the finest steel in the days when the world still seemed a thing that could be set right. Têng Mou had ridden out to silence Yüan-tê; he had not yet understood the difference between a man full of fury and a man who has already seen the end of the moment. Chang Fei did not shout a war cry. He simply came.",
           "sound_effects": [
             "KRRRAK"
           ],
@@ -538,9 +561,9 @@
         },
         {
           "panel_number": 3,
-          "visual_direction": "CLOSE-UP IMPACT PANEL — brutal geometry, almost abstract. The spear tip has erupted through the center of Teng Mou's chest armor from the front. He arches violently backward off his horse, body forming a sharp backward arc — the classic shuǐmò figure of a man surrendering to physics. Blood radiates in ink-splash patterns, not gory but stylized — like a calligrapher's deliberate brushstroke, as if the universe itself is recording the moment. The spear shaft fills the panel diagonally. Chang Fei's gauntleted fist on the shaft is all we see of him — anonymous, instrumental, inevitable. Teng Mou's face: not pain but pure astonishment. His yellow turban, knocked free, spirals off-frame. Deep chiaroscuro: the wound-point is the only bright spot in the panel, everything else pooled in shadow.",
+          "visual_direction": "CLOSE-UP IMPACT PANEL — brutal geometry, almost abstract. The spear tip has erupted through the center of Teng Mou’s chest armor from the front. He arches violently backward off his horse, body forming a sharp backward arc — the classic shuǐmò figure of a man surrendering to physics. Blood radiates in ink-splash patterns, not gory but stylized — like a calligrapher’s deliberate brushstroke, as if the universe itself is recording the moment. The spear shaft fills the panel diagonally. Chang Fei’s gauntleted fist on the shaft is all we see of him — anonymous, instrumental, inevitable. Teng Mou’s face: not pain but pure astonishment. His yellow turban, knocked free, spirals off-frame. Deep chiaroscuro: the wound-point is the only bright spot in the panel, everything else pooled in shadow.",
           "dialogue": [],
-          "narration": "",
+          "narration": "One thrust, and Têng Mou rolled from his horse, pierced through the heart. He had ridden out to begin the battle; instead he ended his own part in it, which is a different kind of ending entirely. For one long, suspended moment, ten thousand men stood in perfect silence and watched the space where their champion had been — and in that silence the morning shifted beneath their feet, and the world became a slightly different shape.",
           "sound_effects": [
             "THKK"
           ],
@@ -551,9 +574,12 @@
         },
         {
           "panel_number": 4,
-          "visual_direction": "HALF-PAGE VERTICAL — the dominant image of the spread. Kuan Yu and the rebel leader in single combat, resolved in a single stroke. Kuan Yu is captured mid-swing — the Black Dragon blade a sweeping diagonal slash that bisects the entire panel from upper-left to lower-right. The rebel leader is already divided: the geometry of the cut is clean, almost architectural, the two halves of the figure separating with terrible symmetry. This is rendered not as gore but as classical tragedy — the broken line of a man who chose the wrong side of history. Kuan Yu himself is monumental: long beard horizontal in the wind of his own stroke, eyes half-lidded with the calm of absolute mastery. His red war-cloak billows behind him like a battle standard. The horse beneath him hasn't even broken stride. Background: swirling battlefield smoke rendered in loose ink-wash, impressionistic. The scale of Kuan Yu against the chaos makes him seem carved from different material than the world around him — stone among water.",
-          "dialogue": [],
-          "narration": "One stroke. The histories would argue about many things. Not this.",
+          "visual_direction": "HALF-PAGE VERTICAL — the dominant image of the spread. Kuan Yu and the rebel leader in single combat, resolved in a single stroke. Kuan Yu is captured mid-swing — the Black Dragon blade a sweeping diagonal slash that bisects the entire panel from upper-left to lower-right. The rebel leader is already divided: the geometry of the cut is clean, almost architectural, the two halves of the figure separating with terrible symmetry. This is rendered not as gore but as classical tragedy — the broken line of a man who chose the wrong side of history. Kuan Yu himself is monumental: long beard horizontal in the wind of his own stroke, eyes half-lidded with the calm of absolute mastery. His red war-cloak billows behind him like a battle standard. The horse beneath him hasn’t even broken stride. Background: swirling battlefield smoke rendered in loose ink-wash, impressionistic. The scale of Kuan Yu against the chaos makes him seem carved from different material than the world around him — stone among water.",
+          "dialogue": [
+            "Chêng Yüan-chih: I will not be shamed by a single rider — I will cut you all down myself!",
+            "Kuan Yu: Then come."
+          ],
+          "narration": "Chêng Yüan-chih, full of rage at the death of his man, whipped his own steed forward with sword raised, riding to slay Chang Fei himself. But Kuan Yün-chʿang — he of the phoenix eyes and the silkworm brows, whose whole appearance was dignified and awe-inspiring — had already swung up the great curved blade he called Cold Beauty, that ponderous weapon of a full hundredweight, and rode to meet him. At the sight of that man upon that horse with that sword, fear seized upon Chêng before he could recover himself, and ere he could do so the great sword fell, cutting him in halves. One stroke. The histories would argue about many things. Not this.",
           "sound_effects": [
             "SHHHK"
           ],
@@ -565,9 +591,11 @@
           "panel_number": 5,
           "visual_direction": "WIDE HORIZONTAL PANEL — aftermath. The battle is over in the same moment it began. Yellow Turban soldiers flee in every direction, their banners fallen, horses riderless. Chang Fei and Kuan Yu rein in their horses at the center of the battlefield, facing each other across a field of dust and scattered yellow cloth. Between them and slightly behind: Liu Pei on his pale horse, both swords still at his hip — they were never drawn. He watches his brothers with an expression of profound, complicated love: pride threaded through with the first faint shadow of something heavier. He alone seems to understand the weight of what just happened. The Tahsing Hills rise behind all three of them, vast and ancient. The light has gone golden — late afternoon or the particular gold of moments that become legend. The composition echoes a classical Chinese court painting triptych: each man separate, each complete, each diminished without the others.",
           "dialogue": [
-            "Two new swords... and they needed neither of us."
+            "Chang Fei: Elder brother — one thrust! Did Heaven itself not smile upon us today?",
+            "Kuan Yu: The man was brave enough to ride out. He chose a poor morning for it.",
+            "Liu Pei: Two new swords… and they needed neither of mine. Heaven has been more generous than our oath deserved."
           ],
-          "narration": "",
+          "narration": "Their leader fallen, the rebels threw away their weapons and fled, and the official soldiers dashed in among them; many thousands surrendered before the sun had moved a hand’s breadth across the sky, and the victory was complete. Three brothers who had sworn brotherhood and unity of aims beneath the flowering peach trees stood now at the center of a broken army — and the eldest of them, Liu Yüan-tê, had never once drawn his swords. He watched his brothers across that golden field and felt the full, complicated weight of what it meant to have chosen well.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -579,7 +607,7 @@
           "panel_number": 6,
           "visual_direction": "NARROW VERTICAL GUTTER PANEL — the full height of the page, barely two inches wide. A single ink-brush detail: the severed yellow turban of the rebel leader, lying in the dust. A thin line of dark ink pools beneath it. In the far background, barely suggested by three or four brushstrokes, the retreating dust cloud of a broken army. Nothing else. The negative space — the white of the page — is the real subject. This is the panel that breathes. The poem caption runs vertically down the right margin, styled as classical Chinese verse lettering.",
           "dialogue": [],
-          "narration": "Two heroes new to war's alarms rode boldly forth to try their arms. Their doughty deeds three kingdoms tell — and poets sing how these befell.",
+          "narration": "When the dust settled, the historians set aside their plain accounting and reached for a different instrument. Some victories refuse prose — they demand to be sung, the way a sword demands a worthy hand. Two heroes new to war’s alarms rode boldly forth to try their arms; their doughty deeds three kingdoms tell, and poets sing how these befell.",
           "sound_effects": [],
           "characters": []
         }
@@ -594,7 +622,7 @@
           "panel_number": 1,
           "visual_direction": "Full-width establishing shot. Wide low-angle view looking up at Chang Pao on horseback against a sky in violent transformation. He is silhouetted from below, a lone figure atop a rearing warhorse, his long hair unbound and whipping horizontally in a wind that has no earthly source. His sword arm is raised straight overhead, blade pointing at the heavens like a lightning rod. Above him, the sky is a churning ink-wash catastrophe — black and grey clouds boiling and spiraling inward as if the sky itself is being drawn into a drain. The horizon behind him still holds pale light, making the darkness above him feel localized, intentional, summoned. Use extreme contrast: the horse and rider rendered in hard muscular linework against backgrounds that dissolve into atmospheric wash. Motion streaks of wind rake across the panel horizontally. The composition echoes a classical Chinese scroll — the tiny human figure commanding something vast and terrible.",
           "dialogue": [],
-          "narration": "The rebel Chang Pao loosened his hair, raised his sword, and opened his mouth to the sky.",
+          "narration": "The rebel Chang Pao, while still mounted, loosened his hair, grasped his sword, and gave voice to his incantations. The sky above the battlefield darkened as though a curtain were being drawn across the heavens — not the slow grey dimming of any natural storm, but something sudden and deliberate, as if an unseen hand were willing the darkness into being. The wind rose from nothing, howling across the hills with a sound no earthly gale had ever made. Thunder answered his raised blade like a soldier obeying his lord.",
           "sound_effects": [
             "WHOOOOOM",
             "KRAKKK"
@@ -607,7 +635,7 @@
           "panel_number": 2,
           "visual_direction": "Tight vertical close-up: Chang Pao's face from the chest up, hair streaming wildly in every direction like black ink dropped in water. His eyes are wide, whites showing, lips moving in incantation — not a villainous snarl but something more unsettling, the focused trance of a man who genuinely commands forces beyond himself. His sword hand is raised at the panel edge. Behind him, the cloud mass is now so close it seems to press against his back, thick with churning darkness. A single crack of lightning bleaches one side of his face white, leaving the other in absolute shadow. Dramatic chiaroscuro rendering — this is the soul of the scene. The ink-wash background should feel like it is physically pressing against the figure.",
           "dialogue": [],
-          "narration": "",
+          "narration": "This was the art Chang Pao had mastered in the mountain passes where the Yellow Heaven sect kept its forbidden texts — word and will and steel raised together toward the sky. His lips shaped syllables that belonged to no dynasty, no court, no common tongue, older than the empire he sought to break. A crack of lightning bleached one side of his face white and left the other in absolute shadow, as though the storm itself were already claiming half of him for its own terrible purpose.",
           "sound_effects": [
             "RUMMMBLE"
           ],
@@ -618,8 +646,10 @@
         {
           "panel_number": 3,
           "visual_direction": "Wide horizontal shot — the descent of the phantom army. The black cloud mass fills the upper two-thirds of the panel, and from within it, ghostly cavalry and infantry materialize in downward diagonal streaks. They are not fully solid — rendered in loose, smeared ink-wash strokes that suggest horses, lances, banners, faces screaming without sound — recognizable as soldiers but translucent, made of storm. Below, Liu Pei's troops are caught in full rout: men throwing down weapons, horses bolting, formations collapsing in every direction. The diagonal lines of the phantom descent contrast violently with the horizontal scatter of the fleeing men. Use explosive compositional energy — diagonal ink streaks, motion blur. A few soldiers look directly up in frozen terror, faces rendered in precise, heartbreaking detail against the chaos around them. The scale should be overwhelming — thousands above, thousands below, one man's will made into catastrophe.",
-          "dialogue": [],
-          "narration": "The phantom cavalry swept down like ink through water. Liu Pei's soldiers saw death wearing the shape of the supernatural — and ran.",
+          "dialogue": [
+            "Fall back! Fall back — there is no fighting what the sword cannot touch!"
+          ],
+          "narration": "Within the dense black cloud were horse and footmen innumerable, and they swept downward to attack the imperial troops — not fully men, not fully spirit, but something that wore the shape of both and the mercy of neither. Fear came upon Yüan-tê's soldiers as it comes upon all living things when confronted with proof that the world holds more than they had ever believed. They did not flee in cowardice: they fled in the oldest wisdom of the body, the knowledge passed down from the first battles of men, that courage is no shield against what cannot die.",
           "sound_effects": [
             "SKREEEEE",
             "THOOM THOOM THOOM"
@@ -633,9 +663,10 @@
           "panel_number": 4,
           "visual_direction": "Full-width horizontal shot from above, looking down from the clifftop perspective — the counter-strike. Along the ridge of rocky cliffs above the battlefield, rows of hidden soldiers are revealed, heaving great clay urns and wooden buckets over the edge. The contents cascade downward in dark streams — blood from slaughtered swine, goats, and dogs — falling in long arcing lines toward the phantom army below. The soldiers on the cliff are rendered in solid, earthy linework, fully real and physical, a deliberate visual contrast to the ghostly translucence below. Their faces are grim but purposeful. One figure — Chu Chien — stands at the cliff edge pointing downward, commanding the pour. Below, the streams of blood and filth are just beginning to intersect with the swirling phantom mass. A single moment suspended before dissolution.",
           "dialogue": [
-            "He uses magic. Meet it with the blood of slaughtered swine, goats, and dogs — poured from the heights above!"
+            "He uses magic — his phantom hosts are conjured from the storm itself.",
+            "Then we shall answer with what the spirit world cannot abide. To-morrow I shall prepare counter magic: the blood of slaughtered swine and goats and dogs. This blood shall be sprinkled upon their hosts from the precipices above by men whom they see not. Thus shall we break the power of their black art."
           ],
-          "narration": "Chu Chien had read the old texts. Ancient sorcery, the scholars wrote, cannot endure the blood of base creatures. He had prepared.",
+          "narration": "Chu Chien had deliberated through the night, and he had remembered what the old texts said: that the dark arts cannot endure the blood of base creatures, that what the spirit world exalts may be undone by the earth's most common and unclean things. He had spent the hours of darkness in grim preparation — great clay urns of the blood of swine and goats and dogs carried without torches to the high cliffs by men who moved in silence. Now the two younger brothers, each commanding a company, crouched hidden upon the heights with a plentiful supply of filth, and waited.",
           "sound_effects": [
             "SPLOOOOSH"
           ],
@@ -647,7 +678,7 @@
           "panel_number": 5,
           "visual_direction": "Large vertical panel — the dissolution of the phantom army, the visual climax of the scene. The phantom cavalry and infantry are mid-air, caught in the precise moment of unmaking. Where the cascading blood touches them, the ghostly forms are literally shredding apart — figures that were soldiers become ragged strips and fragments, exactly like wet paper torn by rain. Use extraordinary ink-wash technique here: tight controlled linework for the fragments closest to the viewer, dissolving into loose gestural wash as they scatter upward and outward. The transformation is simultaneous across hundreds of phantom figures — a cascade of dissolution from the top of the panel downward. The black storm-clouds are visibly retreating, thinning, the darkness pulling back. In the lower portion of the panel, real rebel soldiers are suddenly exposed where the phantoms stood — confused, unshielded, the magic stripped away. Their faces show the specific terror of men whose weapon has just vanished.",
           "dialogue": [],
-          "narration": "The masses of men and horses in the air fluttered to earth as fragments of torn paper. The wind ceased. The thunder subsided.",
+          "narration": "The masses of men and horses in the air fluttered to the earth as fragments of torn paper — and this was the precise and terrible word for it, paper, as though the whole dread host had been nothing but an inkbrush lie written across the face of the sky. The wind ceased to blow. The thunder subsided. The sand sank and the pebbles lay still upon the ground, as though the world itself exhaled in the long aftermath of the sorcerer's undoing. Where the phantom armies had stood, there were now only rebels — mortal men, stripped of their borrowed darkness, blinking into the pale and returning light.",
           "sound_effects": [
             "SHHHHH",
             "RRIIIP",
@@ -661,9 +692,9 @@
           "panel_number": 6,
           "visual_direction": "Smaller square panel — a moment of stillness and resolution. Wide shot of the battlefield from a middle distance. The sky above is clearing, the last tatters of black cloud pulling apart to reveal pale, exhausted light. On the ground, scraps of what was the phantom army lie scattered like debris after a storm — indistinguishable now from fallen leaves or torn paper. In the middle distance, Liu Pei's brothers are already charging forward on horseback into the exposed rebel lines, their banners snapping forward in the direction of attack. Chang Pao's horse is rearing back in the far distance, the sorcerer himself diminished, small against a sky that no longer belongs to him. Use very spare, deliberate brushwork — the visual chaos of the previous panels resolves into controlled Song Dynasty landscape simplicity. Negative space dominates the sky. The composition should feel like the final line of a poem: quiet, exact, final.",
           "dialogue": [
-            "The sky is clear. Forward — charge!"
+            "His sorcery is spent — they are men and nothing more! Forward — charge!"
           ],
-          "narration": "",
+          "narration": "Chang Pao quickly saw that his magic had been countered and turned to retire — but there was no road of retreat left open to him now. On his flanks came Kuan Yü and Chang Fei with their companies, swift as hawks dropping from the hillside; in his rear came Yüan-tê and Chu Chien, closing the last avenue of escape. The rebels were routed, scattered like the phantom soldiers they had so recently commanded, and the sky above the field cleared to pale and indifferent light, returning at last to the world of ordinary men.",
           "sound_effects": [
             "HA-YAAAH"
           ],
@@ -683,7 +714,7 @@
           "panel_number": 1,
           "visual_direction": "FULL-WIDTH ESTABLISHING SHOT — a smoke-choked dawn battlefield seen from a low angle, looking across a smoldering field of broken Yellow Turban soldiers in retreat. They run toward the viewer in desperate diagonal streaks of motion-blur ink. But the entire upper half of the panel is BLOCKED by a solid line of armored cavalry under enormous crimson banners, the fabric catching an unseen wind, snapping like flames. The banners fill the sky. At the dead center of the line, motionless on horseback amid all this movement, is a single figure: TSAO TSAO. He is rendered in crisp, controlled linework — every other element is loose and frantic. The contrast should feel like a stone wall meeting a flood. Lighting: fire-orange glow from the left (Huangfu's retreating conflagration), cold grey dawn from the right. The visual grammar is a Song Dynasty battle scroll cut through with a cinematic wide lens.",
           "dialogue": [],
-          "narration": "Huangfu Sung's fire had done its work. The Yellow Turbans were broken — scattered like sparrows before the hawk.",
+          "narration": "Huangfu Sung had ordered every man to cut a bundle of dry grass, and at the second watch they had set the rebel encampment ablaze — the flames rising to the very heavens, the Yellow Turbans thrown into great confusion, no time to saddle horses or don armour. The battle had continued till dawn and the rebels now fled in all directions, scattered across the smoldering plain like sparrows before the hawk. Chang Liang and Chang Pao, with their few flying soldiers, believed at last they had found a way of escape. They had not yet seen what the morning held in store for them.",
           "sound_effects": [
             "THOOM",
             "KRRRAKK"
@@ -695,16 +726,24 @@
         {
           "panel_number": 2,
           "visual_direction": "MEDIUM SHOT — a knot of fleeing Yellow Turban rebels, faces streaked with ash and terror, skidding to a halt as they realize what is in front of them. One points, mouth open in a silent cry. Another grabs a companion's sleeve. Their yellow headbands are torn and bloodied. The background behind them is pure white ink-wash smoke. The moment of realization — escape has become a cage. Frame them from slightly above to emphasize their smallness and entrapment.",
-          "dialogue": [],
-          "narration": "They had run from fire. They had not known they were running toward something worse.",
+          "dialogue": [
+            "The road — the road is blocked!",
+            "Crimson banners — those are the Emperor's men!",
+            "We have run all night only to fall into a trap!"
+          ],
+          "narration": "Suddenly, out of the pale drift of smoke, a troop of soldiers bearing crimson banners appeared to oppose them — and every road of escape that had seemed to open now closed like a fist. They had fled from Huangfu Sung's fire in darkness and believed the worst was behind them; they had not reckoned on the soldier who had been sent precisely to catch what the fire did not consume. One man pointed, and could not find his voice. Another clutched a companion's sleeve and the two of them stood as if rooted to the cold earth.",
           "sound_effects": [],
           "characters": []
         },
         {
           "panel_number": 3,
           "visual_direction": "MEDIUM WIDE SHOT — Tsao Tsao's cavalry line advances at a slow, measured walk. No screaming charge — just the inexorable forward press of disciplined soldiers. The crimson banners advance with them. In the foreground, a soldier's spear tip catches the orange dawn light. Tsao Tsao himself is partially visible at mid-frame, his posture relaxed on horseback, one hand resting loose on the reins. His expression is invisible at this distance — but his stillness amid the advancing line is more menacing than any war cry. The composition echoes a classical Chinese court painting — order imposed upon chaos with bureaucratic calm.",
-          "dialogue": [],
-          "narration": "He had hung clubs at the city gates when he was twenty. He had struck down the uncle of a great eunuch without flinching. Order, he understood, required only will.",
+          "dialogue": [
+            "Tsao Tsao: Forward. Hold the line. No one leaves this field.",
+            "Officer: My lord — their formation is broken. They cannot stand.",
+            "Tsao Tsao: Then we need not hurry."
+          ],
+          "narration": "He had been given command of five thousand horse and foot and sent to help fight at Yingchuan, and he had arrived precisely in time to close the trap. When he was twenty he had hung clubs at the four city gates he governed, and any breach of the law met its punishment whatever the rank of the offender — even the uncle of a great eunuch had been beaten in the street for the crime of carrying a sword by night, and thereafter no one dared to offend, and the name of Tsao Tsao became terrible. Order, he had always understood, required nothing more than will, and the absolute refusal to hesitate. He walked his cavalry forward at a measured pace, unhurried, as though the rebels before him were already names inscribed in the register of the dead.",
           "sound_effects": [
             "KRUM KRUM KRUM"
           ],
@@ -716,9 +755,12 @@
           "panel_number": 4,
           "visual_direction": "MASSIVE HALF-PAGE CLOSE-UP — Tsao Tsao's face, rendered in meticulous, muscular ink linework. He is middle-aged but sharp: medium-length beard, small eyes that carry extraordinary calculating intelligence, a mouth set in the faintest suggestion of a smile — not cruelty, something colder than cruelty: satisfaction. The dawn light carves his face from the left in dramatic chiaroscuro, leaving his right side in deep shadow. Two crimson banner poles frame the edges of the panel like the wings of some great bird behind him. Smoke drifts across the lower quarter of his face like a veil being drawn aside. This is a face being introduced to history — and it knows it. The linework around his eyes should be the most precise and deliberate on the entire page.",
           "dialogue": [
-            "What manner of man am I?"
+            "Tsao Tsao: What manner of man am I?",
+            "The Seer: You are able enough to rule the world.",
+            "The Seer: But wicked enough to disturb it.",
+            "Tsao Tsao: [quietly, still smiling] Good."
           ],
-          "narration": "A seer had once looked at this face across a table and gone pale.",
+          "narration": "A seer of Junan had once looked upon this face across a table and fallen into long silence, as though the answer required great care to carry safely. Others had spoken of him in the same breath as destiny itself: rebellion is at hand, they said, and only a man of the greatest ability can succeed in restoring tranquillity — and that man is yourself. The dynasty of Han is about to fall; he who can restore peace is this man, and only he. When the seer at last gave his verdict, Tsao Tsao had received it not as warning but as gift, and he had greatly rejoiced.",
           "sound_effects": [],
           "characters": [
             "Tsao Tsao"
@@ -727,8 +769,12 @@
         {
           "panel_number": 5,
           "visual_direction": "FLASHBACK INSET PANEL — small, bordered in a thin double line to signal memory. A younger Tsao Tsao lies on a mat, body convulsing in a theatrical fit, while his uncle rushes from the room in a panic. Young Tsao Tsao's eye — just one, visible above his flailing arm — is calm, watching. The style shifts slightly: looser brushwork, lighter ink wash, the dream-logic of recollection. A single candle throws long shadows. This is the boy who learned that the world could be managed if you were willing to manage it.",
-          "dialogue": [],
-          "narration": "\"The falling sickness,\" he had told his uncle. His uncle had believed him. His uncle had believed everything.",
+          "dialogue": [
+            "Father: Your uncle said you were taken by a fit — are you recovered?",
+            "Young Tsao Tsao: I have never suffered from fits or any such illness.",
+            "Young Tsao Tsao: But it seems I have lost my uncle's affection. And it seems, Father, that he has deceived you."
+          ],
+          "narration": "As a young man he had been fond of hunting and delighted in songs and dancing, resourceful and full of guile, and his uncle had gone often to his father to report his misdeeds. But the youth was equal to every occasion. One day, seeing his uncle approach along the courtyard path, he had flung himself to the ground in a pretended fit — and one eye, just barely visible above the crook of his elbow, watched with perfect calm as the uncle fled in alarm to raise the father. When the father arrived, the boy stood in complete health, and the uncle's word was never trusted in that household again. Thereafter the young man grew up licentious and uncontrolled — and blissfully unobserved.",
           "sound_effects": [],
           "characters": [
             "Tsao Tsao"
@@ -737,8 +783,12 @@
         {
           "panel_number": 6,
           "visual_direction": "RETURN TO BATTLEFIELD — a wide low shot looking up at Tsao Tsao on horseback against the sky, the crimson banners now fully backlit by the rising sun so they glow like burning silk. He has raised one arm — not a dramatic gesture, just a quiet, precise signal to advance. His soldiers move. The Yellow Turbans crumple before them, reduced to small dark shapes at the bottom of the frame. Tsao Tsao himself occupies the upper third of the panel: monumental, deliberate, the fulcrum around which history is turning. The ink-wash sky behind the banners bleeds from deep orange at the horizon to cold, indifferent white at the top of the frame. Below his portrait-still figure, written as a caption in the manner of a classical historical annotation:",
-          "dialogue": [],
-          "narration": "\"Able enough to rule the world. Wicked enough to disturb it.\" The seer had meant it as a warning. Tsao Tsao had worn it ever since like armor.",
+          "dialogue": [
+            "Tsao Tsao: Cut them to pieces. Take the banners, the horses, the drums.",
+            "Officer: My lord — the two rebel lords have escaped the field.",
+            "Tsao Tsao: Then after I speak with Huangfu Sung, I will go in pursuit of them myself."
+          ],
+          "narration": "\"Able enough to rule the world. Wicked enough to disturb it.\" The seer had offered those words as a caution; Tsao Tsao had worn them ever since like armor, bright and unapologetic beneath the sun. Thousands were slain at Yingchuan and endless banners and drums and horses were taken, and not a little money besides. Chang Liang and Chang Pao slipped through his net that day, and so — with one arm raised quietly against the burning silk of the sky, a gesture as calm and final as a brushstroke closing a character — he turned his crimson columns and rode in pursuit. A hero comes; he gains renown — already destined for a crown.",
           "sound_effects": [
             "SHHHHK",
             "KRNNCH"
@@ -758,7 +808,7 @@
           "panel_number": 1,
           "visual_direction": "FULL-WIDTH HORIZONTAL SPLASH. Extreme low angle looking up at three horsemen erupting from the left edge of the panel in a thunderous diagonal charge. Liu Pei leads at center, his twin swords raised, face set in fierce determination. Kuan Yu is to his right, Green Dragon halberd sweeping in a wide arc that sends rebel soldiers sprawling. Chang Fei is a black blur on the far right, his spear driving through the chaos like a lance of lightning. Behind them, Tung Cho's routed soldiers are in disarray — broken standards, fallen horses, men fleeing into ink-wash fog. The rebel Yellow Turban forces of Chang Chio scatter in the middle-ground. Motion-blur ink streaks radiate from the three brothers like brushstrokes of heaven. Dramatic chiaroscuro: a rent in the storm clouds above throws a column of harsh light down on the three brothers alone, leaving the carnage around them in deep shadow. The feeling is mythic intervention — three men reshaping the shape of a battle.",
           "dialogue": [],
-          "narration": "Three men rode into a rout. Three men turned it.",
+          "narration": "Two days from the road they had turned upon, they heard the thunder of battle behind some hills — and hastening to the top they beheld the government soldiers suffering great loss, the countryside thick with Yellow Turbans whose banners blazoned the words 'Celestial Duke' writ large. Yuän-tê wasted no word on counsel. 'We will attack this Chang Chio,' he said, and the three brothers spurred down from the heights into a battle already lost. Chang Chio was in hot pursuit of the broken imperial forces when they dashed into his army, threw his ranks into confusion, and drove him back — and what ten thousand soldiers of the empire could not manage, three men without rank or commission managed in a single, furious charge.",
           "sound_effects": [
             "KRRAAAK",
             "HAAAAAH"
@@ -773,7 +823,7 @@
           "panel_number": 2,
           "visual_direction": "VERTICAL PANEL, left column. Medium shot from behind Chang Chio, looking out at the battlefield from his command position on a low ridge. He is a tall, gaunt figure — robes the color of storm clouds, a yellow headband bright as a wound across his brow. His hands are raised mid-incantation, but they are lowering, the magic faltering. His silhouette is rigid with the shock of reversal. Before him, his Yellow Turban forces are breaking apart like a river striking three boulders — the three brothers visible in the far distance as small, luminous figures carving through the press. Sparse ink-wash landscape behind him: bare hills, smoke rising, the suggestion of ten thousand fleeing men rendered in loose gestural brushwork. The mood is a general watching his certainty dissolve.",
           "dialogue": [],
-          "narration": "Chang Chio, the Celestial Duke, had never known retreat. He learned it today.",
+          "narration": "Chang Chio had worsted Tung Cho and was following up his advantage — the field was his, the imperial banner broken, the day as good as won. He had summoned wind and thunder to his bidding; he had filled the sky with the shapes of horsemen innumerable and driven whole armies before the force of his sorcery alone. But the men who now fell upon his flank answered to no court and no heaven he had learned to bargain with, and when they dashed into the heart of his ranks and threw his army into confusion, even the Celestial Duke discovered that he had run out of incantations.",
           "sound_effects": [],
           "characters": [
             "Chang Chio"
@@ -783,7 +833,7 @@
           "panel_number": 3,
           "visual_direction": "VERTICAL PANEL, right column. A tight medium shot: the three brothers have reined their horses around Tung Cho, who sits heavily on his own mount — his armor disarrayed, his face flushed with the shame of a man pulled from the jaws of defeat. He is large, physically imposing, with a thick neck and heavy-lidded eyes that already carry contempt even in rescue. Liu Pei, Kuan Yu, and Chang Fei form a loose semicircle around him, their horses heaving, all three of them blood-streaked and battle-bright. Chang Fei's eyes burn like coals; Kuan Yu's long beard is swept back from the wind of the charge, his expression carved from composure. Liu Pei looks at Tung Cho steadily — not with hunger for praise, but with the quiet readiness of a man who already suspects what is coming. The background is the dissipating chaos of the battlefield settling into an eerie stillness.",
           "dialogue": [],
-          "narration": "The battle was over. The reckoning had not yet begun.",
+          "narration": "Then they returned with the rescued general to his camp — all three of them blood-streaked and battle-bright, their horses still heaving from the charge that had turned the day. Tung Cho was a man born in the west at Lin-t'ao, arrogant and overbearing since youth; he had survived the afternoon not by his own arm but by the arms of strangers, and this was already a thing his pride was working to forget. He looked the three brothers over in the settling dust — the way a man of rank examines men of none — and his face spoke everything his mouth had not yet troubled itself to say.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -796,10 +846,11 @@
           "panel_number": 4,
           "visual_direction": "WIDE HORIZONTAL PANEL spanning the full top half of page 2. Interior of Tung Cho's command tent. Heavy fabric walls hung with maps and a wolf-pelt standard. Tung Cho has settled himself onto a carved command chair at center — the posture of a man who has already reclaimed authority over the situation, legs spread, one hand resting on his knee with lazy ownership. He looks the three brothers over the way a merchant examines inferior goods. Liu Pei, Kuan Yu, and Chang Fei stand before him — still in full battle gear, wounds unattended, sweat and blood on their faces. The contrast is total and deliberate: the three heroes fill the left side of the panel with hard-won dignity; Tung Cho's bloated ease fills the right. The tent lighting is from braziers below, casting upward shadows on Tung Cho's face that make him sinister without caricature — the honest face of power that needs no mask. Ink-wash technique: Tung Cho rendered in heavy, blunt linework; the three brothers in leaner, more precise strokes.",
           "dialogue": [
-            "What rank do you hold?",
-            "We hold none, my lord."
+            "What officers have you?",
+            "None, my lord. We are men of the land — Liu Pei of Chuo county, and my sworn brothers Kuan Yu and Chang Fei. We heard the battle and came.",
+            "Men of the land. No commission. No rank."
           ],
-          "narration": "",
+          "narration": "When Tung Cho had leisure to speak with the three brothers — when he had settled himself upon his command chair and reclaimed, by posture alone, the authority that Chang Chio had nearly stripped from him — his first question was not of their valor, nor of the price paid in blood to drive the rebels back. He was a man who measured all things by rank and commission, by seals of office and warrants from the capital, and for men who held none of these there was, in the architecture of his world, simply no place at all.",
           "sound_effects": [],
           "characters": [
             "Tung Cho",
@@ -812,9 +863,10 @@
           "panel_number": 5,
           "visual_direction": "TIGHT CLOSE-UP, bottom-left panel. Tung Cho's face filling almost the entire frame — the gesture of dismissal caught in a single, devastating image. His hand is raised, wrist slack, the wave of a man shooing away a fly. His expression is not cruel — it is worse than cruel. It is bored. Heavy-lidded eyes already drifting away, the slight downward curl of a lip. This is a man to whom these three have ceased to exist the moment their rank was announced. Behind him, barely visible, the ghost of the wolf-pelt standard. The ink technique here uses deliberate bluntness — thick, dismissive strokes that mirror his contempt. In the lower corner of the frame, barely visible: the edge of Chang Fei's white-knuckled fist.",
           "dialogue": [
-            "Then you are nothing. Go."
+            "Then you are nothing to me. I keep no company with men of no rank and no name.",
+            "Go."
           ],
-          "narration": "",
+          "narration": "The dismissal fell like a stone and spread no further. He did not send them away in anger, which would at least have been a form of recognition — he sent them away with the flat, final indifference of a man to whom they had already ceased to exist. Tung Cho turned his heavy gaze elsewhere, and the three who had ridden into a losing battle and turned it by the force of their own bodies were, in his accounting, as though they had never been. Yuän-tê retired calmly, as he withdrew from all such things — his fury swallowed whole, his eyes already fixed on a distance Tung Cho could not see.",
           "sound_effects": [],
           "characters": [
             "Tung Cho"
@@ -824,10 +876,12 @@
           "panel_number": 6,
           "visual_direction": "MEDIUM SHOT, bottom-right panel. Outside the tent entrance, the three brothers stand in the harsh late-afternoon light. This is the scene's heart. Chang Fei has turned — his face is volcanic, a vein standing in his neck, teeth bared, one hand white-knuckled on his spear shaft and the other arm already pulling back toward the tent. He is three seconds from action. Kuan Yu stands slightly apart, arms folded, his face a mask of cold fury held rigidly in check — the composed exterior barely containing what burns beneath. But the panel's true focal point is Liu Pei's hand on Chang Fei's forearm. It is not a gripping hand — it is a resting hand. Quiet. Certain. His face is turned toward Chang Fei, and his expression is the most complex image in the scene: there is grief in it, and fury swallowed whole, and the exhausted, deliberate patience of a man who is already thinking ten years forward. The ink is sparse here — wide negative space around the three figures, the suggestion of a vast and indifferent sky above them rendered in diluted wash. Their isolation is total. Their bond is the only architecture in the frame.",
           "dialogue": [
-            "We saved that menial in bloody fighting — and this is our answer! Nothing but his death will satisfy me!",
-            "Brother. Not today."
+            "We have just rescued this menial in a bloody fight — and now he is rude to us! Nothing but his death can slake my anger! Let me go back in there!",
+            "Remember, Fei — he holds the government commission. Who are we to judge and slay?",
+            "Bitter! Bitter it is to bow before such a wretch! I would rather slay him and be done with it. You may stay here if you wish — I will seek some other place!",
+            "We three are one in life and in death, brother. There is no parting for us. We will all go hence — together."
           ],
-          "narration": "As it was in olden time, so it is to-day — the simple wight may merit well; officialdom holds sway.",
+          "narration": "As it was in olden time, so it is to-day — the simple wight may merit well, yet officialdom holds sway. Chang Fei, the blunt and hasty, would have washed the insult out in blood then and there, and who among ten thousand men could call him wrong? But his elder brothers understood what fury could not: that the bond between three men sworn in a garden was the only thing in this world worth preserving, and that to carry that bond through a world built on contempt was the most demanding form of valor any of them would ever be asked to practice.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -846,7 +900,7 @@
           "panel_number": 1,
           "visual_direction": "Wide establishing shot — a desolate imperial road cuts diagonally through a dust-pale landscape under a bruised, overcast sky. The horizon is low, pressing the heavy clouds down. In the middle distance, an imperial escort of six soldiers marches with spears upright, their lacquered armor dull in the flat light. At the center of the column, a rough-hewn cage-cart of dark timber rolls on iron-rimmed wheels. Through its bars, barely visible, a bearded figure sits erect. Liu Pei, Kuan Yu, and Chang Fei have halted their horses on the road ahead, silhouetted against the grey sky — three dark shapes frozen in recognition. Ink-wash brushwork gives the landscape a Song Dynasty scroll quality: spare, atmospheric, vast. The road stretches ahead into nothing.",
           "dialogue": [],
-          "narration": "On the road to reinforce their teacher — they found him instead.",
+          "narration": "Halfway along the road to reinforce their teacher, the three brothers drew their horses to a halt. An imperial escort marched toward them through the pale dust — spears erect, lacquered armor dull in the flat and failing light — and at the column’s heart, rolling on iron-rimmed wheels, a cage-cart bore its prisoner toward the capital. When they drew near enough to see through the bars, the man inside was no other than the man they had ridden so far to help. The road stretched ahead into nothing, and the sky pressed down like a judgment already rendered.",
           "sound_effects": [
             "CREAK",
             "CLANK"
@@ -862,9 +916,10 @@
           "panel_number": 2,
           "visual_direction": "Medium close-up — Liu Pei has dismounted. He stands at the side of the cage-cart, one hand raised and gripping a wooden bar. His face is tilted upward toward the figure inside, expression cracked open with grief he is trying to master — jaw tight, eyes bright with unshed tears. His riding robes are dusty. The bars cast shadow-stripes across his face, as though he too is imprisoned. Behind him, a soldier's spear haft is visible at the panel edge — a reminder of the armed escort. Chiaroscuro lighting: harsh sidelight from the left, deep shadow on the right half of Liu Pei's face.",
           "dialogue": [
-            "LIU PEI: Teacher—"
+            "LIU PEI: Teacher— I did not know. We heard nothing of this.",
+            "LIU PEI: What has been done to you?"
           ],
-          "narration": "",
+          "narration": "Liu Pei was from his horse before it had stopped moving, his feet finding the road, his hands finding the bars of the cage. The rough timber was cold against his palms. He had not understood, until this moment, how much he had trusted that the world still contained justice — that a man who fought the rebels faithfully would be rewarded, or at the very least not punished for his virtue. The bars divided his teacher’s face into fragments, and Liu Pei could not look away.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -875,9 +930,10 @@
           "panel_number": 3,
           "visual_direction": "Inside the cage — intimate close-up on Lu Chih's face seen through the bars, the bars rendered as thick ink strokes that bisect the panel itself. Lu Chih is composed, almost serene, though his wrists bear the marks of chains. His beard is unkempt, his court robes torn at the shoulder, but his eyes are steady and clear — the eyes of a man who chose correctly and knows it. He looks down at Liu Pei with something between sorrow and paternal calm. Loose ink-wash background inside the cart: just shadow and splinter-textured wood. His dignity is the only light in the panel.",
           "dialogue": [
-            "LU CHIH: Do not grieve for me, Liu Pei. I knew the price when I refused him."
+            "LU CHIH: Do not grieve for me, Liu Pei. I had the means to prevent this — and I chose not to use them.",
+            "LU CHIH: There are men who can be bought. I am not one of them. I knew the price when I refused."
           ],
-          "narration": "",
+          "narration": "Lu Chih looked down at him with the steadiness of a man who has already made his reckoning and found it sufficient. His wrists bore the marks of chains; his court robes were torn at the shoulder; his beard spoke of days on the road and nights in the dark of the cage. But his eyes were clear as still water — the eyes of a man who had examined his choices in the silence and found no shame in any of them.",
           "sound_effects": [],
           "characters": [
             "Lu Chih",
@@ -888,10 +944,12 @@
           "panel_number": 4,
           "visual_direction": "Tall narrow vertical panel — a hanging-scroll composition. Lu Chih speaks through the bars, one chained hand raised slightly in a gesture of explanation, not supplication. Liu Pei stands below him, head bowed slightly to receive the words. The bars run vertically the full height of the panel, turning the image into something that resembles a calligraphy scroll divided by brushstrokes. Imperial soldiers are blurred suggestion in the background — present, watching, irrelevant to this private grief. The framing emphasizes the vertical distance between teacher and student, the cage elevating Lu Chih even as it degrades him.",
           "dialogue": [
-            "LU CHIH: The Court sent a eunuch to enquire into my failure. He demanded a bribe. I told him how hard pressed we were—",
-            "LU CHIH: —and he went away in wrath and reported that I was hiding behind my ramparts."
+            "LU CHIH: I had surrounded the rebels and was on the point of smashing them. Then the Court sent a eunuch to enquire into my failure.",
+            "LU CHIH: He demanded a bribe. I asked him — where, in such circumstances, was I to find a gift for him?",
+            "LU CHIH: He went away in wrath. He told the Court I was hiding behind my ramparts, that I disheartened my men, that I would not give battle.",
+            "LU CHIH: So I was superseded by one Tung Cho — and now I am brought to the capital to answer for crimes that are his."
           ],
-          "narration": "A man refuses to pay. A man is destroyed. The empire does not notice.",
+          "narration": "The story came out in measured, unhurried words — the kind a man rehearses in the dark of his cage until he has stripped them of their bitterness and left only the bare truth. Lu Chih did not rail against his fate; he set it forth with the patience of a teacher explaining a problem his students must come to understand. A man had refused to be corrupted, and the empire had taken its revenge. These were not separate events — they were the same event, and its name was the age they lived in.",
           "sound_effects": [],
           "characters": [
             "Lu Chih",
@@ -902,10 +960,12 @@
           "panel_number": 5,
           "visual_direction": "Wide low-angle horizontal strip — the three brothers in the foreground, backs partly to us, facing the cart. Chang Fei dominates the left: enormous, coiled, his white-knuckled fists strangling his spear shaft, tears cutting clean lines through the road-grime on his fierce, tattooed face. He is vibrating with violent intent, leaning forward. Kuan Yu stands right, separated by deliberate negative space — jaw set, eyes distant, staring past the cart toward the horizon as though looking at a future already decided. Between them, Liu Pei stands very still, one hand still on the bar, the other raised slightly toward Chang Fei in restraint. The cart and its escort are mid-ground. The sky above them all is ink-washed emptiness.",
           "dialogue": [
-            "CHANG FEI: Then we free him. Now. These soldiers are nothing—",
-            "LIU PEI: No."
+            "CHANG FEI: Then we free him! Now! These soldiers are nothing — a handful of strokes and it is done!",
+            "CHANG FEI: I will slay the escort and break these bars myself — who dares say otherwise?",
+            "LIU PEI: No.",
+            "KUAN YU: Chang Fei. Be still, and hear him."
           ],
-          "narration": "",
+          "narration": "The story put Chang Fei into a rage — immediate and total, the way fire is when given air. He was for slaying the escort and setting free the prisoner without another moment’s deliberation; his body had already made the decision before his voice had finished shaping it. The soldiers were nothing to him. The law was nothing to him. There was only the man in the cage and the cowards who had put him there, and his hand upon his spear was already composing its answer.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -918,9 +978,12 @@
           "visual_direction": "Near-full-page final panel — pull back to a three-quarter view. Liu Pei faces Chang Fei directly, hand on his brother's arm, his expression carrying the terrible weight of the words he is about to say. Chang Fei stares back, tears still wet on his face, fists still clenched — but he is listening. Kuan Yu has turned, watching Liu Pei. In the background, Lu Chih watches through the bars in silence, his expression unreadable but present — a witness to the lesson his imprisonment is teaching. The cage-cart has begun to move again; a soldier's boot is visible at the lower edge, the procession resuming. The top quarter of the panel is pure ink-wash sky: cloud, emptiness, the weight of heaven saying nothing. This is the scroll painting that could hang on a wall — three men learning the cost of virtue from the man who is paying it.",
           "dialogue": [
             "LIU PEI: The Government will take the proper course.",
-            "LIU PEI: You must not act hastily."
+            "CHANG FEI: The government put him in that cage!",
+            "LIU PEI: You must not act hastily, brother. We are men under commission — not outlaws. Not yet.",
+            "CHANG FEI: (low, through clenched teeth) Then what are we, if we walk away from this?",
+            "LIU PEI: We are men who do not add to the disorder. That is what he taught us."
           ],
-          "narration": "He believed it. He had to believe it. What is a righteous man, if not that?",
+          "narration": "Liu Pei looked at his brother — at the tears on that fierce face, the strangled fists, the grief that had nowhere righteous to go — and he spoke the words that cost him more than Chang Fei could know. He believed them. He had to believe them. A man who ceased to trust that justice would eventually prevail had only force remaining, and force without righteousness was the very affliction they had taken up arms to cure. In the background, through the bars, Lu Chih said nothing — and his silence, too, was a kind of instruction.",
           "sound_effects": [
             "CREAK"
           ],
@@ -942,7 +1005,7 @@
           "panel_number": 1,
           "visual_direction": "Full-width cinematic panel. Low angle, looking up from street level. Chang Fei bursts through the yamen gate on a massive dark horse, its nostrils flared, hooves scattering cobblestones like shrapnel. Two doorkeepers cartwheel away on either side — one loses his hat mid-air, one clutches a broken pike. Chang Fei is half-standing in his stirrups, eyes blood-red and blazing with wine-fury, his topknot loosened, one massive hand already raised. Motion-blur ink streaks slash diagonally across the panel. The gate's lacquered pillars crack behind him. Ink wash is wild and explosive here — the background dissolves into turbulent brushstrokes suggesting the world itself recoiling.",
           "dialogue": [],
-          "narration": "He had drunk enough to blur the edges of the world. Not enough to blur injustice.",
+          "narration": "Chang Fei had been all day drowning his sorrow in wine and had drunk far too much. He called for his horse and rode out past the lodging of the inspector — and what he found at the gate stopped him as cold as a drawn blade. His eyes opened till they became circles. He ground his teeth. Then, in a single moment, he was off his steed.",
           "sound_effects": [
             "KRAK",
             "THWOOM"
@@ -955,9 +1018,11 @@
           "panel_number": 2,
           "visual_direction": "Left panel of a two-panel row. Tight, intimate shot at ground level. Three white-haired village elders huddle outside the gate, robes dusty, faces streaked with tears and the red marks of blows. One presses his forehead to the earth. Another has his hands raised in supplication toward the gate, fingers trembling. The ink wash here is sparse and heartbreaking — maximum negative white space around the figures, as though grief has consumed everything else. Their faces are rendered with meticulous, anguished linework: every wrinkle a record of endurance.",
           "dialogue": [
+            "The inspector has compelled our magistrate’s own underlings to bear false witness against him...",
+            "We came to beg mercy for Lord Liu, but we are not permitted to enter. And we have been beaten by the doorkeepers for daring to try.",
             "Noble Sir... save us."
           ],
-          "narration": "",
+          "narration": "They were white-haired men, old enough to have endured much — yet here they wept like children outside a gate they were not permitted to cross, their faces still bearing the red marks of blows. They had come to plead for a magistrate who had never wronged the people to the value of a single stalk of stubble, a man who had fought in some score of battles and received this small post as his entire reward. Chang Fei looked at their trembling hands and their foreheads in the dust, and asked no more questions.",
           "sound_effects": [],
           "characters": [
             "Village Elders"
@@ -967,9 +1032,11 @@
           "panel_number": 3,
           "visual_direction": "Right panel of the two-panel row, matching height with Panel 2. Interior: the inspector sits high on his official dais, robes immaculate, face arranged in the smug composure of a man accustomed to impunity. He is surrounded by cowering clerks bearing false documents. Behind him, a painted screen depicts a tiger — ironic, given what is about to arrive. The lighting is rich and oppressive: warm lamplight from above makes him look gilded, untouchable. He is mid-gesture, hand lazily extended to receive a bribe. Then — in the extreme right edge of the panel, just breaching the frame — Chang Fei's silhouette fills the doorway like a thundercloud.",
           "dialogue": [
-            "Let the record show the magistrate finds no complaint..."
+            "Magistrate Liu — what was your origin?",
+            "You lie about your descent and your statement of services is false. The Court has ordered the reduction of your sort of low-class officials.",
+            "Let the record show the magistrate finds no complaint among the people..."
           ],
-          "narration": "",
+          "narration": "The inspector had taken his seat on the dais and left Liu Pei standing below for a long time before deigning to speak. Three times already he had driven Liu Pei from his own door; now he forced the minor officials to bear false witness with their hands in bonds at his feet. He sat in his lamplight like a man who believed himself untouchable — and he was, until the silhouette filled his doorway and the warm air shifted with the cold draft of fury.",
           "sound_effects": [
             "..."
           ],
@@ -984,7 +1051,7 @@
           "dialogue": [
             "Oppressor of the people — robber! Do you know me?"
           ],
-          "narration": "",
+          "narration": "The wine was still in his blood, but the fury in his eyes was perfectly clear — it had a shape and a name, and the name was justice. Chang Fei had forced his way past the terrified doorkeepers into the rear apartments and seen the inspector sitting on high, the official underlings in bonds at his feet. He did not debate, did not threaten, did not wait. One moment the man sat enthroned in silk and self-regard; the next he was swinging in the air, hauled bodily down by the oiled topknot he had dressed with such official care that very morning.",
           "sound_effects": [
             "YANK"
           ],
@@ -997,9 +1064,11 @@
           "panel_number": 5,
           "visual_direction": "Wide panel, lower half of page two. Exterior courtyard: the inspector is lashed to the hitching post, robes torn, the official seal of his rank now hung humiliatingly around his own neck like a placard. Chang Fei stands slightly behind and to the left, mid-swing with a long willow switch — the switch is rendered in mid-arc, already beginning to fracture from the force. The white-haired village elders stand to the right of the panel, watching. Their expressions are not triumphant — they are the faces of people who have wept so long they are not sure how to stop. One old man covers his mouth with both hands. Another bows his head. The ink wash in the background opens wide: a pale, empty sky, the yamen walls just suggested. The inspector's broken posture against the post is rendered with merciless detail.",
           "dialogue": [
-            "If we do not beat this sort of wretch to death — what may we expect?"
+            "If we do not beat this sort of wretch to death — what may we expect?",
+            "Noble Sir — save me! Save me!",
+            "Brother. Release him. Let him go."
           ],
-          "narration": "The switch broke. He found another.",
+          "narration": "Chang Fei lashed him firmly to the hitching post and broke a switch from a willow tree and gave his victim a severe thrashing, staying his hand only when the switch grew too short to strike with. The white-haired elders stood and watched — not with triumph, but with the quiet exhaustion of people who have spent all their tears on a single wrong and have nothing left but the witnessing of it. It was into this scene that Liu Pei stepped from the magistracy, drawn outside by shouting before his door — and he saw at once who the unhappy victim was, and asked the reason.",
           "sound_effects": [
             "CRACK",
             "WHSSST"
@@ -1014,9 +1083,11 @@
           "panel_number": 6,
           "visual_direction": "Narrow vertical portrait panel — the quiet after the storm. Exterior gate, late afternoon light, long shadows. Liu Pei walks away from us, already through the gate, his figure small against a vast ink-wash sky that bleeds from pale gold to deep grey at the top. His sword is sheathed. He does not look back. His posture carries no triumph — only the straight-backed weariness of a man who knows this moment will cost him everything and chose it anyway. In the blurred background: Chang Fei follows, the broken willow switch still in his hand, his fury spent. The inspector remains visible at the hitching post, very small, irrelevant now. The ink wash here is its most restrained — sparse, deliberate, elegiac. The scene breathes.",
           "dialogue": [
-            "A thorn bush is no place for a phoenix. Let us go home — and find a bigger scheme."
+            "Brother — after your magnificent services you have only this petty post, and even here you have been insulted by this fellow. A thorn bush is no place for a phoenix. Let us leave here and go home — till we can evolve a bigger scheme.",
+            "If I hear that you injure the people, I will assuredly kill you. I now spare your life and return to you the seal.",
+            "We are going."
           ],
-          "narration": "He had worn the emperor's seal as a collar around a dog. Liu Pei walked into the road and did not look back. Some doors, once opened, do not close.",
+          "narration": "Yüän-tê had always been kindly and gracious — it was his nature as much as his politics. He contented himself with hanging the official seal about the inspector's neck and speaking his final word quietly, as a man who has already decided and requires no audience for it. Liu Pei walked into the road and did not look back. Some doors, once opened, do not close — and he understood, with the straight-backed weariness of a man who has lost and chosen at once, that the road ahead was longer and darker and more necessary than the one behind.",
           "sound_effects": [],
           "characters": [
             "Liu Pei",
@@ -1034,10 +1105,12 @@
           "panel_number": 1,
           "visual_direction": "Wide horizontal shot of Ho Chin's council chamber — a vast, high-ceilinged hall of lacquered pillars and silk hangings, rendered with loose atmospheric ink-wash for the background and sharp precise linework for figures. Ho Chin sits center-frame on a cushioned dais, robes rich and layered, his posture relaxed to the point of indolence, one ringed hand resting on his knee. Yuan Shao stands before him in full battle armor, breastplate catching the lamplight, leaning forward with the coiled urgency of a man fighting gravity. Three or four advisors flank the edges, watching. The composition emphasizes the absurd contrast: a warrior tensed for action, a lord comfortable in stillness. Chiaroscuro light pours from hanging oil lamps, throwing deep shadows behind the pillars — the darkness at the room's edges feels inhabited.",
           "dialogue": [
-            "Yuan Shao: The eunuchs hold the palace, the Emperor, and your sister's ear. Slay them — root and branch — or they will ruin you.",
-            "Ho Chin: You are bold for a man whose sword has not yet left its scabbard in this matter."
+            "Yuan Shao: Chang Jang and Tuan Kuei are spreading word outside that you caused the death of the late Empress Dowager — that you aim at the throne itself.",
+            "Yuan Shao: Remember how Tou Wu missed his chance because the secret leaked. The conditions are now favorable. This is a heaven-sent opportunity — it will not come again.",
+            "Ho Chin: You are bold for a man whose sword has not yet left its scabbard in this matter.",
+            "Yuan Shao: The eunuchs hold the palace, the Emperor, and your sister's ear. Slay them — root and branch — or they will ruin you."
           ],
-          "narration": "He had come from nothing — a butcher's son who rose to command the armies of the Han. And so he could not imagine that power, once grasped, could be taken back.",
+          "narration": "He had come from nothing — a butcher's son whom fortune had raised to the highest command in all the Han empire, and the years of easy power had made him a man who mistook hesitation for wisdom. Yuan Shao had laid before him a heaven-sent opportunity: the eunuchs Chang Jang and Tuan Kuei were already spreading treasonous rumors abroad, handing Ho Chin the very pretext he needed to destroy them cleanly and at once. Every advisor in that lamplit hall knew it. And so, it must be said, did every shadow gathered behind the pillars at the room's far edge.",
           "sound_effects": [],
           "characters": [
             "Ho Chin",
@@ -1048,10 +1121,12 @@
           "panel_number": 2,
           "visual_direction": "Medium two-shot, camera lower now — we are at Ho Chin's eye level as he sits, making the seated man appear almost equal in stature to the standing Yuan Shao. Ho Chin's soft, be-ringed hand is raised, palm outward, the gesture of dismissal. His expression is not angry — it is worse: gently condescending, the look of a man who believes he is being patient with inferiors. Yuan Shao's jaw is tight, his armored fist clenched at his side, but his eyes are not angry either — they are afraid. In the background, the ornate wall hangings seem to press inward slightly. A detail: one silk panel behind Ho Chin depicts a phoenix — noble, doomed, and beautiful.",
           "dialogue": [
-            "Ho Chin: A gaoler would be ample force. Why throw the empire into confusion over palace servants?",
-            "Ho Chin: What do men like you know of the ways of government?"
+            "Ho Chin: She will not consent. What can be done?",
+            "Yuan Shao: Call up an army and slay them — it is imperative. Never mind her consent!",
+            "Ho Chin: The Empress Dowager speaks plain sense. They are old servants. To kill old servants so soon after their master's death would appear disrespectful to the Dynasty.",
+            "Ho Chin: A gaoler would be ample force. Why throw the empire into confusion over palace servants?"
           ],
-          "narration": "",
+          "narration": "He had gone to his sister and she had argued with the patient certainty of a woman who holds the seal of the Empress Dowager: the eunuchs were old servants, she said, and to put them to death in the wake of their master's passing would dishonor the Dynasty itself. As Ho was of a vacillating mind, he had murmured assent and left her. His brother, too, had whispered the same counsel in his ear — sweetened, though Ho Chin did not know it, by the eunuchs' gifts. Now Yuan Shao stood before him in armor and demanded a plain answer, and Ho Chin gave him the one thing that came most naturally: a reason to wait.",
           "sound_effects": [],
           "characters": [
             "Ho Chin",
@@ -1062,10 +1137,12 @@
           "panel_number": 3,
           "visual_direction": "Tight medium shot on Tsao Tsao standing alone before Ho Chin — no armor, no retinue, just the man himself in plain court robes, composed and terrifyingly still. His eyes are level and cold, reading Ho Chin the way a surgeon reads a wound. Ho Chin is partially cropped out of frame, only his cushioned seat and one slack hand visible — the great general reduced to a prop. The chamber has shrunk again: the ceiling beams are visible now, pressing down. The ink-wash background is spare and grey, all warmth drained. A single hanging lamp sways almost imperceptibly. Tsao Tsao's stillness is more frightening than Yuan Shao's urgency.",
           "dialogue": [
-            "Tsao Tsao: Every day you delay is a gift you hand your enemies. They will not waste it.",
+            "Tsao Tsao: The eunuch evil is of very old standing. But a gaoler would be ample force against it. Why summon armies and increase confusion? Any desire to slay them will speedily become known — and the plan will fail.",
+            "Ho Chin: Then, Meng-te — you have some scheme of your own to further.",
+            "Tsao Tsao: Ho Chin is the man to throw the empire into confusion.",
             "Ho Chin: Let me think it over."
           ],
-          "narration": "Tsao Tsao left without another word. Some doors, once closed, do not reopen.",
+          "narration": "The Recorder Chen Lin had already set down in ink what every clear eye could see: to summon armies to the capital, to gather bold men into one spot each with his own ambitions, was to turn one's weapons against one's own person — like lighting a furnace to burn a single hair, ruinous force for a trifling act. Now Tsao Tsao made the same argument with fewer words and colder eyes, standing in the grey chamber like a man already calculating what comes after. Ho Chin smiled at them both with the patience of a man who has never yet been proven wrong about himself. Tsao Tsao left without another word, and the lamp swayed once in his wake, and was still.",
           "sound_effects": [],
           "characters": [
             "Ho Chin",
@@ -1076,9 +1153,10 @@
           "panel_number": 4,
           "visual_direction": "Tall vertical panel — a full-length rendering of an imperial memorial scroll, held open by two trembling hands at the bottom of frame. The brushwork of the scroll's text is fine and desperate, the characters densely packed. Above it, barely visible in soft focus: Ho Chin's face reading it, expression unchanged, unmoved. The scroll belongs to Chen Lin; his words are rendered as visible calligraphy art within the panel — a visual metaphor for language as plea, as warning, as the last resort of a man without armies. The panel border itself is drawn as if it were a scroll edge, reinforcing the document as physical object. Ink bleeds slightly at the scroll's margins — urgency staining even the paper.",
           "dialogue": [
-            "Chen Lin (caption from scroll): 'The eunuch evil is of very old standing. Act now while you command the gates, or history will record only that you had the chance.'"
+            "Chen Lin (caption from scroll): 'Nay; do not act blindly. The proverb says: to cover the eyes and snatch at swallows is to fool one’s self. Act promptly with the imperial authority already in your hand, and all the Empire will be with you.'",
+            "Chen Lin (caption from scroll): 'But summon armies, gather bold men each with his own schemes — and you place yourself in the power of another. Nothing but failure can come of it. Nothing but confusion.'"
           ],
-          "narration": "Chen Lin put into writing what brave men had already said aloud. Ho Chin set the memorial aside.",
+          "narration": "Chen Lin had set down in careful brushwork what no spoken word had moved Ho Chin to hear: that the eunuchs, for all their malice, were small men — small enough that the authority already in Ho Chin's hands could end them before the lamp burned low, precisely, without chaos. He had urged action prompt and sure, invoking the weight of imperial prestige and the favor of timing. Ho Chin read the memorial, showed it to his partisans, and laid it aside. 'The view of a mere bookworm,' he said, and smiled the smile of a man unequal to the warning he had just received.",
           "sound_effects": [],
           "characters": [
             "Ho Chin"
@@ -1088,9 +1166,11 @@
           "panel_number": 5,
           "visual_direction": "Extreme close-up — Ho Chin's face alone, filling the panel. The room behind him is now just shadow. His expression is the most dangerous thing in the scene: serene. There is no doubt in his face, no fear — only the quiet certainty of a man who has never been wrong about himself. His robes fill the lower portion of the frame, elaborate and heavy. One ringed finger touches his jaw in contemplation. The lighting is a single lamp source, one side of his face in warm gold, the other in absolute dark. The artist should render every line of his face with care — this is not a villain's face. It is the face of a man who simply cannot see what is coming.",
           "dialogue": [
+            "Yuan Shao (off-panel): My lord — at least let us come with you as a guard. Just as a precaution.",
+            "Ho Chin: Silly children. What can palace servants do against the man who holds the forces of the Empire in the palm of his hand?",
             "Ho Chin (to himself): Ho Chin is the man they fear. Let them fear him a while longer."
           ],
-          "narration": "",
+          "narration": "More than half the ministers of state had given up their posts and retired in despair — Lu Chih among them, who had known Tung Cho long and warned plainly that in appearance innocent, he was a very wolf at heart. Ho Chin had sent them all a gracious farewell and summoned the wolf closer still, and mistook the departure of wise men for the withdrawal of the merely timid. He held the forces of the empire, he believed, in the palm of his hand; this was a truth so large it had made him blind to all lesser truths arranged around it. In the lamplight his face was divided — one half bright gold, the other consumed entirely by shadow.",
           "sound_effects": [],
           "characters": [
             "Ho Chin"
@@ -1099,8 +1179,11 @@
         {
           "panel_number": 6,
           "visual_direction": "Full-width bird's-eye establishing shot, bleeding off the page's bottom edge — the most expansive panel in the sequence, yet its subject has never been more alone. From directly above, we see Ho Chin as a small, richly-robed figure approaching the massive timber gates of the inner palace, his shadow stretching long across the flagstone courtyard under a flat grey sky. He walks without escort, without armor. The composition is vast and empty around him — the courtyard dwarfs him with deliberate cruelty. The palace walls rise at the top of the frame, rendered in dense ink-wash stone. And there, at the wall's crenellated edge, barely resolved against the grey sky — dark silhouettes. Three. Four. Five figures crouching in stillness, watching the small figure below walk toward them. They are not yet moving. They are waiting. The ink is coldest here: no warm tones, only grey, black, and the pale stone of a sky that offers nothing.",
-          "dialogue": [],
-          "narration": "He had been warned by every man whose warning was worth heeding. He walked through the gates alone, beneath a sky the color of old bronze, and did not look up.",
+          "dialogue": [
+            "Yuan Shao (calling after him): The plot is no longer a secret. Still you may go — if you are ready to fight your way in.",
+            "Ho Chin (without turning): What can they do?"
+          ],
+          "narration": "At the Chingso Gate the escort was stopped — orders to admit the General and none other — and Ho Chin walked on without pause, as though the stripping away of his guard were a courtesy and not a closing trap. He had been warned by Yuan Shao, by Chen Lin, by Tsao Tsao, by Lu Chih; he had called each of them in turn a bookworm, a timid child, a man unequal to great schemes, and had felt himself confirmed in wisdom by the very consistency of their fear. He walked through the gates alone, beneath a sky the color of old bronze, and did not look up. At the Gate of Abundant Virtue, the two chief eunuchs were waiting, and their followers were already moving to close the circle.",
           "sound_effects": [],
           "characters": [
             "Ho Chin"
@@ -1116,8 +1199,10 @@
         {
           "panel_number": 1,
           "visual_direction": "WIDE ESTABLISHING SHOT — full page width, cinematic and low-angle. Ho Chin strides through the Gate of Abundant Virtue into a sunlit palace courtyard. His ceremonial robes catch the light — deep crimson and gold, meticulously detailed with dragon embroidery, rendered in rich ink wash. He is shot from slightly below and behind, so he appears enormous against the soaring gate architecture. His head is turned just slightly to show a small, proprietary smile — the expression of a man arriving at a place he believes he owns. The courtyard is unnaturally empty ahead of him. Sunlight pours down in long diagonal shafts. In the extreme background, barely visible in doorway shadows, are still figures — watching, waiting. The architecture frames him like a trap already sprung.",
-          "dialogue": [],
-          "narration": "He had been warned. By Ts'ao Ts'ao. By Yuan Shao. By every man whose counsel he dismissed as timidity. He entered anyway.",
+          "dialogue": [
+            "Silly children! What can eunuchs do against the man who holds the forces of the Empire in the palm of his hand?"
+          ],
+          "narration": "He had been warned — by Ts’ao Ts’ao, by Yuan Shao, by Chʻen Lin who had met him at the very threshold and begged him not to enter. He had dismissed them all as timid men unequal to great schemes. When the eunuchs at the inner gate turned back his escort — the orders were to admit the General and none other — Ho Chin walked on, proudly, into the emptied courtyard. He did not look behind him.",
           "sound_effects": [],
           "characters": [
             "Ho Chin"
@@ -1126,8 +1211,10 @@
         {
           "panel_number": 2,
           "visual_direction": "MEDIUM SHOT — the courtyard from Ho Chin's perspective, now pulling back to show the geometry of encirclement. Eunuchs emerge from every archway, every doorway, every shadow — not rushing, but stepping forward with the deliberate calm of men who have rehearsed this. Their robes are dark; their faces are expressionless. The gate architecture overhead seems to tilt inward, the pillars converging toward Ho Chin at center. He has stopped walking. His smile is gone. His hand moves toward his sword but the gesture is already too late — it reads as a twitch, not a draw. Use loose, urgent brushwork for the encircling figures; tight, frozen linework for Ho Chin himself. He is the only still thing in the frame.",
-          "dialogue": [],
-          "narration": "",
+          "dialogue": [
+            "The orders are to admit the General — and none other. Your escort waits outside."
+          ],
+          "narration": "They did not rush. They stepped from every archway, every shadow, every door — dark-robed and deliberate, with the unhurried calm of men who have rehearsed this moment a thousand times in their minds. The eunuchs’ followers quickly closed in around him, and Ho Chin had begun to feel alarmed. His hand moved toward his sword, but found nothing — the gesture of a man who had counted on forces that were no longer here.",
           "sound_effects": [
             "SHFF — SHFF — SHFF"
           ],
@@ -1139,9 +1226,10 @@
           "panel_number": 3,
           "visual_direction": "TIGHT CLOSE-UP — Chang Jang's face filling almost the entire panel, shot slightly upward as though Ho Chin is looking up at his accuser. Chang Jang's face is extraordinary in its ugliness of expression — not rage, but something colder: twenty years of enforced deference, of bowing and scraping and smiling, compressed into a single moment of release. His eyes are bright. His lips are pulled back. Behind him, barely in frame, dark-robed assassins raise blades. The ink work here should be at its most ferocious — jagged, slashing brushstrokes for Chang Jang's features, deep shadow carving his face into something almost abstract. He looks like a man becoming what he always was.",
           "dialogue": [
-            "We raised you — your paltry huckstering family — to all the dignity you have ever known. And THIS is your gratitude?"
+            "What crime had Tung Tʿai-hou committed that she should die? And when the Mother of the Country was buried — who feigned sickness and did not attend the rites?",
+            "We raised you — your paltry, huckstering family — to all the dignity and wealth you have ever known. You would slay us? You call us sordid and dirty — but who, General, is the cleaner?"
           ],
-          "narration": "",
+          "narration": "Chang Jang’s voice rang across the courtyard — not the wheedling tone of a courtier, but something twenty years of bowing and scraping had kept long buried. Ho Chin looked about him for a way to escape, but the eunuchs had closed him in on every side, and then the assassins appeared and did their bloody work. He had held the forces of the Empire in the palm of his hand — and here, at the last, the palm was empty.",
           "sound_effects": [],
           "characters": [
             "Ho Chin"
@@ -1150,8 +1238,10 @@
         {
           "panel_number": 4,
           "visual_direction": "VERTICAL NARROW PANEL — tall and thin, like a section cut from a scroll painting. Against an almost pure white sky, a severed head arcs over the top of the palace wall. The head is rendered with unflinching clarity — Ho Chin's face in its last frozen expression, mouth slightly open, topknot trailing. The wall below is just a dark horizontal band of ink at the panel's base. Nothing else. No assassins, no gate, no context — only the arc, the white sky, and the terrible geometry of a life's end. This panel should feel like a single brushstroke. The white space is not emptiness; it is silence.",
-          "dialogue": [],
-          "narration": "Closing the days of the Hans — the years of their rule were near spent. Stupid and tactless was Ho Chin, yet stood he highest in office.",
+          "dialogue": [
+            "Thy carriage awaits, O General. We are ready to depart."
+          ],
+          "narration": "Yuan Shao had waited long outside the gate, growing impatient at the silence within. At last he had called through the wall: “Thy carriage awaits, O General.” For reply, the head of the murdered officer was flung over the wall. Closing the days of the Hans — the years of their rule were near spent; stupid and tactless was Ho Chin, yet stood he highest in office; many were they who advised him, but he was deaf as he heard not — wherefore fell he a victim under the swords of the eunuchs.",
           "sound_effects": [
             "—"
           ],
@@ -1161,9 +1251,10 @@
           "panel_number": 5,
           "visual_direction": "FULL BLEED SPLASH — Yuan Shao below the palace wall, shot wide to show him small against the massive structure yet incandescent with fury. He stands in full armor, one arm extended outward — he has just caught the severed head, or recoiled from it landing at his feet, the blocking deliberately ambiguous. His sword is raised in his other hand, pointing skyward. His face is turned upward and outward toward his soldiers — his mouth open in a full-throated scream. Around him, soldiers are frozen in the first instant before action, their postures coiled. The ink-wash style is at its most atmospheric here: the wall looms dark and textured behind him, the sky above bleeds from ink-gray to white. Yuan Shao is the only thing in sharp focus. Everything else is brushwork and fury.",
           "dialogue": [
+            "A decree is proclaimed — that Ho Chin contemplated treachery against the throne, and therefore was justly slain! They would have us bow our heads and accept this!",
             "The eunuchs have slain the minister! All who would end this wicked party — TO ME!"
           ],
-          "narration": "",
+          "narration": "A decree was at once proclaimed: Ho Chin had contemplated treachery against the throne, and therefore had been slain; his adherents were pardoned. But Yuan Shao had seen what had been flung over the wall, and all mercy departed from him in that instant. He set one of Ho Chin’s officers to fire the gate, and as the flames took hold, he raised his voice over the roar — a sound that would bring down what remained of the Han dynasty’s long and troubled peace.",
           "sound_effects": [
             "KRAK"
           ],
@@ -1182,7 +1273,7 @@
           "panel_number": 1,
           "visual_direction": "FULL-WIDTH ESTABLISHING SHOT. A low, wide angle looking up at the Imperial Palace gates — massive lacquered doors of deep vermillion, now engulfed in roaring columns of orange and black fire. Yuan Shu's armored soldiers pour through the shattered breach like a tide, silhouetted against the inferno. Spears and banners catch the firelight. The architecture above — ornate bracketing, carved ridge beasts — crumbles and falls in embers. Smoke rolls upward into a night sky that has turned the color of blood and ash. The composition echoes a Song Dynasty landscape scroll turned catastrophic: the palace is rendered in precise, reverent linework, and then systematically destroyed by loose, explosive ink-wash strokes of fire. The soldiers are small against the gate's enormity — the building itself is the protagonist of this panel, dying.",
           "dialogue": [],
-          "narration": "The Han dynasty had stood four hundred years. It took one night to end it.",
+          "narration": "The Han dynasty had stood four hundred years, its gates lacquered with the devotion of ten thousand ministers, its pillars held upright by the blood of loyal men and the weight of heaven's mandate. It took one night to end it. The eunuchs had poisoned the court for a generation — had raised up the unworthy and cast down the just, had hollowed out the sacred dynasty until the bonds of empire could no longer bear their own weight. Now the fire they had kindled in their treachery returned to them, and the palace itself became their pyre.",
           "sound_effects": [
             "KRRAAAK",
             "WHOOOM"
@@ -1193,9 +1284,11 @@
           "panel_number": 2,
           "visual_direction": "MEDIUM SHOT, interior corridor. Yuan Shao strides through a smoke-choked painted hallway, sword drawn, full armor gleaming hellish orange. Behind him, soldiers fan out. Before him, a cluster of eunuchs in silk court robes — some young, some old — press against a crumbling wall. One raises his empty hands. Falling ceiling plaster rains down like snow. The corridor's painted murals — dragons, phoenixes, imperial ceremony — are scorched and peeling on either side, a visual irony: the symbols of Han power burning around the men who served it. Yuan Shao's expression is righteous fury, jaw set, eyes lit by fire rather than doubt. The angle is slightly low, making him loom.",
           "dialogue": [
-            "Yuan Shao: \"All who would cut out this rot — follow me!\""
+            "Yuan Shao: \"All who would cut out this rot — follow me!\"",
+            "Eunuch: \"My lord — I swear it — I had no part in the general's murder — I am only a servant —\"",
+            "Yuan Shao: \"Every man without a beard. Find them all. Leave none.\""
           ],
-          "narration": "",
+          "narration": "Yuan Shao moved through the smoke-choked corridors as a man who has waited long for his hour of reckoning. He had watched the eunuchs hollow out the house of Han for a generation — selling appointments like merchants at a market stall, destroying the loyal and the true, leashing the Son of Heaven himself to their private designs. Now the great families of the empire had gathered their swords, and there was no court ritual left to protect these men in silk. The dragons painted on the walls burned and peeled around them, as if heaven itself were withdrawing its symbols.",
           "sound_effects": [
             "CRASH"
           ],
@@ -1207,7 +1300,7 @@
           "panel_number": 3,
           "visual_direction": "CLOSE-UP CHAOS PANEL — a fractured, multi-angle composition suggesting the indiscriminate speed of slaughter. No single focal point: top-left, a silk robe crumpling to marble floor; center, a sword mid-stroke, ink-blur streaking behind it; bottom-right, a soldier's face — not triumphant, but grimly uncertain, staring at a fallen figure whose face is ambiguous, beardless, neither guilty nor innocent. A single court sandal, ornate, abandoned in the foreground. The violence is rendered in explosive diagonal ink strokes — not gratuitous gore, but the visual grammar of catastrophe. A caption anchors the moral horror.",
           "dialogue": [],
-          "narration": "So many beardless men served the palace that soldiers could not tell servant from eunuch, innocent from conspirator. The swords did not pause to ask.",
+          "narration": "So many beardless men served the palace — scholars, physicians, musicians, servants who had grown old in their quiet posts — that the soldiers could not distinguish the guilty from the innocent, the conspirator from the attendant who had simply never left. The swords did not pause to ask. History would record only that the eunuchs were destroyed and the rot cut out; it would not count the others who fell alongside them, the ones whose names no annalist thought to write down.",
           "sound_effects": [
             "SHHK",
             "THUD"
@@ -1218,9 +1311,11 @@
           "panel_number": 4,
           "visual_direction": "TALL VERTICAL STRIP — a narrow panel running the full height of the page, positioned at the far left like a visual spine. This is the 'shadow track' made explicit: Chang Jang and Tuan Kuei, rendered small and urgent, hurry the young Emperor and his brother — two tiny imperial figures clutching each other — through a smoke-filled service corridor. The perspective is from behind and above, as if a ghost watches them flee. The walls are plain stone here — the back passages of power, unglamorous, forgotten. Firelight flickers from an unseen source, casting long shadows ahead of them toward darkness. The Emperor is recognizable only by a toppled crown he still clutches. Chang Jang looks back once — his face a mask of desperate calculation.",
           "dialogue": [
-            "Chang Jang: \"Do not stop. Do not look back.\""
+            "Chang Jang: \"Do not stop. Do not look back.\"",
+            "Emperor (small, frightened): \"Where are my ministers? Where has my court gone?\"",
+            "Chang Jang: \"Gone, Majesty. There is only us now. Move.\""
           ],
-          "narration": "Deeper in the palace, those who had betrayed everything carried the one thing worth saving.",
+          "narration": "Deeper in the palace, those who had schemed and murdered their way to power now carried the one thing worth saving through the back passages of that same power. Chang Jang and Tuan Kuei had for years nourished evil in their bosoms, had desired to pull down the very pillars of the state for their own advancement. Now they ran through the unglamorous stone corridors — the servants' ways, the forgotten arteries of the palace — the young Emperor stumbling between them, clutching his fallen crown, understanding none of it. There is no ceremony left in flight, no dignity in survival — only the orange glow of fire on every wall and the sound of boots on stone going toward darkness.",
           "sound_effects": [],
           "characters": [
             "Chang Jang"
@@ -1230,9 +1325,11 @@
           "panel_number": 5,
           "visual_direction": "WIDE CINEMATIC SHOT — the north bank of the river, seen from a middle distance. The burning palace fills the entire background, reflected in the dark water below in shimmering, fractured orange light — a mirror image of catastrophe. In the middle ground, Chang Jang stands at the river's edge, the small Emperor and the young Prince behind him, surrounded now — soldiers' torches visible closing in from both flanks, dark figures against the firelit tree line. Chang Jang faces the water, not the soldiers. His armor is gone; he wears only his court robes. His posture is not defeat — it is decision. The composition is deliberately still after the chaos of previous panels: a horizontal line of water, a vertical figure, the burning sky above. Like a classical ink painting of a scholar at the edge of the world.",
           "dialogue": [
-            "Yuan Shao (off-panel, distant): \"You rebels — how dare you take the Emperor from his house!\""
+            "Yuan Shao (off-panel, distant): \"You rebels — how dare you take the Emperor from his house!\"",
+            "Chang Jang (quiet, not turning): \"Your Majesty. Whatever you remember of this night — remember only that your servants loved you.\"",
+            "Chang Jang: \"Remember that we ran.\""
           ],
-          "narration": "The river offered the only answer left to him.",
+          "narration": "The river lay before them like the edge of the known world, black and cold and indifferent to the burning sky above. Chang Jang had spent a lifetime accumulating power — had counted his allies by the thousand, his enemies by the ten thousand — and now there was only this: water, darkness, and the closing ring of torchlight through the trees. He had carried the Emperor's house all his life on a foundation of treachery; he could not carry it any further. He had the heart of a wolf, his enemies said. Perhaps. Even wolves know when the hunt is over.",
           "sound_effects": [],
           "characters": [
             "Chang Jang"
@@ -1242,7 +1339,7 @@
           "panel_number": 6,
           "visual_direction": "FULL-WIDTH CLOSING STRIP — a low, horizontal panel across the very bottom of the page, like a final brushstroke. The river surface, seen almost level with the water. The palace burns in the far background, its reflection stretching toward us. In the center of the frame: a single splash — ink-wash explosive bloom of white water — and then silence. The two tiny imperial figures stand at the bank's edge, alone now, the torchlight of closing soldiers reaching toward them. Above the water, a single ripple expands outward in perfect circles. No figure visible beneath. The panel is spare, almost abstract — mostly water, mostly night, a burning world at the top of the frame and one spreading circle of water at its heart. Elegiac and absolute.",
           "dialogue": [],
-          "narration": "The Han dynasty's last loyal traitor sank into the Yellow River. Above him, the palace burned until morning.",
+          "narration": "The river made no judgment. It received the last of the eunuchs as it received all things — without favor, without condemnation — and carried him into the darkness toward the sea. The sacred dynasty stood without a supporter now; the ministers were crestfallen and helpless; the young Emperor remained at the water's edge with his brother and watched the ripples spread outward until they were nothing. Above him, the palace that had been the center of the world burned until its great beams fell and its fires became coals and its coals became ash, and the long night of Han at last was over.",
           "sound_effects": [
             "...shhhhh..."
           ],
@@ -1259,7 +1356,7 @@
           "panel_number": 1,
           "visual_direction": "WIDE horizontal establishing shot, full page width. A vast Song Dynasty ink-wash sky — cold, remote stars rendered as sparse flecks of white against deep black ink, the Milky Way a pale smear of brushwork overhead. In the extreme lower third of the panel, almost swallowed by tall river-bank grasses, two tiny figures are just barely visible: the young Emperor and the Prince of Chen-liu, curled together in fetal closeness. Their torn silk robes catch the faint starlight. The grass towers over them, dense and ink-black at the roots, feathering to grey at the tips. The river is a flat, lightless void at panel edge. The composition is deliberately crushing — the sky and dark water consume everything, and the children are the smallest possible note of human warmth in an indifferent cosmos. Camera angle: near-aerial, slightly tilted, emphasizing the immensity of the world and the smallness of the boys.",
           "dialogue": [],
-          "narration": "The Son of Heaven had no throne but the cold earth. No court but the wind through the grass.",
+          "narration": "It was the third watch of night, and the Son of Heaven had no throne but the cold earth, no court but the wind moving through the river grass. The two boys lay pressed together in the tall reeds — shivering with cold from the drenching dew, hollow with hunger — listening to soldiers crashing through the darkness all around them in search of them. They had burst through smoke and fire and the ruin of everything they had ever known, and now they wept silently in each other’s arms, lest anyone should discover them. Above, the sky was enormous and indifferent, the stars as remote as courtiers who had forgotten to whom they owed their light.",
           "sound_effects": [],
           "characters": [
             "The Emperor",
@@ -1270,10 +1367,11 @@
           "panel_number": 2,
           "visual_direction": "TIGHT close-up, intimate square panel — two young faces pressed cheek to cheek. The Emperor's face is forward-facing, eyes shut, tears tracing silent lines through the grime on his cheeks. The Prince of Chen-liu is slightly behind, eyes open and dark with fear, arms wrapped around the Emperor's shoulders. Both wear the remnants of imperial silk, now torn, muddied, unrecognizable as court regalia. Sparse, deliberate brushwork — very few lines, maximum emotional weight. The negative space around them is pure black. A single blade of river grass crosses the frame diagonally. No sky, no world — only these two children and their shared terror. The linework on their faces should be meticulous, almost classical portraiture.",
           "dialogue": [
-            "Brother... we cannot stay hidden here forever.",
-            "I know. But I am so afraid."
+            "Brother… this is no place to stay in. We must find some way out.",
+            "I cannot speak. I cannot even cry out.",
+            "Then do not speak. Only hold to me. We will go together."
           ],
-          "narration": "",
+          "narration": "They had knotted the remnants of their silk robes together and clawed their way up the muddy bank, only to find themselves in a thicket of thorn bushes where it was quite dark and no path could be seen. The Emperor — he whose word had once set the whole machinery of the Han court in motion — could not find his voice; it had gone somewhere deep inside him, to a place where terror lives beyond the reach of rank or ceremony. It was the younger prince, clear-eyed and steady in his brother’s arms, who refused on behalf of them both to surrender to despair.",
           "sound_effects": [],
           "characters": [
             "The Emperor",
@@ -1284,9 +1382,10 @@
           "panel_number": 3,
           "visual_direction": "LARGE dramatic panel, consuming the lower two-thirds of the first page — near full-bleed. This is the miracle. From the dark river grass, millions of fireflies ERUPT upward in a swirling golden pillar of living light, rising from the ground around the boys' feet and spiraling toward the stars. The fireflies form a column of radiant gold-white against the black sky — not chaotic but purposeful, the swarm shaped like a massive torch or a divine brushstroke. The two boys stand at the base of this pillar, silhouetted as small dark shapes against the blaze of light — the Emperor's arm slowly lifting, reaching toward the light in instinctive wonder. The Prince of Chen-liu grips his sleeve. The composition is a powerful vertical thrust slicing the horizontal darkness. Use bold diagonal ink streaks in the background to suggest the explosive upward energy. The light reflects off the river in shattered fragments of gold. The thorn thickets at the panel edges are carved in sharp black silhouette by the radiance. Artist note: the fireflies are not separate dots — render the swarm as interlocking swirls of brushed gold, the way ink disperses in water, so it reads as a single living entity of light.",
           "dialogue": [
-            "Look—!"
+            "Look—!",
+            "God is helping us."
           ],
-          "narration": "Heaven had not forgotten its Son.",
+          "narration": "Then, all at once — millions of fireflies sprang up from the dark grass all about them and circled in the air before the Emperor, a living lantern kindled by no human hand. They rose in their multitudes, not scattered or random but purposeful, moving as one radiant body through the black of the night sky, as though Heaven itself had exhaled a column of gold to light the way of its abandoned Son. The Emperor, who had been weeping silently in the dark only moments before, lifted his face toward the light — and for the first time since the palace burned, he was not afraid.",
           "sound_effects": [
             "SHHHHHH"
           ],
@@ -1299,10 +1398,12 @@
           "panel_number": 4,
           "visual_direction": "HORIZONTAL mid-width panel — the two boys moving forward through the night, following the fireflies. The swarm has resolved from a pillar into a flowing river of light ahead of them, a golden path through the darkness. Thorn thickets line both sides of the narrow track — drawn in dense, harsh black ink with sharp angular brushwork — but their branches seem to curve gently away from the boys, opening the path. The Emperor walks slightly ahead, his face lifted, wonder replacing terror. The Prince of Chen-liu follows a half-step behind, one hand still holding the Emperor's trailing sleeve. Camera angle: low, slightly behind and to the side, so we see the boys as small figures walking into the river of firefly-light ahead. The contrast is crucial: harsh thorn geometry framing soft gold luminescence. The ground beneath their feet is shown clearly — no stumbling, the fireflies illuminate every stone. Ink-wash technique: loose atmospheric brushwork on the background darkness, tight controlled linework on the boys' silhouettes and the thorn branches.",
           "dialogue": [
-            "They show us every step.",
-            "God is helping us."
+            "They show us every stone. Every step.",
+            "God is helping us.",
+            "Where will they lead us?",
+            "Somewhere we can rest. Do not look back. Only follow."
           ],
-          "narration": "Through thorn and darkness, the light moved only as fast as two small pairs of feet could follow.",
+          "narration": "They followed where the fireflies led, and gradually — impossibly — they found themselves upon a road. The thorn thickets that had seemed a wall against all passage now parted softly at the edges of the golden light, and the two children walked where the swarm walked, the Emperor’s feet finding purchase on stones he could not otherwise have seen. They walked until their feet were too sore to carry them further, the whole world reduced to the soft golden pulse ahead of them and the sound of their own breathing in the dark.",
           "sound_effects": [],
           "characters": [
             "The Emperor",
@@ -1313,10 +1414,13 @@
           "panel_number": 5,
           "visual_direction": "FULL-WIDTH closing panel, warmer amber ink tones replacing the cold silver-black of earlier panels. A humble farmhouse in the background — one window glowing with warm lamplight, a haystack beside a low wall. In the foreground, a broad-shouldered farmer is on his KNEES, forehead nearly touching the earthen ground in full prostration before two small, filthy, exhausted figures. The Emperor and the Prince stand before him, still wearing their ruined silk, faces hollow with exhaustion but lit by the lamplight through the window. The farmer's face is turned up and to the side in the kowtow — rendered in careful, reverent linework, his expression a mix of awe and tears. He holds a simple oil lamp at his side; its warm light throws long shadows. The fireflies are gone — only the lamplight remains. In the far background, the edge of the night sky is just barely visible, a few stars remaining, as if the cosmos has withdrawn now that its work is done. The composition is intimate and monumental simultaneously — like a classical scroll painting of a sacred encounter. The kneeling farmer's large, calloused farmer's hands are detailed and visible, the contrast with the boys' delicate, noble hands a deliberate visual note.",
           "dialogue": [
-            "I dreamed last night of two red suns falling behind my roof. I rose before dawn to search the road.",
-            "Then it was Heaven that sent you to us."
+            "To what household do you belong, young gentlemen?",
+            "He is the Emperor. There has been a revolution in the palace and we ran away. I am his brother — Prince of Chen-liu.",
+            "Last night I dreamed of two bright red suns falling behind my own roof. I woke in alarm, dressed, and went out before dawn to search the road. Then I saw a light rising from this heap of straw…",
+            "Then it was Heaven that sent you to us.",
+            "I am brother to a former official. My name is Tsui I. My brother grew disgusted with the conduct of the eunuchs and resigned his post to hide himself away here. Come inside, Your Majesty. Come inside and be fed."
           ],
-          "narration": "A farmer who had never seen the Emperor's face knew him at once. Some recognitions live below the eyes.",
+          "narration": "A farmer who had never looked upon the Emperor’s face knew him at once — for Heaven had prepared him first, sending the dream of two red suns dropping behind his dwelling, so that he rose and dressed and went out into the dark before anyone could have told him to go. He had found the brightness rising from the straw by the road and hastened thither, and now he kowtowed again and again, this broad-shouldered man of the earth, pressing his forehead to the ground before two children in ruined silk. Then he led them inside and served them on his knees with refreshment, as though it were the most natural thing in the world for Heaven to arrive hungry at a farmer’s door.",
           "sound_effects": [],
           "characters": [
             "The Emperor",
@@ -1334,8 +1438,11 @@
         {
           "panel_number": 1,
           "visual_direction": "LOW-ANGLE WIDE SHOT from ground level. The grey stone wall of Wancheng fills the entire panel, its battlements silhouetted against a haze-white sky. Arrows rain diagonally downward from the top — ink-streak motion lines, not cartoonish but calligraphic, like brushed cursive. Soldiers cluster at the base in a churning mass of armour and shields. At the leading edge of the crowd, Sun Chien is already moving — his fingers are jammed into a seam in the stone, one boot pressed flat against the face of the wall, body angled outward at an impossible diagonal. He is the only figure in motion in an otherwise static composition. His face is turned upward, jaw set, expression not fierce but concentrated — joyful, even. Ink wash: the wall rendered in dense, architectural brushwork; the sky behind it left almost bare — pale ink wash suggestion of cloud. Soldiers below rendered loosely, impressionistically, to throw Sun Chien's precise, muscular figure into relief.",
-          "dialogue": [],
-          "narration": "Wancheng. The rebel walls. Every man below waits. One does not.",
+          "dialogue": [
+            "Soldier: General! The arrows — fall back! No man can scale that wall alone!",
+            "Sun Chien: Then it will be scaled by one man alone."
+          ],
+          "narration": "Wancheng’s grey walls had held against ten thousand men — its stones slick with rain, its battlements black with crossbow and pike, arrows falling among the massed army of Wu like calligraphy brushed in iron. Every soldier who had reached those walls had turned back from them. In later ages, the histories would record this as the hour Sun Chien’s name was first written in red. He found a seam in the rock, jammed his fingers into it, and he climbed.",
           "sound_effects": [
             "THWK THWK THWK"
           ],
@@ -1347,9 +1454,11 @@
           "panel_number": 2,
           "visual_direction": "MEDIUM SHOT, eye-level with the battlements. Sun Chien has crested the wall — he is already past the parapet, one knee planted on the stone lip, sword drawn in a sweeping upward arc. Two rebels are caught mid-recoil to his left, a third scrambling backward to his right. The sword's arc is rendered as a single bold ink-streak, a calligraphic swoosh that bisects the panel diagonally. Sun Chien's expression: wide open face alight with fierce, uncomplicated joy — this is exactly where he was born to be. His clothes are already torn at the shoulder from the climb. Behind him, nothing but open sky and the ghost of distant hills in pale ink wash. The rebels are rendered with detailed, frightened faces — they are real men, not ciphers — which makes his dominance over them more mythic, not less. Chiaroscuro: deep shadow falls across the inside of the battlement; Sun Chien is lit from above as if the sky itself illuminates him.",
           "dialogue": [
-            "Sun Chien: First!"
+            "Sun Chien: First!",
+            "Rebel Officer: Gods — he’s over! He’s over the WALL —",
+            "Rebel Soldier: Kill him! Sound the alarm — KILL HIM NOW!"
           ],
-          "narration": "Sun Chien was the first to mount the wall — and cut down a score of men with his own hand.",
+          "narration": "He was the first man over the parapet — and he did not wait for a second to follow. Three rebels broke from his sword in the space of a single breath; three more fell before he had drawn another. They would say afterward that he cut down a score with his own hand before any other soldier had gained the top. This is not the exaggeration of victory songs. This is what the chronicle records.",
           "sound_effects": [
             "KRANG",
             "SHHHHK"
@@ -1361,8 +1470,11 @@
         {
           "panel_number": 3,
           "visual_direction": "TIGHT CLOSE-UP on Sun Chien's boots at the very edge of the battlement, toes curling over open air. Beyond the edge: a dizzying drop, the ground far below, and a rebel cavalry officer charging directly toward the wall on horseback — spear leveled, pennant streaming. We see him from Sun Chien's point of view, tiny and charging. The panel is almost entirely negative space — pale sky, stone edge, and that distant mounted figure. One of Sun Chien's hands grips the battlement edge; the other has released. The physical implication is clear: he is about to jump. This panel is narrow and tall, like a keyhole looking straight down into the impossible. A single narration caption hangs at the top like a held breath.",
-          "dialogue": [],
-          "narration": "Below — a rebel lord. A leveled spear. A charging horse. Any man would see an obstacle. Sun Chien sees a gift.",
+          "dialogue": [
+            "Soldier (from below): General Sun — there is a rider! A rebel officer, spear leveled — he comes at the charge!",
+            "Sun Chien: Yes. I see him."
+          ],
+          "narration": "Then he saw what waited below: a rebel lord, armored and mounted, spear already leveled and at the charge — a man who had perhaps never entertained the possibility that anyone might fall out of the sky at him. A lesser general would have held the parapet and called for archers. Sun Chien looked down at the charging horseman the way a hawk regards open country — measuring the distance, weighing the instant, finding it sufficient — and he let go of the wall.",
           "sound_effects": [],
           "characters": [
             "Sun Chien"
@@ -1371,8 +1483,11 @@
         {
           "panel_number": 4,
           "visual_direction": "FULL-WIDTH HORIZONTAL SPLASH PANEL — the widest panel on the page, erupting across the center and breaking the vertical grid. Sun Chien is fully airborne, body horizontal against the sky, arms extended forward, both hands closing around the shaft of the rebel leader's spear at its midpoint. His face is turned directly at the reader — a wild, open grin. The rebel leader beneath him: horse rearing violently, back legs scrabbling, the man's face a mask of pure disbelief, mouth open, one hand losing its grip on the spear. The spear itself is the compositional axis — a diagonal line running from lower-left to upper-right, with Sun Chien's falling body intersecting it at the center. Everything is frozen: the horse's mane, the rebel's robes, the dust, Sun Chien's torn sleeves — all suspended in ink-wash stillness. Time has stopped. The background: nothing. Bare white paper. The vastness of the empty sky makes the moment feel like myth. This is the image the scene was built for.",
-          "dialogue": [],
-          "narration": "— and the sky held him.",
+          "dialogue": [
+            "Rebel Lord: WHAT —",
+            "Sun Chien: Mine."
+          ],
+          "narration": "He jumped. The rebels would speak of it for years afterward — the man who dropped from the sky with both hands open, who seized a leveled spear in mid-air and wrenched it free of its rider’s grip as a hawk takes prey from open water. The horse screamed and the earth lurched and the sky above Wancheng was vast and white and empty as the first day of the world. Sun Chien hung there for one impossible instant — suspended between the wall and the ground, between the soldier he had been and the name he would carry to his grave — and then the world came up to receive him.",
           "sound_effects": [
             "CRACK"
           ],
@@ -1384,9 +1499,10 @@
           "panel_number": 5,
           "visual_direction": "WIDE CINEMATIC SHOT, low angle, ground level. The rebel leader is flat on his back in the churned earth, the wind knocked from him, staring upward. His horse has bolted left. In the center of the frame, Sun Chien is mid-mount — one boot already in the stirrup, the stolen spear in his left hand, sword still in his right, swinging up into the saddle with the easy economy of a man who has done this a thousand times. Around him the rebel line is fracturing — figures beginning to scatter left and right. The ink wash here is dense and dark: churned ground, dust clouds, the chaos of broken cavalry. Sun Chien is the still point in the composition — clean lines, upright posture, a figure carved from certainty amid a smearing world.",
           "dialogue": [
+            "Rebel Lord (from the ground): What manner of man — what manner of man ARE you —",
             "Sun Chien: I'll borrow this."
           ],
-          "narration": "",
+          "narration": "The rebel lord lay flat in the churned earth, the wind knocked entirely from his body, staring up at a sky that had ceased to behave. His horse had bolted. His spear was gone. The man who had fallen out of heaven was already in his saddle — unhurried, easy, the way a man mounts to ride out on an ordinary morning — and he did not look back at what he had taken.",
           "sound_effects": [
             "WHUMP",
             "KCHK"
@@ -1398,8 +1514,11 @@
         {
           "panel_number": 6,
           "visual_direction": "WIDE ESTABLISHING SHOT — full width, squat and panoramic, anchoring the page at its base like a scroll's final line. Sun Chien rides through the scattered rebel lines at full gallop: sword extended in his right hand, captured spear in his left, both arms wide like wings. The horse beneath him is pure motion — all four hooves off the ground, mane streaming. Rebels break away on both sides of him, rendered as loose, fleeing ink-wash figures dissolving into the background. In the far distance behind him, tiny figures on the city wall: his own men, beginning their descent. The sky above is clearing — pale ink wash giving way to white. A single narration box sits at the bottom of the panel, the scene's final line, written in the measured cadence of a chronicle entry.",
-          "dialogue": [],
-          "narration": "He rode through them alone. And they let him — because what else do you do with something like that?",
+          "dialogue": [
+            "Rebel Soldier: Fall back — FALL BACK! All units — fall back NOW!",
+            "Sun Chien: WUUUU!"
+          ],
+          "narration": "He rode through them — sword in his right hand, captured spear in his left, both arms wide as a man who has claimed the whole horizon for his own — and the rebel lines dissolved before him like fog burned from the river at first light. They had faced armies. They had stood siege. They had not faced this. In later days, when men spoke of the hour at Wancheng, they said: the Tiger of Wu came down from the walls, and after that day, no gate in all the land was held long against him.",
           "sound_effects": [
             "HAAAAAH"
           ],
@@ -1418,7 +1537,7 @@
           "panel_number": 1,
           "visual_direction": "FULL-WIDTH PANORAMIC ESTABLISHING SHOT — ink-wash style, sweeping horizontal composition echoing a Song Dynasty landscape scroll. We look outward from just beyond Loyang's great western gates, the city walls rising massive and ancient on the right edge of the frame, their stonework rendered in meticulous linework. Across the vast plain stretching to the left, Tung Cho's western army advances: a dark tide of thousands, infantry ranks bristling with spears, cavalry churning dust into columns that climb and spread across the sky like smoke from a burning world. A dozen provincial banners snap in the hot wind. The army's sheer scale makes the city walls — magnificent as they are — look like something a hand could sweep aside. The sky above the army is ink-dark with risen dust; the sky above Loyang is still pale and clear, the contrast sharp and foreboding. No figures are individuated — this is pure mass and momentum, the feeling of history turning on its hinge.",
           "dialogue": [],
-          "narration": "The west had sent armies before. None had been invited.",
+          "narration": "The west had sent armies before. None had been invited. When the summons came, Tung Cho rejoiced greatly and lost no time in obeying — for here was a door that powerful men were holding open for him, urging him through. Ten thousand spears crossed the plain toward Loyang, and each step of each soldier carved a little deeper into the age that was ending.",
           "sound_effects": [
             "RMMMMMBLL",
             "FWWWSH"
@@ -1429,9 +1548,10 @@
           "panel_number": 2,
           "visual_direction": "TIGHT INTERIOR — Ho Chin's private chamber, lamplight warm against lacquered columns. Ho Chin sits elevated on a reading dais, a silk-bound memorial scroll open across his knees. His face is broad, self-satisfied, lit from below by the lamp so that shadow pools in his eye sockets — a subtle visual foreshadowing of the hollow man he is. He is smiling at the scroll the way a vain man smiles at a mirror. His robes are elaborately decorated, his bearing that of a man who has confused proximity to power with the possession of it. The room is rich with imperial detail — jade ornaments, silk hangings — but the composition places him small within all that grandeur.",
           "dialogue": [
-            "HO CHIN: 'He prays for the happiness of the Dynasty. A loyal man — and a timely one.'"
+            "HO CHIN: 'He prays for the happiness of the Dynasty and of the whole land. A loyal man — and a timely one.'",
+            "HO CHIN: 'The memorial is perfectly clear. I shall send him a warm welcome at once.'"
           ],
-          "narration": "Tung Cho's memorial was a masterwork of flattery. Ho Chin read it three times.",
+          "narration": "Tung Cho's memorial had been composed by his son-in-law Li Ju, a man who understood the uses of fine words. It spoke of the eunuchs as a fire beneath a boiling pot — to stop the ebullition, withdraw the fire; to cure the abscess, cut it out — and it wrapped this counsel in the most elaborate protestations of loyalty. Ho Chin read it and showed it to his partisans, and the warmth of the flattery settled into his chest like wine. He who holds the forces of the Empire in the palm of his hand does not need to be a discerning man.",
           "sound_effects": [],
           "characters": [
             "Ho Chin"
@@ -1441,9 +1561,11 @@
           "panel_number": 3,
           "visual_direction": "WIDE INTERIOR SHOT — same chamber, but the viewpoint has pulled back to include the doorway. Lu Chih and Cheng Tai stand before Ho Chin, their posture formal and rigid with suppressed urgency. Lu Chih — older, his face carved with the dignity of a man who has survived prison and still chosen principle — speaks directly, eyes fixed on Ho Chin. Cheng Tai stands at his shoulder, expression grave. Ho Chin has not looked up from the scroll. The visual weight of the scene is in the two standing men and the seated man who will not meet their eyes.",
           "dialogue": [
-            "LU CHIH: 'Long have I known this man. In appearance — innocent. At heart — a wolf. Let him through those gates, and calamity walks with him.'"
+            "CHENG TAI: 'A fierce wild beast. If he comes, his prey will be men.'",
+            "LU CHIH: 'Long have I known this man. In appearance — innocent. At heart — a wolf. Let him through those gates, and calamity walks with him. Stop him. Do not let him come, and thus will you avoid confusion.'",
+            "HO CHIN: 'You are too timorous. You are unequal to great schemes.'"
           ],
-          "narration": "",
+          "narration": "Cheng Tai had spoken first, blunt as a man who knows there is no time left for diplomacy. Lu Chih — who had survived imprisonment at the eunuchs' hands and returned to serve regardless — added his own counsel with the quiet authority of one who has seen the wolf before, and knows the shape of it by its absence of mercy. Ho Chin heard them both. He smiled the smile a vain man reserves for those he has already decided to dismiss as lesser minds.",
           "sound_effects": [],
           "characters": [
             "Ho Chin",
@@ -1454,7 +1576,7 @@
           "panel_number": 4,
           "visual_direction": "HALF-PAGE WIDE SHOT — the same chamber, now viewed from the doorway threshold as though we are a silent witness departing with the advisors. In the foreground, on the stone floor near our feet, two bronze official seals lie where they have been placed — set down with deliberate care, not thrown. The seals catch the lamplight. In the middle ground, the retreating backs of Lu Chih and Cheng Tai move away from us through the far door into shadow. Ho Chin remains visible in the background on his dais, a small bright figure surrounded by his rich, useless things, still holding the memorial, alone now. The negative space between the seals in the foreground and Ho Chin in the background should feel enormous — the distance between duty and vanity made physical. Sparse brushwork in the background; the seals rendered in precise detail.",
           "dialogue": [],
-          "narration": "They left their seals. They left without a word. Some protests are made in silence.",
+          "narration": "They set their seals down as men lay flowers on a grave — with care, with finality, with the knowledge that what they honored was already beyond saving. Lu Chih and Cheng Tai gave up their posts, and with them went more than half the ministers of State, each departure a small and quiet verdict on Ho Chin's judgment. The great chamber did not echo with their leaving. Men of principle make no noise as the world slips away from them.",
           "sound_effects": [
             "...tok.",
             "...tok."
@@ -1468,9 +1590,11 @@
           "panel_number": 5,
           "visual_direction": "MID-SHOT — exterior, the Ying Pool encampment. Firelight and last dusk. Tung Cho reads a scroll — presumably Ho Chin's formal welcome — by the light of a torch held by a subordinate just out of frame. His physical presence is immense: broad-shouldered, heavyset, a warlord's body built for intimidation. His armour is western-provincial, practical and unadorned compared to the capital's refinements — the armour of a man who has never needed decoration. His face is angled slightly downward toward the scroll, expression unreadable, and that stillness is more threatening than any snarl. One gauntleted hand rests on his knee; the fingers are slightly curled, like a hand that is accustomed to closing around things.",
           "dialogue": [
-            "TUNG CHO: 'He accepted.'"
+            "LI JU: 'My lord — though the summons has come, there are many obscurities in it. It would be well to send a memorial first, stating our aims plainly. Then we can proceed.'",
+            "TUNG CHO: 'Send the memorial.'",
+            "TUNG CHO: 'Keep the columns moving.'"
           ],
-          "narration": "",
+          "narration": "He had camped at Ying Pool, close enough to Loyang that his cookfires might be seen from the city walls on a clear night. His adviser Li Ju had counseled the forms of propriety — a memorial first, intentions stated plainly, the appearance of reluctance maintained. Tung Cho had sent the memorial. He had also kept the army moving. These were not contradictions to a man like Tung Cho; they were simply two hands of the same reach.",
           "sound_effects": [],
           "characters": [
             "Tung Cho"
@@ -1480,7 +1604,7 @@
           "panel_number": 6,
           "visual_direction": "FULL-WIDTH CLOSING IMAGE — dusk exterior, cinematic and monumental. Tung Cho sits motionless on horseback at a slight rise above the Ying Pool camp. He faces Loyang. The city fills the horizon ahead: its walls black silhouettes, its towers and rooftops dark against an enormous sky burning orange and deep vermillion at the horizon, fading through amber to ink-blue above. The light makes the walls look as though they are already on fire. Tung Cho's figure is rendered in precise silhouette against that sky — horse still, rider still, the absolute stillness of a man who has already made every decision. Behind him, the vague shapes of his camp, ten thousand fires beginning to appear in the gathering dark. The composition echoes classical Chinese landscape — the lone figure dwarfed by heaven and earth — but here the figure is not a sage in contemplation. He is a predator surveying what is already his. In the lower corner, barely visible: the two abandoned seals from the chamber before, inset as a ghosted panel overlay — the price already paid.",
           "dialogue": [],
-          "narration": "He had come to save the Dynasty. This was what he told himself. This was what he told the court. And the gates of Loyang opened, and the age of wolves began.",
+          "narration": "He had come to save the Dynasty — this was what he told himself, and what he told the court, and what was written in every memorial that bore his seal. But Lu Chih had known him long, and Lu Chih's words were blowing cold across the darkening plain: in appearance innocent, he is a very wolf at heart. Ho Chin had sent a warm welcome, and the gates of Loyang opened, as gates do for men who have made themselves necessary. And with the wolf came the age that would devour everything the Han had built.",
           "sound_effects": [],
           "characters": [
             "Tung Cho"

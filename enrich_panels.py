@@ -28,6 +28,7 @@ logger = logging.getLogger("enrich_panels")
 GUTENBERG_IDS = {
     "frankenstein": 84,
     "the-strange-case-of-dr.-jekyll-and-m": 43,
+    "romance-of-the-three-kingdoms": 77416,
 }
 
 
