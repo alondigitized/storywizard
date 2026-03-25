@@ -65,6 +65,11 @@ def main() -> None:
         mflux_seed=args.seed,
     )
 
+    # Remove old PNGs to prevent mflux from appending _1 suffix
+    for old_png in panels_dir.glob("*.png"):
+        old_png.unlink()
+        logger.info("Removed old panel: %s", old_png.name)
+
     # Generate panels
     artist = Artist(config)
     generated = artist.generate_panels(scripts, style_guide, panels_dir)
