@@ -50,8 +50,14 @@
           "Imperial Gold (#C9963D) — his suppressed heritage, used sparingly and with increasing weight as his destiny clarifies",
           "Blue-grey in shadow — the weight of unrecognized nobility"
         ],
-        "reference_image_url": "https://v3b.fal.media/files/b/0a925186/43qE7syPDKgom1FImSq_H_image.webp",
-        "reference_image_path": "character_refs/ref_liu_pei_liu_yuan_te.png"
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/liu_pei_front.png",
+        "reference_images": [
+          "character_refs/liu_pei_front.png",
+          "character_refs/liu_pei_three_quarter.png",
+          "character_refs/liu_pei_full_body.png",
+          "character_refs/liu_pei_dramatic.png"
+        ]
       },
       {
         "character_name": "Kuan Yu (Yun-chang)",
@@ -71,8 +77,14 @@
           "Bone White (#E8DFD0) — the blade's edge, moonlight on armor, approaching transcendence",
           "Gold used only in his eventual divine apotheosis — reserved to mark his deification"
         ],
-        "reference_image_url": "https://v3b.fal.media/files/b/0a92518b/uCMZNcdSmQeBfL-diwI4W_image.webp",
-        "reference_image_path": "character_refs/ref_kuan_yu_yun_chang.png"
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/kuan_yu_front.png",
+        "reference_images": [
+          "character_refs/kuan_yu_front.png",
+          "character_refs/kuan_yu_three_quarter.png",
+          "character_refs/kuan_yu_full_body.png",
+          "character_refs/kuan_yu_dramatic.png"
+        ]
       },
       {
         "character_name": "Chang Fei (I-te)",
@@ -92,8 +104,14 @@
           "Deep Brown — his armor and working-man aesthetic",
           "The electric yellow of lightning — used sparingly in his most extreme moments of righteous fury"
         ],
-        "reference_image_url": "https://v3b.fal.media/files/b/0a925192/-tXStApw8E6hRUOPbWQNh_image.webp",
-        "reference_image_path": "character_refs/ref_chang_fei_i_te.png"
+        "reference_image_url": "",
+        "reference_image_path": "character_refs/chang_fei_front.png",
+        "reference_images": [
+          "character_refs/chang_fei_front.png",
+          "character_refs/chang_fei_three_quarter.png",
+          "character_refs/chang_fei_full_body.png",
+          "character_refs/chang_fei_dramatic.png"
+        ]
       },
       {
         "character_name": "Tsao Tsao (Tsao Meng-te)",
@@ -114,7 +132,13 @@
           "Never warm gold — Tsao Tsao's story is about seized power, not legitimate inheritance"
         ],
         "reference_image_url": "",
-        "reference_image_path": ""
+        "reference_image_path": "character_refs/tsao_tsao_front.png",
+        "reference_images": [
+          "character_refs/tsao_tsao_front.png",
+          "character_refs/tsao_tsao_three_quarter.png",
+          "character_refs/tsao_tsao_full_body.png",
+          "character_refs/tsao_tsao_dramatic.png"
+        ]
       },
       {
         "character_name": "Tung Cho",
@@ -155,7 +179,13 @@
           "Black storm-cloud — the inevitable darkness of a movement that burned too many"
         ],
         "reference_image_url": "",
-        "reference_image_path": ""
+        "reference_image_path": "character_refs/chang_chio_front.png",
+        "reference_images": [
+          "character_refs/chang_chio_front.png",
+          "character_refs/chang_chio_three_quarter.png",
+          "character_refs/chang_chio_full_body.png",
+          "character_refs/chang_chio_dramatic.png"
+        ]
       },
       {
         "character_name": "Sun Chien",
@@ -173,7 +203,13 @@
           "Warm Silver — his armor, his blade, the flash of heroic action"
         ],
         "reference_image_url": "",
-        "reference_image_path": ""
+        "reference_image_path": "character_refs/sun_chien_front.png",
+        "reference_images": [
+          "character_refs/sun_chien_front.png",
+          "character_refs/sun_chien_three_quarter.png",
+          "character_refs/sun_chien_full_body.png",
+          "character_refs/sun_chien_dramatic.png"
+        ]
       },
       {
         "character_name": "Ho Chin",
