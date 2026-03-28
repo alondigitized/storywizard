@@ -1,0 +1,332 @@
+{
+  "overall_score": 2,
+  "issues": [
+    {
+      "id": "ALT-001",
+      "severity": "critical",
+      "category": "Alt Text",
+      "description": "All 30 panel image descriptions are truncated mid-sentence in the source data (e.g., 'Wide establishing shot of the nursery interior, full page width, low and intimate. The room is dim a'). No complete, user-facing alt text exists for any panel image.",
+      "panels_affected": "all 30 panels",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "ALT-002",
+      "severity": "critical",
+      "category": "Alt Text",
+      "description": "Panel direction notes are written as production stage directions for an artist \u2014 describing camera angles, compositional intent, and rendering style \u2014 rather than describing what is actually visible in a completed image. Even if restored to full length, they cannot serve as user-facing alt text without a complete rewrite.",
+      "panels_affected": "all 30 panels",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "ALT-003",
+      "severity": "critical",
+      "category": "Alt Text",
+      "description": "Eleven panels have zero dialogue and zero narration text. For these panels, the entire narrative contribution is visual. Without descriptive alt text, a screen reader user encounters complete silence at story-critical moments: Nana's devastating silent stare (Scene 2 Panel 3), the shadow left on the nursery floor (Scene 1 Panel 6), the killing of Skylights (Scene 5 Panel 5), Tiger Lily's procession (Scene 5 Panel 3), and the aerial Neverland night map (Scene 5 Panel 1).",
+      "panels_affected": [
+        "1_2",
+        "1_4",
+        "1_6",
+        "2_3",
+        "2_5",
+        "3_1",
+        "4_3",
+        "5_1",
+        "5_2",
+        "5_3",
+        "5_5"
+      ],
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "CONTRAST-001",
+      "severity": "critical",
+      "category": "Color Contrast",
+      "description": "TINKER BELL GOLD (#F5C518) on white (#FFFFFF) yields an estimated contrast ratio of approximately 1.6:1 \u2014 catastrophically below the 4.5:1 WCAG AA minimum for normal text and the 3:1 minimum for large text. If this color is used for caption overlays, speech bubbles, or any text in flight and magic sequences, it is entirely illegible to users with low vision.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)",
+      "estimated_contrast_ratio": "1.6:1",
+      "required_minimum": "4.5:1 normal text, 3:1 large text"
+    },
+    {
+      "id": "CONTRAST-002",
+      "severity": "critical",
+      "category": "Color Contrast",
+      "description": "FAIRY DUST SILVER (#C8D8E8) on white (#FFFFFF) yields an estimated contrast ratio of approximately 1.5:1. This color is described as dominant in all flying sequences \u2014 if any narration or caption text uses this color on light backgrounds, it fails by a factor of three.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)",
+      "estimated_contrast_ratio": "1.5:1",
+      "required_minimum": "4.5:1"
+    },
+    {
+      "id": "CONTRAST-003",
+      "severity": "serious",
+      "category": "Color Contrast",
+      "description": "HOOK'S CRIMSON (#8B0000) against MIDNIGHT BLUE (#0D1B4B) yields an estimated contrast ratio of approximately 1.7:1. Both colors are dominant in Scenes 4 and 5 panels. Any text rendered in Crimson against a Midnight Blue panel background \u2014 or vice versa \u2014 is nearly invisible to users with low vision or color blindness.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)",
+      "estimated_contrast_ratio": "1.7:1",
+      "required_minimum": "4.5:1"
+    },
+    {
+      "id": "CONTRAST-004",
+      "severity": "serious",
+      "category": "Color Contrast",
+      "description": "NURSERY AMBER (#C8860A) on white (#FFFFFF) yields an estimated contrast ratio of approximately 3.0:1 \u2014 failing the 4.5:1 minimum for normal-weight body text. It only barely meets the 3:1 threshold for large text (18pt+ or 14pt bold). Any caption or narration text styled in Nursery Amber on light backgrounds fails WCAG AA for standard type sizes.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)",
+      "estimated_contrast_ratio": "3.0:1",
+      "required_minimum": "4.5:1 normal text"
+    },
+    {
+      "id": "CONTRAST-005",
+      "severity": "serious",
+      "category": "Color Contrast",
+      "description": "WENDY PERIWINKLE (#7B9DC4) on white (#FFFFFF) yields an estimated contrast ratio of approximately 2.8:1 \u2014 failing WCAG AA for both normal and large text. If used for Wendy-centered caption styling in Scenes 3 and 4, all such text fails minimum contrast.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)",
+      "estimated_contrast_ratio": "2.8:1",
+      "required_minimum": "4.5:1"
+    },
+    {
+      "id": "CONTRAST-006",
+      "severity": "moderate",
+      "category": "Color Contrast",
+      "description": "LONDON SLATE (#6B7280) on white (#FFFFFF) yields an estimated contrast ratio of approximately 4.9:1 \u2014 technically passing AA for normal text, but only marginally. At small type sizes or light font weights, rendering variations may push this below threshold. Verify at actual rendered font size and weight.",
+      "wcag_criterion": "1.4.3 Contrast Minimum (Level AA)",
+      "estimated_contrast_ratio": "4.9:1",
+      "note": "Passes AA at standard sizes but has no headroom \u2014 verify at all rendered sizes"
+    },
+    {
+      "id": "COLOR-001",
+      "severity": "critical",
+      "category": "Use of Color",
+      "description": "The entire emotional and narrative grammar of the story is encoded exclusively in color shifts. WCAG 1.4.1 is violated at a structural level: 'When Viridian bleeds into London panels, Peter is near'; 'When Nursery Amber drains from a panel, a child has been lost'; Tinker Bell dying is expressed by Gold desaturating to ash-grey; Hook's emotional arc shifts from Midnight Blue to Crimson. A user who cannot perceive color receives none of this narrative information. No text alternative encodes these transitions.",
+      "wcag_criterion": "1.4.1 Use of Color (Level A)"
+    },
+    {
+      "id": "ORDER-001",
+      "severity": "serious",
+      "category": "Reading Order",
+      "description": "Six panels are described as full-bleed borderless (Scene 2 Panel 6, Scene 3 Panel 6, Scene 4 Panel 5, Scene 4 Panel 6, Scene 5 Panel 1, Scene 5 Panel 5). Without explicit CSS or ARIA ordering, the DOM position of these elements relative to adjacent half-width and strip panels is ambiguous. Screen readers will read panels in DOM order, which may not match visual reading order in complex grid layouts.",
+      "wcag_criterion": "1.3.2 Meaningful Sequence (Level A)"
+    },
+    {
+      "id": "ORDER-002",
+      "severity": "serious",
+      "category": "Reading Order",
+      "description": "Mixed-geometry panel layouts occur in multiple scenes: tall narrow vertical panels beside short horizontal strips (Scene 1 Panels 3-4, Scene 3 Panels 3-4, Scene 5 Panels 2-3). In CSS Grid, it is common practice to place elements in visual-order grid positions that do not match DOM order. Any such mismatch causes screen readers to read panels out of narrative sequence.",
+      "wcag_criterion": "1.3.2 Meaningful Sequence (Level A)"
+    },
+    {
+      "id": "ORDER-003",
+      "severity": "serious",
+      "category": "Reading Order",
+      "description": "Multi-speaker dialogue strings are stored as unstructured plain text arrays (e.g., ['Peter: There are mermaids. And there are pirates.', 'Wendy: Real pirates?', 'Peter: The most terrible sort. But I deal with them.', 'John [from his bed]: I say \u2014 did someone mention pirates?']). Rendered as plain text, screen readers cannot distinguish speaker from speech, and the speaker label becomes indistinguishable narrative content.",
+      "panels_affected": [
+        "3_4",
+        "3_5",
+        "4_2",
+        "4_4",
+        "4_6",
+        "5_4"
+      ],
+      "wcag_criterion": "1.3.1 Info and Relationships (Level A)"
+    },
+    {
+      "id": "ORDER-004",
+      "severity": "moderate",
+      "category": "Reading Order",
+      "description": "No structural heading or landmark marks scene transitions. Screen reader users cannot navigate directly to Scene 3 or Scene 5 using heading navigation \u2014 one of the primary ways screen reader users orient themselves in long-form content. The five scene breaks are currently structurally invisible.",
+      "wcag_criterion": "1.3.1 Info and Relationships (Level A)"
+    },
+    {
+      "id": "KEYBOARD-001",
+      "severity": "critical",
+      "category": "Keyboard Navigation",
+      "description": "No skip navigation link is specified. Users who rely on keyboard navigation must tab through every interactive element (potentially 30+ panel focus points, navigation controls, and UI elements) before reaching any specific scene. A 'Skip to Scene Navigation' or 'Skip to Panel [N]' link as the first focusable element is required.",
+      "wcag_criterion": "2.4.1 Bypass Blocks (Level A)"
+    },
+    {
+      "id": "KEYBOARD-002",
+      "severity": "serious",
+      "category": "Keyboard Navigation",
+      "description": "No keyboard navigation model is defined for panel traversal. The web reader (web/static/ CSS/JS) has no documented arrow-key, Page Up/Down, or shortcut support for moving between panels or scenes. All interactive panel navigation must be keyboard-operable and focus must be visible at all times.",
+      "wcag_criterion": "2.1.1 Keyboard (Level A), 2.4.7 Focus Visible (Level AA)"
+    },
+    {
+      "id": "KEYBOARD-003",
+      "severity": "serious",
+      "category": "Keyboard Navigation",
+      "description": "Full-bleed panels described as 'bleeding to all four edges' are architecturally likely to be implemented as CSS background-image properties on <div> elements. CSS background images have no accessible role, are invisible to the accessibility tree, and cannot be focused by keyboard users. These panels must be implemented as <img> elements with proper alt text, or as <figure> elements with role='img'.",
+      "wcag_criterion": "2.1.1 Keyboard (Level A), 1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "SCREEN-001",
+      "severity": "critical",
+      "category": "Screen Reader Experience",
+      "description": "Scene 5 Panel 5 \u2014 the killing of Skylights by Hook \u2014 is explicitly described as containing 'not a single word of dialogue' and conveying the act through visual implication only. The narration ('He did not remove the cigars. He did not change expression. The hook moved once \u2014 and returned.') implies but does not state the death. A screen reader user who cannot see the image receives an elliptical narration caption from which the central event is absent. Alt text must complete the narrative gap explicitly without graphic excess.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "SCREEN-002",
+      "severity": "serious",
+      "category": "Screen Reader Experience",
+      "description": "The emotional arc of Mrs. Darling (Scene 1 Panels 1-3) is constructed entirely through visual storytelling \u2014 her body language by the fire, her stirring in her sleep, her half-conscious recognition. The narration captions reference what she knows but not what is visible. Without alt text describing her physical state and expression, a screen reader user cannot access this foundational characterization.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "SCREEN-003",
+      "severity": "serious",
+      "category": "Screen Reader Experience",
+      "description": "The London-to-Neverland visual grammar shift (precise architectural linework vs. soft organic mark-making; hard outlines vs. breathing borders) is a primary carrier of meaning in the adaptation. Screen reader users receive no signal that they have crossed between worlds. Scene-level text annotations identifying the setting register are absent.",
+      "wcag_criterion": "1.3.1 Info and Relationships (Level A)"
+    },
+    {
+      "id": "SCREEN-004",
+      "severity": "moderate",
+      "category": "Screen Reader Experience",
+      "description": "Scene 3 Panel 3 \u2014 Peter leaping with his restored shadow \u2014 is described as exploiting the 'full height of the page' with 'the restored shadow following him like a declaration of self.' This is a visually and thematically climactic moment. The narration only records his crowing. The visual meaning of the shadow as self-recognition is entirely absent from the text layer.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "SCREEN-005",
+      "severity": "moderate",
+      "category": "Screen Reader Experience",
+      "description": "Scene 4 Panel 4 contains a critical character moment: Peter has 'for a moment, forgotten why they were there. Not their names \u2014 just them.' The visual tells this through Peter's expression, and 'Wendy had seen it.' If the alt text of this panel does not describe Peter's expression and Wendy's noticing, this foundational plot-and-character beat is invisible to screen reader users.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "id": "LANG-001",
+      "severity": "moderate",
+      "category": "Internationalization",
+      "description": "No page language is specified in the audit data. The work is British-authored Edwardian English. The <html> element should carry lang='en-GB' to ensure text-to-speech engines apply appropriate British English pronunciation rules. Misapplied American English TTS rules will mispronounce period vocabulary and character names.",
+      "wcag_criterion": "3.1.1 Language of Page (Level A)"
+    }
+  ],
+  "enhanced_alt_texts": {
+    "1_1": "Wide low-angle view of an Edwardian nursery at night, bathed in warm Nursery Amber candlelight. Mrs. Darling sits alone by a glowing fireplace, mending by hand, her posture relaxed and unguarded. Three children's beds are visible in the background, small and still in the amber glow. Heavy curtains frame the window. The room radiates safety and order \u2014 the architectural precision of a household at rest. This is the last moment of ordinary peace before the story begins.",
+    "1_2": "The nursery window \u2014 previously a dark rectangle of night \u2014 now blazes with an erratic darting light: Tinker Bell's incandescent gold circling and probing against the glass from outside. The room behind remains in amber shadow. Something small, brilliant, and inhuman is pressing against the boundary between outside and in. The contrast between the gold light and the surrounding darkness is electric and slightly alarming.",
+    "1_3": "Extreme close-up of Mrs. Darling's sleeping face. Her eyelids are not quite still, brows drawn in a faint unconscious frown, lips slightly parted. Warm amber light falls across one cheek; the other side fades into shadow. Her expression is poised between sleep and recognition \u2014 her subconscious registering a name she once saw written in a child's mind, rising toward the surface.",
+    "1_4": "Tall narrow panel filling the page height. Peter Pan crouches on the window ledge, one hand gripping the frame above, knees drawn up to his chest, body coiled like a spring. He is half-silhouetted against a luminous Neverland green glow behind him. His face is watchful, feral, and achingly young. He belongs to neither world: a threshold creature balanced at the exact border between magic and domesticity.",
+    "1_5": "Full-width explosive action panel: the nursery in sudden upheaval. Peter Pan has entered and three children in nightgowns are mid-gasp \u2014 limbs thrown wide in shock that is indistinguishable from delight. Motion lines radiate from Peter at the center. The composition is deliberately chaotic, pen linework suggesting velocity in every direction. A single 'Oh!' floats near the upper edge \u2014 the only word in a scene of pure kinetic energy.",
+    "1_6": "Small, hush-quiet panel at ground level after the chaos. The nursery floor viewed from low angle: warm floorboard, the leg of a bed frame, and in the corner, a small dark shape \u2014 Peter's shadow, detached and lying abandoned where it fell. Everything else is absent from the frame. The shadow is isolated and slightly uncanny, more unsettling for being so ordinary an object.",
+    "2_1": "Wide shot of an Edwardian master bedroom in warm gaslight, long controlled shadows across the walls and floor. Mr. Darling stands in the foreground facing the nursery doorway, posture upright and performative, dressed and authoritative. The linework is precise and architectural \u2014 this is London in its orderly register. His expression combines genuine belief in his own authority with a slight strain that suggests he requires witnesses.",
+    "2_2": "Medium shot from slightly below, looking up at Mr. Darling in the nursery. He has adopted a theatrical stance \u2014 chest elevated, one arm extended toward Nana's dog bowl, presenting his own medicine bottle. The low angle makes him seem larger. His expression is caught between certainty and performance. He is a man who needs the children to see him being right more than he needs to actually be right.",
+    "2_3": "Extreme close-up of Nana the Newfoundland dog's face filling almost the entire panel. Her great dark eyes are steady, calm, and devastating in their intelligence \u2014 looking directly at Mr. Darling with the absolute patience of a creature who understands everything and will not argue. Her fur is rendered in rich detailed crosshatching. The wet intelligence of her eyes is the emotional center of the scene. She does not protest. She simply looks. It is more damning than any words.",
+    "2_4": "Wide, slightly Dutch-angled panel \u2014 the nursery with the composition tilted as if the room's familiar geometry has become unreliable. Mr. Darling stands at the center, arm gesturing outward, face now strained beneath the performance of authority. His justification ('It was only a joke!') is visually undermined by the compositional instability. The tilt signals something is sliding out of alignment that cannot be straightened.",
+    "2_5": "Exterior wide shot: the Darling house's back garden at night in deep blue-black ink wash. Nana is chained to a post near the garden wall, her large shape reduced to a silhouette against the darkness. The house windows glow amber in the background \u2014 warm and unreachable. Mr. Darling has left the frame. The visual grammar is of desolation: the household's protection has been removed and the house does not yet know it.",
+    "2_6": "Full-width borderless cinematic panel bleeding to all four page edges. The exterior of the Darling house at night: sky above, street below, the house rendered in London Slate and Midnight Blue. Nana is just visible as a dark shape in the garden. Mrs. Darling appears at the nursery window above, looking downward. On the street, nothing moves. The composition is charged with foreboding \u2014 the quiet before the story breaks open.",
+    "3_1": "Wide elevated overhead shot of the nursery at night, viewed from above. Peter Pan crouches on the nursery floor near the window, pressing his shadow against the footboard of Wendy's bed, trying to reattach it with soap. His expression is concentrated and frustrated. Around him, the children sleep in their beds, the room in warm amber stillness. He is entirely alone in his problem, working at it with both hands, murmuring to himself.",
+    "3_2": "Warm intimate medium close-up, the room narrowed to a single amber lamp pool. Wendy sits beside Peter on the nursery floor, needle and thread in hand, her posture calm and focused. Peter is very still, head slightly bowed, legs crossed, while Wendy works at attaching his shadow to his feet. Their faces are close, expressions careful and trusting. This is the most domestic moment in the story: mending by lamplight, two children in total, unguarded intimacy.",
+    "3_3": "Tall vertical panel exploiting the full page height. Peter Pan leaps straight upward from floor to ceiling in a single joyful bound, his restored shadow stretching upward beneath him and snapping into perfect alignment as he rises. His arms are thrown wide, face electric with triumph. The vertical composition makes the leap feel inevitable and effortless. The shadow \u2014 previously crumpled and abandoned on the floor \u2014 now follows him in a declaration of wholeness.",
+    "3_4": "Shallow horizontal strip spanning the full page width \u2014 low-ceilinged, conspiratorial. Peter crouches in the foreground, leaning toward Wendy with urgent confiding intensity. Wendy leans in, eyes wide. Just visible over the edge of his coverlet, John's tousled head is raised and alert. The format compresses the space to make it feel secret \u2014 three children in the half-dark, planning something wonderful and terrifying.",
+    "3_5": "Large exuberant central panel \u2014 the biggest on the page \u2014 alive with spinning motion. All three Darling children are airborne in the nursery, sheened in silver fairy dust. Michael spirals in the foreground, arms windmilling in gleeful shock. John hangs upside-down at the top of the panel, spectacles askew, mid-scientific explanation of the principles involved. Peter stands at the open window, arm extended, pointing outward into the infinite night sky. The nursery has become impossible and joyful and already unreturnable.",
+    "3_6": "Full-width panel bleeding to both horizontal edges. A night sky above London rooftops viewed from below: three small silhouettes \u2014 Wendy in her nightgown, John in his top hat, Michael trailing \u2014 rise in a line against the deep Midnight Blue sky, growing smaller as they ascend. The nursery window below is dark. On the pavement, two small adult figures stand looking upward at nothing. The visual weight of the empty window and the smallness of the parents is entirely contained without a single word.",
+    "4_1": "Full-width panoramic strip: three tiny children crossing a vast sky above oceans, moons, and the edges of all the maps. Wendy in her white nightgown leads, John in his top hat follows, Michael trails. Below them the world curves away in watercolor washes of pale gold and grey-blue. They are impossibly small. A contrail of Fairy Dust Silver traces their path. They are between worlds and the world is enormous.",
+    "4_2": "Medium shot, open sky. Peter Pan hangs lazily upside-down in midair, arms folded behind his head \u2014 the posture of someone entirely at home in the impossible. He looks down at the Darling children with the easy proprietorial pleasure of a host welcoming guests. His expression is arch, slightly smug, pleased with the effect he is creating. The sky behind him is pale gold bleeding into grey-blue: neither day nor night, the permanent in-between of a journey.",
+    "4_3": "Tall vertically oriented panel \u2014 a vertiginous overhead plunge looking straight down past Michael's tumbling figure toward cloud far below. Michael is mid-fall, arms and legs splayed, face a mixture of genuine terror and involuntary glee. Wendy's hand reaches in from above, fingers outstretched and straining but not yet reaching. The drop beneath Michael is enormous and cloud-filled. The scale of the danger and the scale of the fun are identical.",
+    "4_4": "Wide horizontal panel with warm and cool light split across the composition. Peter has swept in and caught Michael, both of them hanging stationary in air \u2014 Peter's arm around Michael's waist, the danger resolved. Wendy watches from the edge of the panel, relief on her face complicated by something else: she has noticed a shadow cross Peter's expression in the instant before he caught Michael \u2014 the look of someone who had, for a moment, forgotten who was falling.",
+    "4_5": "Full-width panoramic \u2014 the most luminous panel in the spread. A great sun hangs low over a turquoise sea. Below it, an island resolves from morning mist: white cliffs, dense forest canopy in oversaturated Neverland Viridian, smoke from unseen fires, the tiny silhouette of a ship at anchor in a lagoon. The whole island carries the too-vivid quality of a place that exists in memory \u2014 every color slightly more itself than real colors are. This is Neverland, and it is waiting.",
+    "4_6": "Full-width strip \u2014 the emotional inverse of the preceding panel. The sun is gone. The same island in absolute darkness: the forest now black, the cliffs angular and predatory, the ship at anchor lit only by a single red lantern staining the surrounding water Hook's Crimson. All Neverland Viridian has drained to near-black. The island is unrecognizable as the magical place of the previous panel. It has become a different place entirely by the removal of light.",
+    "5_1": "Full-width aerial bird's-eye panorama of Neverland at night, rendered in deep Midnight Blue and rich purple. Viewed from directly above, the island's geography is visible as rings of circling movement: small Lost Boy figures in warm ochre tones, pirate processions carrying torchlit orange-red, Native hunters as near-silent shadows, wild animals as dark shapes at the forest edge. All of them circling. At the center, conspicuously absent from every group, an empty space where Peter should be and is not.",
+    "5_2": "Half-width ground-level panel: tight low-angle shot through dense jungle ferns in luminous Neverland Viridian. Through the layered foliage, the small figure of Tootles \u2014 smallest and youngest of the Lost Boys \u2014 moves carefully, always leaning forward as if expecting to arrive at the adventure just in time. His posture is earnest and perpetually premature. The ferns frame and half-conceal him, making him appear simultaneously hidden and observed.",
+    "5_3": "Half-width panel in deeper register \u2014 deep purples and Midnight Blue, the jungle trees becoming abstract architectural shapes. Tiger Lily moves through the most dangerous part of the forest with absolute stillness, spine erect, steps soundless. She is the only figure in the night-spread who is not hurrying or searching or afraid. The darkness around her is not threatening; she inhabits it. Her stillness is the most authoritative presence on the page.",
+    "5_4": "Wide low-angle panel: a torchlit pirate procession through jungle, seen from ground level as if from hiding in the undergrowth. A wall of boots and weaponry fills the frame, pirates receding into torchlit murk. At center, elevated slightly above the others, visible from knees upward: Captain Hook. Long dark coat, iron hook catching torchlight, chin elevated, eyes ahead. His Crimson coat blazes against the Midnight Blue. He is magnificent and genuine and terrible.",
+    "5_5": "Near-full-page borderless panel in near-total darkness. Deep purples and black with minimal detail. At the left edge of the panel, a standing pirate figure \u2014 Skylights. Hook stands at center, expression unchanged, a lit cigar in his teeth and his iron hook extended. The hook is then withdrawn. There is no dramatic lighting, no blood, no theatrical gesture. The violence is conveyed entirely through the calm: Hook's unchanged expression, his cigar still in place, the absolute ordinariness of the act. Skylights does not appear in the remainder of the story.",
+    "5_6": "Narrow full-width strip at the bottom of the page \u2014 extreme close-up on Hook's face and upper chest. His eyes look directly out from the panel with absolute stillness: not menace, not satisfaction, not regret. The cigar remains in the corner of his mouth, ash intact. His iron hook at the bottom edge of the frame catches a single point of torchlight. Midnight Blue and Hook's Crimson pool together in the background wash. This is the face of a man who is dangerous not because he is angry, but because he is calm."
+  },
+  "recommendations": [
+    {
+      "priority": "critical",
+      "category": "Alt Text \u2014 Implementation",
+      "action": "Replace all truncated production stage notes with the user-facing alt text provided in this audit's enhanced_alt_texts section. For each <img> element, set the alt attribute to the corresponding enhanced text. Principles to maintain: (1) name who is present and what is happening, (2) describe the emotional register and body language at story-critical moments, (3) state narrative events that occur only visually \u2014 do not defer to narration captions, as they are complementary not redundant, (4) for action panels with no text, the alt text is the only narrative content a screen reader user receives.",
+      "implementation_note": "In agents/accessibility_reviewer.py, update the WCAG check to validate that alt text: is non-empty, is not identical to narration text, is not a truncated stage direction, and is at minimum 40 characters for narrative panels."
+    },
+    {
+      "priority": "critical",
+      "category": "Color \u2014 Text Contrast",
+      "action": "Immediately audit all text elements in web/static/ CSS for instances of TINKER BELL GOLD (#F5C518), FAIRY DUST SILVER (#C8D8E8), WENDY PERIWINKLE (#7B9DC4), and NURSERY AMBER (#C8860A) used as text color on light backgrounds. Replace with compliant alternatives: use near-black ink (#1A1A2E or #0D0D1A) for text, with palette colors applied only as background, border, or decorative elements. If colored text must be used, test each combination with a contrast checker \u2014 minimum 4.5:1 for normal text.",
+      "failing_combinations": [
+        "TINKER BELL GOLD on white: ~1.6:1",
+        "FAIRY DUST SILVER on white: ~1.5:1",
+        "HOOK'S CRIMSON on MIDNIGHT BLUE: ~1.7:1",
+        "WENDY PERIWINKLE on white: ~2.8:1",
+        "NURSERY AMBER on white: ~3.0:1"
+      ]
+    },
+    {
+      "priority": "critical",
+      "category": "Color \u2014 Narrative Information",
+      "action": "Add visually-hidden text annotations (<span class='sr-only'>) at key color-transition moments where the palette carries narrative meaning. Specifically: (1) when Neverland Viridian bleeds into a London panel, add sr-only text 'Peter Pan is near'; (2) when Nursery Amber drains from a panel, add 'The warmth of home has left this scene'; (3) when Tinker Bell's gold desaturates, add 'Tinker Bell is weakening'; (4) when the panel shifts from warm to Midnight Blue, add 'The mood turns to longing or danger'. These should be placed as the last child of the relevant <figure> or panel wrapper element.",
+      "wcag_criterion": "1.4.1 Use of Color (Level A)"
+    },
+    {
+      "priority": "high",
+      "category": "Reading Order \u2014 DOM Structure",
+      "action": "Audit the CSS Grid implementation in web/templates/reader.html for any panel whose visual position is established by grid-row/grid-column placement that differs from DOM order. Use tabindex order and CSS order property only for visual adjustment \u2014 never to reverse logical reading sequence. Test by: (1) disabling all CSS in the browser, (2) confirming panels appear in correct narrative sequence as a linear document, (3) using a screen reader to navigate panels and verify sequence matches the story.",
+      "wcag_criterion": "1.3.2 Meaningful Sequence (Level A)"
+    },
+    {
+      "priority": "high",
+      "category": "Reading Order \u2014 Scene Structure",
+      "action": "Wrap each scene in a <section> element with a visually-hidden heading: <h2 class='sr-only'>Scene [N]: [Scene Title]</h2>. Suggested scene titles: Scene 1: 'The Nursery, and the Shadow', Scene 2: 'The Chaining of Nana', Scene 3: 'The Shadow Restored, and the Flight', Scene 4: 'The Journey to Neverland', Scene 5: 'The Island at Night'. Add aria-label='London' or aria-label='Neverland' to the section element to signal world-setting to screen reader users. Label each panel figure with aria-label='Panel [N] of [total]'.",
+      "wcag_criterion": "1.3.1 Info and Relationships (Level A)"
+    },
+    {
+      "priority": "high",
+      "category": "Dialogue Markup",
+      "action": "Replace plain-text dialogue arrays with semantic HTML. Recommended pattern for multi-speaker panels: <dl class='panel-dialogue'><dt>Peter Pan</dt><dd>There are mermaids. And there are pirates.</dd><dt>Wendy</dt><dd>Real pirates?</dd></dl>. For single-speaker dialogue, use <p class='speech'><span class='speaker'>Peter Pan:</span> Would you like an adventure now...</p>. This allows screen readers to announce speaker and speech as distinct elements rather than reading 'Peter Pan colon There are mermaids' as undifferentiated text.",
+      "panels_requiring_update": [
+        "3_4",
+        "3_5",
+        "4_2",
+        "4_4",
+        "4_6",
+        "5_4"
+      ]
+    },
+    {
+      "priority": "high",
+      "category": "Keyboard Navigation",
+      "action": "Implement the following keyboard model in web/static/: (1) First focusable element on page must be a 'Skip to scene navigation' link; (2) Arrow keys navigate between panels (Left/Right) and scenes (Up/Down); (3) All panel <figure> elements must have tabindex='0' and a visible focus ring (minimum 2px solid, 3:1 contrast against surrounding area per WCAG 2.4.11); (4) Enter or Space on a focused panel triggers a detail view with full alt text; (5) Escape closes detail view and returns focus to panel. Document all shortcuts in an accessible help dialog at '?' key.",
+      "wcag_criterion": "2.1.1 Keyboard (Level A), 2.4.1 Bypass Blocks (Level A), 2.4.7 Focus Visible (Level AA)"
+    },
+    {
+      "priority": "high",
+      "category": "Full-Bleed Panel Implementation",
+      "action": "Audit all full-bleed borderless panels in the web reader. Any panel implemented as a CSS background-image property on a <div> must be converted to an <img> element (with alt text) inside a <figure> element. CSS background images are invisible to the accessibility tree. If a background-image is required for design reasons, add a visually-hidden <img> with alt text as a sibling element, or use role='img' and aria-label on the container div. Panels affected: Scene 2 Panel 6, Scene 3 Panel 6, Scene 4 Panels 5-6, Scene 5 Panels 1 and 5.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A), 2.1.1 Keyboard (Level A)"
+    },
+    {
+      "priority": "medium",
+      "category": "Text Mode Alternative",
+      "action": "Implement a 'Text Mode' toggle button in the web reader that presents the complete novel as accessible prose: narration rendered as <p> elements, dialogue as semantic <dl> conversation lists, and each panel's enhanced alt text rendered as a brief scene-description paragraph. Store this in a <template> element server-rendered and injected on toggle. This ensures the story is fully comprehensible through text alone \u2014 the gold standard for screen reader experience \u2014 without requiring perfect alt text on every image render.",
+      "implementation": "Add a 'Read as text' button to web/templates/reader.html that toggles between visual and text modes"
+    },
+    {
+      "priority": "medium",
+      "category": "ARIA Landmarks",
+      "action": "Add the following ARIA landmark structure to web/templates/reader.html: <header role='banner'> containing title and book metadata; <nav role='navigation' aria-label='Scene navigation'> for scene/chapter navigation controls; <main role='main'> wrapping the panel reading area; <aside role='complementary' aria-label='Style and character guide'> for supplementary information. This enables screen reader users to navigate directly to the reading area using a single shortcut rather than tabbing through chrome.",
+      "wcag_criterion": "1.3.6 Identify Purpose (Level AAA, recommended for complex layouts)"
+    },
+    {
+      "priority": "medium",
+      "category": "Violence and Mature Content",
+      "action": "Scene 5 Panel 5 depicts a killing. The alt text for this panel (provided in enhanced_alt_texts) describes the act through implication matching the panel's visual tone \u2014 present but not gratuitous. Do not omit the event from alt text: doing so creates a censored version of the story for screen reader users, violating narrative parity. If a content warning is appropriate for sighted users, it must equally precede the alt text for screen reader users, implemented as a visually-present warning before the scene.",
+      "wcag_criterion": "1.1.1 Non-text Content (Level A)"
+    },
+    {
+      "priority": "medium",
+      "category": "Motion and Animation",
+      "action": "If Tinker Bell's light, fairy dust effects, or panel transition animations are implemented with CSS animation or JavaScript, ensure all animations respect @media (prefers-reduced-motion: reduce) by removing or freezing motion. Flashing or strobing effects must not exceed 3 flashes per second (WCAG 2.3.1). Any animation running longer than 5 seconds requires a visible pause control (WCAG 2.2.2).",
+      "wcag_criterion": "2.2.2 Pause, Stop, Hide (Level A), 2.3.1 Three Flashes (Level A)"
+    },
+    {
+      "priority": "low",
+      "category": "Language Declaration",
+      "action": "Set lang='en-GB' on the <html> element in web/templates/reader.html and web/templates/bookshelf.html. This is a British-authored Edwardian text; American English TTS rules will mispronounce period vocabulary ('nursery', 'fortnight', character names). If Hook's Victorian theatrical register or Tiger Lily's dialogue is stylistically distinct, consider wrapping those passages in <span lang='en-GB'> to reinforce the correct TTS ruleset.",
+      "wcag_criterion": "3.1.1 Language of Page (Level A)"
+    },
+    {
+      "priority": "low",
+      "category": "Accessibility Reviewer Agent",
+      "action": "Update agents/accessibility_reviewer.py to enforce the following checks programmatically before generating novel.json: (1) Every panel image path must have a corresponding non-empty alt_text field, (2) alt_text must not be identical to narration_text, (3) alt_text must not contain truncation markers or stage-direction language ('Direction:', 'Panel:'), (4) All palette colors used for text must be validated against their background colors for WCAG AA contrast, (5) Dialogue entries with colon-separated speaker labels must be flagged for semantic markup review. Return these as structured validation_errors in the pipeline output.",
+      "implementation": "Add a validate_accessibility() method to the AccessibilityReviewer agent that returns a list of WCAGViolation Pydantic objects"
+    }
+  ]
+}

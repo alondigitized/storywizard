@@ -29,6 +29,7 @@ GUTENBERG_IDS = {
     "frankenstein": 84,
     "the-strange-case-of-dr.-jekyll-and-m": 43,
     "romance-of-the-three-kingdoms": 77416,
+    "peter-pan": 16,
 }
 
 
