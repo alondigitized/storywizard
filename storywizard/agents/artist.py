@@ -390,11 +390,6 @@ class Artist(BaseAgent):
             cmd = "mflux-generate-flux2"
             steps = 4
 
-        # Truncate prompt to ~2000 chars — FLUX models degrade with very long prompts
-        if len(prompt) > 2000:
-            prompt = prompt[:1997] + "..."
-            logger.info("Truncated prompt to 2000 chars (was %d)", len(prompt))
-
         args = [
             cmd,
             "--prompt", prompt,
