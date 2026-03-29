@@ -16,8 +16,8 @@ logger = logging.getLogger(__name__)
 
 T = TypeVar("T", bound=BaseModel)
 
-MAX_RETRIES = 3
-RETRY_BACKOFF_BASE = 2.0  # seconds
+MAX_RETRIES = 5
+RETRY_BACKOFF_BASE = 3.0  # seconds
 
 
 class BaseAgent:

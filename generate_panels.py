@@ -33,6 +33,8 @@ def main() -> None:
     parser.add_argument("--model", choices=["klein", "turbo"], default="turbo")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--size", default="1024x768")
+    parser.add_argument("--resume", action="store_true",
+                        help="Skip panels that already have PNGs")
     args = parser.parse_args()
 
     w, h = [int(x) for x in args.size.split("x")]
@@ -65,10 +67,32 @@ def main() -> None:
         mflux_seed=args.seed,
     )
 
-    # Remove old PNGs to prevent mflux from appending _1 suffix
-    for old_png in panels_dir.glob("*.png"):
-        old_png.unlink()
-        logger.info("Removed old panel: %s", old_png.name)
+    if not args.resume:
+        # Remove old PNGs to prevent mflux from appending _1 suffix
+        for old_png in panels_dir.glob("*.png"):
+            old_png.unlink()
+            logger.info("Removed old panel: %s", old_png.name)
+    else:
+        # Filter out scripts/panels that already have PNGs
+        existing = {p.stem for p in panels_dir.glob("*.png")}
+        filtered_scripts = []
+        skipped = 0
+        for s in scripts:
+            remaining_panels = []
+            for p in s.panels:
+                key = f"scene{s.scene_number:02d}_panel{p.panel_number:02d}"
+                if key in existing:
+                    skipped += 1
+                else:
+                    remaining_panels.append(p)
+            if remaining_panels:
+                from copy import deepcopy
+                fs = deepcopy(s)
+                fs.panels = remaining_panels
+                filtered_scripts.append(fs)
+        scripts = filtered_scripts
+        total_panels = sum(len(s.panels) for s in scripts)
+        logger.info("Resuming: skipped %d existing panels, %d remaining", skipped, total_panels)
 
     # Generate panels
     artist = Artist(config)
