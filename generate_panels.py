@@ -100,8 +100,14 @@ def main() -> None:
 
     logger.info("Generated %d panels", len(generated))
 
-    # Update novel.json with real image paths
-    data["generated_panels"] = [gp.model_dump() for gp in generated]
+    # Update novel.json with real image paths (merge with existing if resuming)
+    if args.resume and "generated_panels" in data:
+        existing = {(gp["scene_number"], gp["panel_number"]): gp for gp in data["generated_panels"]}
+        for gp in generated:
+            existing[(gp.scene_number, gp.panel_number)] = gp.model_dump()
+        data["generated_panels"] = list(existing.values())
+    else:
+        data["generated_panels"] = [gp.model_dump() for gp in generated]
     novel_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
     logger.info("Updated %s with generated panel data", novel_path)
 
