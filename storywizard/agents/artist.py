@@ -274,21 +274,21 @@ class Artist(BaseAgent):
                     + "\n\n"
                 )
 
-        # For mflux: build the frozen identity block that will be injected verbatim
+        # For mflux: build the frozen identity block appended at the end
         identity_anchor = ""
         consistency_instruction = ""
         if is_mflux:
             identity_anchor = self._build_character_identity_block(panel, style_guide)
             if identity_anchor:
                 consistency_instruction = (
-                    "\n\nCRITICAL CONSISTENCY RULE: Your prompt MUST begin with the "
-                    "art style declaration and then include this EXACT character "
-                    "identity block verbatim (do not rephrase, reorder, or omit "
-                    "any detail):\n"
-                    f"Style: {style_guide.art_style}\n"
-                    f"{identity_anchor}\n"
-                    "After this identity block, describe the scene composition, "
-                    "action, environment, and lighting."
+                    "\n\nPROMPT STRUCTURE RULE: Lead with the SPECIFIC scene "
+                    "composition, action, camera angle, environment, and lighting "
+                    "FIRST — this is the most important part and must be unique to "
+                    "this panel. THEN append the character identity details and "
+                    "art style as supporting context at the END of the prompt.\n"
+                    f"Character details to include at end: {identity_anchor}\n"
+                    f"Art style to include at end: {style_guide.art_style}\n"
+                    "The scene-specific content MUST dominate the first half of the prompt."
                 )
 
         prompt = (
