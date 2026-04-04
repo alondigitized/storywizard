@@ -281,14 +281,14 @@ class Artist(BaseAgent):
             identity_anchor = self._build_character_identity_block(panel, style_guide)
             if identity_anchor:
                 consistency_instruction = (
-                    "\n\nPROMPT STRUCTURE RULE: Lead with the SPECIFIC scene "
-                    "composition, action, camera angle, environment, and lighting "
-                    "FIRST — this is the most important part and must be unique to "
-                    "this panel. THEN append the character identity details and "
-                    "art style as supporting context at the END of the prompt.\n"
-                    f"Character details to include at end: {identity_anchor}\n"
-                    f"Art style to include at end: {style_guide.art_style}\n"
-                    "The scene-specific content MUST dominate the first half of the prompt."
+                    "\n\nPROMPT STRUCTURE RULE: Your prompt MUST follow this exact structure:\n"
+                    f"1. FIRST LINE — art style declaration: \"{style_guide.art_style[:150]}\"\n"
+                    f"2. SCENE CONTENT — the specific composition, action, camera angle, "
+                    "environment, and lighting unique to THIS panel (this is the bulk)\n"
+                    f"3. CHARACTER DETAILS — include verbatim: {identity_anchor}\n"
+                    "The art style MUST appear in the first sentence. "
+                    "The scene content MUST be unique and specific to this panel — "
+                    "do not repeat generic descriptions across panels."
                 )
 
         prompt = (
