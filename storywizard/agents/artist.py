@@ -207,15 +207,13 @@ class Artist(BaseAgent):
         for char_name in panel_chars:
             for cd in style_guide.character_designs:
                 if cd.character_name == char_name:
-                    parts = [cd.appearance]
+                    # Keep identity block concise — first 150 chars of appearance
+                    # + first 100 chars of clothing + key features only
+                    parts = [cd.appearance[:150]]
                     if cd.clothing:
-                        parts.append(cd.clothing)
+                        parts.append(cd.clothing[:100])
                     if cd.distinguishing_features:
-                        parts.append(", ".join(cd.distinguishing_features))
-                    if cd.color_associations:
-                        parts.append(
-                            "color palette: " + ", ".join(cd.color_associations)
-                        )
+                        parts.append(", ".join(cd.distinguishing_features[:3]))
                     lines.append(f"{cd.character_name}: {'; '.join(parts)}")
                     break
 
